@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio Profesional de Richard Ampie Chamorro - Senior Data Analyst & Data Engineer. Especialista en Azure, Fabric y Power BI con mentalidad financiera contable.">
+    <meta name="author" content="Richard Ampie Chamorro">
+    <title>Richard Ampie Chamorro | Data Engineer & Analytics Engineer</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span class="logo-accent">&lt;</span>Richard<span class="logo-accent">.Ampie /&gt;</span>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#about" class="nav-link" data-i18n="nav_about">Sobre Mí</a>
+                <a href="#services" class="nav-link" data-i18n="nav_services">Especialidades</a>
+                <a href="#projects" class="nav-link" data-i18n="nav_projects">Portafolio</a>
+                <a href="#demos" class="nav-link" data-i18n="nav_demos">Demos Power BI</a>
+                <a href="#certifications" class="nav-link" data-i18n="nav_certs">Certificaciones</a>
+                <a href="#experience" class="nav-link" data-i18n="nav_exp">Experiencia</a>
+                <a href="#contact" class="nav-link btn-nav" data-i18n="nav_contact">Contacto</a>
+            </nav>
+
+            <!-- Bilingual Toggle & Menu Buttons -->
+            <div class="nav-actions">
+                <div class="lang-selector">
+                    <button class="lang-btn active" id="btn-es" onclick="changeLanguage('es')">ES</button>
+                    <div class="lang-divider">|</div>
+                    <button class="lang-btn" id="btn-en" onclick="changeLanguage('en')">EN</button>
+                </div>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Abrir menú">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="badge-role" data-i18n="hero_badge">LA SÍNTESIS PERFECTA ENTRE INGENIERÍA, ANALÍTICA Y NEGOCIO</div>
+                <h1 class="hero-title" data-i18n="hero_title">
+                    Diseñando arquitecturas de datos que impulsan la <span class="text-gradient">salud financiera</span> de tu negocio
+                </h1>
+                <p class="hero-subtitle" data-i18n="hero_subtitle">
+                    Richard Ampie Chamorro | Senior Data Analyst & Data Engineer
+                </p>
+                <p class="hero-description" data-i18n="hero_description">
+                    Especialista certificado por Microsoft en Data Engineering y Analytics Engineer. Diseño y despliego soluciones integrales en Azure, Fabric y Power BI que automatizan flujos complejos, reducen costos de cómputo y estandarizan la gobernanza analítica con un entendimiento financiero nativo.
+                </p>
+                <div class="hero-ctas">
+                    <a href="#projects" class="btn btn-primary" data-i18n="hero_cta_primary">Explorar Casos de Éxito</a>
+                    <a href="#demos" class="btn btn-secondary" data-i18n="hero_cta_secondary">Ver Demos Power BI</a>
+                </div>
+                <!-- Micro Certs Badge Preview -->
+                <div class="hero-certs-preview">
+                    <span class="certs-preview-label" data-i18n="hero_certs_label">Certificaciones Oficiales Microsoft:</span>
+                    <div class="certs-badge-group">
+                        <span class="cert-pill">Azure Data Engineer</span>
+                        <span class="cert-pill">Fabric Analytics Associate</span>
+                        <span class="cert-pill">Power BI Data Analyst</span>
+                        <span class="cert-pill">Azure AI Fundamentals</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="visual-canvas">
+                    <!-- Glassmorphic Tech Pipeline Animation Container -->
+                    <div class="pipeline-card">
+                        <div class="pipeline-node data-source">
+                            <span class="node-label">ERP / Softland / APIs</span>
+                            <div class="pulse-ring"></div>
+                        </div>
+                        <div class="pipeline-flow">
+                            <div class="flow-line"></div>
+                            <div class="flow-dot"></div>
+                        </div>
+                        <div class="pipeline-node data-eng">
+                            <span class="node-label">Azure / Fabric / PySpark</span>
+                            <div class="pulse-ring"></div>
+                        </div>
+                        <div class="pipeline-flow">
+                            <div class="flow-line"></div>
+                            <div class="flow-dot"></div>
+                        </div>
+                        <div class="pipeline-node data-bi">
+                            <span class="node-label">Power BI / SQL / DAX</span>
+                            <div class="pulse-ring"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Floating Stat card representing financial ROI -->
+                    <div class="floating-roi-card">
+                        <div class="roi-header">
+                            <span class="roi-title" data-i18n="hero_roi_title">Optimización Financiera</span>
+                            <span class="roi-percent">+50% Efficiency</span>
+                        </div>
+                        <div class="roi-chart">
+                            <div class="chart-bar" style="height: 40%"></div>
+                            <div class="chart-bar" style="height: 60%"></div>
+                            <div class="chart-bar" style="height: 85%"></div>
+                            <div class="chart-bar highlight" style="height: 100%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span class="mouse-icon"><span class="wheel"></span></span>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="about_tag">VISIÓN GENERAL</span>
+                <h2 class="section-title" data-i18n="about_title">La Ventaja de un Perfil Híbrido</h2>
+            </div>
+            
+            <div class="about-grid">
+                <!-- Signature Outcomes Sidebar -->
+                <div class="outcomes-sidebar">
+                    <div class="outcome-card">
+                        <div class="outcome-num" data-target="60">-60%</div>
+                        <div class="outcome-label" data-i18n="out_time_title">Tiempo de Despliegue</div>
+                        <p class="outcome-desc" data-i18n="out_time_desc">Gobernanza de BI estandarizada mediante Git DevOps y pipelines Dev/Test/Prod (de 72h a ~30h).</p>
+                    </div>
+                    <div class="outcome-card">
+                        <div class="outcome-num" data-target="230">+230</div>
+                        <div class="outcome-label" data-i18n="out_mig_title">Reportes Modernizados</div>
+                        <p class="outcome-desc" data-i18n="out_mig_desc">Migración hands-on de Tableau/Excel a Power BI con 90% menos incidencias.</p>
+                    </div>
+                    <div class="outcome-card">
+                        <div class="outcome-num" data-target="67">-67%</div>
+                        <div class="outcome-label" data-i18n="out_ing_title">Tiempo de Ingesta</div>
+                        <p class="outcome-desc" data-i18n="out_ing_desc">Migración SSIS a Fabric Lakehouse, acelerando flujos de carga de 3h a 1h.</p>
+                    </div>
+                    <div class="outcome-card">
+                        <div class="outcome-num" data-target="50">-50%</div>
+                        <div class="outcome-label" data-i18n="out_cap_title">Costo de Capacidad</div>
+                        <p class="outcome-desc" data-i18n="out_cap_desc">Optimización en Microsoft Fabric mediante cargas incrementales y tuneo de DAX/SQL.</p>
+                    </div>
+                </div>
+
+                <!-- Main Professional Narrative -->
+                <div class="about-narrative">
+                    <p class="narrative-lead" data-i18n="about_lead">
+                        Muchas organizaciones sufren el mismo problema: sus ingenieros de datos no entienden los estados financieros que procesan, y sus financieros no saben cómo optimizar una base de datos. Mi propuesta de valor cierra esa brecha por completo.
+                    </p>
+                    <div class="narrative-body">
+                        <p data-i18n="about_p1">
+                            Mi carrera comenzó en el núcleo de las finanzas y la contabilidad empresarial. Comprendo de forma nativa la lógica del negocio, los desvíos presupuestarios (OPEX/CAPEX) y la importancia crítica de la consistencia fiscal. Posteriormente, traduje esta visión comercial al campo técnico, convirtiéndome en Especialista Certificado por Microsoft en el diseño de infraestructuras analíticas avanzadas.
+                        </p>
+                        <p data-i18n="about_p2">
+                            Ya sea migrando reportes analíticos a entornos gobernados, reduciendo a la mitad los costos de capacidad en Microsoft Fabric o estructurando bases de datos desde cero sobre SQL Server y PySpark, mi enfoque siempre es el mismo: crear valor tangible, ahorrar tiempo operativo y asegurar una única versión de la verdad comercial.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services & Specialties Section -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag" data-i18n="serv_tag">QUÉ HAGO</span>
+                <h2 class="section-title" data-i18n="serv_title">Especialidades & Soluciones Estratégicas</h2>
+            </div>
+
+            <div class="services-grid">
+                <!-- Card 1: Data Engineering -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                            <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"></path>
+                        </svg>
+                    </div>
+                    <h3 class="service-name" data-i18n="serv_eng_title">1. Arquitectura & Data Engineering</h3>
+                    <p class="service-desc" data-i18n="serv_eng_desc">Construcción de cimientos sólidos, seguros y escalables para el flujo de información corporativa.</p>
+                    <ul class="service-bullets">
+                        <li data-i18n="serv_eng_b1"><strong>Gobernanza y DevOps:</strong> Control de versiones con Git (Azure DevOps), despliegue continuo de reportes (.pbip) y administración de workspaces.</li>
+                        <li data-i18n="serv_eng_b2"><strong>Orquestación de Pipelines:</strong> Reemplazo de SSIS tradicionales por flujos modernos y rápidos en Fabric Data Factory.</li>
+                        <li data-i18n="serv_eng_b3"><strong>Procesamiento Escalable:</strong> Transformación de datos usando PySpark / Notebooks de Python y SQL.</li>
+                    </ul>
+                </div>
+
+                <!-- Card 2: Analytics & BI -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="20" x2="18" y2="10"></line>
+                            <line x1="12" y1="20" x2="12" y2="4"></line>
+                            <line x1="6" y1="20" x2="6" y2="14"></line>
+                        </svg>
+                    </div>
+                    <h3 class="service-name" data-i18n="serv_bi_title">2. Visualización e Inteligencia de Negocio</h3>
+                    <p class="service-desc" data-i18n="serv_bi_desc">Modelado y reportería avanzada para traducir millones de filas de datos en decisiones inmediatas.</p>
+                    <ul class="service-bullets">
+                        <li data-i18n="serv_bi_b1"><strong>Modelado Estrella:</strong> Arquitectura de modelos robustos en SQL Server con lógica DAX optimizada para refrescos rápidos (5-20 min).</li>
+                        <li data-i18n="serv_bi_b2"><strong>Dashboards de Alto Impacto:</strong> Desarrollo en Power BI consumiendo APIs REST y base de datos locales/nube.</li>
+                        <li data-i18n="serv_bi_b3"><strong>Gobernanza de Capacidades:</strong> Monitoreo de recursos Fabric para evitar throttling y gestionar licencias eficientemente.</li>
+                    </ul>
+                </div>
+
+                <!-- Card 3: Finance Automation -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="4" width="20" height="16" rx="2" ry="2"></rect>
+                            <line x1="12" y1="4" x2="12" y2="20"></line>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                        </svg>
+                    </div>
+                    <h3 class="service-name" data-i18n="serv_fin_title">3. Inteligencia Financiera & Automatización</h3>
+                    <p class="service-desc" data-i18n="serv_fin_desc">Optimización de la contabilidad analítica, auditoría automática del dato y aceleración contable.</p>
+                    <ul class="service-bullets">
+                        <li data-i18n="serv_fin_b1"><strong>Cierres Mensuales Acelerados:</strong> Reducción del tiempo de cierre del mes en un 50% (de 5 a 2.5 días hábiles).</li>
+                        <li data-i18n="serv_fin_b2"><strong>Reportería Fiscal & OPEX:</strong> Automatización de reportes de retenciones fiscales y análisis OPEX vinculados al ERP Softland.</li>
+                        <li data-i18n="serv_fin_b3"><strong>Productividad RPA:</strong> Desarrollo con Power Apps y Power Automate para eliminar procesos manuales administrativos.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section" id="projects">
+        <div class="container">
+            <div class="section-header flex-header">
+                <div>
+                    <span class="section-tag" data-i18n="proj_tag">CASOS REALES</span>
+                    <h2 class="section-title" data-i18n="proj_title">Ingeniería & Analítica Aplicada</h2>
+                </div>
+                
+                <!-- Tab Selector for Projects -->
+                <div class="tab-container">
+                    <button class="tab-btn active" id="tab-corporate" onclick="togglePortfolioCategory('corporate')" data-i18n="tab_corp">Casos Corporativos</button>
+                    <button class="tab-btn" id="tab-personal" onclick="togglePortfolioCategory('personal')" data-i18n="tab_pers">Laboratorio y Prácticas</button>
+                </div>
+            </div>
+
+            <!-- Carousel Wrapper for Corporate Projects -->
+            <div class="carousel-wrapper" id="carousel-corporate-container">
+                <button class="carousel-control-btn btn-prev" onclick="moveCarousel('corp', -1)">&#8592;</button>
+                <div class="carousel-viewport">
+                    <div class="carousel-track" id="carousel-corp-track">
+                        <!-- Case 1: Corporate (BI DevOps) -->
+                        <div class="carousel-slide">
+                            <div class="project-card">
+                                <div class="project-header">
+                                    <span class="project-category">DevOps & Gobernanza</span>
+                                    <span class="project-outcome">-60% Despliegue</span>
+                                </div>
+                                <h3 class="project-name" data-i18n="proj_c1_title">Gobernanza de BI y Git Integration en Fabric</h3>
+                                <p class="project-desc" data-i18n="proj_c1_desc">Implementación de un flujo de desarrollo ordenado integrando archivos .pbip con Git en Azure DevOps y despliegues pipelines separados (Dev/Test/Prod) en Fabric.</p>
+                                <div class="project-stack">
+                                    <span class="tech-tag">Microsoft Fabric</span>
+                                    <span class="tech-tag">Azure DevOps</span>
+                                    <span class="tech-tag">Power BI</span>
+                                    <span class="tech-tag">Git</span>
+                                </div>
+                                <div class="project-impact-box">
+                                    <strong data-i18n="proj_c1_imp_lbl">Impacto:</strong> <span data-i18n="proj_c1_imp_val">Ciclo de lanzamiento reducido de 72h a ~30h promedio con total trazabilidad y control de fallos en producción.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Case 2: Corporate (Migration) -->
+                        <div class="carousel-slide">
+                            <div class="project-card">
+                                <div class="project-header">
+                                    <span class="project-category">Data Engineering</span>
+                                    <span class="project-outcome">3x Más Rápido</span>
+                                </div>
+                                <h3 class="project-name" data-i18n="proj_c2_title">Migración Masiva de DWH y Reportería</h3>
+                                <p class="project-desc" data-i18n="proj_c2_desc">Migración estructural de un DWH obsoleto en SSIS a un Microsoft Fabric Lakehouse. Migración hands-on de 80 reportes de Tableau/Excel a un entorno centralizado de Power BI.</p>
+                                <div class="project-stack">
+                                    <span class="tech-tag">Fabric Lakehouse</span>
+                                    <span class="tech-tag">PySpark</span>
+                                    <span class="tech-tag">SQL Server</span>
+                                    <span class="tech-tag">Power BI</span>
+                                </div>
+                                <div class="project-impact-box">
+                                    <strong data-i18n="proj_c2_imp_lbl">Impacto:</strong> <span data-i18n="proj_c2_imp_val">Reducción del procesamiento de ingesta de 3h a 1h e incidencias post-actualización reducidas en un 90%.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Case 3: Corporate (Financial) -->
+                        <div class="carousel-slide">
+                            <div class="project-card">
+                                <div class="project-header">
+                                    <span class="project-category">BI & Inteligencia Financiera</span>
+                                    <span class="project-outcome">Cierre en 2.5 Días</span>
+                                </div>
+                                <h3 class="project-name" data-i18n="proj_c3_title">Reportería de Márgenes y OPEX Automatizado</h3>
+                                <p class="project-desc" data-i18n="proj_c3_desc">Conexión directa de APIs REST y el ERP Softland con SQL Server para generar dashboards automatizados en Power BI, eliminando conciliaciones manuales de OPEX.</p>
+                                <div class="project-stack">
+                                    <span class="tech-tag">Power BI (DAX)</span>
+                                    <span class="tech-tag">SQL Server</span>
+                                    <span class="tech-tag">REST APIs</span>
+                                    <span class="tech-tag">Softland ERP</span>
+                                </div>
+                                <div class="project-impact-box">
+                                    <strong data-i18n="proj_c3_imp_lbl">Impacto:</strong> <span data-i18n="proj_c3_imp_val">Ahorro de 24h mensuales por director de proyecto, margen bruto actualizado diario y cierre mensual 50% más rápido.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Case 4: Corporate (Fabric/Azure Cost - NEW) -->
+                        <div class="carousel-slide">
+                            <div class="project-card">
+                                <div class="project-header">
+                                    <span class="project-category">Cloud Operations & ROI</span>
+                                    <span class="project-outcome">-50% Cómputo</span>
+                                </div>
+                                <h3 class="project-name" data-i18n="proj_c4_title">Optimización en Fabric y Reducción de Costos Azure</h3>
+                                <p class="project-desc" data-i18n="proj_c4_desc">Reducción sustancial del consumo de unidades de cómputo en Fabric aplicando cargas incrementales, particionamiento lógico, y robustos controles pre/post carga en Azure.</p>
+                                <div class="project-stack">
+                                    <span class="tech-tag">Microsoft Fabric</span>
+                                    <span class="tech-tag">Azure Portal</span>
+                                    <span class="tech-tag">Capacity Metrics</span>
+                                    <span class="tech-tag">T-SQL</span>
+                                </div>
+                                <div class="project-impact-box">
+                                    <strong data-i18n="proj_c4_imp_lbl">Impacto:</strong> <span data-i18n="proj_c4_imp_val">Evitación total de throttling de capacidades, reducción del 50% de uso redundante y control del presupuesto nube.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-btn btn-next" onclick="moveCarousel('corp', 1)">&#8594;</button>
+            </div>
+
+            <!-- Carousel Wrapper for Personal/Labs Projects -->
+            <div class="carousel-wrapper d-none" id="carousel-personal-container">
+                <button class="carousel-control-btn btn-prev" onclick="moveCarousel('pers', -1)">&#8592;</button>
+                <div class="carousel-viewport">
+                    <div class="carousel-track" id="carousel-pers-track">
+                        <!-- Lab 1: DAX Optimizer -->
+                        <div class="carousel-slide">
+                            <div class="project-card">
+                                <div class="project-header">
+                                    <span class="project-category">Optimización Semántica</span>
+                                    <span class="project-outcome">GitHub Lab</span>
+                                </div>
+                                <h3 class="project-name" data-i18n="proj_p1_title">Framework de Optimización DAX & Fabric Capacity</h3>
+                                <p class="project-desc" data-i18n="proj_p1_desc">Conjunto de scripts de diagnóstico y mejores prácticas documentadas para auditar modelos de Power BI grandes, reduciendo el consumo de Capacity Units (CU).</p>
+                                <div class="project-stack">
+                                    <span class="tech-tag">Tabular Editor</span>
+                                    <span class="tech-tag">DAX Studio</span>
+                                    <span class="tech-tag">Fabric Monitor</span>
+                                </div>
+                                <div class="dual-btn-group">
+                                    <a href="https://github.com/tu-usuario" target="_blank" class="btn btn-secondary btn-sm" data-i18n="proj_view_git">Ver Código en Git</a>
+                                    <a href="https://ejemplo.com/doc1.pdf" target="_blank" class="btn btn-primary btn-sm" data-i18n="proj_view_doc">Ver Documentación</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Lab 2: API Python requests -->
+                        <div class="carousel-slide">
+                            <div class="project-card">
+                                <div class="project-header">
+                                    <span class="project-category">Python Data Pipelines</span>
+                                    <span class="project-outcome">GitHub Lab</span>
+                                </div>
+                                <h3 class="project-name" data-i18n="proj_p2_title">Ingesta y ETL Automático de APIs REST Públicas</h3>
+                                <p class="project-desc" data-i18n="proj_p2_desc">Proyecto en Python para ingestar, formatear y almacenar datos transaccionales de APIs externas a base de datos relacionales SQL Server, controlando logs de fallas.</p>
+                                <div class="project-stack">
+                                    <span class="tech-tag">Python (Pandas)</span>
+                                    <span class="tech-tag">SQL Server</span>
+                                    <span class="tech-tag">Requests API</span>
+                                </div>
+                                <div class="dual-btn-group">
+                                    <a href="https://github.com/tu-usuario" target="_blank" class="btn btn-secondary btn-sm" data-i18n="proj_view_git">Ver Código en Git</a>
+                                    <a href="https://ejemplo.com/doc2.pdf" target="_blank" class="btn btn-primary btn-sm" data-i18n="proj_view_doc">Ver Documentación</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Lab 3: Formula 1 Medallion DWH (NEW) -->
+                        <div class="carousel-slide">
+                            <div class="project-card">
+                                <div class="project-header">
+                                    <span class="project-category">Medallion ETL Pipeline</span>
+                                    <span class="project-outcome">Medallion Lab</span>
+                                </div>
+                                <h3 class="project-name" data-i18n="proj_p3_title">Proyecto ETL de Formula 1 (Fabric & Scrape)</h3>
+                                <p class="project-desc" data-i18n="proj_p3_desc">Extracción masiva de datos (carreras, qualys, prácticas) usando web scraping con PySpark y Pandas, implementada en Fabric bajo arquitectura Medallion (Bronze/Silver/Gold).</p>
+                                <div class="project-stack">
+                                    <span class="tech-tag">Microsoft Fabric</span>
+                                    <span class="tech-tag">PySpark (Python)</span>
+                                    <span class="tech-tag">Gold Delta Tables</span>
+                                </div>
+                                <div class="dual-btn-group">
+                                    <a href="https://github.com/tu-usuario" target="_blank" class="btn btn-secondary btn-sm" data-i18n="proj_view_git">Ver Código en Git</a>
+                                    <a href="https://ejemplo.com/doc_f1.pdf" target="_blank" class="btn btn-primary btn-sm" data-i18n="proj_view_doc">Ver Documentación</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Lab 4: Transaction Classifier (NEW) -->
+                        <div class="carousel-slide">
+                            <div class="project-card">
+                                <div class="project-header">
+                                    <span class="project-category">Machine Learning / Finance</span>
+                                    <span class="project-outcome">Streamlit RPA</span>
+                                </div>
+                                <h3 class="project-name" data-i18n="proj_p4_title">Clasificación de Transacciones con ML</h3>
+                                <p class="project-desc" data-i18n="proj_p4_desc">Modelo entrenado con descripciones y referencias contables para clasificar automáticamente estados de cuenta bancarios. Desarrollado en Streamlit y orquestado con Apache Airflow.</p>
+                                <div class="project-stack">
+                                    <span class="tech-tag">Python (Scikit)</span>
+                                    <span class="tech-tag">Apache Airflow</span>
+                                    <span class="tech-tag">Streamlit UI</span>
+                                </div>
+                                <div class="dual-btn-group">
+                                    <a href="https://github.com/tu-usuario" target="_blank" class="btn btn-secondary btn-sm" data-i18n="proj_view_git">Ver Código en Git</a>
+                                    <a href="https://ejemplo.com/doc_ml.pdf" target="_blank" class="btn btn-primary btn-sm" data-i18n="proj_view_doc">Ver Documentación</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-btn btn-next" onclick="moveCarousel('pers', 1)">&#8594;</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Power BI Gallery Section -->
+    <section class="demos-section" id="demos">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag" data-i18n="demo_tag">GALERÍA ANALÍTICA</span>
+                <h2 class="section-title" data-i18n="demo_title">Portafolio de Reportes Power BI</h2>
+                <div class="tab-container justify-center" style="margin-top: 24px;">
+                    <button class="tab-btn active" id="tab-pbi-practices" onclick="toggleDemosCategory('practices')" data-i18n="tab_demos_practices">Demos de Práctica Activas</button>
+                    <button class="tab-btn" id="tab-pbi-corporate" onclick="toggleDemosCategory('corporate')" data-i18n="tab_demos_corporate">Implementaciones Corporativas (Confidenciales)</button>
+                </div>
+            </div>
+
+            <!-- Disclaimer Box for Practices (Default/Visible) -->
+            <div class="disclaimer-box" id="pbi-practices-disclaimer">
+                <span class="disclaimer-icon">💡</span>
+                <p class="disclaimer-text" data-i18n="pbi_practices_disclaimer">
+                    <strong>Aviso de Nivel Senior:</strong> Aunque mis implementaciones corporativas directas permanecen bajo estricta confidencialidad comercial, los siguientes tableros públicos demuestran mis capacidades de análisis de datos a nivel SENIOR, incorporando modelados complejos y lógicas analíticas avanzadas que desarrollo ordinariamente para juntas directivas de grandes empresas.
+                </p>
+            </div>
+
+            <!-- Disclaimer Box for Corporate Demos (Confidential) -->
+            <div class="disclaimer-box d-none" id="pbi-corporate-disclaimer">
+                <span class="disclaimer-icon">🔒</span>
+                <p class="disclaimer-text" data-i18n="pbi_corporate_disclaimer">
+                    <strong>Aviso de Privacidad Comercial:</strong> Con el fin de salvaguardar los datos confidenciales de las corporaciones donde he laborado, los siguientes reportes no pueden ser visualizados de forma pública interactiva. A continuación, presento capturas de interfaz representativas (mockups) y los detalles funcionales, la audiencia gerencial y las decisiones reales de negocio que estas soluciones de inteligencia empresarial habilitan.
+                </p>
+            </div>
+
+            <!-- Practices Showcase (Live Links - Active by Default) -->
+            <div class="carousel-wrapper" id="demos-practices-container">
+                <button class="carousel-control-btn btn-prev" onclick="moveCarousel('pbipract', -1)">&#8592;</button>
+                <div class="carousel-viewport">
+                    <div class="carousel-track" id="carousel-pbipract-track">
+                        <!-- Practice 1: F1 Dashboard -->
+                        <div class="carousel-slide">
+                            <div class="demo-card">
+                                <div class="demo-visual-container">
+                                    <div class="monitor-frame">
+                                        <a href="https://app.fabric.microsoft.com/view?r=eyJrIjoiYzY1Y2Y1YWQtNDM5NC00Y2RhLWFjZmItNmQ0NTQ0MDhkMWYxIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" class="monitor-screen">
+                                            <div class="dashboard-placeholder dp-practice-f1">
+                                                <img src="assets/Portfolio_PbiDemo_F1.png" alt="F1 Analytics Dashboard" class="dashboard-preview-img">
+                                            </div>
+                                            <div class="hover-overlay">
+                                                <span class="hover-icon">↗</span>
+                                                <span class="hover-text" data-i18n="demo_cta_interact">Interactuar con Reporte</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="demo-info">
+                                    <div class="demo-area" data-i18n="demo_f1_area">Inteligencia Deportiva & ETL</div>
+                                    <h3 class="demo-title" data-i18n="demo_f1_title">F1 Analytics: Dashboard del Campeonato</h3>
+                                    <p class="demo-desc" data-i18n="demo_f1_desc">Reporte interactivo alimentado directamente del Lakehouse de Formula 1 en Fabric, analizando tiempos de vuelta, posiciones históricas y ratios de pits.</p>
+                                    <a href="https://app.fabric.microsoft.com/view?r=eyJrIjoiYzY1Y2Y1YWQtNDM5NC00Y2RhLWFjZmItNmQ0NTQ0MDhkMWYxIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" class="btn-demo-link" data-i18n="demo_btn_open">Abrir Reporte Interactivo ↗</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Championship 1 -->
+                        <div class="carousel-slide">
+                            <div class="demo-card">
+                                <div class="demo-visual-container">
+                                    <div class="monitor-frame">
+                                        <a href="https://app.fabric.microsoft.com/view?r=eyJrIjoiOTU5MTc2ZmUtMjE3YS00ZWQ1LWFjYzktYWIyNGIwNjQ4ZTY2IiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" class="monitor-screen">
+                                            <div class="dashboard-placeholder dp-practice-ch1">
+                                                <img src="assets/Portfolio_PbiDemo_WC2026R1.png" alt="World Championship Edition 1 Dashboard" class="dashboard-preview-img">
+                                            </div>
+                                            <div class="hover-overlay">
+                                                <span class="hover-icon">↗</span>
+                                                <span class="hover-text" data-i18n="demo_cta_interact">Interactuar con Reporte</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="demo-info">
+                                    <div class="demo-area" data-i18n="demo_c1_area">Campeonato Mundial - Edición 1</div>
+                                    <h3 class="demo-title" data-i18n="demo_c1_title">Visualización y Storytelling de Datos</h3>
+                                    <p class="demo-desc" data-i18n="demo_c1_desc">Mi primera participación destacada en el Campeonato Mundial oficial de Microsoft, logrando mención de honor en optimización y modelado semántico de alta complejidad.</p>
+                                    <a href="https://app.fabric.microsoft.com/view?r=eyJrIjoiOTU5MTc2ZmUtMjE3YS00ZWQ1LWFjYzktYWIyNGIwNjQ4ZTY2IiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" class="btn-demo-link" data-i18n="demo_btn_open">Abrir Reporte Interactivo ↗</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Championship 2 -->
+                        <div class="carousel-slide">
+                            <div class="demo-card">
+                                <div class="demo-visual-container">
+                                    <div class="monitor-frame">
+                                        <a href="https://app.fabric.microsoft.com/view?r=eyJrIjoiNDQ0YWQyN2UtZjI0Zi00Mzk0LTkxMGMtM2YyODk4NDEzMjVhIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" class="monitor-screen">
+                                            <div class="dashboard-placeholder dp-practice-ch2">
+                                                <img src="assets/Portfolio_PbiDemo_WC2026R2.png" alt="World Championship Edition 2 Dashboard" class="dashboard-preview-img">
+                                            </div>
+                                            <div class="hover-overlay">
+                                                <span class="hover-icon">↗</span>
+                                                <span class="hover-text" data-i18n="demo_cta_interact">Interactuar con Reporte</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="demo-info">
+                                    <div class="demo-area" data-i18n="demo_c2_area">Campeonato Mundial - Edición 2</div>
+                                    <h3 class="demo-title" data-i18n="demo_c2_title">Analítica Corporativa & Dashboards Ejecutivos</h3>
+                                    <p class="demo-desc" data-i18n="demo_c2_desc">Desarrollo interactivo enfocado en la conversión de negocio y agilidad operativa. Proyecto calificado por jueces expertos de la comunidad de Microsoft.</p>
+                                    <a href="https://app.fabric.microsoft.com/view?r=eyJrIjoiNDQ0YWQyN2UtZjI0Zi00Mzk0LTkxMGMtM2YyODk4NDEzMjVhIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" class="btn-demo-link" data-i18n="demo_btn_open">Abrir Reporte Interactivo ↗</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Championship 3 -->
+                        <div class="carousel-slide">
+                            <div class="demo-card">
+                                <div class="demo-visual-container">
+                                    <div class="monitor-frame">
+                                        <a href="https://app.fabric.microsoft.com/view?r=eyJrIjoiNjIzYzBiNTAtMjZjMi00NGIzLTlmM2UtYjg3NzBkOGEyNjdmIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" class="monitor-screen">
+                                            <div class="dashboard-placeholder dp-practice-ch3">
+                                                <img src="assets/Portfolio_PbiDemo_WC2026R3.png" alt="World Championship Edition 3 Dashboard" class="dashboard-preview-img">
+                                            </div>
+                                            <div class="hover-overlay">
+                                                <span class="hover-icon">↗</span>
+                                                <span class="hover-text" data-i18n="demo_cta_interact">Interactuar con Reporte</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="demo-info">
+                                    <div class="demo-area" data-i18n="demo_c3_area">Campeonato Mundial - Edición 3</div>
+                                    <h3 class="demo-title" data-i18n="demo_c3_title">UI/UX Avanzado & UX de Consumo Ejecutivo</h3>
+                                    <p class="demo-desc" data-i18n="demo_c3_desc">Dashboard centrado en jerarquías visuales limpias, con distribución armónica de gráficos de dispersión y navegación personalizada sin fricción.</p>
+                                    <a href="https://app.fabric.microsoft.com/view?r=eyJrIjoiNjIzYzBiNTAtMjZjMi00NGIzLTlmM2UtYjg3NzBkOGEyNjdmIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" class="btn-demo-link" data-i18n="demo_btn_open">Abrir Reporte Interactivo ↗</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-btn btn-next" onclick="moveCarousel('pbipract', 1)">&#8594;</button>
+            </div>
+
+            <!-- Corporate Showcase (Confidential - Carrusel Layout - Hidden by Default) -->
+            <div class="carousel-wrapper d-none" id="carousel-pbi-corporate-container">
+                <button class="carousel-control-btn btn-prev" onclick="moveCarousel('pbicorp', -1)">&#8592;</button>
+                <div class="carousel-viewport">
+                    <div class="carousel-track" id="carousel-pbicorp-track">
+                        <!-- Slide 1: OPEX -->
+                        <div class="carousel-slide">
+                            <div class="demo-card">
+                                <div class="demo-visual-container">
+                                    <div class="monitor-frame">
+                                        <div class="monitor-screen cursor-default">
+                                            <div class="dashboard-placeholder dp-finance">
+                                                <svg viewBox="0 0 400 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect width="400" height="240" rx="4" fill="#111827"/>
+                                                    <text x="20" y="35" fill="#05FFB0" font-size="12" font-weight="bold" font-family="Inter">Reporte Financiero OPEX</text>
+                                                    <line x1="20" y1="50" x2="380" y2="50" stroke="#374151"/>
+                                                    <!-- Table -->
+                                                    <text x="30" y="80" fill="#9CA3AF" font-size="10" font-family="Inter">C. Costo</text>
+                                                    <text x="180" y="80" fill="#9CA3AF" font-size="10" font-family="Inter">Presupuesto</text>
+                                                    <text x="300" y="80" fill="#9CA3AF" font-size="10" font-family="Inter">Real</text>
+                                                    
+                                                    <text x="30" y="110" fill="#F9FAFB" font-size="10" font-family="Inter">IT Department</text>
+                                                    <text x="180" y="110" fill="#F9FAFB" font-size="10" font-family="Inter">$140,000</text>
+                                                    <text x="300" y="110" fill="#05FFB0" font-size="10" font-family="Inter">$132,500</text>
+
+                                                    <text x="30" y="140" fill="#F9FAFB" font-size="10" font-family="Inter">Logistics</text>
+                                                    <text x="180" y="140" fill="#F9FAFB" font-size="10" font-family="Inter">$320,000</text>
+                                                    <text x="300" y="140" fill="#EF4444" font-size="10" font-family="Inter">$342,000</text>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="demo-info">
+                                    <div class="demo-area" data-i18n="demo_c_opex_area">Finanzas & Dirección</div>
+                                    <h3 class="demo-title" data-i18n="demo_c_opex_title">Reporte OPEX (Presupuesto vs. Real)</h3>
+                                    <p class="demo-desc" data-i18n="demo_c_opex_desc">Auditoría automática de desviaciones operacionales y contables por departamento para directores financieros y gerencia general.</p>
+                                    <span class="badge-confidential" data-i18n="confidential_badge">🔒 Confidencial</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2: Costos Produccion -->
+                        <div class="carousel-slide">
+                            <div class="demo-card">
+                                <div class="demo-visual-container">
+                                    <div class="monitor-frame">
+                                        <div class="monitor-screen cursor-default">
+                                            <div class="dashboard-placeholder dp-production">
+                                                <svg viewBox="0 0 400 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect width="400" height="240" rx="4" fill="#111827"/>
+                                                    <text x="20" y="35" fill="#00C2FF" font-size="12" font-weight="bold" font-family="Inter">Costos de Producción Industrial</text>
+                                                    <!-- Circle charts -->
+                                                    <circle cx="120" cy="130" r="35" stroke="#374151" stroke-width="6" fill="none"/>
+                                                    <circle cx="120" cy="130" r="35" stroke="#00C2FF" stroke-width="6" fill="none" stroke-dasharray="220" stroke-dashoffset="40"/>
+                                                    <text x="105" y="135" fill="#F9FAFB" font-size="12" font-weight="bold" font-family="Inter">80%</text>
+
+                                                    <circle cx="280" cy="130" r="35" stroke="#374151" stroke-width="6" fill="none"/>
+                                                    <circle cx="280" cy="130" r="35" stroke="#05FFB0" stroke-width="6" fill="none" stroke-dasharray="220" stroke-dashoffset="100"/>
+                                                    <text x="265" y="135" fill="#F9FAFB" font-size="12" font-weight="bold" font-family="Inter">55%</text>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="demo-info">
+                                    <div class="demo-area" data-i18n="demo_c_prod_area">Operaciones Industriales</div>
+                                    <h3 class="demo-title" data-i18n="demo_c_prod_title">Monitoreo de Costo Unitario de Producción</h3>
+                                    <p class="demo-desc" data-i18n="demo_c_prod_desc">Evaluación en tiempo real del costo de insumos y eficiencia de mano de obra en planta, midiendo la ejecución del plan diario de producción.</p>
+                                    <span class="badge-confidential" data-i18n="confidential_badge">🔒 Confidencial</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3: P&L Statements -->
+                        <div class="carousel-slide">
+                            <div class="demo-card">
+                                <div class="demo-visual-container">
+                                    <div class="monitor-frame">
+                                        <div class="monitor-screen cursor-default">
+                                            <div class="dashboard-placeholder dp-pl">
+                                                <svg viewBox="0 0 400 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect width="400" height="240" rx="4" fill="#111827"/>
+                                                    <text x="20" y="35" fill="#FFB900" font-size="12" font-weight="bold" font-family="Inter">Financial Statements & P&L</text>
+                                                    <rect x="20" y="60" width="110" height="40" fill="#1F2937" rx="4"/>
+                                                    <text x="30" y="85" fill="#05FFB0" font-size="12" font-weight="bold" font-family="Inter">EBITDA 24%</text>
+
+                                                    <rect x="145" y="60" width="110" height="40" fill="#1F2937" rx="4"/>
+                                                    <text x="155" y="85" fill="#00C2FF" font-size="12" font-weight="bold" font-family="Inter">ROI 18.2%</text>
+
+                                                    <rect x="270" y="60" width="110" height="40" fill="#1F2937" rx="4"/>
+                                                    <text x="280" y="85" fill="#F9FAFB" font-size="12" font-weight="bold" font-family="Inter">Ratio L. 2.1</text>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="demo-info">
+                                    <div class="demo-area" data-i18n="demo_c_pl_area">Contabilidad Analítica</div>
+                                    <h3 class="demo-title" data-i18n="demo_c_pl_title">P&L (Pérdidas y Ganancias) y Ratios Contables</h3>
+                                    <p class="demo-desc" data-i18n="demo_c_pl_desc">Consolidación del Balance General, Estado de Resultados, y métricas financieras como Liquidez, Solvencia y Capital de Trabajo.</p>
+                                    <span class="badge-confidential" data-i18n="confidential_badge">🔒 Confidencial</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 4: Supply Chain -->
+                        <div class="carousel-slide">
+                            <div class="demo-card">
+                                <div class="demo-visual-container">
+                                    <div class="monitor-frame">
+                                        <div class="monitor-screen cursor-default">
+                                            <div class="dashboard-placeholder dp-supply">
+                                                <svg viewBox="0 0 400 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect width="400" height="240" rx="4" fill="#111827"/>
+                                                    <text x="20" y="35" fill="#0066FF" font-size="12" font-weight="bold" font-family="Inter">Supply Chain & Inventory Auditor</text>
+                                                    <path d="M40 180 L 100 140 L 160 150 L 220 90 L 280 120 L 340 60" stroke="#0066FF" stroke-width="3" fill="none"/>
+                                                    <circle cx="340" cy="60" r="5" fill="#05FFB0"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="demo-info">
+                                    <div class="demo-area" data-i18n="demo_c_sup_area">Logística & Compras</div>
+                                    <h3 class="demo-title" data-i18n="demo_c_sup_title">Salud del Inventario y Punto de Reorden</h3>
+                                    <p class="demo-desc" data-i18n="demo_c_sup_desc">Control de stock disponible, alertas predictivas de agotamiento, análisis de velocidad de rotación de inventarios y reorden automático.</p>
+                                    <span class="badge-confidential" data-i18n="confidential_badge">🔒 Confidencial</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-btn btn-next" onclick="moveCarousel('pbicorp', 1)">&#8594;</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="certifications-section" id="certifications">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag" data-i18n="cert_tag">RESPALDO PROFESIONAL</span>
+                <h2 class="section-title" data-i18n="cert_title">Certificaciones Oficiales Microsoft</h2>
+                <p class="section-description-sub" data-i18n="cert_subtitle">
+                    Credenciales oficiales emitidas por Microsoft que respaldan mis habilidades en ingeniería de datos, analítica e inteligencia artificial.
+                </p>
+            </div>
+
+            <!-- Certifications Carousel Wrapper -->
+            <div class="carousel-wrapper" id="carousel-certifications-container">
+                <button class="carousel-control-btn btn-prev" onclick="moveCarousel('certs', -1)">&#8592;</button>
+                <div class="carousel-viewport">
+                    <div class="carousel-track" id="carousel-certs-track">
+                        <!-- Cert 1: Azure Data Engineer -->
+                        <div class="carousel-slide">
+                            <div class="cert-card">
+                                <div class="cert-badge-container">
+                                    <img src="assets/DP700 Badge.png" alt="Fabric Data Engineer Associate Badge" class="cert-badge-img">
+                                </div>
+                                <h3 class="cert-name" data-i18n="cert_c1_title">Azure Data Engineer Associate</h3>
+                                <p class="cert-issuer" data-i18n="cert_c1_issuer">Microsoft Certified</p>
+                                <div class="cert-use-commentary">
+                                    <strong data-i18n="cert_comment_label">Aplicación Laboral:</strong>
+                                    <p class="cert-commentary-text" data-i18n="cert_c1_comment">Uso esta credencial para optimizar pipelines en la nube, diseñar Lakehouses escalables y migrar entornos inestables SSIS locales hacia flujos Azure eficientes.</p>
+                                </div>
+                                <a href="https://learn.microsoft.com/api/credentials/share/es-mx/richardampie-0240/F7CDBD4B6FDD0055?sharingId=7758DE5B5185C6B1" target="_blank" class="btn-verify" data-i18n="cert_btn_verify">Verificar Credencial ↗</a>
+                            </div>
+                        </div>
+
+                        <!-- Cert 2: Fabric Analytics -->
+                        <div class="carousel-slide">
+                            <div class="cert-card">
+                                <div class="cert-badge-container">
+                                    <img src="assets/DP600 Badge.png" alt="Fabric Analytics Engineer Associate Badge" class="cert-badge-img">
+                                </div>
+                                <h3 class="cert-name" data-i18n="cert_c2_title">Fabric Analytics Engineer Associate</h3>
+                                <p class="cert-issuer" data-i18n="cert_c2_issuer">Microsoft Certified</p>
+                                <div class="cert-use-commentary">
+                                    <strong data-i18n="cert_comment_label">Aplicación Laboral:</strong>
+                                    <p class="cert-commentary-text" data-i18n="cert_c2_comment">Me capacita para integrar almacenes de datos y Lakehouses en Microsoft Fabric, unificando flujos masivos de finanzas y ventas en una única verdad.</p>
+                                </div>
+                                <a href="https://learn.microsoft.com/api/credentials/share/es-mx/richardampie-0240/ED7938BD47B54F5C?sharingId=7758DE5B5185C6B1" target="_blank" class="btn-verify" data-i18n="cert_btn_verify">Verificar Credencial ↗</a>
+                            </div>
+                        </div>
+
+                        <!-- Cert 3: Power BI -->
+                        <div class="carousel-slide">
+                            <div class="cert-card">
+                                <div class="cert-badge-container">
+                                    <img src="assets/PL300 Badge.png" alt="Power BI Data Analyst Associate Badge" class="cert-badge-img">
+                                </div>
+                                <h3 class="cert-name" data-i18n="cert_c3_title">Power BI Data Analyst Associate</h3>
+                                <p class="cert-issuer" data-i18n="cert_c3_issuer">Microsoft Certified</p>
+                                <div class="cert-use-commentary">
+                                    <strong data-i18n="cert_comment_label">Aplicación Laboral:</strong>
+                                    <p class="cert-commentary-text" data-i18n="cert_c3_comment">Modelado avanzado de datos y creación de cuadros de mando ejecutivos. Con ella lideré la migración de más de 230 reportes manuales a entornos gobernados.</p>
+                                </div>
+                                <a href="https://learn.microsoft.com/api/credentials/share/es-mx/richardampie-0240/23F4EABA13F7FA7E?sharingId=7758DE5B5185C6B1" target="_blank" class="btn-verify" data-i18n="cert_btn_verify">Verificar Credencial ↗</a>
+                            </div>
+                        </div>
+
+                        <!-- Cert 4: Azure AI Fundamentals -->
+                        <div class="carousel-slide">
+                            <div class="cert-card">
+                                <div class="cert-badge-container">
+                                    <img src="assets/IA900 Badge.png" alt="Azure AI Fundamentals Badge" class="cert-badge-img">
+                                </div>
+                                <h3 class="cert-name" data-i18n="cert_c4_title">Azure AI Fundamentals</h3>
+                                <p class="cert-issuer" data-i18n="cert_c4_issuer">Microsoft Certified</p>
+                                <div class="cert-use-commentary">
+                                    <strong data-i18n="cert_comment_label">Aplicación Laboral:</strong>
+                                    <p class="cert-commentary-text" data-i18n="cert_c4_comment">Me brinda fundamentos sólidos para integrar inteligencia artificial en pipelines, automatizando la clasificación y lectura predictiva de datos contables.</p>
+                                </div>
+                                <a href="https://learn.microsoft.com/api/credentials/share/es-mx/richardampie-0240/ED826CFA3634B292?sharingId=7758DE5B5185C6B1" target="_blank" class="btn-verify" data-i18n="cert_btn_verify">Verificar Credencial ↗</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <button class="carousel-control-btn btn-next" onclick="moveCarousel('certs', 1)">&#8594;</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academic Education Section (NEW Layout Below Certifications) -->
+    <section class="education-section" id="education">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag" data-i18n="edu_tag">CONOCIMIENTO RESPALDADO</span>
+                <h2 class="section-title" data-i18n="edu_title">Formación Académica</h2>
+            </div>
+
+            <div class="education-grid">
+                <!-- Academic 1: Public Accounting -->
+                <div class="edu-card-custom">
+                    <div class="edu-card-header">
+                        <span class="edu-year">2022 - Presente</span>
+                        <span class="edu-status-badge" data-i18n="edu_badge_grad">Último Año Cursado</span>
+                    </div>
+                    <h3 class="edu-card-title" data-i18n="edu_ac1_title">Contaduría Pública y Finanzas</h3>
+                    <p class="edu-card-school" data-i18n="edu_ac1_school">Universidad de Nicaragua</p>
+                    <p class="edu-card-desc" data-i18n="edu_ac1_desc">Sólida formación en auditoría contable, estructuración fiscal nacional, conciliaciones bancarias complejas, estados financieros P&L e indicadores de OPEX.</p>
+                </div>
+
+                <!-- Academic 2: Computer Engineering -->
+                <div class="edu-card-custom">
+                    <div class="edu-card-header">
+                        <span class="edu-year">2024 - Presente</span>
+                        <span class="edu-status-badge" data-i18n="edu_badge_active">Cursando Activamente</span>
+                    </div>
+                    <h3 class="edu-card-title" data-i18n="edu_ac2_title">Ingeniería en Computación</h3>
+                    <p class="edu-card-school" data-i18n="edu_ac2_school">Universidad de Nicaragua</p>
+                    <p class="edu-card-desc" data-i18n="edu_ac2_desc">Enfoque centrado en algoritmos avanzados de programación, bases de datos relacionales y no relacionales, análisis estructurado de sistemas y arquitectura de computadoras.</p>
+                </div>
+
+                <!-- Academic 3: High School Diploma -->
+                <div class="edu-card-custom">
+                    <div class="edu-card-header">
+                        <span class="edu-year">2019 - 2021</span>
+                        <span class="edu-status-badge" data-i18n="edu_badge_compl">Título Técnico</span>
+                    </div>
+                    <h3 class="edu-card-title" data-i18n="edu_ac3_title">Técnico Medio en Contabilidad</h3>
+                    <p class="edu-card-school" data-i18n="edu_ac3_school">Instituto Técnico de Nicaragua</p>
+                    <p class="edu-card-desc" data-i18n="edu_ac3_desc">Formación técnica inicial en principios de contabilidad generalmente aceptados, registro diario de transacciones fiscales, inventarios y nóminas.</p>
+                </div>
+
+                <!-- Specializations -->
+                <div class="edu-card-custom edu-card-special">
+                    <div class="edu-card-header">
+                        <span class="edu-year">2021 - 2025</span>
+                        <span class="edu-status-badge" data-i18n="edu_badge_special">Especialidades</span>
+                    </div>
+                    <h3 class="edu-card-title" data-i18n="edu_ac4_title">Certificaciones Técnicas Complementarias</h3>
+                    <p class="edu-card-school" data-i18n="edu_ac4_school">Instituciones Oficiales & Microsoft Learn</p>
+                    <div class="edu-specialization-tags">
+                        <span class="edu-spec-tag">Git & GitHub (2025)</span>
+                        <span class="edu-spec-tag">Python for Data Science (2024)</span>
+                        <span class="edu-spec-tag">SQL Server Integration Services (SSIS - 2023)</span>
+                        <span class="edu-spec-tag">Power BI & Tableau Expert (2022)</span>
+                        <span class="edu-spec-tag">Excel Avanzado & Finanzas (2021)</span>
+                        <span class="edu-spec-tag">Inglés Avanzado (C1 - EF SET)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Stack Section -->
+    <section class="stack-section">
+        <div class="container text-center">
+            <h3 class="stack-heading-section" data-i18n="stack_title">Ecosistema & Stack Tecnológico</h3>
+            <div class="stack-tags-container">
+                <span class="tech-stack-tag">Microsoft Fabric</span>
+                <span class="tech-stack-tag">Azure Portal</span>
+                <span class="tech-stack-tag">Power BI Service/PPU</span>
+                <span class="tech-stack-tag">T-SQL (SQL Server)</span>
+                <span class="tech-stack-tag">PySpark / Python</span>
+                <span class="tech-stack-tag">Git / GitHub / Azure DevOps</span>
+                <span class="tech-stack-tag">SSIS / SSRS</span>
+                <span class="tech-stack-tag">Tabular Editor</span>
+                <span class="tech-stack-tag">DAX Studio</span>
+                <span class="tech-stack-tag">Power Apps</span>
+                <span class="tech-stack-tag">Power Automate</span>
+                <span class="tech-stack-tag">ERP Softland</span>
+                <span class="tech-stack-tag">Lógica Contable Financiera</span>
+                <span class="tech-stack-tag">Prompt Engineering / AI</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Experience Section (NEW - Timeline Layout) -->
+    <section class="experience-section" id="experience">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag" data-i18n="exp_tag">HISTORIAL PROFESIONAL</span>
+                <h2 class="section-title" data-i18n="exp_title">Experiencia Laboral</h2>
+            </div>
+
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+                
+                <!-- Experience Item 1: NowOptics -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content-card">
+                        <div class="timeline-header">
+                            <span class="exp-dates">Abril 2025 - Presente</span>
+                            <span class="company-badge">NowOptics</span>
+                        </div>
+                        <h3 class="exp-role" data-i18n="exp_x1_title">SQL & BI Developer Lead</h3>
+                        <p class="exp-desc" data-i18n="exp_x1_desc">Lidero el desarrollo de modelados semánticos de datos complejos y optimización de capacidades analíticas. Responsable directo de garantizar la consistencia analítica corporativa.</p>
+                        <ul class="exp-bullet-list">
+                            <li data-i18n="exp_x1_b1">Implementación completa de Git Integration con Azure DevOps para versionado ordenado y despliegues pipelines Dev/Test/Prod de Power BI (.pbip).</li>
+                            <li data-i18n="exp_x1_b2">Monitoreo y optimización diaria de la capacidad de Microsoft Fabric, bajando en un 50% incidentes de throttling sin degradar servicios para 350+ usuarios.</li>
+                            <li data-i18n="exp_x1_b3">Diseño coordinado de KPIs contables de ventas y logística, erradicando discrepancias operativas y acelerando reportes de facturación de 72h a ~30h.</li>
+                        </ul>
+                        <div class="exp-toolbox">
+                            <strong>Toolbox:</strong> T-SQL, Power BI (DAX), Fabric (Lakehouse/Warehouse), Azure DevOps, PySpark.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Item 2: Senior Analyst Echamorro Monisa -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content-card">
+                        <div class="timeline-header">
+                            <span class="exp-dates">Enero 2023 - Marzo 2025</span>
+                            <span class="company-badge">Grupo Echamorro Monisa</span>
+                        </div>
+                        <h3 class="exp-role" data-i18n="exp_x2_title">Senior Data Analyst (Departamento de TI)</h3>
+                        <p class="exp-desc" data-i18n="exp_x2_desc">Lideré la modernización del área de Business Intelligence del holding corporativo (subsidiarias industriales, farmacéuticas y distribuidoras).</p>
+                        <ul class="exp-bullet-list">
+                            <li data-i18n="exp_x2_b1">Migración exitosa hands-on de más de 80 reportes de Tableau y Excel manuales a Power BI, mejorando la usabilidad y gobernanza de datos analíticos.</li>
+                            <li data-i18n="exp_x2_b2">Estructuración desde cero del Microsoft Fabric Lakehouse/Warehouse unificado, reemplazando un SSIS obsoleto e inestable.</li>
+                            <li data-i18n="exp_x2_b3">Implementación de cargas incrementales de datos SQL, logrando acelerar las ingestas un 67% (procesamientos de 3h a 1h) con verificaciones automatizadas de errores.</li>
+                        </ul>
+                        <div class="exp-toolbox">
+                            <strong>Toolbox:</strong> Fabric Data Factory, Power BI Premium, Azure Portal, SQL Server (SSIS/SSRS), Tabular Editor.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Item 3: Accounting Assistant Echamorro Monisa -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content-card">
+                        <div class="timeline-header">
+                            <span class="exp-dates">Junio 2021 - Diciembre 2022</span>
+                            <span class="company-badge">Grupo Echamorro Monisa</span>
+                        </div>
+                        <h3 class="exp-role" data-i18n="exp_x3_title">Asistente Contable & Analista Financiero</h3>
+                        <p class="exp-desc" data-i18n="exp_x3_desc">Encargado del registro, control y análisis contable para la toma de decisiones presupuestarias y de rentabilidad del grupo industrial.</p>
+                        <ul class="exp-bullet-list">
+                            <li data-i18n="exp_x3_b1">Diseño de plantillas inteligentes en Excel que automatizaron cálculos de impuestos, retenciones nacionales y declaraciones fiscales (VET), ahorrando 1.5 días de carga operativa mensual.</li>
+                            <li data-i18n="exp_x3_b2">Automatización y estandarización del control OPEX, OPEX variances, conciliaciones bancarias y de cuentas por cobrar/pagar, reduciendo el cierre contable mensual de 5 a 2.5 días hábiles.</li>
+                            <li data-i18n="exp_x3_b3">Registros de amortizaciones, gastos financieros de subsidiarias y reportes de variaciones presupuestarias mensuales.</li>
+                        </ul>
+                        <div class="exp-toolbox">
+                            <strong>Toolbox:</strong> ERP Softland, Excel Avanzado (Power Pivot/Query), Contabilidad Analítica, Declaración VET.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Direct info cards -->
+                <div class="contact-info-panel">
+                    <span class="section-tag" data-i18n="cont_tag">HABLEMOS</span>
+                    <h2 class="contact-heading" data-i18n="cont_title">Alineemos tu Infraestructura con tus Objetivos Comerciales</h2>
+                    <p class="contact-subtext" data-i18n="cont_desc">
+                        ¿Buscas automatizar tus reportes contables, migrar a la nube sin cargos de cómputo redundantes o construir una arquitectura escalable en Fabric? Agenda una conversación rápida.
+                    </p>
+                    
+                    <div class="contact-info-list">
+                        <!-- Email direct -->
+                        <a href="mailto:rampiechamorro14@gmail.com" class="contact-item-link">
+                            <span class="contact-item-icon">✉</span>
+                            <div class="contact-item-details">
+                                <span class="contact-item-label" data-i18n="cont_lbl_email">Correo Electrónico Directo</span>
+                                <span class="contact-item-val">rampiechamorro14@gmail.com</span>
+                            </div>
+                        </a>
+                        
+                        <!-- Phone / WhatsApp direct -->
+                        <a href="https://wa.me/50576896537?text=Hola%20Richard,%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20conversar." target="_blank" class="contact-item-link">
+                            <span class="contact-item-icon">💬</span>
+                            <div class="contact-item-details">
+                                <span class="contact-item-label" data-i18n="cont_lbl_phone">WhatsApp Directo</span>
+                                <span class="contact-item-val">+505 76896537</span>
+                            </div>
+                        </a>
+
+                        <!-- Location direct -->
+                        <div class="contact-item-static">
+                            <span class="contact-item-icon">📍</span>
+                            <div class="contact-item-details">
+                                <span class="contact-item-label" data-i18n="cont_lbl_loc">Ubicación Actual</span>
+                                <span class="contact-item-val">Managua, Nicaragua (Disponible Remoto Global)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Networks -->
+                    <div class="social-links-footer">
+                        <a href="https://www.linkedin.com/in/richard-ampie-218a07247/" target="_blank" class="social-icon-btn">LinkedIn</a>
+                        <a href="https://github.com/tu-usuario" target="_blank" class="social-icon-btn">GitHub</a>
+                        <a href="resume.md" target="_blank" class="btn btn-cv-download" data-i18n="cont_btn_cv">Descargar CV (Markdown)</a>
+                    </div>
+                </div>
+
+                <!-- Glassmorphic Form Card -->
+                <div class="contact-form-card">
+                    <form id="contact-form" onsubmit="handleFormSubmit(event)">
+                        <div class="form-group">
+                            <label for="frm-name" data-i18n="frm_lbl_name">Nombre Completo</label>
+                            <input type="text" id="frm-name" placeholder="Juan Pérez" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="frm-email" data-i18n="frm_lbl_email">Correo Electrónico Corporativo</label>
+                            <input type="email" id="frm-email" placeholder="juan.perez@empresa.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="frm-subject" data-i18n="frm_lbl_subj">Asunto</label>
+                            <input type="text" id="frm-subject" placeholder="Consultoría de Inteligencia de Negocio" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="frm-message" data-i18n="frm_lbl_msg">Mensaje</label>
+                            <textarea id="frm-message" rows="5" placeholder="Cuéntame brevemente sobre tu proyecto o vacante..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block" id="btn-submit-form" data-i18n="frm_btn_send">Enviar Mensaje / Conectar</button>
+                    </form>
+                    <div class="form-success-message d-none" id="form-success">
+                        <span class="success-icon">✓</span>
+                        <p class="success-text" data-i18n="frm_success_msg">¡Mensaje enviado con éxito! Me pondré en contacto contigo en menos de 24 horas hábiles.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer minimal -->
+    <footer class="footer-minimal">
+        <div class="container text-center">
+            <p class="footer-copyright" data-i18n="foot_copyright">
+                © 2026 Richard Ampie Chamorro. Arquitectura e Inteligencia de Negocio con Impacto Financiero.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Local logic code -->
+    <script src="app.js"></script>
+</body>
+</html>
