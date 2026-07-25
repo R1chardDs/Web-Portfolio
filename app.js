@@ -118,16 +118,12 @@ const translations = {
         proj_p4_title: "Clasificación de Transacciones con ML",
         proj_p4_desc: "Modelo entrenado con descripciones y referencias contables para clasificar automáticamente estados de cuenta bancarios. Desarrollado en Streamlit y orquestado con Apache Airflow.",
 
-        // Power BI Showcases & Restructured Tabs
+        // Power BI Showcases
         demo_tag: "GALERÍA ANALÍTICA",
         demo_title: "Portafolio de Reportes Power BI",
-        tab_demos_practices: "Demos de Práctica Activas",
-        tab_demos_corporate: "Implementaciones Corporativas (Confidenciales)",
-        pbi_practices_disclaimer: "<strong>Aviso de Nivel Senior:</strong> Aunque mis implementaciones corporativas directas permanecen bajo estricta confidencialidad comercial, los siguientes tableros públicos demuestran mis capacidades de análisis de datos a nivel SENIOR, incorporando modelados complejos y lógicas analíticas avanzadas que desarrollo ordinariamente para juntas directivas de grandes empresas.",
-        pbi_corporate_disclaimer: "<strong>Aviso de Privacidad Comercial:</strong> Con el fin de salvaguardar los datos confidenciales de las corporaciones donde he laborado, los siguientes reportes no pueden ser visualizados de forma pública interactiva. A continuación, presento capturas de interfaz representativas (mockups) y los detalles funcionales, la audiencia gerencial y las decisiones reales de negocio que estas soluciones de inteligencia empresarial habilitan.",
+        pbi_practices_disclaimer: "<strong>Aviso de Nivel Senior:</strong> Los siguientes tableros interactivos demuestran mis capacidades de análisis de datos a nivel SENIOR, incorporando modelados complejos, arquitectura semántica y lógicas analíticas avanzadas desarrolladas para la toma de decisiones estratégicas.",
         demo_cta_interact: "Interactuar con Reporte",
         demo_btn_open: "Abrir Reporte Interactivo ↗",
-        confidential_badge: "🔒 Confidencial",
 
         demo_f1_area: "Inteligencia Deportiva & ETL",
         demo_f1_title: "F1 Analytics: Dashboard del Campeonato",
@@ -145,21 +141,13 @@ const translations = {
         demo_c3_title: "UI/UX Avanzado & UX de Consumo Ejecutivo",
         demo_c3_desc: "Dashboard centrado en jerarquías visuales limpias, con distribución armónica de gráficos de dispersión y navegación personalizada sin fricción.",
 
-        demo_c_opex_area: "Finanzas & Dirección",
-        demo_c_opex_title: "Reporte OPEX (Presupuesto vs. Real)",
-        demo_c_opex_desc: "Auditoría automática de desviaciones operacionales y contables por departamento para directores financieros y gerencia general.",
-        
-        demo_c_prod_area: "Operaciones Industriales",
-        demo_c_prod_title: "Monitoreo de Costo Unitario de Producción",
-        demo_c_prod_desc: "Evaluación en tiempo real del costo de insumos y eficiencia de mano de obra en planta, midiendo la ejecución del plan diario de producción.",
-        
-        demo_c_pl_area: "Contabilidad Analítica",
-        demo_c_pl_title: "P&L (Pérdidas y Ganancias) y Ratios Contables",
-        demo_c_pl_desc: "Consolidación del Balance General, Estado de Resultados, y métricas financieras como Liquidez, Solvencia y Capital de Trabajo.",
-        
-        demo_c_sup_area: "Logística & Compras",
-        demo_c_sup_title: "Salud del Inventario y Punto de Reorden",
-        demo_c_sup_desc: "Control de stock disponible, alertas predictivas de agotamiento, análisis de velocidad de rotación de inventarios y reorden automático.",
+        demo_s2r1_area: "World Championship 2026 Season 2 - Ronda 1",
+        demo_s2r1_title: "Análisis Financiero Empresarial & Storytelling",
+        demo_s2r1_desc: "Reporte interactivo enfocado en el diagnóstico financiero integral, analizando las fortalezas y debilidades operativas de una empresa mediante técnicas de storytelling avanzado.",
+
+        demo_s2r2_area: "World Championship 2026 Season 2 - Ronda 2",
+        demo_s2r2_title: "Museo Interactivo LEGO & Analítica Histórica",
+        demo_s2r2_desc: "Dashboard enfocado en el análisis histórico de sets de LEGO, patrones de lanzamiento y visualizaciones avanzadas diseñadas para explorar la evolución de colecciones.",
 
         // Certifications Section
         cert_tag: "RESPALDO PROFESIONAL",
@@ -349,16 +337,12 @@ const translations = {
         proj_p4_title: "ML Financial Transaction Classifier",
         proj_p4_desc: "Data Science laboratory. Categorizes bank statement transactions using a Machine Learning model trained on reference text descriptions. Automated via Airflow on Streamlit.",
 
-        // Power BI Showcases & Restructured Tabs
+        // Power BI Showcases
         demo_tag: "ANALYTICS SHOWCASE",
         demo_title: "Power BI Reporting Portfolio",
-        tab_demos_practices: "Active Practice Demos",
-        tab_demos_corporate: "Corporate Implementations (Confidential)",
-        pbi_practices_disclaimer: "<strong>Senior Level Disclaimer:</strong> While my direct corporate work remains protected under strict NDA, these public dashboards demonstrate advanced, SENIOR-level Business Intelligence capabilities, complex modeling, and robust analytical layouts that I ordinarily design for executive boards of enterprise clients.",
-        pbi_corporate_disclaimer: "<strong>Corporate Privacy Notice:</strong> To safeguard corporate data confidentiality, these reports cannot be interacted with publicly. Below, I present representative UI mockups showing real business capabilities, target audiences, and operational decisions enabled.",
+        pbi_practices_disclaimer: "<strong>Senior Level Showcase:</strong> The following interactive dashboards demonstrate SENIOR-level data analytics capabilities, featuring complex modeling, semantic architecture, and advanced analytical logic designed for strategic decision-making.",
         demo_cta_interact: "Interact with Dashboard",
         demo_btn_open: "Open Live Report ↗",
-        confidential_badge: "🔒 Confidential",
 
         demo_f1_area: "Sports Intelligence & ETL",
         demo_f1_title: "F1 Analytics: Championship Dashboard",
@@ -376,21 +360,13 @@ const translations = {
         demo_c3_title: "Advanced UX/UI & Executive Interaction",
         demo_c3_desc: "Dashboard centered on clean visual layouts, integrating scatter charts, custom slicers, and seamless navigation states.",
 
-        demo_c_opex_area: "Finance & Executive",
-        demo_c_opex_title: "OPEX Financial Performance Report",
-        demo_c_opex_desc: "Automated auditing of cost variances against budget per department, designed for Chief Financial Officers and General Directors.",
-        
-        demo_c_prod_area: "Industrial Operations",
-        demo_c_prod_title: "Unit Cost Production Monitoring",
-        demo_c_prod_desc: "Real-time evaluation of raw materials costs and plant labor efficiency, measuring performance against the master production schedule.",
-        
-        demo_c_pl_area: "Managerial Accounting",
-        demo_c_pl_title: "P&L (Profit & Loss) and Ratios Report",
-        demo_c_pl_desc: "Consolidation of Balance Sheet, Income Statement, and financial ratios such as EBITDA, working capital, and leverage indicators.",
-        
-        demo_c_sup_area: "Logistics & Purchasing",
-        demo_c_sup_title: "Inventory Health & Reorder Point Control",
-        demo_c_sup_desc: "Inventory audits, automatic reorder warnings, stock turnover velocity, and obsolete inventory cash impact analysis.",
+        demo_s2r1_area: "World Championship 2026 Season 2 - Round 1",
+        demo_s2r1_title: "Corporate Financial Analysis & Storytelling",
+        demo_s2r1_desc: "Interactive report focused on comprehensive financial diagnostics, analyzing corporate operational strengths and weaknesses through advanced data storytelling.",
+
+        demo_s2r2_area: "World Championship 2026 Season 2 - Round 2",
+        demo_s2r2_title: "LEGO Interactive Museum & Historical Analytics",
+        demo_s2r2_desc: "Dashboard focused on historical analysis of LEGO sets, release patterns, and advanced data visualizations designed to explore collection evolution.",
 
         // Certifications Section
         cert_tag: "TECHNICAL CREDIBILITY",
@@ -558,39 +534,11 @@ function togglePortfolioCategory(category) {
     }
 }
 
-/* --- POWER BI GALLERY DEMOS TOGGLE SYSTEM (V4) --- */
-function toggleDemosCategory(category) {
-    document.querySelectorAll('#demos .tab-btn').forEach(btn => btn.classList.remove('active'));
-    document.getElementById(`tab-pbi-${category}`).classList.add('active');
-    
-    const practicesContainer = document.getElementById('demos-practices-container');
-    const corpContainer = document.getElementById('carousel-pbi-corporate-container');
-    const practicesDisclaimer = document.getElementById('pbi-practices-disclaimer');
-    const corpDisclaimer = document.getElementById('pbi-corporate-disclaimer');
-    
-    if (category === 'practices') {
-        corpContainer.classList.add('d-none');
-        corpDisclaimer.classList.add('d-none');
-        practicesContainer.classList.remove('d-none');
-        practicesDisclaimer.classList.remove('d-none');
-        carouselPositions.pbipract = 0;
-        updateCarouselTrack('pbipract');
-    } else {
-        practicesContainer.classList.add('d-none');
-        practicesDisclaimer.classList.add('d-none');
-        corpContainer.classList.remove('d-none');
-        corpDisclaimer.classList.remove('d-none');
-        carouselPositions.pbicorp = 0;
-        updateCarouselTrack('pbicorp');
-    }
-}
-
-/* --- MULTI-CAROUSEL SYSTEM LOGIC (V4) --- */
+/* --- MULTI-CAROUSEL SYSTEM LOGIC --- */
 const carouselPositions = {
     corp: 0,
     pers: 0,
     pbipract: 0,
-    pbicorp: 0,
     certs: 0
 };
 
@@ -598,7 +546,6 @@ const carouselTracks = {
     corp: 'carousel-corp-track',
     pers: 'carousel-pers-track',
     pbipract: 'carousel-pbipract-track',
-    pbicorp: 'carousel-pbicorp-track',
     certs: 'carousel-certs-track'
 };
 
