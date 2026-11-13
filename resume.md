@@ -1,77 +1,66 @@
-# Richard Ampie Chamorro
-**Data Engineer**
+# Richard Ampié Chamorro
 
-**Location:** Managua, Nicaragua
-**Contact:** Tel: +505 76896537 | rampiechamorro14@gmail.com | [LinkedIn Profile](https://www.linkedin.com/in/richard-ampie-218a07247/)
+**Data & AI Consulting · Business Intelligence · Automation**
 
----
+Nicaragua · Remote collaboration · Español / English (C1)
 
-## Profile
-**Senior Data Analyst & Data Engineer** (Microsoft Certified Data Engineer & Analytics Engineer Associate) who turns messy financial and sales data into reliable decision systems. I design and ship SQL/Fabric/Power BI solutions that reduce refresh times, cut capacity costs, and standardize governance across IT, Finance, Sales, Logistics, Accounting, and Tax. My focus: measurable impact, clean architectures, and pragmatic best practices.
+[Email](mailto:rampiechamorro14@gmail.com) · [LinkedIn](https://www.linkedin.com/in/richard-ampie-218a07247/) · [GitHub](https://github.com/R1chardDs)
 
-## Signature Outcomes
-* Standardized BI governance (PBIP reports + Azure DevOps (Git Integration) + Deployment Pipelines Dev/Test/Prod), lead time to release cut from 72h to ~30h (-60%) the end-to-end process.
-* Migrated 80+ reports hands-on and led ~150 more from Tableau/Excel/PPT to Power BI. Replaced manual ETL process and PDF distribution, bringing post-update incidents down ~90%.
-* Built a reliable Microsoft Fabric data warehouse for Finance/Sales/Ops/Marketing, replacing unstable SSIS jobs. Cut ingestion from 3 hours to 1 hour (~67%) and made other pipelines ~50% faster.
-* Reduced Fabric compute/capacity usage by ~50% implementing incremental loads; added pre/post-load data checks and monitoring to prevent missed loads.
+## Professional profile
 
-## Experience
+I help teams optimize Power BI and Microsoft Fabric, automate analytics operations and modernize reporting platforms. My background combines accounting and finance, data engineering and technical leadership. I currently supervise Business Intelligence and Data Development.
 
-### NowOptics
-**SQL & BI Developer Lead** (Apr 2025 - Present)
-* Build and optimize semantic models and SQL workloads in Fabric/Power BI focused on reliability and lean refresh cycles.
-* Drive cost-aware designs and clean handoffs for business users.
-* **Selected impact:**
-  * Delivered ~30 Tableau-to-Power BI migrations plus new dashboards with 5-20 min refresh, reducing manual work and stabilizing day-to-day delivery for 350+ users.
-  * Implemented Git integration (with Azure DevOps and deployment pipelines) for Power BI (PBIP) to streamline report development, enable safe rollbacks, and keep Dev/Test/Prod workspaces organized and auditable.
-  * Partnered with Finance/Sales/Marketing/Ops to standardize KPIs and definitions, reducing daily decision latency and preventing conflicting "versions of truth."
-  * Monitored and optimized Microsoft Fabric capacity consumption; identified bottlenecks and tuned refresh (partitioning, concurrency, scheduling, query optimization), reducing throttling incidents by ~50% while meeting daily SLAs.
-  * Enforced workspace governance standards (Dev/Test/Prod separation, RBAC least-privilege, naming, certified datasets, and the implementation of best practices in development).
-* **Toolbox:** SQL Server/T-SQL, Power BI (DAX/M language), Microsoft Fabric (Lakehouse/Warehouse, Data Factory Pipelines, PySpark/Python Notebooks), Azure DevOps (Git integration).
+I lead delivery from business requirements and semantic architecture through report development, validation and knowledge transfer. I direct AI agents using reusable guides and defined business rules while retaining ownership of architecture and business logic.
 
-### Holding Group Echamorro Monisa
-*(Jun 2021 - Mar 2025)*
-*Subsidiaries: Echamorro Industrial S.A., Droguería Rocha S.A., Farmacity S.A., WAPI Industrial S.A., among others.*
+## Selected career impact
 
-**Senior Data Analyst (IT Department)** (Jan 2023 - Mar 2025)
-* Led BI modernization across the group, moving from fragmented reporting to governed analytics by implementing a Microsoft Fabric data warehouse and leading the Tableau-to-Power BI migration.
-* **Selected impact:**
-  * Led the Tableau → Power BI migration (~50 reports / 60 users), improving accessibility and reducing maintenance.
-  * Built the Microsoft Fabric lakehouse/warehouse from scratch, migrating an unstable SSIS-based DWH.
-  * Reduced long-running loads from over 2 hours to ~1 hour via incremental loading patterns, partitioning, and query tuning, with pre/post-load validations and monitoring to prevent missed loads.
-  * Standardized KPIs and automated refresh/delivery; month-end close now 2.5 days (was 5, 50% faster) and daily reports ship automatically instead of failing or being sent by hand.
-  * Administered the Azure/Entra ID tenant for BI: created security groups, provisioned users, and managed M365/Power BI Pro/PPU/Fabric licenses.
-  * Managed Power BI workspaces and capacity assignments (roles, access reviews, ownership/naming standards), keeping environments audit-ready and reducing access issues.
-* **Toolbox:** Microsoft Fabric (Data Factory, Lakehouse, Warehouse), Azure Portal, Power BI (DAX, Tabular Editor, Power Query), SQL Server/SSIS/SSRS, Excel/Power Pivot.
+- Migrated 80+ reports hands-on and led ~150 additional migrations; post-update incidents reduced by ~90%.
+- Reduced data ingestion from 3 hours to 1 hour and Fabric compute/capacity usage by ~50%.
+- Reduced BI release lead time from 72 hours to ~30 hours through version control and governed deployment.
 
-**Accounting Assistant & Financial Analyst** (Jun 2021 - Dec 2022)
-* Responsible for supporting the accounting and financial management of the group, leading key tasks in report preparation, reconciliations, and financial analysis to assist strategic decision-making.
-* **Selected impact:**
-  * Built Excel templates for withholding tax, fiscal credit, and income/ISC that automated data cleaning and validations.
-  * Prepared and filed returns in Nicaragua's tax system (VET), reducing tax-prep time by ~1.5 days per cycle.
-  * Recorded expenses, amortizations, and other financial transactions to ensure accurate and up-to-date accounting records.
-  * Standardized and automated finance workflows (bank and AR/AP reconciliations; OPEX variance and budget-to-actuals for expenses/costs; financial statement comparatives and cash-flow variance analysis; payroll postings/analysis), replacing manual steps and cutting the month-end close by about 2 days.
+These outcomes refer to specific professional projects and are not guarantees for future engagements.
 
-## Technical Skills
-* **English:** Advanced (C1)
-* **Advanced:** Power BI (Microsoft Certified), Microsoft Fabric (Microsoft Certified), SQL Server, MySQL, Excel, Power Query, and Power Pivot
-* **Intermediate:** SSRS & SSIS, Python & PySpark for Data Engineering, HTML, CSS, and JavaScript, Git and GitHub/Azure DevOps, Azure/Office Management
-* **Basic:** R for Statistical Analysis
-* **Other:** Proficient in ERP Softland, Application Development with Power Apps, Process Automation with Power Automate
+## Professional experience
 
-## Soft Skills
-* **Leadership:** Ability to motivate and guide teams toward achieving common goals.
-* **Effective Communication:** Excellent skills in conveying ideas and results clearly and concisely.
-* **Teaching and Mentorship:** Passion for teaching and mentoring colleagues, helping them develop their skills and reach their full potential.
-* **Teamwork:** Strong ability to foster collaboration and cohesion within teams to create a productive work environment.
-* **Problem-Solving:** Skilled at identifying and resolving issues efficiently and effectively.
-* **Adaptability:** Quick to adjust to new challenges and work environments.
+### NowOptics · April 2025 to present
 
-## Technical and University Education
-* **2025:** Git and GitHub Certification, Microsoft Data Engineering Certification
-* **2024:** Enrolled in Computer Engineering (currently in 2nd year), Microsoft Fabric Certification, and additional certifications in Project Management and Soft Skills
-* **2022-Present:** Final-year student in Public Accounting and Finance (4th and last year)
-* **2023:** Certificate in Data Analysis, Python for Data Science, and SQL Server Integration Services
-* **2022:** Certificate in Power BI, SQL, and Tableau
-* **2021:** Certificate in Advanced Excel and Finance for Non-Financial Professionals
-* **2019-2021:** Technical High School Diploma in Accounting
+**Business Intelligence & Data Development Supervisor (current)**
+
+Previously: SQL & BI Developer Lead.
+
+Build and optimize Fabric and Power BI semantic models and SQL workloads. Delivered ~30 Tableau-to-Power BI migrations and new dashboards supporting 350+ users. Implemented PBIP source control with Azure DevOps and governed Dev/Test/Prod workspaces. Partner with Finance, Sales, Marketing and Operations on KPIs and reporting definitions.
+
+### Holding Group Echamorro Monisa · June 2021 to March 2025
+
+**Senior Data Analyst, IT · January 2023 to March 2025**
+
+Led the migration of ~50 Tableau reports to Power BI for 60 users. Built a Fabric lakehouse/warehouse to replace an unstable SSIS platform. Standardized KPIs and automated refresh and distribution, reducing month-end close from 5 days to 2.5 days. Administered Azure/Entra ID, licenses, workspace roles and capacity assignments.
+
+**Accounting Assistant & Financial Analyst · June 2021 to December 2022**
+
+Automated reconciliations, OPEX and budget analysis, cash-flow reporting and tax templates. Reduced month-end close by ~2 days and tax preparation by ~1.5 days per cycle.
+
+## Community recognition and public work
+
+Participated in six rounds across two editions of the Power BI Dataviz World Champs. Microsoft included Richard among the Judges’ Favorites in its round 1 results, highlighting intuitive interactions, card-driven navigation and clean data exploration.
+
+[Microsoft recognition](https://community.fabric.microsoft.com/blog/community_blog/%F0%9F%8F%86-announcing-the-results-of-round-1-of-the-power-bi-dataviz-world-champs/4938838)
+
+Public projects include Briarport livability, global climate signals, Olympic Games analysis, PitchSide Pro financial analysis, an interactive LEGO museum, Formula 1 analytics, What Makes a Movie Successful? and The life we fear never living.
+
+## Expertise
+
+Power BI, DAX, Power Query, semantic modeling, Microsoft Fabric, SQL Server/T-SQL, Python/PySpark, Data Factory, incremental ETL, Tableau migration, PBIP/PBIR, Git, Azure DevOps, deployment pipelines, Power Automate and AI-assisted BI development with Codex and Claude Code.
+
+## Education and credentials
+
+- Bachelor's Degree in Public Accounting and Finance, 2026.
+- Computer Engineering studies, started 2024.
+- Microsoft Certified: Fabric Data Engineer Associate, DP-700.
+- Microsoft Certified: Fabric Analytics Engineer Associate, DP-600.
+- Microsoft Certified: Power BI Data Analyst Associate, PL-300.
+- Microsoft Certified: Azure AI Fundamentals, AI-900.
+- **In progress:** SQL AI Developer Associate, DP-800.
+- **In progress:** Azure Database Administrator Associate, DP-300.
+
+Four certifications earned; two in preparation.

@@ -1,969 +1,1318 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portafolio Profesional de Richard Ampie Chamorro - Senior Data Analyst & Data Engineer. Especialista en Azure, Fabric y Power BI con mentalidad financiera contable.">
-    <meta name="author" content="Richard Ampie Chamorro">
-    <title>Richard Ampie Chamorro | Data Engineer & Analytics Engineer</title>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="style.css">
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/favicon.png">
-</head>
-<body>
-
-    <!-- Header & Navigation -->
-    <header class="header">
-        <div class="container nav-container">
-            <a href="#" class="logo">
-                <span class="logo-accent">&lt;</span>Richard<span class="logo-accent">.Ampie /&gt;</span>
-            </a>
-            
-            <nav class="nav-menu" id="nav-menu">
-                <a href="#about" class="nav-link" data-i18n="nav_about">Sobre Mí</a>
-                <a href="#services" class="nav-link" data-i18n="nav_services">Especialidades</a>
-                <a href="#projects" class="nav-link" data-i18n="nav_projects">Portafolio</a>
-                <a href="#demos" class="nav-link" data-i18n="nav_demos">Demos Power BI</a>
-                <a href="#certifications" class="nav-link" data-i18n="nav_certs">Certificaciones</a>
-                <a href="#experience" class="nav-link" data-i18n="nav_exp">Experiencia</a>
-                <a href="#contact" class="nav-link btn-nav" data-i18n="nav_contact">Contacto</a>
-            </nav>
-
-            <!-- Bilingual Toggle & Menu Buttons -->
-            <div class="nav-actions">
-                <div class="lang-selector">
-                    <button class="lang-btn active" id="btn-es" onclick="changeLanguage('es')">ES</button>
-                    <div class="lang-divider">|</div>
-                    <button class="lang-btn" id="btn-en" onclick="changeLanguage('en')">EN</button>
-                </div>
-                <button class="mobile-toggle" id="mobile-toggle" aria-label="Abrir menú">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </button>
-            </div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Richard Ampié | Consultoría en BI, automatización e IA</title>
+    <meta
+      name="description"
+      content="Consultoría en Power BI, Microsoft Fabric, automatización e IA aplicada. Richard Ampié: liderazgo técnico, migraciones Tableau a Power BI y optimización de operaciones analíticas."
+    />
+    <meta name="author" content="Richard Ampié Chamorro" />
+    <meta name="theme-color" content="#173d35" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_LA" />
+    <meta
+      property="og:title"
+      content="Richard Ampié | Consultoría en BI, automatización e IA"
+    />
+    <meta
+      property="og:description"
+      content="Consultoría en Power BI, Microsoft Fabric, automatización e IA aplicada. Richard Ampié: liderazgo técnico, migraciones Tableau a Power BI y optimización de operaciones analíticas."
+    />
+    <meta
+      property="og:image"
+      content="https://r1chardds.github.io/Web-Portfolio/assets/social-card.png"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="assets/monogram.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Manrope:wght@400;500;600;650;700;750;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="content.js" defer></script>
+    <script src="app.js" defer></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Richard Ampié Chamorro",
+        "url": "https://r1chardds.github.io/Web-Portfolio/",
+        "jobTitle": "Business Intelligence & Data Development Supervisor",
+        "knowsAbout": [
+          "Power BI",
+          "Microsoft Fabric",
+          "Data engineering",
+          "Business intelligence",
+          "Automation",
+          "AI-assisted development"
+        ],
+        "sameAs": [
+          "https://github.com/R1chardDs",
+          "https://www.linkedin.com/in/richard-ampie-218a07247/"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" data-i18n="skip" href="#main">Ir al contenido</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="wordmark" href="#top" aria-label="Richard Ampié"
+          ><span class="monogram" aria-hidden="true">ra<span>·</span></span
+          ><span class="wordmark-name"
+            >Richard Ampié<small>DATA & AI CONSULTING</small></span
+          ></a
+        >
+        <nav id="main-nav" aria-label="Principal">
+          <a data-i18n="nav.services" href="#services">Servicios</a
+          ><a data-i18n="nav.impact" href="#impact">Resultados</a
+          ><a data-i18n="nav.work" href="#projects">Proyectos</a
+          ><a data-i18n="nav.about" href="#about">Mi enfoque</a>
+        </nav>
+        <div class="header-actions">
+          <div
+            class="language-switch"
+            role="group"
+            aria-label="Idioma / Language"
+          >
+            <button type="button" data-lang="es" aria-pressed="true" lang="es">
+              ES</button
+            ><span>/</span
+            ><button
+              type="button"
+              data-lang="en"
+              aria-pressed="false"
+              lang="en"
+            >
+              EN
+            </button>
+          </div>
+          <a class="header-contact" data-i18n="nav.contact" href="#contact"
+            >Conversemos</a
+          ><button
+            class="menu-toggle"
+            type="button"
+            aria-controls="main-nav"
+            aria-expanded="false"
+            aria-label="Abrir menú"
+          >
+            <span></span><span></span>
+          </button>
         </div>
+      </div>
     </header>
-
-    <!-- Hero Section -->
-    <section class="hero-section" id="hero">
-        <div class="container hero-container">
-            <div class="hero-content">
-                <div class="badge-role" data-i18n="hero_badge">LA SÍNTESIS PERFECTA ENTRE INGENIERÍA, ANALÍTICA Y NEGOCIO</div>
-                <h1 class="hero-title" data-i18n="hero_title">
-                    Diseñando arquitecturas de datos que impulsan la <span class="text-gradient">salud financiera</span> de tu negocio
-                </h1>
-                <p class="hero-subtitle" data-i18n="hero_subtitle">
-                    Richard Ampie Chamorro | Senior Data Analyst & Data Engineer
-                </p>
-                <p class="hero-description" data-i18n="hero_description">
-                    Especialista certificado por Microsoft en Data Engineering y Analytics Engineer. Diseño, automatizo y despliego soluciones integrales en Azure, Fabric y Power BI que automatizan flujos complejos, reducen costos de cómputo y estandarizan la gobernanza analítica con un entendimiento financiero nativo.
-                </p>
-                <div class="hero-ctas">
-                    <a href="#projects" class="btn btn-primary" data-i18n="hero_cta_primary">Explorar Casos de Éxito</a>
-                    <a href="#demos" class="btn btn-secondary" data-i18n="hero_cta_secondary">Ver Demos Power BI</a>
-                </div>
-                <!-- Micro Certs Badge Preview -->
-                <div class="hero-certs-preview">
-                    <span class="certs-preview-label" data-i18n="hero_certs_label">Certificaciones Oficiales Microsoft:</span>
-                    <div class="certs-badge-group">
-                        <span class="cert-pill">Azure Data Engineer</span>
-                        <span class="cert-pill">Fabric Analytics Associate</span>
-                        <span class="cert-pill">Power BI Data Analyst</span>
-                        <span class="cert-pill">Azure AI Fundamentals</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="hero-visual">
-                <div class="visual-canvas">
-                    <!-- Glassmorphic Tech Pipeline Animation Container -->
-                    <div class="pipeline-card">
-                        <div class="pipeline-node data-source">
-                            <span class="node-label">ERP / Softland / APIs</span>
-                            <div class="pulse-ring"></div>
-                        </div>
-                        <div class="pipeline-flow">
-                            <div class="flow-line"></div>
-                            <div class="flow-dot"></div>
-                        </div>
-                        <div class="pipeline-node data-eng">
-                            <span class="node-label">Azure / Fabric / PySpark</span>
-                            <div class="pulse-ring"></div>
-                        </div>
-                        <div class="pipeline-flow">
-                            <div class="flow-line"></div>
-                            <div class="flow-dot"></div>
-                        </div>
-                        <div class="pipeline-node data-bi">
-                            <span class="node-label">Power BI / SQL / DAX</span>
-                            <div class="pulse-ring"></div>
-                        </div>
-                    </div>
-                    
-                    <!-- Floating Stat card representing financial ROI -->
-                    <div class="floating-roi-card">
-                        <div class="roi-header">
-                            <span class="roi-title" data-i18n="hero_roi_title">Optimización Financiera</span>
-                            <span class="roi-percent">+50% Efficiency</span>
-                        </div>
-                        <div class="roi-chart">
-                            <div class="chart-bar" style="height: 40%"></div>
-                            <div class="chart-bar" style="height: 60%"></div>
-                            <div class="chart-bar" style="height: 85%"></div>
-                            <div class="chart-bar highlight" style="height: 100%"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <span class="mouse-icon"><span class="wheel"></span></span>
-        </div>
-    </section>
-
-    <!-- About Me Section -->
-    <section class="about-section" id="about">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag" data-i18n="about_tag">VISIÓN GENERAL</span>
-                <h2 class="section-title" data-i18n="about_title">La Ventaja de un Perfil Híbrido</h2>
-            </div>
-            
-            <div class="about-grid">
-                <!-- Signature Outcomes Sidebar -->
-                <div class="outcomes-sidebar">
-                    <div class="outcome-card">
-                        <div class="outcome-num" data-target="60">-60%</div>
-                        <div class="outcome-label" data-i18n="out_time_title">Tiempo de Despliegue</div>
-                        <p class="outcome-desc" data-i18n="out_time_desc">Gobernanza de BI estandarizada mediante Git DevOps y pipelines Dev/Test/Prod (de 72h a ~30h).</p>
-                    </div>
-                    <div class="outcome-card">
-                        <div class="outcome-num" data-target="230">+230</div>
-                        <div class="outcome-label" data-i18n="out_mig_title">Reportes Modernizados</div>
-                        <p class="outcome-desc" data-i18n="out_mig_desc">Migración hands-on de Tableau/Excel a Power BI con 90% menos incidencias.</p>
-                    </div>
-                    <div class="outcome-card">
-                        <div class="outcome-num" data-target="67">-67%</div>
-                        <div class="outcome-label" data-i18n="out_ing_title">Tiempo de Ingesta</div>
-                        <p class="outcome-desc" data-i18n="out_ing_desc">Migración SSIS a Fabric Lakehouse, acelerando flujos de carga de 3h a 1h.</p>
-                    </div>
-                    <div class="outcome-card">
-                        <div class="outcome-num" data-target="50">-50%</div>
-                        <div class="outcome-label" data-i18n="out_cap_title">Costo de Capacidad</div>
-                        <p class="outcome-desc" data-i18n="out_cap_desc">Optimización en Microsoft Fabric mediante cargas incrementales y tuneo de DAX/SQL.</p>
-                    </div>
-                </div>
-
-                <!-- Main Professional Narrative -->
-                <div class="about-narrative">
-                    <p class="narrative-lead" data-i18n="about_lead">
-                        Muchas organizaciones sufren el mismo problema: sus ingenieros de datos no entienden los estados financieros que procesan, y sus financieros no saben cómo optimizar una base de datos. Mi propuesta de valor cierra esa brecha por completo.
-                    </p>
-                    <div class="narrative-body">
-                        <p data-i18n="about_p1">
-                            Mi carrera comenzó en el núcleo de las finanzas y la contabilidad empresarial. Comprendo de forma nativa la lógica del negocio, los desvíos presupuestarios (OPEX/CAPEX) y la importancia crítica de la consistencia fiscal. Posteriormente, traduje esta visión comercial al campo técnico, convirtiéndome en Especialista Certificado por Microsoft en el diseño de infraestructuras analíticas avanzadas.
-                        </p>
-                        <p data-i18n="about_p2">
-                            Ya sea migrando reportes analíticos a entornos gobernados, reduciendo a la mitad los costos de capacidad en Microsoft Fabric o estructurando bases de datos desde cero sobre SQL Server y PySpark, mi enfoque siempre es el mismo: crear valor tangible, ahorrar tiempo operativo y asegurar una única versión de la verdad comercial.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services & Specialties Section -->
-    <section class="services-section" id="services">
-        <div class="container">
-            <div class="section-header text-center">
-                <span class="section-tag" data-i18n="serv_tag">QUÉ HAGO</span>
-                <h2 class="section-title" data-i18n="serv_title">Especialidades & Soluciones Estratégicas</h2>
-            </div>
-
-            <div class="services-grid">
-                <!-- Card 1: Data Engineering -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
-                            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
-                            <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"></path>
-                        </svg>
-                    </div>
-                    <h3 class="service-name" data-i18n="serv_eng_title">1. Arquitectura & Data Engineering</h3>
-                    <p class="service-desc" data-i18n="serv_eng_desc">Construcción de cimientos sólidos, seguros y escalables para el flujo de información corporativa.</p>
-                    <ul class="service-bullets">
-                        <li data-i18n="serv_eng_b1"><strong>Gobernanza y DevOps:</strong> Control de versiones con Git (Azure DevOps), despliegue continuo de reportes (.pbip) y administración de workspaces.</li>
-                        <li data-i18n="serv_eng_b2"><strong>Orquestación de Pipelines:</strong> Reemplazo de SSIS tradicionales por flujos modernos y rápidos en Fabric Data Factory.</li>
-                        <li data-i18n="serv_eng_b3"><strong>Procesamiento Escalable:</strong> Transformación de datos usando PySpark / Notebooks de Python y SQL.</li>
-                    </ul>
-                </div>
-
-                <!-- Card 2: Analytics & BI -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <line x1="18" y1="20" x2="18" y2="10"></line>
-                            <line x1="12" y1="20" x2="12" y2="4"></line>
-                            <line x1="6" y1="20" x2="6" y2="14"></line>
-                        </svg>
-                    </div>
-                    <h3 class="service-name" data-i18n="serv_bi_title">2. Visualización e Inteligencia de Negocio</h3>
-                    <p class="service-desc" data-i18n="serv_bi_desc">Modelado y reportería avanzada para traducir millones de filas de datos en decisiones inmediatas.</p>
-                    <ul class="service-bullets">
-                        <li data-i18n="serv_bi_b1"><strong>Modelado Estrella:</strong> Arquitectura de modelos robustos en SQL Server con lógica DAX optimizada para refrescos rápidos (5-20 min).</li>
-                        <li data-i18n="serv_bi_b2"><strong>Dashboards de Alto Impacto:</strong> Desarrollo en Power BI consumiendo APIs REST y base de datos locales/nube.</li>
-                        <li data-i18n="serv_bi_b3"><strong>Gobernanza de Capacidades:</strong> Monitoreo de recursos Fabric para evitar throttling y gestionar licencias eficientemente.</li>
-                    </ul>
-                </div>
-
-                <!-- Card 3: Finance Automation -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="2" y="4" width="20" height="16" rx="2" ry="2"></rect>
-                            <line x1="12" y1="4" x2="12" y2="20"></line>
-                            <line x1="2" y1="12" x2="22" y2="12"></line>
-                        </svg>
-                    </div>
-                    <h3 class="service-name" data-i18n="serv_fin_title">3. Inteligencia Financiera & Automatización</h3>
-                    <p class="service-desc" data-i18n="serv_fin_desc">Optimización de la contabilidad analítica, auditoría automática del dato y aceleración contable.</p>
-                    <ul class="service-bullets">
-                        <li data-i18n="serv_fin_b1"><strong>Cierres Mensuales Acelerados:</strong> Reducción del tiempo de cierre del mes en un 50% (de 5 a 2.5 días hábiles).</li>
-                        <li data-i18n="serv_fin_b2"><strong>Reportería Fiscal & OPEX:</strong> Automatización de reportes de retenciones fiscales y análisis OPEX vinculados al ERP Softland.</li>
-                        <li data-i18n="serv_fin_b3"><strong>Productividad RPA:</strong> Desarrollo con Power Apps y Power Automate para eliminar procesos manuales administrativos.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section class="projects-section" id="projects">
-        <div class="container">
-            <div class="section-header flex-header">
-                <div>
-                    <span class="section-tag" data-i18n="proj_tag">CASOS REALES</span>
-                    <h2 class="section-title" data-i18n="proj_title">Ingeniería & Analítica Aplicada</h2>
-                </div>
-                
-                <!-- Tab Selector for Projects -->
-                <div class="tab-container">
-                    <button class="tab-btn active" id="tab-corporate" onclick="togglePortfolioCategory('corporate')" data-i18n="tab_corp">Casos Corporativos</button>
-                    <button class="tab-btn" id="tab-personal" onclick="togglePortfolioCategory('personal')" data-i18n="tab_pers">Laboratorio y Prácticas</button>
-                </div>
-            </div>
-
-            <!-- Carousel Wrapper for Corporate Projects -->
-            <div class="carousel-wrapper" id="carousel-corporate-container">
-                <button class="carousel-control-btn btn-prev" onclick="moveCarousel('corp', -1)">&#8592;</button>
-                <div class="carousel-viewport">
-                    <div class="carousel-track" id="carousel-corp-track">
-                        <!-- Case 1: Corporate (BI DevOps) -->
-                        <div class="carousel-slide">
-                            <div class="project-card">
-                                <div class="project-header">
-                                    <span class="project-category" data-i18n="proj_c1_cat">DevOps & Gobernanza</span>
-                                    <span class="project-outcome" data-i18n="proj_c1_out">-60% Despliegue</span>
-                                </div>
-                                <h3 class="project-name" data-i18n="proj_c1_title">Gobernanza de BI y Git Integration en Fabric</h3>
-                                <p class="project-desc" data-i18n="proj_c1_desc">Implementación de un flujo de desarrollo ordenado integrando archivos .pbip con Git en Azure DevOps y despliegues pipelines separados (Dev/Test/Prod) en Fabric.</p>
-                                <div class="project-stack">
-                                    <span class="tech-tag">Microsoft Fabric</span>
-                                    <span class="tech-tag">Azure DevOps</span>
-                                    <span class="tech-tag">Power BI</span>
-                                    <span class="tech-tag">Git</span>
-                                </div>
-                                <div class="project-impact-box">
-                                    <strong data-i18n="proj_c1_imp_lbl">Impacto:</strong> <span data-i18n="proj_c1_imp_val">Ciclo de lanzamiento reducido de 72h a ~30h promedio con total trazabilidad y control de fallos en producción.</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Case 2: Corporate (Migration) -->
-                        <div class="carousel-slide">
-                            <div class="project-card">
-                                <div class="project-header">
-                                    <span class="project-category" data-i18n="proj_c2_cat">Data Engineering</span>
-                                    <span class="project-outcome" data-i18n="proj_c2_out">3x Más Rápido</span>
-                                </div>
-                                <h3 class="project-name" data-i18n="proj_c2_title">Migración Masiva de DWH y Reportería</h3>
-                                <p class="project-desc" data-i18n="proj_c2_desc">Migración estructural de un DWH obsoleto en SSIS a un Microsoft Fabric Lakehouse. Migración hands-on de 80 reportes de Tableau/Excel a un entorno centralizado de Power BI.</p>
-                                <div class="project-stack">
-                                    <span class="tech-tag">Fabric Lakehouse</span>
-                                    <span class="tech-tag">PySpark</span>
-                                    <span class="tech-tag">SQL Server</span>
-                                    <span class="tech-tag">Power BI</span>
-                                </div>
-                                <div class="project-impact-box">
-                                    <strong data-i18n="proj_c2_imp_lbl">Impacto:</strong> <span data-i18n="proj_c2_imp_val">Reducción del procesamiento de ingesta de 3h a 1h e incidencias post-actualización reducidas en un 90%.</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Case 3: Corporate (Financial) -->
-                        <div class="carousel-slide">
-                            <div class="project-card">
-                                <div class="project-header">
-                                    <span class="project-category" data-i18n="proj_c3_cat">BI & Inteligencia Financiera</span>
-                                    <span class="project-outcome" data-i18n="proj_c3_out">Cierre en 2.5 Días</span>
-                                </div>
-                                <h3 class="project-name" data-i18n="proj_c3_title">Reportería de Márgenes y OPEX Automatizado</h3>
-                                <p class="project-desc" data-i18n="proj_c3_desc">Conexión directa de APIs REST y el ERP Softland con SQL Server para generar dashboards automatizados en Power BI, eliminando conciliaciones manuales de OPEX.</p>
-                                <div class="project-stack">
-                                    <span class="tech-tag">Power BI (DAX)</span>
-                                    <span class="tech-tag">SQL Server</span>
-                                    <span class="tech-tag">REST APIs</span>
-                                    <span class="tech-tag">Softland ERP</span>
-                                </div>
-                                <div class="project-impact-box">
-                                    <strong data-i18n="proj_c3_imp_lbl">Impacto:</strong> <span data-i18n="proj_c3_imp_val">Ahorro de 24h mensuales por director de proyecto, margen bruto actualizado diario y cierre mensual 50% más rápido.</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Case 4: Corporate (Fabric/Azure Cost - NEW) -->
-                        <div class="carousel-slide">
-                            <div class="project-card">
-                                <div class="project-header">
-                                    <span class="project-category" data-i18n="proj_c4_cat">Cloud Operations & ROI</span>
-                                    <span class="project-outcome" data-i18n="proj_c4_out">-50% Cómputo</span>
-                                </div>
-                                <h3 class="project-name" data-i18n="proj_c4_title">Optimización en Fabric y Reducción de Costos Azure</h3>
-                                <p class="project-desc" data-i18n="proj_c4_desc">Reducción sustancial del consumo de unidades de cómputo en Fabric aplicando cargas incrementales, particionamiento lógico, y robustos controles pre/post carga en Azure.</p>
-                                <div class="project-stack">
-                                    <span class="tech-tag">Microsoft Fabric</span>
-                                    <span class="tech-tag">Azure Portal</span>
-                                    <span class="tech-tag">Capacity Metrics</span>
-                                    <span class="tech-tag">T-SQL</span>
-                                </div>
-                                <div class="project-impact-box">
-                                    <strong data-i18n="proj_c4_imp_lbl">Impacto:</strong> <span data-i18n="proj_c4_imp_val">Evitación total de throttling de capacidades, reducción del 50% de uso redundante y control del presupuesto nube.</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-control-btn btn-next" onclick="moveCarousel('corp', 1)">&#8594;</button>
-            </div>
-
-            <!-- Carousel Wrapper for Personal/Labs Projects -->
-            <div class="carousel-wrapper d-none" id="carousel-personal-container">
-                <button class="carousel-control-btn btn-prev" onclick="moveCarousel('pers', -1)">&#8592;</button>
-                <div class="carousel-viewport">
-                    <div class="carousel-track" id="carousel-pers-track">
-                        <!-- Lab 1: DAX Optimizer -->
-                        <div class="carousel-slide">
-                            <div class="project-card">
-                                <div class="project-header">
-                                    <span class="project-category" data-i18n="proj_p1_cat">Optimización Semántica</span>
-                                    <span class="project-outcome" data-i18n="proj_p1_out">GitHub Lab</span>
-                                </div>
-                                <h3 class="project-name" data-i18n="proj_p1_title">Framework de Optimización DAX & Fabric Capacity</h3>
-                                <p class="project-desc" data-i18n="proj_p1_desc">Conjunto de scripts de diagnóstico y mejores prácticas documentadas para auditar modelos de Power BI grandes, reduciendo el consumo de Capacity Units (CU).</p>
-                                <div class="project-stack">
-                                    <span class="tech-tag">Tabular Editor</span>
-                                    <span class="tech-tag">DAX Studio</span>
-                                    <span class="tech-tag">Fabric Monitor</span>
-                                </div>
-                                <div class="dual-btn-group">
-                                    <a href="https://github.com/tu-usuario" target="_blank" class="btn btn-secondary btn-sm" data-i18n="proj_view_git">Ver Código en Git</a>
-                                    <a href="https://ejemplo.com/doc1.pdf" target="_blank" class="btn btn-primary btn-sm" data-i18n="proj_view_doc">Ver Documentación</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Lab 2: API Python requests -->
-                        <div class="carousel-slide">
-                            <div class="project-card">
-                                <div class="project-header">
-                                    <span class="project-category" data-i18n="proj_p2_cat">Python Data Pipelines</span>
-                                    <span class="project-outcome" data-i18n="proj_p2_out">GitHub Lab</span>
-                                </div>
-                                <h3 class="project-name" data-i18n="proj_p2_title">Ingesta y ETL Automático de APIs REST Públicas</h3>
-                                <p class="project-desc" data-i18n="proj_p2_desc">Proyecto en Python para ingestar, formatear y almacenar datos transaccionales de APIs externas a base de datos relacionales SQL Server, controlando logs de fallas.</p>
-                                <div class="project-stack">
-                                    <span class="tech-tag">Python (Pandas)</span>
-                                    <span class="tech-tag">SQL Server</span>
-                                    <span class="tech-tag">Requests API</span>
-                                </div>
-                                <div class="dual-btn-group">
-                                    <a href="https://github.com/tu-usuario" target="_blank" class="btn btn-secondary btn-sm" data-i18n="proj_view_git">Ver Código en Git</a>
-                                    <a href="https://ejemplo.com/doc2.pdf" target="_blank" class="btn btn-primary btn-sm" data-i18n="proj_view_doc">Ver Documentación</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Lab 3: Formula 1 Medallion DWH (NEW) -->
-                        <div class="carousel-slide">
-                            <div class="project-card">
-                                <div class="project-header">
-                                    <span class="project-category" data-i18n="proj_p3_cat">Medallion ETL Pipeline</span>
-                                    <span class="project-outcome" data-i18n="proj_p3_out">Medallion Lab</span>
-                                </div>
-                                <h3 class="project-name" data-i18n="proj_p3_title">Proyecto ETL de Formula 1 (Fabric & Scrape)</h3>
-                                <p class="project-desc" data-i18n="proj_p3_desc">Extracción masiva de datos (carreras, qualys, prácticas) usando web scraping con PySpark y Pandas, implementada en Fabric bajo arquitectura Medallion (Bronze/Silver/Gold).</p>
-                                <div class="project-stack">
-                                    <span class="tech-tag">Microsoft Fabric</span>
-                                    <span class="tech-tag">PySpark (Python)</span>
-                                    <span class="tech-tag">Gold Delta Tables</span>
-                                </div>
-                                <div class="dual-btn-group">
-                                    <a href="https://github.com/tu-usuario" target="_blank" class="btn btn-secondary btn-sm" data-i18n="proj_view_git">Ver Código en Git</a>
-                                    <a href="https://ejemplo.com/doc_f1.pdf" target="_blank" class="btn btn-primary btn-sm" data-i18n="proj_view_doc">Ver Documentación</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Lab 4: Transaction Classifier (NEW) -->
-                        <div class="carousel-slide">
-                            <div class="project-card">
-                                <div class="project-header">
-                                    <span class="project-category" data-i18n="proj_p4_cat">Machine Learning / Finance</span>
-                                    <span class="project-outcome" data-i18n="proj_p4_out">Streamlit RPA</span>
-                                </div>
-                                <h3 class="project-name" data-i18n="proj_p4_title">Clasificación de Transacciones con ML</h3>
-                                <p class="project-desc" data-i18n="proj_p4_desc">Modelo entrenado con descripciones y referencias contables para clasificar automáticamente estados de cuenta bancarios. Desarrollado en Streamlit y orquestado con Apache Airflow.</p>
-                                <div class="project-stack">
-                                    <span class="tech-tag">Python (Scikit)</span>
-                                    <span class="tech-tag">Apache Airflow</span>
-                                    <span class="tech-tag">Streamlit UI</span>
-                                </div>
-                                <div class="dual-btn-group">
-                                    <a href="https://github.com/tu-usuario" target="_blank" class="btn btn-secondary btn-sm" data-i18n="proj_view_git">Ver Código en Git</a>
-                                    <a href="https://ejemplo.com/doc_ml.pdf" target="_blank" class="btn btn-primary btn-sm" data-i18n="proj_view_doc">Ver Documentación</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-control-btn btn-next" onclick="moveCarousel('pers', 1)">&#8594;</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Power BI Gallery Section -->
-    <section class="demos-section" id="demos">
-        <div class="container">
-            <div class="section-header text-center">
-                <span class="section-tag" data-i18n="demo_tag">GALERÍA ANALÍTICA</span>
-                <h2 class="section-title" data-i18n="demo_title">Portafolio de Reportes Power BI</h2>
-            </div>
-
-            <!-- Disclaimer Box for Practices (Default/Visible) -->
-            <div class="disclaimer-box" id="pbi-practices-disclaimer">
-                <span class="disclaimer-icon">💡</span>
-                <p class="disclaimer-text" data-i18n="pbi_practices_disclaimer">
-                    <strong>Aviso de Nivel Senior:</strong> Los siguientes tableros interactivos demuestran mis capacidades de análisis de datos a nivel SENIOR, incorporando modelados complejos, arquitectura semántica y lógicas analíticas avanzadas desarrolladas para la toma de decisiones estratégicas.
-                </p>
-            </div>
-
-            <!-- Practices Showcase (Live Links - Active by Default) -->
-            <div class="carousel-wrapper" id="demos-practices-container">
-                <button class="carousel-control-btn btn-prev" onclick="moveCarousel('pbipract', -1)">&#8592;</button>
-                <div class="carousel-viewport">
-                    <div class="carousel-track" id="carousel-pbipract-track">
-                        <!-- Practice 1: F1 Dashboard -->
-                        <div class="carousel-slide">
-                            <div class="demo-card">
-                                <div class="demo-visual-container">
-                                    <div class="monitor-frame">
-                                        <a href="https://app.fabric.microsoft.com/view?r=eyJrIjoiYzY1Y2Y1YWQtNDM5NC00Y2RhLWFjZmItNmQ0NTQ0MDhkMWYxIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" class="monitor-screen">
-                                            <div class="dashboard-placeholder dp-practice-f1">
-                                                <img src="assets/Portfolio_PbiDemo_F1.png" alt="F1 Analytics Dashboard" class="dashboard-preview-img">
-                                            </div>
-                                            <div class="hover-overlay">
-                                                <span class="hover-icon">↗</span>
-                                                <span class="hover-text" data-i18n="demo_cta_interact">Interactuar con Reporte</span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="demo-info">
-                                    <div class="demo-area" data-i18n="demo_f1_area">Inteligencia Deportiva & ETL</div>
-                                    <h3 class="demo-title" data-i18n="demo_f1_title">F1 Analytics: Dashboard del Campeonato</h3>
-                                    <p class="demo-desc" data-i18n="demo_f1_desc">Reporte interactivo alimentado directamente del Lakehouse de Formula 1 en Fabric, analizando tiempos de vuelta, posiciones históricas y ratios de pits.</p>
-                                    <a href="https://app.fabric.microsoft.com/view?r=eyJrIjoiYzY1Y2Y1YWQtNDM5NC00Y2RhLWFjZmItNmQ0NTQ0MDhkMWYxIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" class="btn-demo-link" data-i18n="demo_btn_open">Abrir Reporte Interactivo ↗</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Championship 1 -->
-                        <div class="carousel-slide">
-                            <div class="demo-card">
-                                <div class="demo-visual-container">
-                                    <div class="monitor-frame">
-                                        <a href="https://app.fabric.microsoft.com/view?r=eyJrIjoiOTU5MTc2ZmUtMjE3YS00ZWQ1LWFjYzktYWIyNGIwNjQ4ZTY2IiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" class="monitor-screen">
-                                            <div class="dashboard-placeholder dp-practice-ch1">
-                                                <img src="assets/Portfolio_PbiDemo_WC2026R1.png" alt="World Championship Edition 1 Dashboard" class="dashboard-preview-img">
-                                            </div>
-                                            <div class="hover-overlay">
-                                                <span class="hover-icon">↗</span>
-                                                <span class="hover-text" data-i18n="demo_cta_interact">Interactuar con Reporte</span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="demo-info">
-                                    <div class="demo-area" data-i18n="demo_c1_area">World Championship 2026 - Ronda 1</div>
-                                    <h3 class="demo-title" data-i18n="demo_c1_title">Visualización y Storytelling de Datos</h3>
-                                    <p class="demo-desc" data-i18n="demo_c1_desc">Mi primera participación destacada en el Campeonato Mundial oficial de Microsoft, logrando mención de honor en optimización y modelado semántico de alta complejidad.</p>
-                                    <a href="https://app.fabric.microsoft.com/view?r=eyJrIjoiOTU5MTc2ZmUtMjE3YS00ZWQ1LWFjYzktYWIyNGIwNjQ4ZTY2IiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" class="btn-demo-link" data-i18n="demo_btn_open">Abrir Reporte Interactivo ↗</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Championship 2 -->
-                        <div class="carousel-slide">
-                            <div class="demo-card">
-                                <div class="demo-visual-container">
-                                    <div class="monitor-frame">
-                                        <a href="https://app.fabric.microsoft.com/view?r=eyJrIjoiNDQ0YWQyN2UtZjI0Zi00Mzk0LTkxMGMtM2YyODk4NDEzMjVhIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" class="monitor-screen">
-                                            <div class="dashboard-placeholder dp-practice-ch2">
-                                                <img src="assets/Portfolio_PbiDemo_WC2026R2.png" alt="World Championship Edition 2 Dashboard" class="dashboard-preview-img">
-                                            </div>
-                                            <div class="hover-overlay">
-                                                <span class="hover-icon">↗</span>
-                                                <span class="hover-text" data-i18n="demo_cta_interact">Interactuar con Reporte</span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="demo-info">
-                                    <div class="demo-area" data-i18n="demo_c2_area">World Championship 2026 - Ronda 2</div>
-                                    <h3 class="demo-title" data-i18n="demo_c2_title">Analítica Corporativa & Dashboards Ejecutivos</h3>
-                                    <p class="demo-desc" data-i18n="demo_c2_desc">Desarrollo interactivo enfocado en la conversión de negocio y agilidad operativa. Proyecto calificado por jueces expertos de la comunidad de Microsoft.</p>
-                                    <a href="https://app.fabric.microsoft.com/view?r=eyJrIjoiNDQ0YWQyN2UtZjI0Zi00Mzk0LTkxMGMtM2YyODk4NDEzMjVhIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" class="btn-demo-link" data-i18n="demo_btn_open">Abrir Reporte Interactivo ↗</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Championship 3 -->
-                        <div class="carousel-slide">
-                            <div class="demo-card">
-                                <div class="demo-visual-container">
-                                    <div class="monitor-frame">
-                                        <a href="https://app.fabric.microsoft.com/view?r=eyJrIjoiNjIzYzBiNTAtMjZjMi00NGIzLTlmM2UtYjg3NzBkOGEyNjdmIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" class="monitor-screen">
-                                            <div class="dashboard-placeholder dp-practice-ch3">
-                                                <img src="assets/Portfolio_PbiDemo_WC2026R3.png" alt="World Championship Edition 3 Dashboard" class="dashboard-preview-img">
-                                            </div>
-                                            <div class="hover-overlay">
-                                                <span class="hover-icon">↗</span>
-                                                <span class="hover-text" data-i18n="demo_cta_interact">Interactuar con Reporte</span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="demo-info">
-                                    <div class="demo-area" data-i18n="demo_c3_area">World Championship 2026 - Ronda 3</div>
-                                    <h3 class="demo-title" data-i18n="demo_c3_title">UI/UX Avanzado & UX de Consumo Ejecutivo</h3>
-                                    <p class="demo-desc" data-i18n="demo_c3_desc">Dashboard centrado en jerarquías visuales limpias, con distribución armónica de gráficos de dispersión y navegación personalizada sin fricción.</p>
-                                    <a href="https://app.fabric.microsoft.com/view?r=eyJrIjoiNjIzYzBiNTAtMjZjMi00NGIzLTlmM2UtYjg3NzBkOGEyNjdmIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" class="btn-demo-link" data-i18n="demo_btn_open">Abrir Reporte Interactivo ↗</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Championship S2 Round 1 -->
-                        <div class="carousel-slide">
-                            <div class="demo-card">
-                                <div class="demo-visual-container">
-                                    <div class="monitor-frame">
-                                        <a href="https://app.fabric.microsoft.com/view?r=eyJrIjoiYmJiM2EyZmMtNjI2ZC00MzJiLThjODktNGE2OGZmMWEwMWMyIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" class="monitor-screen">
-                                            <div class="dashboard-placeholder dp-practice-s2r1">
-                                                <img src="assets/Portfolio_PbiDemo_WC2026S2R1.png" alt="World Championship 2026 S2 Round 1 Financial Analysis Dashboard" class="dashboard-preview-img">
-                                            </div>
-                                            <div class="hover-overlay">
-                                                <span class="hover-icon">↗</span>
-                                                <span class="hover-text" data-i18n="demo_cta_interact">Interactuar con Reporte</span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="demo-info">
-                                    <div class="demo-area" data-i18n="demo_s2r1_area">World Championship 2026 Season 2 - Ronda 1</div>
-                                    <h3 class="demo-title" data-i18n="demo_s2r1_title">Análisis Financiero Empresarial &amp; Storytelling</h3>
-                                    <p class="demo-desc" data-i18n="demo_s2r1_desc">Reporte interactivo enfocado en el diagnóstico financiero integral, analizando las fortalezas y debilidades operativas de una empresa mediante técnicas de storytelling avanzado.</p>
-                                    <a href="https://app.fabric.microsoft.com/view?r=eyJrIjoiYmJiM2EyZmMtNjI2ZC00MzJiLThjODktNGE2OGZmMWEwMWMyIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" class="btn-demo-link" data-i18n="demo_btn_open">Abrir Reporte Interactivo ↗</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Championship S2 Round 2 -->
-                        <div class="carousel-slide">
-                            <div class="demo-card">
-                                <div class="demo-visual-container">
-                                    <div class="monitor-frame">
-                                        <a href="https://app.fabric.microsoft.com/view?r=eyJrIjoiYmMxY2Y0NDAtZDhkNy00Y2Y1LWIyOGItOTU1MjY3NGVjMWJlIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" class="monitor-screen">
-                                            <div class="dashboard-placeholder dp-practice-s2r2">
-                                                <img src="assets/Portfolio_PbiDemo_WC2026S2R2.png" alt="World Championship 2026 S2 Round 2 Lego Museum Dashboard" class="dashboard-preview-img">
-                                            </div>
-                                            <div class="hover-overlay">
-                                                <span class="hover-icon">↗</span>
-                                                <span class="hover-text" data-i18n="demo_cta_interact">Interactuar con Reporte</span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="demo-info">
-                                    <div class="demo-area" data-i18n="demo_s2r2_area">World Championship 2026 Season 2 - Ronda 2</div>
-                                    <h3 class="demo-title" data-i18n="demo_s2r2_title">Museo Interactivo LEGO &amp; Analítica Histórica</h3>
-                                    <p class="demo-desc" data-i18n="demo_s2r2_desc">Dashboard enfocado en el análisis histórico de sets de LEGO, patrones de lanzamiento y visualizaciones avanzadas diseñadas para explorar la evolución de colecciones.</p>
-                                    <a href="https://app.fabric.microsoft.com/view?r=eyJrIjoiYmMxY2Y0NDAtZDhkNy00Y2Y1LWIyOGItOTU1MjY3NGVjMWJlIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" class="btn-demo-link" data-i18n="demo_btn_open">Abrir Reporte Interactivo ↗</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-control-btn btn-next" onclick="moveCarousel('pbipract', 1)">&#8594;</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Certifications Section -->
-    <section class="certifications-section" id="certifications">
-        <div class="container">
-            <div class="section-header text-center">
-                <span class="section-tag" data-i18n="cert_tag">RESPALDO PROFESIONAL</span>
-                <h2 class="section-title" data-i18n="cert_title">Certificaciones Oficiales Microsoft</h2>
-                <p class="section-description-sub" data-i18n="cert_subtitle">
-                    Credenciales oficiales emitidas por Microsoft que respaldan mis habilidades en ingeniería de datos, analítica e inteligencia artificial.
-                </p>
-            </div>
-
-            <!-- Certifications Carousel Wrapper -->
-            <div class="carousel-wrapper" id="carousel-certifications-container">
-                <button class="carousel-control-btn btn-prev" onclick="moveCarousel('certs', -1)">&#8592;</button>
-                <div class="carousel-viewport">
-                    <div class="carousel-track" id="carousel-certs-track">
-                        <!-- Cert 1: Azure Data Engineer -->
-                        <div class="carousel-slide">
-                            <div class="cert-card">
-                                <div class="cert-badge-container">
-                                    <img src="assets/DP700 Badge.png" alt="Fabric Data Engineer Associate Badge" class="cert-badge-img">
-                                </div>
-                                <h3 class="cert-name" data-i18n="cert_c1_title">Azure Data Engineer Associate</h3>
-                                <p class="cert-issuer" data-i18n="cert_c1_issuer">Microsoft Certified</p>
-                                <div class="cert-use-commentary">
-                                    <strong data-i18n="cert_comment_label">Aplicación Laboral:</strong>
-                                    <p class="cert-commentary-text" data-i18n="cert_c1_comment">Uso esta credencial para optimizar pipelines en la nube, diseñar Lakehouses escalables y migrar entornos inestables SSIS locales hacia flujos Azure eficientes.</p>
-                                </div>
-                                <a href="https://learn.microsoft.com/api/credentials/share/es-mx/richardampie-0240/F7CDBD4B6FDD0055?sharingId=7758DE5B5185C6B1" target="_blank" class="btn-verify" data-i18n="cert_btn_verify">Verificar Credencial ↗</a>
-                            </div>
-                        </div>
-
-                        <!-- Cert 2: Fabric Analytics -->
-                        <div class="carousel-slide">
-                            <div class="cert-card">
-                                <div class="cert-badge-container">
-                                    <img src="assets/DP600 Badge.png" alt="Fabric Analytics Engineer Associate Badge" class="cert-badge-img">
-                                </div>
-                                <h3 class="cert-name" data-i18n="cert_c2_title">Fabric Analytics Engineer Associate</h3>
-                                <p class="cert-issuer" data-i18n="cert_c2_issuer">Microsoft Certified</p>
-                                <div class="cert-use-commentary">
-                                    <strong data-i18n="cert_comment_label">Aplicación Laboral:</strong>
-                                    <p class="cert-commentary-text" data-i18n="cert_c2_comment">Me capacita para integrar almacenes de datos y Lakehouses en Microsoft Fabric, unificando flujos masivos de finanzas y ventas en una única verdad.</p>
-                                </div>
-                                <a href="https://learn.microsoft.com/api/credentials/share/es-mx/richardampie-0240/ED7938BD47B54F5C?sharingId=7758DE5B5185C6B1" target="_blank" class="btn-verify" data-i18n="cert_btn_verify">Verificar Credencial ↗</a>
-                            </div>
-                        </div>
-
-                        <!-- Cert 3: Power BI -->
-                        <div class="carousel-slide">
-                            <div class="cert-card">
-                                <div class="cert-badge-container">
-                                    <img src="assets/PL300 Badge.png" alt="Power BI Data Analyst Associate Badge" class="cert-badge-img">
-                                </div>
-                                <h3 class="cert-name" data-i18n="cert_c3_title">Power BI Data Analyst Associate</h3>
-                                <p class="cert-issuer" data-i18n="cert_c3_issuer">Microsoft Certified</p>
-                                <div class="cert-use-commentary">
-                                    <strong data-i18n="cert_comment_label">Aplicación Laboral:</strong>
-                                    <p class="cert-commentary-text" data-i18n="cert_c3_comment">Modelado avanzado de datos y creación de cuadros de mando ejecutivos. Con ella lideré la migración de más de 230 reportes manuales a entornos gobernados.</p>
-                                </div>
-                                <a href="https://learn.microsoft.com/api/credentials/share/es-mx/richardampie-0240/23F4EABA13F7FA7E?sharingId=7758DE5B5185C6B1" target="_blank" class="btn-verify" data-i18n="cert_btn_verify">Verificar Credencial ↗</a>
-                            </div>
-                        </div>
-
-                        <!-- Cert 4: Azure AI Fundamentals -->
-                        <div class="carousel-slide">
-                            <div class="cert-card">
-                                <div class="cert-badge-container">
-                                    <img src="assets/IA900 Badge.png" alt="Azure AI Fundamentals Badge" class="cert-badge-img">
-                                </div>
-                                <h3 class="cert-name" data-i18n="cert_c4_title">Azure AI Fundamentals</h3>
-                                <p class="cert-issuer" data-i18n="cert_c4_issuer">Microsoft Certified</p>
-                                <div class="cert-use-commentary">
-                                    <strong data-i18n="cert_comment_label">Aplicación Laboral:</strong>
-                                    <p class="cert-commentary-text" data-i18n="cert_c4_comment">Me brinda fundamentos sólidos para integrar inteligencia artificial en pipelines, automatizando la clasificación y lectura predictiva de datos contables.</p>
-                                </div>
-                                <a href="https://learn.microsoft.com/api/credentials/share/es-mx/richardampie-0240/ED826CFA3634B292?sharingId=7758DE5B5185C6B1" target="_blank" class="btn-verify" data-i18n="cert_btn_verify">Verificar Credencial ↗</a>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <button class="carousel-control-btn btn-next" onclick="moveCarousel('certs', 1)">&#8594;</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Academic Education Section (NEW Layout Below Certifications) -->
-    <section class="education-section" id="education">
-        <div class="container">
-            <div class="section-header text-center">
-                <span class="section-tag" data-i18n="edu_tag">CONOCIMIENTO RESPALDADO</span>
-                <h2 class="section-title" data-i18n="edu_title">Formación Académica</h2>
-            </div>
-
-            <div class="education-grid">
-                <!-- Academic 1: Public Accounting -->
-                <div class="edu-card-custom">
-                    <div class="edu-card-header">
-                        <span class="edu-year" data-i18n="edu_y1">2022 - Presente</span>
-                        <span class="edu-status-badge" data-i18n="edu_badge_grad">Último Año Cursado</span>
-                    </div>
-                    <h3 class="edu-card-title" data-i18n="edu_ac1_title">Contaduría Pública y Finanzas</h3>
-                    <p class="edu-card-school" data-i18n="edu_ac1_school">Universidad de Nicaragua</p>
-                    <p class="edu-card-desc" data-i18n="edu_ac1_desc">Sólida formación en auditoría contable, estructuración fiscal nacional, conciliaciones bancarias complejas, estados financieros P&L e indicadores de OPEX.</p>
-                </div>
-
-                <!-- Academic 2: Computer Engineering -->
-                <div class="edu-card-custom">
-                    <div class="edu-card-header">
-                        <span class="edu-year" data-i18n="edu_y2">2024 - Presente</span>
-                        <span class="edu-status-badge" data-i18n="edu_badge_active">Cursando Activamente</span>
-                    </div>
-                    <h3 class="edu-card-title" data-i18n="edu_ac2_title">Ingeniería en Computación</h3>
-                    <p class="edu-card-school" data-i18n="edu_ac2_school">Universidad de Nicaragua</p>
-                    <p class="edu-card-desc" data-i18n="edu_ac2_desc">Enfoque centrado en algoritmos avanzados de programación, bases de datos relacionales y no relacionales, análisis estructurado de sistemas y arquitectura de computadoras.</p>
-                </div>
-
-                <!-- Academic 3: High School Diploma -->
-                <div class="edu-card-custom">
-                    <div class="edu-card-header">
-                        <span class="edu-year" data-i18n="edu_y3">2019 - 2021</span>
-                        <span class="edu-status-badge" data-i18n="edu_badge_compl">Título Técnico</span>
-                    </div>
-                    <h3 class="edu-card-title" data-i18n="edu_ac3_title">Técnico Medio en Contabilidad</h3>
-                    <p class="edu-card-school" data-i18n="edu_ac3_school">Instituto Técnico de Nicaragua</p>
-                    <p class="edu-card-desc" data-i18n="edu_ac3_desc">Formación técnica inicial en principios de contabilidad generalmente aceptados, registro diario de transacciones fiscales, inventarios y nóminas.</p>
-                </div>
-
-                <!-- Specializations -->
-                <div class="edu-card-custom edu-card-special">
-                    <div class="edu-card-header">
-                        <span class="edu-year" data-i18n="edu_y4">2021 - 2025</span>
-                        <span class="edu-status-badge" data-i18n="edu_badge_special">Especialidades</span>
-                    </div>
-                    <h3 class="edu-card-title" data-i18n="edu_ac4_title">Certificaciones Técnicas Complementarias</h3>
-                    <p class="edu-card-school" data-i18n="edu_ac4_school">Instituciones Oficiales & Microsoft Learn</p>
-                    <div class="edu-specialization-tags">
-                        <span class="edu-spec-tag">Git & GitHub (2025)</span>
-                        <span class="edu-spec-tag">Python for Data Science (2024)</span>
-                        <span class="edu-spec-tag">SQL Server Integration Services (SSIS - 2023)</span>
-                        <span class="edu-spec-tag">Power BI & Tableau Expert (2022)</span>
-                        <span class="edu-spec-tag" data-i18n="edu_s5">Excel Avanzado & Finanzas (2021)</span>
-                        <span class="edu-spec-tag" data-i18n="edu_s6">Inglés Avanzado (C1 - EF SET)</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Technical Stack Section -->
-    <section class="stack-section">
-        <div class="container text-center">
-            <h3 class="stack-heading-section" data-i18n="stack_title">Ecosistema & Stack Tecnológico</h3>
-            <div class="stack-tags-container">
-                <span class="tech-stack-tag">Microsoft Fabric</span>
-                <span class="tech-stack-tag">Azure Portal</span>
-                <span class="tech-stack-tag">Power BI Service/PPU</span>
-                <span class="tech-stack-tag">T-SQL (SQL Server)</span>
-                <span class="tech-stack-tag">PySpark / Python</span>
-                <span class="tech-stack-tag">Git / GitHub / Azure DevOps</span>
-                <span class="tech-stack-tag">SSIS / SSRS</span>
-                <span class="tech-stack-tag">Tabular Editor</span>
-                <span class="tech-stack-tag">DAX Studio</span>
-                <span class="tech-stack-tag">Power Apps</span>
-                <span class="tech-stack-tag">Power Automate</span>
-                <span class="tech-stack-tag">ERP Softland</span>
-                <span class="tech-stack-tag">Lógica Contable Financiera</span>
-                <span class="tech-stack-tag">Prompt Engineering / AI</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- Work Experience Section (NEW - Timeline Layout) -->
-    <section class="experience-section" id="experience">
-        <div class="container">
-            <div class="section-header text-center">
-                <span class="section-tag" data-i18n="exp_tag">HISTORIAL PROFESIONAL</span>
-                <h2 class="section-title" data-i18n="exp_title">Experiencia Laboral</h2>
-            </div>
-
-            <div class="timeline-container">
-                <div class="timeline-line"></div>
-                
-                <!-- Experience Item 1: NowOptics -->
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content-card">
-                        <div class="timeline-header">
-                            <span class="exp-dates" data-i18n="exp_x1_dates">Abril 2025 - Presente</span>
-                            <span class="company-badge">NowOptics</span>
-                        </div>
-                        <h3 class="exp-role" data-i18n="exp_x1_title">SQL & BI Developer Lead</h3>
-                        <p class="exp-desc" data-i18n="exp_x1_desc">Lidero el desarrollo de modelados semánticos de datos complejos y optimización de capacidades analíticas. Responsable directo de garantizar la consistencia analítica corporativa.</p>
-                        <ul class="exp-bullet-list">
-                            <li data-i18n="exp_x1_b1">Implementación completa de Git Integration con Azure DevOps para versionado ordenado y despliegues pipelines Dev/Test/Prod de Power BI (.pbip).</li>
-                            <li data-i18n="exp_x1_b2">Monitoreo y optimización diaria de la capacidad de Microsoft Fabric, bajando en un 50% incidentes de throttling sin degradar servicios para 350+ usuarios.</li>
-                            <li data-i18n="exp_x1_b3">Diseño coordinado de KPIs contables de ventas y logística, erradicando discrepancias operativas y acelerando reportes de facturación de 72h a ~30h.</li>
-                        </ul>
-                        <div class="exp-toolbox">
-                            <strong>Toolbox:</strong> T-SQL, Power BI (DAX), Fabric (Lakehouse/Warehouse), Azure DevOps, PySpark.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Experience Item 2: Senior Analyst Echamorro Monisa -->
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content-card">
-                        <div class="timeline-header">
-                            <span class="exp-dates" data-i18n="exp_x2_dates">Enero 2023 - Marzo 2025</span>
-                            <span class="company-badge">Grupo Echamorro Monisa</span>
-                        </div>
-                        <h3 class="exp-role" data-i18n="exp_x2_title">Senior Data Analyst (Departamento de TI)</h3>
-                        <p class="exp-desc" data-i18n="exp_x2_desc">Lideré la modernización del área de Business Intelligence del holding corporativo (subsidiarias industriales, farmacéuticas y distribuidoras).</p>
-                        <ul class="exp-bullet-list">
-                            <li data-i18n="exp_x2_b1">Migración exitosa hands-on de más de 80 reportes de Tableau y Excel manuales a Power BI, mejorando la usabilidad y gobernanza de datos analíticos.</li>
-                            <li data-i18n="exp_x2_b2">Estructuración desde cero del Microsoft Fabric Lakehouse/Warehouse unificado, reemplazando un SSIS obsoleto e inestable.</li>
-                            <li data-i18n="exp_x2_b3">Implementación de cargas incrementales de datos SQL, logrando acelerar las ingestas un 67% (procesamientos de 3h a 1h) con verificaciones automatizadas de errores.</li>
-                        </ul>
-                        <div class="exp-toolbox">
-                            <strong>Toolbox:</strong> Fabric Data Factory, Power BI Premium, Azure Portal, SQL Server (SSIS/SSRS), Tabular Editor.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Experience Item 3: Accounting Assistant Echamorro Monisa -->
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content-card">
-                        <div class="timeline-header">
-                            <span class="exp-dates" data-i18n="exp_x3_dates">Junio 2021 - Diciembre 2022</span>
-                            <span class="company-badge">Grupo Echamorro Monisa</span>
-                        </div>
-                        <h3 class="exp-role" data-i18n="exp_x3_title">Asistente Contable & Analista Financiero</h3>
-                        <p class="exp-desc" data-i18n="exp_x3_desc">Encargado del registro, control y análisis contable para la toma de decisiones presupuestarias y de rentabilidad del grupo industrial.</p>
-                        <ul class="exp-bullet-list">
-                            <li data-i18n="exp_x3_b1">Diseño de plantillas inteligentes en Excel que automatizaron cálculos de impuestos, retenciones nacionales y declaraciones fiscales (VET), ahorrando 1.5 días de carga operativa mensual.</li>
-                            <li data-i18n="exp_x3_b2">Automatización y estandarización del control OPEX, OPEX variances, conciliaciones bancarias y de cuentas por cobrar/pagar, reduciendo el cierre contable mensual de 5 a 2.5 días hábiles.</li>
-                            <li data-i18n="exp_x3_b3">Registros de amortizaciones, gastos financieros de subsidiarias y reportes de variaciones presupuestarias mensuales.</li>
-                        </ul>
-                        <div class="exp-toolbox">
-                            <strong>Toolbox:</strong> ERP Softland, Excel Avanzado (Power Pivot/Query), Contabilidad Analítica, Declaración VET.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact-section" id="contact">
-        <div class="container">
-            <div class="contact-grid">
-                <!-- Direct info cards -->
-                <div class="contact-info-panel">
-                    <span class="section-tag" data-i18n="cont_tag">HABLEMOS</span>
-                    <h2 class="contact-heading" data-i18n="cont_title">Alineemos tu Infraestructura con tus Objetivos Comerciales</h2>
-                    <p class="contact-subtext" data-i18n="cont_desc">
-                        ¿Buscas automatizar tus reportes contables, migrar a la nube sin cargos de cómputo redundantes o construir una arquitectura escalable en Fabric? Agenda una conversación rápida.
-                    </p>
-                    
-                    <div class="contact-info-list">
-                        <!-- Email direct -->
-                        <a href="mailto:rampiechamorro14@gmail.com" class="contact-item-link">
-                            <span class="contact-item-icon">✉</span>
-                            <div class="contact-item-details">
-                                <span class="contact-item-label" data-i18n="cont_lbl_email">Correo Electrónico Directo</span>
-                                <span class="contact-item-val">rampiechamorro14@gmail.com</span>
-                            </div>
-                        </a>
-                        
-                        <!-- Phone / WhatsApp direct -->
-                        <a href="https://wa.me/50576896537?text=Hola%20Richard,%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20conversar." target="_blank" class="contact-item-link">
-                            <span class="contact-item-icon">💬</span>
-                            <div class="contact-item-details">
-                                <span class="contact-item-label" data-i18n="cont_lbl_phone">WhatsApp Directo</span>
-                                <span class="contact-item-val">+505 76896537</span>
-                            </div>
-                        </a>
-
-                        <!-- Location direct -->
-                        <div class="contact-item-static">
-                            <span class="contact-item-icon">📍</span>
-                            <div class="contact-item-details">
-                                <span class="contact-item-label" data-i18n="cont_lbl_loc">Ubicación Actual</span>
-                                <span class="contact-item-val" data-i18n="cont_val_loc">Managua, Nicaragua (Disponible Remoto Global)</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Social Networks -->
-                    <div class="social-links-footer">
-                        <a href="https://www.linkedin.com/in/richard-ampie-218a07247/" target="_blank" class="social-icon-btn">LinkedIn</a>
-                        <a href="https://github.com/tu-usuario" target="_blank" class="social-icon-btn">GitHub</a>
-                        <a href="resume.md" target="_blank" class="btn btn-cv-download" data-i18n="cont_btn_cv">Descargar CV (Markdown)</a>
-                    </div>
-                </div>
-
-                <!-- Glassmorphic Form Card -->
-                <div class="contact-form-card">
-                    <form id="contact-form" onsubmit="handleFormSubmit(event)">
-                        <div class="form-group">
-                            <label for="frm-name" data-i18n="frm_lbl_name">Nombre Completo</label>
-                            <input type="text" id="frm-name" placeholder="Juan Pérez" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="frm-email" data-i18n="frm_lbl_email">Correo Electrónico Corporativo</label>
-                            <input type="email" id="frm-email" placeholder="juan.perez@empresa.com" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="frm-subject" data-i18n="frm_lbl_subj">Asunto</label>
-                            <input type="text" id="frm-subject" placeholder="Consultoría de Inteligencia de Negocio" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="frm-message" data-i18n="frm_lbl_msg">Mensaje</label>
-                            <textarea id="frm-message" rows="5" placeholder="Cuéntame brevemente sobre tu proyecto o vacante..." required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-block" id="btn-submit-form" data-i18n="frm_btn_send">Enviar Mensaje / Conectar</button>
-                    </form>
-                    <div class="form-success-message d-none" id="form-success">
-                        <span class="success-icon">✓</span>
-                        <p class="success-text" data-i18n="frm_success_msg">¡Mensaje enviado con éxito! Me pondré en contacto contigo en menos de 24 horas hábiles.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer minimal -->
-    <footer class="footer-minimal">
-        <div class="container text-center">
-            <p class="footer-copyright" data-i18n="foot_copyright">
-                © 2026 Richard Ampie Chamorro. Arquitectura e Inteligencia de Negocio con Impacto Financiero.
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow" data-i18n="hero.eyebrow">
+              CONSULTORÍA EN DATOS, BI E IA APLICADA
             </p>
+            <h1 data-i18n="hero.title">
+              Menos trabajo manual. Más capacidad para decidir.
+            </h1>
+            <p class="hero-description" data-i18n="hero.body">
+              Ayudo a equipos a automatizar su operación analítica, optimizar
+              Power BI y convertir datos dispersos en información confiable. De
+              la arquitectura a la entrega, con criterio de negocio y dirección
+              técnica.
+            </p>
+            <div class="hero-actions">
+              <a class="button primary" data-i18n="hero.primary" href="#contact"
+                >Hablemos de tu proyecto</a
+              ><a
+                class="text-link arrow-link"
+                data-i18n="hero.secondary"
+                href="#projects"
+                >Explorar mi trabajo</a
+              >
+            </div>
+            <p class="hero-signature" data-i18n="hero.signature">
+              Richard Ampié · Ingeniería, estrategia y ejecución
+            </p>
+          </div>
+          <div class="hero-art">
+            <div class="art-top">
+              <span class="tiny-squares" aria-hidden="true">▪ ▪ ▪</span
+              ><span class="eyebrow" data-i18n="hero.visual.label"
+                >DE LA COMPLEJIDAD A LA CLARIDAD</span
+              >
+            </div>
+            <h2 data-i18n="hero.visual.title">
+              Tu operación, mejor conectada.
+            </h2>
+            <div class="operation-diagram">
+              <div class="source-row">
+                <span>ERP</span><span>APIs</span><span>Excel</span
+                ><span>SQL</span>
+              </div>
+              <div class="connector" aria-hidden="true"></div>
+              <div class="model-node">
+                <span class="node-icon" aria-hidden="true">◈</span>
+                <div>
+                  <strong data-i18n="hero.visual.model"
+                    >Una base confiable</strong
+                  ><small>Fabric · Power BI</small>
+                </div>
+                <span class="node-check" aria-hidden="true">✓</span>
+              </div>
+              <div class="connector short" aria-hidden="true"></div>
+              <div class="automation-node">
+                <span class="node-icon" aria-hidden="true">⌘</span
+                ><strong data-i18n="hero.visual.auto"
+                  >Automatización + IA</strong
+                ><span aria-hidden="true">↗</span>
+              </div>
+              <div class="connector short" aria-hidden="true"></div>
+              <div class="decision-node">
+                <strong data-i18n="hero.visual.decision"
+                  >Decisiones informadas</strong
+                >
+                <div class="mini-chart" aria-hidden="true">
+                  <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                </div>
+              </div>
+            </div>
+            <div class="art-bottom">
+              <span class="status-dot" aria-hidden="true"></span
+              ><span data-i18n="hero.visual.footer"
+                >Diseño técnico con una visión de negocio.</span
+              >
+            </div>
+            <span class="art-index" aria-hidden="true">RA / 01</span>
+          </div>
         </div>
-    </footer>
+        <div class="container tech-strip">
+          <span class="eyebrow" data-i18n="trust.label"
+            >TECNOLOGÍA AL SERVICIO DE LA OPERACIÓN</span
+          >
+          <div>
+            <span>Microsoft Fabric</span><span>Power BI</span><span>Azure</span
+            ><span>SQL Server</span><span>Python</span><span>AI Agents</span>
+          </div>
+        </div>
+      </section>
+      <section id="impact" class="section impact">
+        <div class="container">
+          <p class="eyebrow" data-i18n="impact.tag">
+            01 / EXPERIENCIA QUE SE TRADUCE EN RESULTADOS
+          </p>
+          <div class="section-heading">
+            <h2 data-i18n="impact.title">La mejora se mide en la operación.</h2>
+            <p data-i18n="impact.body">
+              Experiencia en finanzas, ingeniería de datos y liderazgo de BI.
+              Estos son algunos resultados de mi trayectoria profesional.
+            </p>
+          </div>
+          <div class="metrics-grid">
+            <article>
+              <strong>80<span>+</span></strong>
+              <h3 data-i18n="impact.metric1">reportes migrados directamente</h3>
+              <p data-i18n="impact.metric1sub">
+                Además de ~150 migraciones lideradas.
+              </p>
+            </article>
+            <article>
+              <strong>−67<span>%</span></strong>
+              <h3 data-i18n="impact.metric2">en tiempo de ingesta de datos</h3>
+              <p data-i18n="impact.metric2sub">De 3 horas a 1 hora.</p>
+            </article>
+            <article>
+              <strong>~50<span>%</span></strong>
+              <h3 data-i18n="impact.metric3">
+                menos uso de cómputo / capacidad Fabric
+              </h3>
+              <p data-i18n="impact.metric3sub">
+                Optimización de cargas y consultas.
+              </p>
+            </article>
+            <article>
+              <strong>72h <span>→</span> 30h</strong>
+              <h3 data-i18n="impact.metric4">
+                en el ciclo de liberación de BI
+              </h3>
+              <p data-i18n="impact.metric4sub">
+                Control de versiones y despliegues gobernados.
+              </p>
+            </article>
+          </div>
+          <p class="footnote" data-i18n="impact.note">
+            Resultados de experiencia profesional documentados en mi CV. Son
+            referencias de proyectos específicos; cada intervención parte de su
+            propio diagnóstico.
+          </p>
+        </div>
+      </section>
+      <section id="services" class="section services">
+        <div class="container">
+          <p class="eyebrow" data-i18n="services.tag">
+            02 / CÓMO PUEDO AYUDARTE
+          </p>
+          <div class="section-heading">
+            <h2 data-i18n="services.title">
+              Resolver el cuello de botella. Dejar capacidad instalada.
+            </h2>
+            <p data-i18n="services.body">
+              Intervenciones con un alcance definido, entregables claros y
+              transferencia de conocimiento a tu equipo.
+            </p>
+          </div>
+          <div class="service-list">
+            <details class="service" open>
+              <summary>
+                <span class="service-num">01</span>
+                <h3 data-service="0" data-field="title">
+                  Optimización de Power BI y Fabric
+                </h3>
+                <span class="expand" aria-hidden="true">+</span>
+              </summary>
+              <div class="service-body">
+                <div>
+                  <p data-service="0" data-field="intro">
+                    Cuando los reportes tardan, las cargas fallan o la capacidad
+                    cuesta demasiado.
+                  </p>
+                  <p class="tech">Power BI · DAX · SQL · Microsoft Fabric</p>
+                </div>
+                <div>
+                  <h4 data-i18n="services.deliver">Qué recibís</h4>
+                  <ul>
+                    <li data-service="0" data-field="items" data-item="0">
+                      Diagnóstico de modelos, DAX, SQL y cargas.
+                    </li>
+                    <li data-service="0" data-field="items" data-item="1">
+                      Plan priorizado de mejoras de rendimiento y consumo.
+                    </li>
+                    <li data-service="0" data-field="items" data-item="2">
+                      Implementación y comparación de resultados.
+                    </li>
+                  </ul>
+                  <a
+                    href="#contact"
+                    class="text-link"
+                    data-service-cta="0"
+                    data-i18n="services.cta"
+                    >Consultar por este servicio ↗</a
+                  >
+                </div>
+              </div>
+            </details>
+            <details class="service">
+              <summary>
+                <span class="service-num">02</span>
+                <h3 data-service="1" data-field="title">
+                  Automatización e IA aplicada a BI
+                </h3>
+                <span class="expand" aria-hidden="true">+</span>
+              </summary>
+              <div class="service-body">
+                <div>
+                  <p data-service="1" data-field="intro">
+                    Cuando tu equipo repite tareas que ya deberían estar
+                    resueltas.
+                  </p>
+                  <p class="tech">
+                    Python · Power Automate · Codex · Claude Code
+                  </p>
+                </div>
+                <div>
+                  <h4 data-i18n="services.deliver">Qué recibís</h4>
+                  <ul>
+                    <li data-service="1" data-field="items" data-item="0">
+                      Mapeo de tareas y oportunidades de automatización.
+                    </li>
+                    <li data-service="1" data-field="items" data-item="1">
+                      Flujos de datos y desarrollo asistido por agentes.
+                    </li>
+                    <li data-service="1" data-field="items" data-item="2">
+                      Guías reutilizables, validaciones y documentación.
+                    </li>
+                  </ul>
+                  <a
+                    href="#contact"
+                    class="text-link"
+                    data-service-cta="1"
+                    data-i18n="services.cta"
+                    >Consultar por este servicio ↗</a
+                  >
+                </div>
+              </div>
+            </details>
+            <details class="service">
+              <summary>
+                <span class="service-num">03</span>
+                <h3 data-service="2" data-field="title">
+                  Migración y modernización de BI
+                </h3>
+                <span class="expand" aria-hidden="true">+</span>
+              </summary>
+              <div class="service-body">
+                <div>
+                  <p data-service="2" data-field="intro">
+                    Cuando necesitás evolucionar la plataforma sin perder la
+                    lógica del negocio.
+                  </p>
+                  <p class="tech">
+                    Tableau → Power BI · PBIP / PBIR · Azure DevOps
+                  </p>
+                </div>
+                <div>
+                  <h4 data-i18n="services.deliver">Qué recibís</h4>
+                  <ul>
+                    <li data-service="2" data-field="items" data-item="0">
+                      Inventario, dependencias y reglas de negocio.
+                    </li>
+                    <li data-service="2" data-field="items" data-item="1">
+                      Migración de Tableau o Excel a Power BI.
+                    </li>
+                    <li data-service="2" data-field="items" data-item="2">
+                      Modelos gobernados, control de versiones y entrega al
+                      equipo.
+                    </li>
+                  </ul>
+                  <a
+                    href="#contact"
+                    class="text-link"
+                    data-service-cta="2"
+                    data-i18n="services.cta"
+                    >Consultar por este servicio ↗</a
+                  >
+                </div>
+              </div>
+            </details>
+            <details class="service">
+              <summary>
+                <span class="service-num">04</span>
+                <h3 data-service="3" data-field="title">
+                  Ingeniería de datos y reporting ejecutivo
+                </h3>
+                <span class="expand" aria-hidden="true">+</span>
+              </summary>
+              <div class="service-body">
+                <div>
+                  <p data-service="3" data-field="intro">
+                    Cuando las decisiones dependen de datos dispersos o
+                    indicadores inconsistentes.
+                  </p>
+                  <p class="tech">Fabric · SQL Server · PySpark · Power BI</p>
+                </div>
+                <div>
+                  <h4 data-i18n="services.deliver">Qué recibís</h4>
+                  <ul>
+                    <li data-service="3" data-field="items" data-item="0">
+                      Integración de fuentes y definición de indicadores.
+                    </li>
+                    <li data-service="3" data-field="items" data-item="1">
+                      Pipelines, lakehouse y modelos semánticos.
+                    </li>
+                    <li data-service="3" data-field="items" data-item="2">
+                      Reportes orientados a decisiones y transferencia de
+                      conocimiento.
+                    </li>
+                  </ul>
+                  <a
+                    href="#contact"
+                    class="text-link"
+                    data-service-cta="3"
+                    data-i18n="services.cta"
+                    >Consultar por este servicio ↗</a
+                  >
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+      <section id="method" class="section method">
+        <div class="container">
+          <div class="method-heading">
+            <p class="eyebrow" data-i18n="method.tag">
+              03 / MI FORMA DE TRABAJAR
+            </p>
+            <h2 data-i18n="method.title">
+              La IA acelera la ejecución. El criterio dirige el resultado.
+            </h2>
+          </div>
+          <div class="method-grid">
+            <div>
+              <p class="method-description" data-i18n="method.body">
+                Convierto conocimiento técnico, reglas de negocio y estándares
+                de diseño en un flujo de desarrollo asistido por agentes.
+                Mantengo la dirección de arquitectura, la lógica del negocio y
+                la revisión de cada entrega.
+              </p>
+              <div class="time-comparison">
+                <div>
+                  <p class="eyebrow" data-i18n="method.before">Antes</p>
+                  <strong data-i18n="method.days">Días</strong>
+                  <p data-i18n="method.beforebody">
+                    de construcción manual de un reporte
+                  </p>
+                </div>
+                <span class="comparison-arrow" aria-hidden="true">→</span>
+                <div>
+                  <p class="eyebrow" data-i18n="method.after">
+                    En mi flujo actual
+                  </p>
+                  <strong data-i18n="method.halfday">~½ día</strong>
+                  <p data-i18n="method.afterbody">
+                    para ejecutar y publicar reportes con requisitos definidos
+                  </p>
+                </div>
+              </div>
+              <p class="footnote" data-i18n="method.note">
+                Experiencia propia en reportes con BRD y reglas de negocio
+                definidos. El plazo depende del alcance, la preparación de los
+                datos y la validación requerida.
+              </p>
+            </div>
+            <ol class="method-steps">
+              <li>
+                <span class="step-index">01</span>
+                <div>
+                  <h3 data-i18n="method.step1">Entender</h3>
+                  <p data-i18n="method.step1body">
+                    Objetivo, BRD, reglas de negocio y criterios de aceptación.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <span class="step-index">02</span>
+                <div>
+                  <h3 data-i18n="method.step2">Estructurar</h3>
+                  <p data-i18n="method.step2body">
+                    Datos, modelo semántico y guías reutilizables de desarrollo.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <span class="step-index">03</span>
+                <div>
+                  <h3 data-i18n="method.step3">Construir</h3>
+                  <p data-i18n="method.step3body">
+                    Agentes de IA ejecutan tareas bajo dirección técnica.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <span class="step-index">04</span>
+                <div>
+                  <h3 data-i18n="method.step4">Validar y entregar</h3>
+                  <p data-i18n="method.step4body">
+                    Revisión de lógica, visuales, publicación y documentación.
+                  </p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+      <section id="projects" class="section projects">
+        <div class="container">
+          <p class="eyebrow" data-i18n="work.tag">04 / TRABAJO SELECCIONADO</p>
+          <div class="section-heading">
+            <h2 data-i18n="work.title">
+              Rigor en los datos. Intención en cada visual.
+            </h2>
+            <p data-i18n="work.body">
+              Una selección de reportes públicos creados para explorar, explicar
+              y llevar Power BI más lejos. La misma atención al detalle que
+              llevo a una solución de negocio.
+            </p>
+          </div>
+          <aside class="recognition">
+            <div class="recognition-icon" aria-hidden="true">✳</div>
+            <div>
+              <p class="eyebrow" data-i18n="work.recognition">
+                RECONOCIMIENTO DE MICROSOFT
+              </p>
+              <h3 data-i18n="work.recognitiontitle">
+                Entre los favoritos del jurado.
+              </h3>
+              <p data-i18n="work.recognitionbody">
+                Microsoft me incluyó en los Judges’ Favorites de la ronda 1 del
+                Power BI Dataviz World Champs 2026, destacando las interacciones
+                intuitivas, la navegación por tarjetas y la exploración de
+                datos.
+              </p>
+              <a
+                class="text-link"
+                data-i18n="work.source"
+                href="https://community.fabric.microsoft.com/blog/community_blog/%F0%9F%8F%86-announcing-the-results-of-round-1-of-the-power-bi-dataviz-world-champs/4938838"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Leer reconocimiento en Microsoft ↗</a
+              >
+            </div>
+            <div class="recognition-side">
+              <span>Power BI<br />Dataviz<br />World Champs</span
+              ><span class="recognition-year">2026</span>
+            </div>
+          </aside>
+          <div class="work-toolbar">
+            <div
+              class="project-filters"
+              role="group"
+              aria-label="Filtrar proyectos"
+            >
+              <button
+                type="button"
+                data-filter="all"
+                aria-pressed="true"
+                data-i18n="filter.all"
+              >
+                Todos los proyectos</button
+              ><button
+                type="button"
+                data-filter="champs"
+                aria-pressed="false"
+                data-i18n="filter.champs"
+              >
+                World Champs</button
+              ><button
+                type="button"
+                data-filter="explore"
+                aria-pressed="false"
+                data-i18n="filter.explore"
+              >
+                Exploración
+              </button>
+            </div>
+            <p class="project-count" aria-live="polite">
+              <span id="project-count">8</span>
+              <span data-i18n="project.count">proyectos públicos</span>
+            </p>
+          </div>
+          <div class="project-grid">
+            <article class="project-card featured" data-category="champs">
+              <a
+                class="project-image"
+                href="https://app.fabric.microsoft.com/view?r=eyJrIjoiZWEzM2E0NDEtZGY5NC00YzdmLWE2MWEtMWFlNGI3OWVhZDNlIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="What Makes a Movie Successful? — Power BI"
+              >
+                <img
+                  src="assets/project-movies.png"
+                  alt="What Makes a Movie Successful?"
+                  loading="lazy"
+                  width="1600"
+                  height="900"
+                /><span class="project-arrow" aria-hidden="true">↗</span></a
+              >
+              <div class="project-info">
+                <p class="eyebrow" data-project="movies" data-field="tag">
+                  WORLD CHAMPS BCN 2026 · RONDA 3
+                </p>
+                <h3 class="" data-project="movies" data-field="title">
+                  What Makes a Movie Successful?
+                </h3>
+                <p class="" data-project="movies" data-field="desc">
+                  Una historia en tres actos sobre lo que el dinero compra en el
+                  cine: audiencia, retorno y valoración.
+                </p>
+                <div class="project-links">
+                  <a
+                    data-i18n="project.open"
+                    href="https://app.fabric.microsoft.com/view?r=eyJrIjoiZWEzM2E0NDEtZGY5NC00YzdmLWE2MWEtMWFlNGI3OWVhZDNlIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Explorar reporte ↗</a
+                  ><button
+                    type="button"
+                    data-open-project="movies"
+                    data-i18n="project.details"
+                  >
+                    Sobre el proyecto
+                  </button>
+                </div>
+                <a
+                  class="community-link"
+                  data-i18n="project.community"
+                  href="https://community.fabric.microsoft.com/discussions/pbi_contestsgallery/richard-ampie---world-champs-bcn-26---round-3/5355053"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Ver en Microsoft Community ↗</a
+                >
+              </div>
+            </article>
+            <article class="project-card featured" data-category="explore">
+              <a
+                class="project-image"
+                href="https://app.fabric.microsoft.com/view?r=eyJrIjoiOGEwMjUzNWItNzM1OC00YmE4LWE3ZDUtNTQyMWIxNzI0YTc1IiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="The life we fear never living — Power BI"
+              >
+                <img
+                  src="assets/project-fears.png"
+                  alt="The life we fear never living"
+                  loading="lazy"
+                  width="1600"
+                  height="900"
+                /><span class="project-arrow" aria-hidden="true">↗</span></a
+              >
+              <div class="project-info">
+                <p class="eyebrow" data-project="fears" data-field="tag">
+                  HALLOWEEN CONTEST · HISTORIA DE DATOS
+                </p>
+                <h3 class="" data-project="fears" data-field="title">
+                  The life we fear never living
+                </h3>
+                <p class="" data-project="fears" data-field="desc">
+                  Una página sobre incertidumbre, potencial y los miedos que
+                  cambian al crecer.
+                </p>
+                <div class="project-links">
+                  <a
+                    data-i18n="project.open"
+                    href="https://app.fabric.microsoft.com/view?r=eyJrIjoiOGEwMjUzNWItNzM1OC00YmE4LWE3ZDUtNTQyMWIxNzI0YTc1IiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Explorar reporte ↗</a
+                  ><button
+                    type="button"
+                    data-open-project="fears"
+                    data-i18n="project.details"
+                  >
+                    Sobre el proyecto
+                  </button>
+                </div>
+                <a
+                  class="community-link"
+                  data-i18n="project.community"
+                  href="https://community.fabric.microsoft.com/discussions/pbi_contestsgallery/the-life-we-fear-never-living/5376385"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Ver en Microsoft Community ↗</a
+                >
+              </div>
+            </article>
+            <article class="project-card" data-category="champs">
+              <a
+                class="project-image"
+                href="https://app.fabric.microsoft.com/view?r=eyJrIjoiYmJiM2EyZmMtNjI2ZC00MzJiLThjODktNGE2OGZmMWEwMWMyIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="PitchSide Pro · Análisis financiero — Power BI"
+              >
+                <img
+                  src="assets/Portfolio_PbiDemo_WC2026S2R1.png"
+                  alt="PitchSide Pro · Análisis financiero"
+                  loading="lazy"
+                  width="1600"
+                  height="900"
+                /><span class="project-arrow" aria-hidden="true">↗</span></a
+              >
+              <div class="project-info">
+                <p class="eyebrow" data-project="finance" data-field="tag">
+                  WORLD CHAMPS BCN 2026 · RONDA 1
+                </p>
+                <h3 class="" data-project="finance" data-field="title">
+                  PitchSide Pro · Análisis financiero
+                </h3>
+                <p class="" data-project="finance" data-field="desc">
+                  Ingresos, margen, categorías y regiones en una experiencia de
+                  análisis del desempeño comercial.
+                </p>
+                <div class="project-links">
+                  <a
+                    data-i18n="project.open"
+                    href="https://app.fabric.microsoft.com/view?r=eyJrIjoiYmJiM2EyZmMtNjI2ZC00MzJiLThjODktNGE2OGZmMWEwMWMyIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Explorar reporte ↗</a
+                  ><button
+                    type="button"
+                    data-open-project="finance"
+                    data-i18n="project.details"
+                  >
+                    Sobre el proyecto
+                  </button>
+                </div>
+                <a
+                  class="community-link"
+                  data-i18n="project.community"
+                  href="https://community.fabric.microsoft.com/discussions/pbi_contestsgallery/week-1---world-champs-bcn-2026-richard-ampie/5241525"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Ver en Microsoft Community ↗</a
+                >
+              </div>
+            </article>
+            <article class="project-card" data-category="champs">
+              <a
+                class="project-image"
+                href="https://app.fabric.microsoft.com/view?r=eyJrIjoiYmMxY2Y0NDAtZDhkNy00Y2Y1LWIyOGItOTU1MjY3NGVjMWJlIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Museo interactivo LEGO — Power BI"
+              >
+                <img
+                  src="assets/Portfolio_PbiDemo_WC2026S2R2.png"
+                  alt="Museo interactivo LEGO"
+                  loading="lazy"
+                  width="1600"
+                  height="900"
+                /><span class="project-arrow" aria-hidden="true">↗</span></a
+              >
+              <div class="project-info">
+                <p class="eyebrow" data-project="lego" data-field="tag">
+                  WORLD CHAMPS BCN 2026 · RONDA 2
+                </p>
+                <h3 class="" data-project="lego" data-field="title">
+                  Museo interactivo LEGO
+                </h3>
+                <p class="" data-project="lego" data-field="desc">
+                  Una experiencia de exploración histórica de sets, colecciones
+                  y lanzamientos.
+                </p>
+                <div class="project-links">
+                  <a
+                    data-i18n="project.open"
+                    href="https://app.fabric.microsoft.com/view?r=eyJrIjoiYmMxY2Y0NDAtZDhkNy00Y2Y1LWIyOGItOTU1MjY3NGVjMWJlIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Explorar reporte ↗</a
+                  ><button
+                    type="button"
+                    data-open-project="lego"
+                    data-i18n="project.details"
+                  >
+                    Sobre el proyecto
+                  </button>
+                </div>
+                <a
+                  class="community-link"
+                  data-i18n="project.community"
+                  href="https://community.fabric.microsoft.com/discussions/pbi_contestsgallery/lego-data-museum---world-champs-bcn-26---round-2---richard-ampie/5307161"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Ver en Microsoft Community ↗</a
+                >
+              </div>
+            </article>
+            <article class="project-card" data-category="champs">
+              <a
+                class="project-image"
+                href="https://app.fabric.microsoft.com/view?r=eyJrIjoiOTU5MTc2ZmUtMjE3YS00ZWQ1LWFjYzktYWIyNGIwNjQ4ZTY2IiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Briarport · Calidad de vida urbana — Power BI"
+              >
+                <img
+                  src="assets/Portfolio_PbiDemo_WC2026R1.png"
+                  alt="Briarport · Calidad de vida urbana"
+                  loading="lazy"
+                  width="1600"
+                  height="900"
+                /><span class="project-arrow" aria-hidden="true">↗</span></a
+              >
+              <div class="project-info">
+                <p class="eyebrow" data-project="world1" data-field="tag">
+                  WORLD CHAMPS ATL 2026 · RONDA 1
+                </p>
+                <h3 class="" data-project="world1" data-field="title">
+                  Briarport · Calidad de vida urbana
+                </h3>
+                <p class="" data-project="world1" data-field="desc">
+                  Vivienda, transporte y sostenibilidad con navegación por
+                  tarjetas. Reconocido en Judges’ Favorites por Microsoft.
+                </p>
+                <div class="project-links">
+                  <a
+                    data-i18n="project.open"
+                    href="https://app.fabric.microsoft.com/view?r=eyJrIjoiOTU5MTc2ZmUtMjE3YS00ZWQ1LWFjYzktYWIyNGIwNjQ4ZTY2IiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Explorar reporte ↗</a
+                  ><button
+                    type="button"
+                    data-open-project="world1"
+                    data-i18n="project.details"
+                  >
+                    Sobre el proyecto
+                  </button>
+                </div>
+                <a
+                  class="community-link"
+                  data-i18n="project.community"
+                  href="https://community.fabric.microsoft.com/discussions/pbi_contestsgallery/week-1---world-champs-2026-richard-ampie/4921469"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Ver en Microsoft Community ↗</a
+                >
+              </div>
+            </article>
+            <article class="project-card" data-category="champs">
+              <a
+                class="project-image"
+                href="https://app.fabric.microsoft.com/view?r=eyJrIjoiNDQ0YWQyN2UtZjI0Zi00Mzk0LTkxMGMtM2YyODk4NDEzMjVhIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Global Climate Signals — Power BI"
+              >
+                <img
+                  src="assets/Portfolio_PbiDemo_WC2026R2.png"
+                  alt="Global Climate Signals"
+                  loading="lazy"
+                  width="1600"
+                  height="900"
+                /><span class="project-arrow" aria-hidden="true">↗</span></a
+              >
+              <div class="project-info">
+                <p class="eyebrow" data-project="world2" data-field="tag">
+                  WORLD CHAMPS ATL 2026 · RONDA 2
+                </p>
+                <h3 class="" data-project="world2" data-field="title">
+                  Global Climate Signals
+                </h3>
+                <p class="" data-project="world2" data-field="desc">
+                  Exploración de anomalías de temperatura, emisiones y cambios
+                  del nivel del mar a lo largo del tiempo.
+                </p>
+                <div class="project-links">
+                  <a
+                    data-i18n="project.open"
+                    href="https://app.fabric.microsoft.com/view?r=eyJrIjoiNDQ0YWQyN2UtZjI0Zi00Mzk0LTkxMGMtM2YyODk4NDEzMjVhIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Explorar reporte ↗</a
+                  ><button
+                    type="button"
+                    data-open-project="world2"
+                    data-i18n="project.details"
+                  >
+                    Sobre el proyecto
+                  </button>
+                </div>
+                <a
+                  class="community-link"
+                  data-i18n="project.community"
+                  href="https://community.fabric.microsoft.com/discussions/pbi_contestsgallery/week-2---world-champs-2026-richard-ampie/4927764"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Ver en Microsoft Community ↗</a
+                >
+              </div>
+            </article>
+            <article class="project-card" data-category="champs">
+              <a
+                class="project-image"
+                href="https://app.fabric.microsoft.com/view?r=eyJrIjoiNjIzYzBiNTAtMjZjMi00NGIzLTlmM2UtYjg3NzBkOGEyNjdmIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="The Olympic Games by the Numbers — Power BI"
+              >
+                <img
+                  src="assets/Portfolio_PbiDemo_WC2026R3.png"
+                  alt="The Olympic Games by the Numbers"
+                  loading="lazy"
+                  width="1600"
+                  height="900"
+                /><span class="project-arrow" aria-hidden="true">↗</span></a
+              >
+              <div class="project-info">
+                <p class="eyebrow" data-project="world3" data-field="tag">
+                  WORLD CHAMPS ATL 2026 · RONDA 3
+                </p>
+                <h3 class="" data-project="world3" data-field="title">
+                  The Olympic Games by the Numbers
+                </h3>
+                <p class="" data-project="world3" data-field="desc">
+                  Una mirada a la escala, participación y evolución histórica de
+                  los Juegos Olímpicos.
+                </p>
+                <div class="project-links">
+                  <a
+                    data-i18n="project.open"
+                    href="https://app.fabric.microsoft.com/view?r=eyJrIjoiNjIzYzBiNTAtMjZjMi00NGIzLTlmM2UtYjg3NzBkOGEyNjdmIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Explorar reporte ↗</a
+                  ><button
+                    type="button"
+                    data-open-project="world3"
+                    data-i18n="project.details"
+                  >
+                    Sobre el proyecto
+                  </button>
+                </div>
+                <a
+                  class="community-link"
+                  data-i18n="project.community"
+                  href="https://community.fabric.microsoft.com/discussions/pbi_contestsgallery/week-3-world-champs-26---richard-ampie/4993293"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Ver en Microsoft Community ↗</a
+                >
+              </div>
+            </article>
+            <article class="project-card" data-category="explore">
+              <a
+                class="project-image"
+                href="https://app.fabric.microsoft.com/view?r=eyJrIjoiYzY1Y2Y1YWQtNDM5NC00Y2RhLWFjZmItNmQ0NTQ0MDhkMWYxIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="F1 Analytics — Power BI"
+              >
+                <img
+                  src="assets/Portfolio_PbiDemo_F1.png"
+                  alt="F1 Analytics"
+                  loading="lazy"
+                  width="1600"
+                  height="900"
+                /><span class="project-arrow" aria-hidden="true">↗</span></a
+              >
+              <div class="project-info">
+                <p class="eyebrow" data-project="f1" data-field="tag">
+                  LABORATORIO · ANALÍTICA DEPORTIVA
+                </p>
+                <h3 class="" data-project="f1" data-field="title">
+                  F1 Analytics
+                </h3>
+                <p class="" data-project="f1" data-field="desc">
+                  Un proyecto independiente de analítica de Fórmula 1 y
+                  exploración de resultados.
+                </p>
+                <div class="project-links">
+                  <a
+                    data-i18n="project.open"
+                    href="https://app.fabric.microsoft.com/view?r=eyJrIjoiYzY1Y2Y1YWQtNDM5NC00Y2RhLWFjZmItNmQ0NTQ0MDhkMWYxIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Explorar reporte ↗</a
+                  ><button
+                    type="button"
+                    data-open-project="f1"
+                    data-i18n="project.details"
+                  >
+                    Sobre el proyecto
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+          <p class="passion-note" data-i18n="work.passion">
+            Power BI también es una elección personal: participo en concursos,
+            experimento y construyo por el gusto de hacerlo mejor.
+          </p>
+        </div>
+      </section>
+      <section id="about" class="section about">
+        <div class="container about-grid">
+          <div class="about-copy">
+            <p class="eyebrow" data-i18n="about.tag">
+              05 / EL CONSULTOR DETRÁS DEL TRABAJO
+            </p>
+            <h2 data-i18n="about.title">Richard Ampié</h2>
+            <p class="about-lead" data-i18n="about.lead">
+              Liderazgo de BI. Mentalidad de ingeniería. Visión financiera.
+            </p>
+            <p data-i18n="about.body">
+              Mi carrera empezó en contabilidad y finanzas y evolucionó hacia la
+              ingeniería de datos y la inteligencia de negocio. Esa combinación
+              me permite conectar las necesidades de dirección con la
+              arquitectura y el trabajo técnico que las hace posibles.
+            </p>
+            <p data-i18n="about.body2">
+              He liderado migraciones de Tableau a Power BI en distintas
+              empresas, construido plataformas en Microsoft Fabric y establecido
+              procesos de desarrollo y entrega. Actualmente soy supervisor de
+              inteligencia de negocio y desarrollo de datos.
+            </p>
+            <p class="about-owner" data-i18n="about.owner">
+              Trabajás directamente conmigo: desde la definición del problema
+              hasta la entrega y la transferencia de conocimiento.
+            </p>
+            <div class="social-links">
+              <a
+                href="https://www.linkedin.com/in/richard-ampie-218a07247/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >LinkedIn ↗</a
+              ><a
+                href="https://github.com/R1chardDs"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GitHub ↗</a
+              >
+            </div>
+            <p class="location" data-i18n="about.location">
+              Nicaragua · Colaboración remota · Español / English
+            </p>
+          </div>
+          <div class="leadership-panel">
+            <div class="leadership-mark" aria-hidden="true">
+              ra<span>·</span>
+            </div>
+            <p class="eyebrow" data-i18n="about.current">ACTUALMENTE</p>
+            <h3 data-i18n="about.role">
+              Supervisor de inteligencia de negocio y desarrollo de datos
+            </h3>
+            <div class="leadership-history">
+              <article>
+                <span aria-hidden="true">01</span>
+                <div>
+                  <h4 data-i18n="about.history1">
+                    Ingeniería de datos y liderazgo de BI
+                  </h4>
+                  <p data-i18n="about.history1body">
+                    Migraciones, modelos semánticos, Fabric y gobierno de la
+                    entrega.
+                  </p>
+                </div>
+              </article>
+              <article>
+                <span aria-hidden="true">02</span>
+                <div>
+                  <h4 data-i18n="about.history2">
+                    Base en contabilidad y finanzas
+                  </h4>
+                  <p data-i18n="about.history2body">
+                    Indicadores, conciliaciones, cierres y automatización
+                    operativa.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="certifications" class="section certifications">
+        <div class="container">
+          <p class="eyebrow" data-i18n="cert.tag">
+            06 / FORMACIÓN Y CREDENCIALES
+          </p>
+          <div class="section-heading">
+            <h2 data-i18n="cert.title">
+              Conocimiento que sigo poniendo a prueba.
+            </h2>
+            <p class="cert-summary" data-i18n="cert.summary">
+              4 certificaciones obtenidas · 2 en preparación
+            </p>
+          </div>
+          <div class="cert-grid">
+            <article class="cert">
+              <div class="cert-top">
+                <img
+                  src="assets/DP700 Badge.png"
+                  alt="Microsoft Fabric Data Engineer Associate"
+                  loading="lazy"
+                  width="72"
+                  height="72"
+                /><span class="status" data-i18n="cert.earned">Obtenida</span>
+              </div>
+              <p class="cert-code">DP-700</p>
+              <h3>Fabric Data Engineer Associate</h3>
+              <p class="issuer">Microsoft Certified</p>
+              <a
+                data-i18n="cert.verify"
+                href="https://learn.microsoft.com/api/credentials/share/es-mx/richardampie-0240/F7CDBD4B6FDD0055?sharingId=7758DE5B5185C6B1"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Ver credencial ↗</a
+              >
+            </article>
+            <article class="cert">
+              <div class="cert-top">
+                <img
+                  src="assets/DP600 Badge.png"
+                  alt="Microsoft Fabric Analytics Engineer Associate"
+                  loading="lazy"
+                  width="72"
+                  height="72"
+                /><span class="status" data-i18n="cert.earned">Obtenida</span>
+              </div>
+              <p class="cert-code">DP-600</p>
+              <h3>Fabric Analytics Engineer Associate</h3>
+              <p class="issuer">Microsoft Certified</p>
+              <a
+                data-i18n="cert.verify"
+                href="https://learn.microsoft.com/api/credentials/share/es-mx/richardampie-0240/ED7938BD47B54F5C?sharingId=7758DE5B5185C6B1"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Ver credencial ↗</a
+              >
+            </article>
+            <article class="cert">
+              <div class="cert-top">
+                <img
+                  src="assets/PL300 Badge.png"
+                  alt="Microsoft Power BI Data Analyst Associate"
+                  loading="lazy"
+                  width="72"
+                  height="72"
+                /><span class="status" data-i18n="cert.earned">Obtenida</span>
+              </div>
+              <p class="cert-code">PL-300</p>
+              <h3>Power BI Data Analyst Associate</h3>
+              <p class="issuer">Microsoft Certified</p>
+              <a
+                data-i18n="cert.verify"
+                href="https://learn.microsoft.com/api/credentials/share/es-mx/richardampie-0240/23F4EABA13F7FA7E?sharingId=7758DE5B5185C6B1"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Ver credencial ↗</a
+              >
+            </article>
+            <article class="cert">
+              <div class="cert-top">
+                <img
+                  src="assets/IA900 Badge.png"
+                  alt="Microsoft Azure AI Fundamentals"
+                  loading="lazy"
+                  width="72"
+                  height="72"
+                /><span class="status" data-i18n="cert.earned">Obtenida</span>
+              </div>
+              <p class="cert-code">AI-900</p>
+              <h3>Azure AI Fundamentals</h3>
+              <p class="issuer">Microsoft Certified</p>
+              <a
+                data-i18n="cert.verify"
+                href="https://learn.microsoft.com/api/credentials/share/es-mx/richardampie-0240/ED826CFA3634B292?sharingId=7758DE5B5185C6B1"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Ver credencial ↗</a
+              >
+            </article>
+            <article class="cert planned">
+              <div class="cert-top">
+                <span class="planned-symbol" aria-hidden="true">↗</span
+                ><span class="status" data-i18n="cert.progress"
+                  >En preparación</span
+                >
+              </div>
+              <p class="cert-code">DP-800</p>
+              <h3>SQL AI Developer Associate</h3>
+              <p class="issuer">Microsoft</p>
+              <a
+                data-i18n="cert.syllabus"
+                href="https://learn.microsoft.com/en-us/credentials/certifications/developing-ai-enabled-database-solutions/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Ver programa del examen ↗</a
+              >
+            </article>
+            <article class="cert planned">
+              <div class="cert-top">
+                <span class="planned-symbol" aria-hidden="true">↗</span
+                ><span class="status" data-i18n="cert.progress"
+                  >En preparación</span
+                >
+              </div>
+              <p class="cert-code">DP-300</p>
+              <h3>Azure Database Administrator Associate</h3>
+              <p class="issuer">Microsoft</p>
+              <a
+                data-i18n="cert.syllabus"
+                href="https://learn.microsoft.com/en-us/credentials/certifications/azure-database-administrator-associate/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Ver programa del examen ↗</a
+              >
+            </article>
+          </div>
+          <p class="footnote" data-i18n="cert.note">
+            DP-800 y DP-300 forman parte de mi plan de desarrollo; aún no son
+            certificaciones obtenidas.
+          </p>
+        </div>
+      </section>
+      <section id="contact" class="section contact">
+        <div class="container contact-grid">
+          <div>
+            <p class="eyebrow" data-i18n="contact.tag">
+              07 / EL SIGUIENTE PASO
+            </p>
+            <h2 data-i18n="contact.title">
+              Tu equipo tiene mejores cosas que hacer que repetir tareas.
+            </h2>
+            <p class="contact-description" data-i18n="contact.body">
+              Contame qué proceso consume tiempo, qué reporte dejó de responder
+              o qué querés automatizar. Podemos empezar por definir el problema
+              y el alcance de una primera intervención.
+            </p>
+            <div class="contact-actions">
+              <a
+                class="button primary"
+                data-i18n="contact.mail"
+                href="mailto:rampiechamorro14@gmail.com"
+                >Escribirme por correo ↗</a
+              ><a
+                class="text-link"
+                data-i18n="contact.whatsapp"
+                href="https://wa.me/50576896537?text=Hola%20Richard%2C%20quisiera%20conversar%20sobre%20un%20proyecto%20de%20datos."
+                target="_blank"
+                rel="noopener noreferrer"
+                >Conversar por WhatsApp ↗</a
+              >
+            </div>
+            <a class="email-address" href="mailto:rampiechamorro14@gmail.com"
+              >rampiechamorro14@gmail.com</a
+            >
+            <p class="footnote" data-i18n="contact.direct">
+              Escribime para definir el alcance de tu proyecto.
+            </p>
+          </div>
+          <aside class="brief-card">
+            <span class="brief-icon" aria-hidden="true">↗</span>
+            <h3 data-i18n="contact.brief">Un buen punto de partida</h3>
+            <p data-i18n="contact.briefbody">
+              Contame el objetivo, las herramientas actuales y qué resultado
+              esperás. Si todavía no lo tenés claro, lo definimos juntos.
+            </p>
+            <label for="inquiry-guide" class="sr-only" data-i18n="contact.brief"
+              >Un buen punto de partida</label
+            ><textarea readonly id="inquiry-guide" rows="9">
+Hola Richard, quiero mejorar este proceso:
 
-    <!-- Local logic code -->
-    <script src="app.js"></script>
-</body>
+Objetivo:
+Herramientas y fuentes actuales:
+Principal dificultad:
+Resultado esperado:
+Plazo aproximado:</textarea
+            ><button
+              type="button"
+              id="copy-brief"
+              class="button outline"
+              data-i18n="contact.copy"
+            >
+              Copiar guía para mi consulta
+            </button>
+            <p id="copy-status" class="copy-status" aria-live="polite"></p>
+          </aside>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container footer-inner">
+        <a class="footer-brand" href="#top"
+          >Richard Ampié<span>© 2026</span></a
+        >
+        <p data-i18n="footer.line">
+          Consultoría independiente en datos, BI e IA aplicada.
+        </p>
+        <a class="text-link" data-i18n="footer.top" href="#top"
+          >Volver arriba ↑</a
+        >
+      </div>
+    </footer>
+    <dialog id="project-dialog" aria-labelledby="dialog-title">
+      <button
+        type="button"
+        id="close-dialog"
+        class="close-dialog"
+        aria-label="Cerrar proyecto"
+      >
+        ×
+      </button>
+      <div id="dialog-content"></div>
+    </dialog>
+  </body>
 </html>

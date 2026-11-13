@@ -1,709 +1,216 @@
-/* 
-   RICHARD AMPIE CHAMORRO - PROFESSIONAL PORTFOLIO LOGIC
-   Features: Bilingual Engine, Multi-Carousel System, Category Toggles, Stat Counters, Form Handling
-   Author: Antigravity AI
-   Version: 4.0
-*/
+"use strict";
 
-/* --- BILINGUAL TRANSLATION DICTIONARY --- */
-const translations = {
-    es: {
-        // Navigation
-        nav_about: "Sobre Mí",
-        nav_services: "Especialidades",
-        nav_projects: "Portafolio",
-        nav_demos: "Demos Power BI",
-        nav_certs: "Certificaciones",
-        nav_exp: "Experiencia",
-        nav_contact: "Contacto",
-        
-        // Hero Section
-        hero_badge: "LA SÍNTESIS PERFECTA ENTRE INGENIERÍA, ANALÍTICA Y NEGOCIO",
-        hero_title: 'Diseñando arquitecturas de datos que impulsan la <span class="text-gradient">salud financiera</span> de tu negocio',
-        hero_subtitle: "Richard Ampie Chamorro | Senior Data Analyst & Data Engineer",
-        hero_description: "Especialista certificado por Microsoft en Data Engineering y Analytics Engineer. Diseño y despliego soluciones integrales en Azure, Fabric y Power BI que automatizan flujos complejos, reducen costos de cómputo y estandarizan la gobernanza analítica con un entendimiento financiero nativo.",
-        hero_cta_primary: "Explorar Casos de Éxito",
-        hero_cta_secondary: "Ver Demos Power BI",
-        hero_certs_label: "Certificaciones Oficiales Microsoft:",
-        hero_roi_title: "Optimización Financiera",
+(() => {
+  const { ui, projects, services } = window.PORTFOLIO;
+  let language = "es";
+  let activeProject = null;
+  let lastProjectButton = null;
+  const dialog = document.querySelector("#project-dialog");
+  const nav = document.querySelector("#main-nav");
+  const menu = document.querySelector(".menu-toggle");
+  const localized = (value) =>
+    Array.isArray(value) ? value[language === "es" ? 0 : 1] : value;
+  const escape = (value) =>
+    String(value).replace(
+      /[&<>"']/g,
+      (c) =>
+        ({
+          "&": "&amp;",
+          "<": "&lt;",
+          ">": "&gt;",
+          '"': "&quot;",
+          "'": "&#39;",
+        })[c],
+    );
+  const tr = (key) => ui[language][key];
 
-        // About Me Section
-        about_tag: "VISIÓN GENERAL",
-        about_title: "La Ventaja de un Perfil Híbrido",
-        about_lead: "Muchas organizaciones sufren el mismo problema: sus ingenieros de datos no entienden los estados financieros que procesan, y sus financieros no saben cómo optimizar una base de datos. Mi propuesta de valor cierra esa brecha por completo.",
-        about_p1: "Mi carrera comenzó en el núcleo de las finanzas y la contabilidad empresarial. Comprendo de forma nativa la lógica del negocio, los desvíos presupuestarios (OPEX/CAPEX) y la importancia crítica de la consistencia fiscal. Posteriormente, traduje esta visión comercial al campo técnico, convirtiéndome en Especialista Certificado por Microsoft en el diseño de infraestructuras analíticas avanzadas.",
-        about_p2: "Ya sea migrando reportes analíticos a entornos gobernados, reduciendo a la mitad los costos de capacidad en Microsoft Fabric o estructurando bases de datos desde cero sobre SQL Server y PySpark, mi enfoque siempre es el mismo: crear valor tangible, ahorrar tiempo operativo y asegurar una única versión de la verdad comercial.",
+  function closeMenu() {
+    nav.classList.remove("is-open");
+    menu.setAttribute("aria-expanded", "false");
+  }
 
-        // Outcomes / Metrics
-        out_time_title: "Tiempo de Despliegue",
-        out_time_desc: "Gobernanza de BI estandarizada mediante Git DevOps y pipelines Dev/Test/Prod (de 72h a ~30h).",
-        out_mig_title: "Reportes Modernizados",
-        out_mig_desc: "Migración hands-on de Tableau/Excel a Power BI con 90% menos incidencias.",
-        out_ing_title: "Tiempo de Ingesta",
-        out_ing_desc: "Migración SSIS a Fabric Lakehouse, acelerando flujos de carga de 3h a 1h.",
-        out_cap_title: "Costo de Capacidad",
-        out_cap_desc: "Optimización en Microsoft Fabric mediante cargas incrementales y tuneo de DAX/SQL.",
+  function showProject(id) {
+    const p = projects.find((project) => project.id === id);
+    if (!p) return;
+    activeProject = id;
+    const section = (key, field) =>
+      `<section><h3>${escape(tr(key))}</h3><p>${escape(localized(p[field]))}</p></section>`;
+    document.querySelector("#dialog-content").innerHTML = `
+      <img class="dialog-image" src="${escape(p.img)}" alt="${escape(localized(p.title))}">
+      <div class="dialog-body"><p class="eyebrow">${escape(localized(p.tag))}</p>
+      <h2 id="dialog-title">${escape(localized(p.title))}</h2>
+      ${section("project.challenge", "question")}${section("project.approach", "approach")}${section("project.value", "value")}
+      <div class="dialog-actions"><a class="button primary" href="${escape(p.url)}" target="_blank" rel="noopener noreferrer">${escape(tr("project.open"))}</a>
+      ${p.community ? `<a class="text-link" href="${escape(p.community)}" target="_blank" rel="noopener noreferrer">${escape(tr("project.community"))}</a>` : ""}</div></div>`;
+    document
+      .querySelector("#close-dialog")
+      .setAttribute("aria-label", tr("project.close"));
+    if (!dialog.open) dialog.showModal();
+    document.body.classList.add("modal-open");
+  }
 
-        // Services Section
-        serv_tag: "QUÉ HAGO",
-        serv_title: "Especialidades & Soluciones Estratégicas",
-        serv_eng_title: "1. Arquitectura & Data Engineering",
-        serv_eng_desc: "Construcción de cimientos sólidos, seguros y escalables para el flujo de información corporativa.",
-        serv_eng_b1: "<strong>Gobernanza y DevOps:</strong> Control de versiones con Git (Azure DevOps), despliegue continuo de reportes (.pbip) y administración de workspaces.",
-        serv_eng_b2: "<strong>Orquestación de Pipelines:</strong> Reemplazo de SSIS tradicionales por flujos modernos y rápidos en Fabric Data Factory.",
-        serv_eng_b3: "<strong>Procesamiento Escalable:</strong> Transformación de datos usando PySpark / Notebooks de Python y SQL.",
-        serv_bi_title: "2. Visualización e Inteligencia de Negocio",
-        serv_bi_desc: "Modelado y reportería avanzada para traducir millones de filas de datos en decisiones inmediatas.",
-        serv_bi_b1: "<strong>Modelado Estrella:</strong> Arquitectura de modelos robustos en SQL Server con lógica DAX optimizada para refrescos rápidos (5-20 min).",
-        serv_bi_b2: "<strong>Dashboards de Alto Impacto:</strong> Desarrollo en Power BI consumiendo APIs REST y base de datos locales/nube.",
-        serv_bi_b3: "<strong>Gobernanza de Capacidades:</strong> Monitoreo de recursos Fabric para evitar throttling y gestionar licencias eficientemente.",
-        serv_fin_title: "3. Inteligencia Financiera & Automatización",
-        serv_fin_desc: "Optimización de la contabilidad analítica, auditoría automática del dato y aceleración contable.",
-        serv_fin_b1: "<strong>Cierres Mensuales Acelerados:</strong> Reducción del tiempo de cierre del mes en un 50% (de 5 a 2.5 días hábiles).",
-        serv_fin_b2: "<strong>Reportería Fiscal & OPEX:</strong> Automatización de reportes de retenciones fiscales y análisis OPEX vinculados al ERP Softland.",
-        serv_fin_b3: "<strong>Productividad RPA:</strong> Desarrollo con Power Apps y Power Automate para eliminar procesos manuales administrativos.",
-
-        // Projects Section
-        proj_tag: "CASOS REALES",
-        proj_title: "Ingeniería & Analítica Aplicada",
-        tab_corp: "Casos Corporativos",
-        tab_pers: "Laboratorio y Prácticas",
-        proj_view_git: "Ver Código en Git",
-        proj_view_doc: "Ver Documentación",
-        proj_c1_cat: "DevOps & Gobernanza",
-        proj_c1_out: "-60% Despliegue",
-        proj_c2_cat: "Data Engineering",
-        proj_c2_out: "3x Más Rápido",
-        proj_c3_cat: "BI & Inteligencia Financiera",
-        proj_c3_out: "Cierre en 2.5 Días",
-        proj_c4_cat: "Cloud Operations & ROI",
-        proj_c4_out: "-50% Cómputo",
-        proj_p1_cat: "Optimización Semántica",
-        proj_p1_out: "Laboratorio Git",
-        proj_p2_cat: "Pipelines de Datos",
-        proj_p2_out: "Laboratorio Git",
-        proj_p3_cat: "Pipeline ETL Medallion",
-        proj_p3_out: "Laboratorio Medallion",
-        proj_p4_cat: "Machine Learning y Finanzas",
-        proj_p4_out: "Streamlit RPA",
-        
-        proj_c1_title: "Gobernanza de BI y Git Integration en Fabric",
-        proj_c1_desc: "Implementación de un flujo de desarrollo ordenado integrando archivos .pbip con Git en Azure DevOps y despliegues pipelines separados (Dev/Test/Prod) en Fabric.",
-        proj_c1_imp_lbl: "Impacto:",
-        proj_c1_imp_val: "Ciclo de lanzamiento reducido de 72h a ~30h promedio con total trazabilidad y control de fallos en producción.",
-        
-        proj_c2_title: "Migración Masiva de DWH y Reportería",
-        proj_c2_desc: "Migración estructural de un DWH obsoleto en SSIS a un Microsoft Fabric Lakehouse. Migración hands-on de 80 reportes de Tableau/Excel a un entorno centralizado de Power BI.",
-        proj_c2_imp_lbl: "Impacto:",
-        proj_c2_imp_val: "Reducción del procesamiento de ingesta de 3h a 1h e incidencias post-actualización reducidas en un 90%.",
-        
-        proj_c3_title: "Reportería de Márgenes y OPEX Automatizado",
-        proj_c3_desc: "Conexión directa de APIs REST y el ERP Softland con SQL Server para generar dashboards automatizados en Power BI, eliminando conciliaciones manuales de OPEX.",
-        proj_c3_imp_lbl: "Impacto:",
-        proj_c3_imp_val: "Ahorro de 24h mensuales por director de proyecto, margen bruto actualizado diario y cierre mensual 50% más rápido.",
-
-        proj_c4_title: "Optimización en Fabric y Reducción de Costos Azure",
-        proj_c4_desc: "Reducción sustancial del consumo de unidades de cómputo en Fabric aplicando cargas incrementales, particionamiento lógico, y robustos controles pre/post carga en Azure.",
-        proj_c4_imp_lbl: "Impacto:",
-        proj_c4_imp_val: "Evitación total de throttling de capacidades, reducción del 50% de uso redundante y control del presupuesto nube.",
-        
-        proj_p1_title: "Framework de Optimización DAX & Fabric Capacity",
-        proj_p1_desc: "Conjunto de scripts de diagnóstico y mejores prácticas documentadas para auditar modelos de Power BI grandes, reduciendo el consumo de Capacity Units (CU).",
-        
-        proj_p2_title: "Ingesta y ETL Automático de APIs REST Públicas",
-        proj_p2_desc: "Proyecto en Python para ingestar, formatear y almacenar datos transaccionales de APIs externas a base de datos relacionales SQL Server, controlando logs de fallas.",
-
-        proj_p3_title: "Proyecto ETL de Formula 1 (Fabric & Scrape)",
-        proj_p3_desc: "Extracción masiva de datos (carreras, qualys, prácticas) usando web scraping con PySpark y Pandas, implementada en Fabric bajo arquitectura Medallion (Bronze/Silver/Gold).",
-
-        proj_p4_title: "Clasificación de Transacciones con ML",
-        proj_p4_desc: "Modelo entrenado con descripciones y referencias contables para clasificar automáticamente estados de cuenta bancarios. Desarrollado en Streamlit y orquestado con Apache Airflow.",
-
-        // Power BI Showcases
-        demo_tag: "GALERÍA ANALÍTICA",
-        demo_title: "Portafolio de Reportes Power BI",
-        pbi_practices_disclaimer: "<strong>Aviso de Nivel Senior:</strong> Los siguientes tableros interactivos demuestran mis capacidades de análisis de datos a nivel SENIOR, incorporando modelados complejos, arquitectura semántica y lógicas analíticas avanzadas desarrolladas para la toma de decisiones estratégicas.",
-        demo_cta_interact: "Interactuar con Reporte",
-        demo_btn_open: "Abrir Reporte Interactivo ↗",
-
-        demo_f1_area: "Inteligencia Deportiva & ETL",
-        demo_f1_title: "F1 Analytics: Dashboard del Campeonato",
-        demo_f1_desc: "Reporte interactivo alimentado directamente del Lakehouse de Formula 1 en Fabric, analizando tiempos de vuelta, posiciones históricas y ratios de pits.",
-        
-        demo_c1_area: "World Championship 2026 - Ronda 1",
-        demo_c1_title: "Visualización y Storytelling de Datos",
-        demo_c1_desc: "Mi primera participación destacada en el Campeonato Mundial oficial de Microsoft, logrando mención de honor en optimización y modelado semántico de alta complejidad.",
-        
-        demo_c2_area: "World Championship 2026 - Ronda 2",
-        demo_c2_title: "Analítica Corporativa & Dashboards Ejecutivos",
-        demo_c2_desc: "Desarrollo interactivo enfocado en la conversión de negocio y agilidad operativa. Proyecto calificado por jueces expertos de la comunidad de Microsoft.",
-        
-        demo_c3_area: "World Championship 2026 - Ronda 3",
-        demo_c3_title: "UI/UX Avanzado & UX de Consumo Ejecutivo",
-        demo_c3_desc: "Dashboard centrado en jerarquías visuales limpias, con distribución armónica de gráficos de dispersión y navegación personalizada sin fricción.",
-
-        demo_s2r1_area: "World Championship 2026 Season 2 - Ronda 1",
-        demo_s2r1_title: "Análisis Financiero Empresarial & Storytelling",
-        demo_s2r1_desc: "Reporte interactivo enfocado en el diagnóstico financiero integral, analizando las fortalezas y debilidades operativas de una empresa mediante técnicas de storytelling avanzado.",
-
-        demo_s2r2_area: "World Championship 2026 Season 2 - Ronda 2",
-        demo_s2r2_title: "Museo Interactivo LEGO & Analítica Histórica",
-        demo_s2r2_desc: "Dashboard enfocado en el análisis histórico de sets de LEGO, patrones de lanzamiento y visualizaciones avanzadas diseñadas para explorar la evolución de colecciones.",
-
-        // Certifications Section
-        cert_tag: "RESPALDO PROFESIONAL",
-        cert_title: "Certificaciones Oficiales Microsoft",
-        cert_subtitle: "Credenciales oficiales emitidas por Microsoft que respaldan mis habilidades en ingeniería de datos, analítica e inteligencia artificial.",
-        cert_c1_title: "Azure Data Engineer Associate",
-        cert_c1_issuer: "Microsoft Certified",
-        cert_c2_title: "Fabric Analytics Engineer Associate",
-        cert_c2_issuer: "Microsoft Certified",
-        cert_c3_title: "Power BI Data Analyst Associate",
-        cert_c3_issuer: "Microsoft Certified",
-        cert_c4_title: "Azure AI Fundamentals",
-        cert_c4_issuer: "Microsoft Certified",
-        cert_btn_verify: "Verificar Credencial ↗",
-        cert_comment_label: "Aplicación Laboral:",
-        cert_c1_comment: "Uso esta credencial para optimizar pipelines en la nube, diseñar Lakehouses escalables y migrar entornos inestables SSIS locales hacia flujos Azure eficientes.",
-        cert_c2_comment: "Me capacita para integrar almacenes de datos y Lakehouses en Microsoft Fabric, unificando flujos masivos de finanzas y ventas en una única verdad.",
-        cert_c3_comment: "Modelado avanzado de datos y creación de cuadros de mando ejecutivos. Con ella lideré la migración de más de 230 reportes manuales a entornos gobernados.",
-        cert_c4_comment: "Me brinda fundamentos sólidos para integrar inteligencia artificial en pipelines, automatizando la clasificación y lectura predictiva de datos contables.",
-        stack_title: "Ecosistema & Stack Tecnológico",
-
-        // Education Section
-        edu_tag: "CONOCIMIENTO RESPALDADO",
-        edu_title: "Formación Académica",
-        edu_badge_grad: "Último Año Cursado",
-        edu_badge_active: "Cursando Activamente",
-        edu_badge_compl: "Título Técnico",
-        edu_badge_special: "Especialidades",
-        edu_y1: "2022 - Presente",
-        edu_y2: "2024 - Presente",
-        edu_y3: "2019 - 2021",
-        edu_y4: "2021 - 2025",
-        edu_ac1_title: "Contaduría Pública y Finanzas",
-        edu_ac1_school: "Universidad de Nicaragua",
-        edu_ac1_desc: "Sólida formación en auditoría contable, estructuración fiscal nacional, conciliaciones bancarias complejas, estados financieros P&L e indicadores de OPEX.",
-        edu_ac2_title: "Ingeniería en Computación",
-        edu_ac2_school: "Universidad de Nicaragua",
-        edu_ac2_desc: "Enfoque centrado en algoritmos avanzados de programación, bases de datos relacionales y no relacionales, análisis estructurado de sistemas y arquitectura de computadoras.",
-        edu_ac3_title: "Técnico Medio en Contabilidad",
-        edu_ac3_school: "Instituto Técnico de Nicaragua",
-        edu_ac3_desc: "Formación técnica inicial en principios de contabilidad generalmente aceptados, registro diario de transacciones fiscales, inventarios y nóminas.",
-        edu_ac4_title: "Certificaciones Técnicas Complementarias",
-        edu_ac4_school: "Instituciones Oficiales & Microsoft Learn",
-        edu_s5: "Excel Avanzado & Finanzas (2021)",
-        edu_s6: "Inglés Avanzado (C1 - EF SET)",
-
-        // Experience Section
-        exp_tag: "HISTORIAL PROFESIONAL",
-        exp_title: "Experiencia Laboral",
-        exp_x1_dates: "Abril 2025 - Presente",
-        exp_x1_title: "SQL & BI Developer Lead",
-        exp_x1_desc: "Lidero el desarrollo de modelados semánticos de datos complejos y optimización de capacidades analíticas. Responsable directo de garantizar la consistencia analítica corporativa.",
-        exp_x1_b1: "Implementación completa de Git Integration con Azure DevOps para versionado ordenado y despliegues pipelines Dev/Test/Prod de Power BI (.pbip).",
-        exp_x1_b2: "Monitoreo y optimización diaria de la capacidad de Microsoft Fabric, bajando en un 50% incidentes de throttling sin degradar servicios para 350+ usuarios.",
-        exp_x1_b3: "Diseño coordinado de KPIs contables de ventas y logística, erradicando discrepancias operativas y acelerando reportes de facturación de 72h a ~30h.",
-        
-        exp_x2_dates: "Enero 2023 - Marzo 2025",
-        exp_x2_title: "Senior Data Analyst (Departamento de TI)",
-        exp_x2_desc: "Lideré la modernización del área de Business Intelligence del holding corporativo (subsidiarias industriales, farmacéuticas y distribuidoras).",
-        exp_x2_b1: "Migración exitosa hands-on de más de 80 reportes de Tableau y Excel manuales a Power BI, mejorando la usabilidad y gobernanza de datos analíticos.",
-        exp_x2_b2: "Estructuración desde cero del Microsoft Fabric Lakehouse/Warehouse unificado, reemplazando un SSIS obsoleto e inestable.",
-        exp_x2_b3: "Implementación de cargas incrementales de datos SQL, logrando acelerar las ingestas un 67% (procesamientos de 3h a 1h) con verificaciones automatizadas de errores.",
-        
-        exp_x3_dates: "Junio 2021 - Diciembre 2022",
-        exp_x3_title: "Asistente Contable & Analista Financiero",
-        exp_x3_desc: "Encargado del registro, control y análisis contable para la toma de decisiones presupuestarias y de rentabilidad del grupo industrial.",
-        exp_x3_b1: "Diseño de plantillas inteligentes en Excel que automatizaron cálculos de impuestos, retenciones nacionales y declaraciones fiscales (VET), ahorrando 1.5 días de carga operativa mensual.",
-        exp_x3_b2: "Automatización y estandarización del control OPEX, OPEX variances, conciliaciones bancarias y de cuentas por cobrar/pagar, reduciendo el cierre contable mensual de 5 a 2.5 días hábiles.",
-        exp_x3_b3: "Registros de amortizaciones, gastos financieros de subsidiarias y reportes de variaciones presupuestarias mensuales.",
-
-        // Contact & Panel
-        cont_tag: "HABLEMOS",
-        cont_title: "Alineemos tu Infraestructura con tus Objetivos Comerciales",
-        cont_desc: "¿Buscas automatizar tus reportes contables, migrar a la nube sin cargos de cómputo redundantes o construir una arquitectura escalable en Fabric? Agenda una conversación rápida.",
-        cont_lbl_email: "Correo Electrónico Directo",
-        cont_lbl_phone: "WhatsApp Directo",
-        cont_lbl_loc: "Ubicación Actual",
-        cont_val_loc: "Managua, Nicaragua (Disponible Remoto Global)",
-        cont_btn_cv: "Descargar CV (Markdown)",
-        
-        frm_lbl_name: "Nombre Completo",
-        frm_lbl_email: "Correo Electrónico Corporativo",
-        frm_lbl_subj: "Asunto",
-        frm_lbl_msg: "Mensaje",
-        frm_btn_send: "Enviar Mensaje / Conectar",
-        frm_success_msg: "¡Mensaje enviado con éxito! Me pondré en contacto contigo en menos de 24 horas hábiles.",
-        foot_copyright: "© 2026 Richard Ampie Chamorro. Arquitectura e Inteligencia de Negocio con Impacto Financiero."
-    },
-    en: {
-        // Navigation
-        nav_about: "About Me",
-        nav_services: "Specialties",
-        nav_projects: "Portfolio",
-        nav_demos: "Power BI Demos",
-        nav_certs: "Certifications",
-        nav_exp: "Experience",
-        nav_contact: "Contact",
-        
-        // Hero Section
-        hero_badge: "THE PERFECT SYNTHESIS OF DATA ENGINEERING, ANALYTICS, AND BUSINESS LOGIC",
-        hero_title: 'Designing data architectures that drive your business\'s <span class="text-gradient">financial health</span>',
-        hero_subtitle: "Richard Ampie Chamorro | Senior Data Analyst & Data Engineer",
-        hero_description: "Microsoft Certified Data Engineer & Analytics Engineer. I design and deploy end-to-end solutions in Azure, Fabric, and Power BI that automate complex pipelines, cut capacity costs, and standardize analytics governance with a native financial perspective.",
-        hero_cta_primary: "Explore Success Cases",
-        hero_cta_secondary: "View Power BI Demos",
-        hero_certs_label: "Official Microsoft Certifications:",
-        hero_roi_title: "Financial Optimization",
-
-        // About Me Section
-        about_tag: "OVERVIEW",
-        about_title: "The Edge of a Hybrid Profile",
-        about_lead: "Many organizations suffer from the same problem: their data engineers don't understand the financial statements they process, and their financial teams don't know how to optimize a database. My value proposition closes that gap entirely.",
-        about_p1: "My career began at the core of finance and business accounting. I natively understand business logic, budget variances (OPEX/CAPEX), and the critical importance of fiscal consistency. I later translated this commercial insight into the technical field, becoming a Microsoft Certified Specialist in advanced analytical infrastructure.",
-        about_p2: "Whether migrating analytics reports to governed environments, cutting Microsoft Fabric capacity costs in half, or structuring databases from scratch on SQL Server and PySpark, my focus is always the same: creating tangible value, saving operational time, and ensuring a single version of commercial truth.",
-
-        // Outcomes / Metrics
-        out_time_title: "Release Lead Time",
-        out_time_desc: "Standardized BI DevOps using Git (Azure DevOps) and Dev/Test/Prod pipelines (cut cycle from 72h to ~30h).",
-        out_mig_title: "Reports Migrated",
-        out_mig_desc: "Hands-on migration from Tableau and Excel to Power BI, reducing post-update incidents by 90%.",
-        out_ing_title: "Ingestion Time",
-        out_ing_desc: "Migrated to Fabric Lakehouse/Warehouse from unstable SSIS, speeding up data ingestion from 3h to 1h.",
-        out_cap_title: "Capacity Costs",
-        out_cap_desc: "Optimized Microsoft Fabric capacity consumption through incremental loads and DAX/SQL query tuning.",
-
-        // Services Section
-        serv_tag: "WHAT I DO",
-        serv_title: "Specialties & Strategic Solutions",
-        serv_eng_title: "1. Architecture & Data Engineering",
-        serv_eng_desc: "Building solid, secure, and scalable foundations for enterprise data pipelines.",
-        serv_eng_b1: "<strong>Governance & DevOps:</strong> Git version control (Azure DevOps), continuous deployment of reports (.pbip), and workspace administration.",
-        serv_eng_b2: "<strong>Pipeline Orchestration:</strong> Replacing traditional SSIS workloads with agile pipelines in Fabric Data Factory.",
-        serv_eng_b3: "<strong>Scalable Processing:</strong> Ingestion and data transformation using PySpark / Python Notebooks and SQL.",
-        serv_bi_title: "2. Visualization & Business Intelligence",
-        serv_bi_desc: "Advanced modeling and reporting to translate millions of rows of data into immediate decisions.",
-        serv_bi_b1: "<strong>Star Schema Modeling:</strong> Architecture of robust models in SQL Server with DAX logic optimized for fast updates (5-20 min).",
-        serv_bi_b2: "<strong>High-Impact Dashboards:</strong> Power BI development consuming REST APIs and local/cloud databases.",
-        serv_bi_b3: "<strong>Capacity Governance:</strong> Monitoring Fabric resources to mitigate throttling and manage licenses efficiently.",
-        serv_fin_title: "3. Financial Intelligence & Automation",
-        serv_fin_desc: "Optimizing managerial accounting, data integrity auditing, and closing acceleration.",
-        serv_fin_b1: "<strong>Automated Month-End Close:</strong> Cutting monthly accounting close times by 50% (from 5 to 2.5 business days).",
-        serv_fin_b2: "<strong>Tax & OPEX Reporting:</strong> Automation of tax withholding reports and OPEX analysis connected directly to Softland ERP.",
-        serv_fin_b3: "<strong>RPA Productivity:</strong> Development with Power Apps and Power Automate to eliminate manual admin processes.",
-
-        // Projects Section
-        proj_tag: "REAL CASES",
-        proj_title: "Applied Engineering & Analytics",
-        tab_corp: "Corporate Cases",
-        tab_pers: "Labs & Practice Demos",
-        proj_view_git: "View Code on Git",
-        proj_view_doc: "View Documentation",
-        proj_c1_cat: "DevOps & Governance",
-        proj_c1_out: "-60% Release Time",
-        proj_c2_cat: "Data Engineering",
-        proj_c2_out: "3x Faster Ingestion",
-        proj_c3_cat: "BI & Financial Intelligence",
-        proj_c3_out: "2.5-Day Close",
-        proj_c4_cat: "Cloud Operations & ROI",
-        proj_c4_out: "-50% Compute",
-        proj_p1_cat: "Semantic Optimization",
-        proj_p1_out: "GitHub Lab",
-        proj_p2_cat: "Python Data Pipelines",
-        proj_p2_out: "GitHub Lab",
-        proj_p3_cat: "Medallion ETL Pipeline",
-        proj_p3_out: "Medallion Lab",
-        proj_p4_cat: "Machine Learning / Finance",
-        proj_p4_out: "Streamlit RPA",
-        
-        proj_c1_title: "BI DevOps and Git Integration in Fabric",
-        proj_c1_desc: "Implementation of a governed development cycle integrating .pbip files with Git in Azure DevOps and deploying via separated Fabric deployment pipelines (Dev/Test/Prod).",
-        proj_c1_imp_lbl: "Impact:",
-        proj_c1_imp_val: "Release cycle reduced from 72h to ~30h average with full auditability and zero production failures.",
-        
-        proj_c2_title: "Massive DWH and Reporting Migration",
-        proj_c2_desc: "Structural migration of a legacy DWH in SSIS to Microsoft Fabric Lakehouse. Hands-on migration of 80 reports from Tableau/Excel to Power BI.",
-        proj_c2_imp_lbl: "Impact:",
-        proj_c2_imp_val: "Ingestion time cut from 3 hours to 1 hour, and post-update reporting incidents down by 90%.",
-        
-        proj_c3_title: "Margin Reporting & Automated OPEX Monitor",
-        proj_c3_desc: "Direct connection of REST APIs and Softland ERP with SQL Server to generate fully automated margins and OPEX dashboards in Power BI, replacing manual steps.",
-        proj_c3_imp_lbl: "Impact:",
-        proj_c3_imp_val: "Saved 24h monthly per project director, gross margins updated daily, and month-end close 50% faster.",
-
-        proj_c4_title: "Fabric Tuning & Azure Cloud Cost Control",
-        proj_c4_desc: "Substantial reduction in Fabric compute consumption using incremental logic, semantic partitioning, and proactive validation scripts in Azure.",
-        proj_c4_imp_lbl: "Impact:",
-        proj_c4_imp_val: "Complete prevention of compute capacity throttling, eliminating 50% of redundant workloads and optimizing cloud costs.",
-        
-        proj_p1_title: "DAX Optimization Framework & Fabric Capacity Lab",
-        proj_p1_desc: "A collection of diagnostic scripts and documented best practices to profile large Power BI models, reducing Fabric Capacity Unit (CU) spikes.",
-        
-        proj_p2_title: "Automated Ingestion & ETL from Public REST APIs",
-        proj_p2_desc: "Python project to ingest, format, and store transactional data from external APIs into SQL Server relational databases with error handling logs.",
-
-        proj_p3_title: "Formula 1 ETL Pipeline Project (Fabric & Scrape)",
-        proj_p3_desc: "Massive data extraction (races, qualys, practices) using web scraping with PySpark and Pandas, implemented in Fabric under Medallion Architecture (Bronze/Silver/Gold).",
-
-        proj_p4_title: "ML Bank Transaction Classifier",
-        proj_p4_desc: "Machine Learning model trained on text descriptions and accounting references to automatically classify bank transactions. Developed in Streamlit and orchestrated with Apache Airflow.",
-
-        // Power BI Showcases
-        demo_tag: "ANALYTICS SHOWCASE",
-        demo_title: "Power BI Reporting Portfolio",
-        pbi_practices_disclaimer: "<strong>Senior Level Showcase:</strong> The following interactive dashboards demonstrate SENIOR-level data analytics capabilities, featuring complex modeling, semantic architecture, and advanced analytical logic designed for strategic decision-making.",
-        demo_cta_interact: "Interact with Dashboard",
-        demo_btn_open: "Open Live Report ↗",
-
-        demo_f1_area: "Sports Intelligence & ETL",
-        demo_f1_title: "F1 Analytics: Championship Dashboard",
-        demo_f1_desc: "Interactive report fed directly from the Formula 1 Lakehouse in Fabric, analyzing lap times, historical grid positions, and pit stop ratios.",
-        
-        demo_c1_area: "World Championship 2026 - Round 1",
-        demo_c1_title: "Data Visualization & Executive Storytelling",
-        demo_c1_desc: "My first outstanding participation in Microsoft's official World Championship, achieving an honorable mention for semantics modeling and visuals.",
-        
-        demo_c2_area: "World Championship 2026 - Round 2",
-        demo_c2_title: "Corporate Analytics & Dynamic UI",
-        demo_c2_desc: "Interactive dashboard focused on business conversion and operational agility. Certified and reviewed by community experts and Microsoft judges.",
-        
-        demo_c3_area: "World Championship 2026 - Round 3",
-        demo_c3_title: "Advanced UI/UX & Executive UX",
-        demo_c3_desc: "Dashboard centered on clean visual layouts, integrating scatter charts, custom slicers, and seamless navigation states.",
-
-        demo_s2r1_area: "World Championship 2026 Season 2 - Round 1",
-        demo_s2r1_title: "Corporate Financial Analysis & Storytelling",
-        demo_s2r1_desc: "Interactive report focused on comprehensive financial diagnostics, analyzing corporate operational strengths and weaknesses through advanced data storytelling.",
-
-        demo_s2r2_area: "World Championship 2026 Season 2 - Round 2",
-        demo_s2r2_title: "LEGO Interactive Museum & Historical Analytics",
-        demo_s2r2_desc: "Dashboard focused on historical analysis of LEGO sets, release patterns, and advanced data visualizations designed to explore collection evolution.",
-
-        // Certifications Section
-        cert_tag: "TECHNICAL CREDIBILITY",
-        cert_title: "Official Microsoft Certifications",
-        cert_subtitle: "Official credentials issued directly by Microsoft validating my advanced data engineering, analytics, and artificial intelligence capabilities.",
-        cert_c1_title: "Azure Data Engineer Associate",
-        cert_c1_issuer: "Microsoft Certified",
-        cert_c2_title: "Fabric Analytics Engineer Associate",
-        cert_c2_issuer: "Microsoft Certified",
-        cert_c3_title: "Power BI Data Analyst Associate",
-        cert_c3_issuer: "Microsoft Certified",
-        cert_c4_title: "Azure AI Fundamentals",
-        cert_c4_issuer: "Microsoft Certified",
-        cert_btn_verify: "Verify Credential ↗",
-        cert_comment_label: "Practical Work Use:",
-        cert_c1_comment: "I use this credential to optimize cloud pipelines, design scalable Lakehouses, and migrate legacy local SSIS workloads into efficient Azure flows.",
-        cert_c2_comment: "Empowers me to integrate data warehouses and Lakehouses in Microsoft Fabric, consolidating massive finance and sales streams into a single source of truth.",
-        cert_c3_comment: "Advanced data modeling and executive dashboard creation. Led the migration of over 230 manual Excel reports to governed environments.",
-        cert_c4_comment: "Provides solid foundations for integrating artificial intelligence into pipelines, automating accounting transaction classification and predictive reading.",
-        stack_title: "Ecosystem & Technical Stack",
-
-        // Education Section
-        edu_tag: "ACCREDITED KNOWLEDGE",
-        edu_title: "Academic Background",
-        edu_badge_grad: "Final Year Completed",
-        edu_badge_active: "Active Studies",
-        edu_badge_compl: "Technical Degree",
-        edu_badge_special: "Specializations",
-        edu_y1: "2022 - Present",
-        edu_y2: "2024 - Present",
-        edu_y3: "2019 - 2021",
-        edu_y4: "2021 - 2025",
-        edu_ac1_title: "Public Accounting and Finance",
-        edu_ac1_school: "University of Nicaragua",
-        edu_ac1_desc: "Solid training in financial auditing, tax compliance, complex bank reconciliations, P&L financial statements, and OPEX metrics.",
-        edu_ac2_title: "Computer Engineering",
-        edu_ac2_school: "University of Nicaragua",
-        edu_ac2_desc: "Focus centered on advanced programming algorithms, relational/non-relational databases, structured systems analysis, and computer architecture.",
-        edu_ac3_title: "Accounting Technician",
-        edu_ac3_school: "Technical Institute of Nicaragua",
-        edu_ac3_desc: "Initial technical training in generally accepted accounting principles, daily fiscal transaction recording, inventory audits, and payroll.",
-        edu_ac4_title: "Technical Specializations",
-        edu_ac4_school: "Official Entities & Microsoft Learn Training",
-        edu_s5: "Advanced Excel & Finance (2021)",
-        edu_s6: "Advanced English (C1 - EF SET)",
-
-        // Experience Section
-        exp_tag: "PROFESSIONAL HISTORY",
-        exp_title: "Work Experience",
-        exp_x1_dates: "April 2025 - Present",
-        exp_x1_title: "SQL & BI Developer Lead",
-        exp_x1_desc: "I lead the development of complex semantic data models and capacity optimization. Direct responsibility for ensuring corporate analytical consistency.",
-        exp_x1_b1: "Complete Git Integration with Azure DevOps for structured versioning and separated Dev/Test/Prod pipeline deployments of Power BI (.pbip).",
-        exp_x1_b2: "Daily monitoring and capacity tuning of Microsoft Fabric, reducing throttling incidents by 50% without degrading service for 350+ users.",
-        exp_x1_b3: "Coordinated design of sales and logistics accounting KPIs, eliminating operational discrepancies and accelerating billing report latency from 72h to ~30h.",
-        
-        exp_x2_dates: "January 2023 - March 2025",
-        exp_x2_title: "Senior Data Analyst (IT Department)",
-        exp_x2_desc: "Led the modernization of the Business Intelligence unit for a corporate holding company (industrial, pharmaceutical, and distribution subsidiaries).",
-        exp_x2_b1: "Successful hands-on migration of 80+ manual Tableau and Excel reports to Power BI, improving usability and data governance.",
-        exp_x2_b2: "Built from scratch the unified Microsoft Fabric Lakehouse/Warehouse, replacing an obsolete and unstable SSIS architecture.",
-        exp_x2_b3: "Implemented incremental SQL data loading, accelerating ingestion pipelines by 67% (processing time reduced from 3h to 1h) with automated error checks.",
-        
-        exp_x3_dates: "June 2021 - December 2022",
-        exp_x3_title: "Accounting Assistant & Financial Analyst",
-        exp_x3_desc: "In charge of accounting record-keeping, auditing, and financial analysis for budgeting and profitability decision-making across the industrial group.",
-        exp_x3_b1: "Designed smart Excel templates automating tax withholdings, national taxes, and VET tax returns, saving 1.5 days of monthly manual effort.",
-        exp_x3_b2: "Automated and standardized OPEX control, variance analysis, bank reconciliations, and AR/AP, reducing the monthly accounting close from 5 to 2.5 business days.",
-        exp_x3_b3: "Recorded depreciations, subsidiary financial expenses, and monthly budget variance reports.",
-
-        // Contact & Panel
-        cont_tag: "CONTACT ME",
-        cont_title: "Let's Align Your Infrastructure with Your Business Objectives",
-        cont_desc: "Looking to automate your accounting reports, migrate to the cloud without redundant compute fees, or build a scalable Fabric architecture? Let's schedule a quick call.",
-        cont_lbl_email: "Direct Email Address",
-        cont_lbl_phone: "Direct WhatsApp",
-        cont_lbl_loc: "Current Location",
-        cont_val_loc: "Managua, Nicaragua (Available for Global Remote)",
-        cont_btn_cv: "Download CV (Markdown)",
-        
-        frm_lbl_name: "Full Name",
-        frm_lbl_email: "Corporate Email Address",
-        frm_lbl_subj: "Subject",
-        frm_lbl_msg: "Message",
-        frm_btn_send: "Send Message / Connect",
-        frm_success_msg: "Message sent successfully! I will reach out to you within 24 business hours.",
-        foot_copyright: "© 2026 Richard Ampie Chamorro. Data Architecture & Business Intelligence with Financial Impact."
+  function setLanguage(next) {
+    language = next === "en" ? "en" : "es";
+    document.documentElement.lang = language;
+    document.title = tr("meta.title");
+    document.querySelector('meta[name="description"]').content =
+      tr("meta.description");
+    document.querySelector('meta[property="og:title"]').content =
+      tr("meta.title");
+    document.querySelector('meta[property="og:description"]').content =
+      tr("meta.description");
+    document.querySelector('meta[property="og:locale"]').content =
+      language === "es" ? "es_LA" : "en_US";
+    document.querySelectorAll("[data-i18n]").forEach((el) => {
+      const value = tr(el.dataset.i18n);
+      if (value !== undefined) el.textContent = value;
+    });
+    document.querySelectorAll("[data-project]").forEach((el) => {
+      const p = projects.find((project) => project.id === el.dataset.project);
+      el.textContent = localized(p[el.dataset.field]);
+    });
+    document.querySelectorAll(".project-card").forEach((card) => {
+      const id = card.querySelector("[data-open-project]").dataset.openProject;
+      const p = projects.find((project) => project.id === id);
+      card
+        .querySelector(".project-image")
+        .setAttribute("aria-label", `${localized(p.title)} — Power BI`);
+      card.querySelector("img").alt = localized(p.title);
+    });
+    document.querySelectorAll("[data-service]").forEach((el) => {
+      const s = services[Number(el.dataset.service)];
+      el.textContent = localized(
+        el.dataset.field === "items"
+          ? s.items[Number(el.dataset.item)]
+          : s[el.dataset.field],
+      );
+    });
+    document
+      .querySelectorAll("[data-lang]")
+      .forEach((button) =>
+        button.setAttribute(
+          "aria-pressed",
+          String(button.dataset.lang === language),
+        ),
+      );
+    menu.setAttribute("aria-label", tr("menu"));
+    nav.setAttribute("aria-label", language === "es" ? "Principal" : "Main");
+    document
+      .querySelector(".project-filters")
+      .setAttribute(
+        "aria-label",
+        language === "es" ? "Filtrar proyectos" : "Filter projects",
+      );
+    document.querySelector("#inquiry-guide").value = tr("contact.prompt");
+    const greeting =
+      language === "es"
+        ? "Hola Richard, quisiera conversar sobre un proyecto de datos."
+        : "Hi Richard, I would like to discuss a data project.";
+    document.querySelector('a[href^="https://wa.me/"]').href =
+      `https://wa.me/50576896537?text=${encodeURIComponent(greeting)}`;
+    document.querySelector("#copy-status").textContent = "";
+    if (dialog.open && activeProject) showProject(activeProject);
+    try {
+      localStorage.setItem("ra-language", language);
+    } catch {
+      /* Storage is optional. */
     }
-};
+  }
 
-/* --- LANGUAGE ENGINE LOGIC --- */
-let currentLanguage = 'es';
+  document
+    .querySelectorAll("[data-lang]")
+    .forEach((button) =>
+      button.addEventListener("click", () => setLanguage(button.dataset.lang)),
+    );
+  menu.addEventListener("click", () => {
+    const isOpen = menu.getAttribute("aria-expanded") === "true";
+    menu.setAttribute("aria-expanded", String(!isOpen));
+    nav.classList.toggle("is-open", !isOpen);
+  });
+  nav.addEventListener("click", (event) => {
+    if (event.target.closest("a")) closeMenu();
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeMenu();
+  });
+  document.addEventListener("click", (event) => {
+    if (!nav.contains(event.target) && !menu.contains(event.target))
+      closeMenu();
+  });
+  const desktopMedia = matchMedia("(min-width: 901px)");
+  desktopMedia.addEventListener("change", (event) => {
+    if (event.matches) closeMenu();
+  });
 
-function changeLanguage(lang) {
-    if (!translations[lang]) return;
-    
-    currentLanguage = lang;
-    localStorage.setItem('lang', lang);
-    
-    // Toggle active state on buttons
-    document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
-    const activeBtn = document.getElementById(`btn-${lang}`);
-    if (activeBtn) activeBtn.classList.add('active');
-    
-    // Translate all elements with data-i18n
-    document.querySelectorAll('[data-i18n]').forEach(element => {
-        const key = element.getAttribute('data-i18n');
-        if (translations[lang][key]) {
-            // Check if element is an input placeholder
-            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-                element.placeholder = translations[lang][key];
-            } else {
-                element.innerHTML = translations[lang][key];
-            }
-        }
-    });
+  document.querySelectorAll("[data-open-project]").forEach((button) =>
+    button.addEventListener("click", () => {
+      lastProjectButton = button;
+      showProject(button.dataset.openProject);
+    }),
+  );
+  document
+    .querySelector("#close-dialog")
+    .addEventListener("click", () => dialog.close());
+  dialog.addEventListener("click", (event) => {
+    if (event.target === dialog) dialog.close();
+  });
+  dialog.addEventListener("close", () => {
+    document.body.classList.remove("modal-open");
+    activeProject = null;
+    lastProjectButton?.focus();
+  });
 
-    // Update HTML lang attribute
-    document.documentElement.setAttribute('lang', lang);
-    
-    // Recalculate carousels after lang change as heights/widths might shift text
-    resetCarousels();
-}
+  document.querySelectorAll("[data-filter]").forEach((button) =>
+    button.addEventListener("click", () => {
+      const category = button.dataset.filter;
+      let count = 0;
+      document.querySelectorAll(".project-card").forEach((card) => {
+        const visible =
+          category === "all" || card.dataset.category === category;
+        card.hidden = !visible;
+        if (visible) count += 1;
+      });
+      document.querySelector("#project-count").textContent = String(count);
+      document
+        .querySelectorAll("[data-filter]")
+        .forEach((b) => b.setAttribute("aria-pressed", String(b === button)));
+    }),
+  );
 
-// Auto Initialize Language
-function initLanguage() {
-    const savedLang = localStorage.getItem('lang');
-    if (savedLang && translations[savedLang]) {
-        changeLanguage(savedLang);
-    } else {
-        // Detect browser language
-        const userLang = navigator.language || navigator.userLanguage;
-        const defaultLang = userLang.startsWith('en') ? 'en' : 'es';
-        changeLanguage(defaultLang);
+  document.querySelectorAll("[data-service-cta]").forEach((link) =>
+    link.addEventListener("click", () => {
+      const service = localized(
+        services[Number(link.dataset.serviceCta)].title,
+      );
+      const subject = encodeURIComponent(
+        `${language === "es" ? "Consulta" : "Inquiry"}: ${service}`,
+      );
+      const email = document.querySelector(
+        '.contact-actions a[href^="mailto:"]',
+      );
+      email.href = `mailto:rampiechamorro14@gmail.com?subject=${subject}`;
+    }),
+  );
+
+  document.querySelector("#copy-brief").addEventListener("click", async () => {
+    const guide = document.querySelector("#inquiry-guide");
+    try {
+      await navigator.clipboard.writeText(guide.value);
+      document.querySelector("#copy-status").textContent = tr("contact.copied");
+    } catch {
+      guide.focus();
+      guide.select();
+      document.querySelector("#copy-status").textContent = tr(
+        "contact.copyfallback",
+      );
     }
-}
+  });
 
-/* --- MOBILE NAVIGATION PANEL --- */
-const mobileToggle = document.getElementById('mobile-toggle');
-const navMenu = document.getElementById('nav-menu');
-
-if (mobileToggle && navMenu) {
-    mobileToggle.addEventListener('click', () => {
-        mobileToggle.classList.toggle('active');
-        navMenu.classList.toggle('active');
-    });
-
-    // Close menu when a link is clicked
-    document.querySelectorAll('.nav-link').forEach(link => {
-        link.addEventListener('click', () => {
-            mobileToggle.classList.remove('active');
-            navMenu.classList.remove('active');
-        });
-    });
-}
-
-/* --- PROJECT/PORTFOLIO CATEGORY TOGGLE SYSTEM (V4 Carruseles) --- */
-function togglePortfolioCategory(category) {
-    document.querySelectorAll('#projects .tab-btn').forEach(btn => btn.classList.remove('active'));
-    document.getElementById(`tab-${category}`).classList.add('active');
-    
-    const corpContainer = document.getElementById('carousel-corporate-container');
-    const persContainer = document.getElementById('carousel-personal-container');
-    
-    if (category === 'corporate') {
-        persContainer.classList.add('d-none');
-        corpContainer.classList.remove('d-none');
-        carouselPositions.corp = 0;
-        updateCarouselTrack('corp');
-    } else {
-        corpContainer.classList.add('d-none');
-        persContainer.classList.remove('d-none');
-        carouselPositions.pers = 0;
-        updateCarouselTrack('pers');
-    }
-}
-
-/* --- MULTI-CAROUSEL SYSTEM LOGIC --- */
-const carouselPositions = {
-    corp: 0,
-    pers: 0,
-    pbipract: 0,
-    certs: 0
-};
-
-const carouselTracks = {
-    corp: 'carousel-corp-track',
-    pers: 'carousel-pers-track',
-    pbipract: 'carousel-pbipract-track',
-    certs: 'carousel-certs-track'
-};
-
-function getVisibleSlidesCount() {
-    const width = window.innerWidth;
-    if (width <= 768) return 1; // 1 slide on mobile
-    if (width <= 1200) return 2; // 2 slides on tablet/small laptops
-    return 3; // 3 slides on large viewports
-}
-
-function moveCarousel(carouselId, direction) {
-    const trackId = carouselTracks[carouselId];
-    const track = document.getElementById(trackId);
-    if (!track) return;
-    
-    const totalSlides = track.children.length;
-    const visibleSlides = carouselId === 'certs' && window.innerWidth > 1200 ? 3 : getVisibleSlidesCount();
-    const maxIndex = Math.max(0, totalSlides - visibleSlides);
-    
-    let currentIndex = carouselPositions[carouselId] + direction;
-    
-    // Bounds check
-    if (currentIndex < 0) {
-        currentIndex = 0;
-    } else if (currentIndex > maxIndex) {
-        currentIndex = maxIndex;
-    }
-    
-    carouselPositions[carouselId] = currentIndex;
-    updateCarouselTrack(carouselId);
-}
-
-function updateCarouselTrack(carouselId) {
-    const trackId = carouselTracks[carouselId];
-    const track = document.getElementById(trackId);
-    if (!track) return;
-    
-    const index = carouselPositions[carouselId];
-    const slide = track.querySelector('.carousel-slide');
-    if (!slide) return;
-    
-    const slideWidth = slide.getBoundingClientRect().width;
-    track.style.transform = `translateX(-${index * slideWidth}px)`;
-}
-
-function resetCarousels() {
-    // Reset positions to 0 and re-calculate offsets
-    Object.keys(carouselPositions).forEach(key => {
-        carouselPositions[key] = 0;
-        updateCarouselTrack(key);
-    });
-}
-
-// Re-calculate carousel positions on window resizing (for responsivity)
-window.addEventListener('resize', () => {
-    resetCarousels();
-});
-
-/* --- METRICS / COUNTERS ANIMATOR --- */
-const outcomeNumbers = document.querySelectorAll('.outcome-num');
-let startedCounters = false;
-
-function startCounters() {
-    if (startedCounters) return;
-    startedCounters = true;
-    
-    outcomeNumbers.forEach(counter => {
-        const targetValue = parseInt(counter.getAttribute('data-target'), 10);
-        const originalText = counter.innerText; // Holds "-" or "+" sign
-        const isNegative = originalText.startsWith('-');
-        const isPositive = originalText.startsWith('+');
-        
-        let currentValue = 0;
-        const duration = 1500; // 1.5 seconds animation
-        const steps = 60;
-        const increment = targetValue / steps;
-        const stepTime = duration / steps;
-        
-        let currentStep = 0;
-        const timer = setInterval(() => {
-            currentStep++;
-            currentValue += increment;
-            
-            if (currentStep >= steps) {
-                clearInterval(timer);
-                counter.innerText = (isNegative ? '-' : isPositive ? '+' : '') + targetValue + (counter.innerText.endsWith('%') ? '%' : isNegative ? '%' : '');
-            } else {
-                counter.innerText = (isNegative ? '-' : isPositive ? '+' : '') + Math.floor(currentValue) + (originalText.endsWith('%') ? '%' : '');
-            }
-        }, stepTime);
-    });
-}
-
-// Intersection Observer to trigger metrics counters when scrolled into viewport
-const statsObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            startCounters();
-        }
-    });
-}, { threshold: 0.1 });
-
-const statsSection = document.querySelector('.outcomes-sidebar');
-if (statsSection) {
-    statsObserver.observe(statsSection);
-}
-
-/* --- FORM SUBMISSION SIMULATION --- */
-function handleFormSubmit(event) {
-    event.preventDefault();
-    
-    const form = document.getElementById('contact-form');
-    const successMsg = document.getElementById('form-success');
-    const submitBtn = document.getElementById('btn-submit-form');
-    
-    if (!form || !successMsg || !submitBtn) return;
-    
-    // Add loading state
-    const originalBtnText = submitBtn.innerHTML;
-    submitBtn.disabled = true;
-    submitBtn.innerText = currentLanguage === 'es' ? 'Enviando...' : 'Sending...';
-    
-    // Simulate API POST / Form submission latency
-    setTimeout(() => {
-        form.classList.add('d-none');
-        successMsg.classList.remove('d-none');
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = originalBtnText;
-        
-        // Reset form inputs
-        form.reset();
-    }, 1500);
-}
-
-// Initialize components on load
-window.addEventListener('DOMContentLoaded', () => {
-    initLanguage();
-    resetCarousels();
-});
+  let savedLanguage;
+  try {
+    savedLanguage = localStorage.getItem("ra-language");
+  } catch {
+    /* Defaults to Spanish. */
+  }
+  setLanguage(savedLanguage || "es");
+})();
