@@ -140,7 +140,7 @@ window.PORTFOLIO = {
       "contact.direct": "Escribime para definir el alcance de tu proyecto.",
       "footer.line": "Consultoría independiente en datos, BI e IA aplicada.",
       "footer.top": "Volver arriba ↑",
-      "meta.title": "Richard Ampié | Consultoría en BI, automatización e IA",
+      "meta.title": "Portafolio | Richard Ampié",
       "meta.description":
         "Consultoría en Power BI, Microsoft Fabric, automatización e IA aplicada. Richard Ampié: liderazgo técnico, migraciones Tableau a Power BI y optimización de operaciones analíticas.",
       "nav.engineering": "Ingeniería",
@@ -308,7 +308,7 @@ window.PORTFOLIO = {
       "contact.direct": "Get in touch to define the scope of your project.",
       "footer.line": "Independent consulting in data, BI and applied AI.",
       "footer.top": "Back to top ↑",
-      "meta.title": "Richard Ampié | BI, Automation & AI Consulting",
+      "meta.title": "Portfolio | Richard Ampié",
       "meta.description":
         "Power BI, Microsoft Fabric, automation and applied AI consulting. Richard Ampié: technical leadership, Tableau-to-Power BI migrations and analytics operations optimization.",
       "nav.engineering": "Engineering",
