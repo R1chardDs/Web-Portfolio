@@ -1,4 +1,4 @@
-/* Editorial content. ES and EN values share the same key. */
+/* Bilingual portfolio content: [Spanish, English]. */
 window.PORTFOLIO = {
   ui: {
     es: {
@@ -45,7 +45,7 @@ window.PORTFOLIO = {
         "Intervenciones con un alcance definido, entregables claros y transferencia de conocimiento a tu equipo.",
       "services.deliver": "Qué recibís",
       "services.cta": "Consultar por este servicio",
-      "method.tag": "03 / MI FORMA DE TRABAJAR",
+      "method.tag": "04 / MI FORMA DE TRABAJAR",
       "method.title":
         "La IA acelera la ejecución.\nEl criterio dirige el resultado.",
       "method.body":
@@ -71,7 +71,7 @@ window.PORTFOLIO = {
       "method.step4": "Validar y entregar",
       "method.step4body":
         "Revisión de lógica, visuales, publicación y documentación.",
-      "work.tag": "04 / TRABAJO SELECCIONADO",
+      "work.tag": "05 / TRABAJO SELECCIONADO",
       "work.title": "Rigor en los datos.\nIntención en cada visual.",
       "work.body":
         "Una selección de reportes públicos creados para explorar, explicar y llevar Power BI más lejos. La misma atención al detalle que llevo a una solución de negocio.",
@@ -93,7 +93,7 @@ window.PORTFOLIO = {
       "project.value": "Qué demuestra",
       "project.close": "Cerrar proyecto",
       "project.count": "proyectos públicos",
-      "about.tag": "05 / EL CONSULTOR DETRÁS DEL TRABAJO",
+      "about.tag": "06 / EL CONSULTOR DETRÁS DEL TRABAJO",
       "about.title": "Richard Ampié",
       "about.lead":
         "Liderazgo de BI. Mentalidad de ingeniería. Visión financiera.",
@@ -113,7 +113,7 @@ window.PORTFOLIO = {
       "about.history2body":
         "Indicadores, conciliaciones, cierres y automatización operativa.",
       "about.location": "Nicaragua · Colaboración remota · Español / English",
-      "cert.tag": "06 / FORMACIÓN Y CREDENCIALES",
+      "cert.tag": "07 / FORMACIÓN Y CREDENCIALES",
       "cert.title": "Conocimiento que sigo\nponiendo a prueba.",
       "cert.summary": "4 certificaciones obtenidas · 2 en preparación",
       "cert.earned": "Obtenida",
@@ -122,7 +122,7 @@ window.PORTFOLIO = {
       "cert.syllabus": "Ver programa del examen ↗",
       "cert.note":
         "DP-800 y DP-300 forman parte de mi plan de desarrollo; aún no son certificaciones obtenidas.",
-      "contact.tag": "07 / EL SIGUIENTE PASO",
+      "contact.tag": "08 / EL SIGUIENTE PASO",
       "contact.title":
         "Tu equipo tiene\nmejores cosas que hacer\nque repetir tareas.",
       "contact.body":
@@ -143,6 +143,23 @@ window.PORTFOLIO = {
       "meta.title": "Richard Ampié | Consultoría en BI, automatización e IA",
       "meta.description":
         "Consultoría en Power BI, Microsoft Fabric, automatización e IA aplicada. Richard Ampié: liderazgo técnico, migraciones Tableau a Power BI y optimización de operaciones analíticas.",
+      "nav.engineering": "Ingeniería",
+      "theme.light": "Cambiar a modo claro",
+      "theme.dark": "Cambiar a modo oscuro",
+      "engineering.tag": "03 / INGENIERÍA Y AUTOMATIZACIÓN",
+      "engineering.title": "Lo que sostiene\ncada decisión.",
+      "engineering.body":
+        "Casos de experiencia profesional y laboratorios de ingeniería: integración de datos, modelos confiables, automatización y entrega gobernada.",
+      "engineering.all": "Todos",
+      "engineering.corporate": "Experiencia profesional",
+      "engineering.labs": "Laboratorios",
+      "engineering.details": "Ver enfoque y resultado",
+      "engineering.problem": "El problema",
+      "engineering.approach": "La solución",
+      "engineering.result": "Resultado / alcance",
+      "engineering.code": "Explorar código en GitHub ↗",
+      "engineering.note":
+        "Casos de experiencia profesional y laboratorios personales, presentados con su contexto técnico.",
     },
     en: {
       skip: "Skip to content",
@@ -187,7 +204,7 @@ window.PORTFOLIO = {
         "Focused engagements with a defined scope, clear deliverables and knowledge transfer to your team.",
       "services.deliver": "What you receive",
       "services.cta": "Discuss this service",
-      "method.tag": "03 / HOW I WORK",
+      "method.tag": "04 / HOW I WORK",
       "method.title": "AI accelerates execution.\nJudgment guides the outcome.",
       "method.body":
         "I turn technical knowledge, business rules and design standards into an agent-assisted development workflow. I retain ownership of architecture, business logic and delivery review.",
@@ -211,7 +228,7 @@ window.PORTFOLIO = {
       "method.step4": "Validate and deliver",
       "method.step4body":
         "Review of logic, visuals, publication and documentation.",
-      "work.tag": "04 / SELECTED WORK",
+      "work.tag": "05 / SELECTED WORK",
       "work.title": "Rigor in the data.\nPurpose in every visual.",
       "work.body":
         "Public reports built to explore, explain and push Power BI further. The same attention to detail I bring to a business solution.",
@@ -233,7 +250,7 @@ window.PORTFOLIO = {
       "project.value": "What it demonstrates",
       "project.close": "Close project",
       "project.count": "public projects",
-      "about.tag": "05 / THE CONSULTANT BEHIND THE WORK",
+      "about.tag": "06 / THE CONSULTANT BEHIND THE WORK",
       "about.title": "Richard Ampié",
       "about.lead":
         "BI leadership. Engineering mindset. Financial perspective.",
@@ -252,7 +269,7 @@ window.PORTFOLIO = {
       "about.history2body":
         "KPIs, reconciliations, financial close and operational automation.",
       "about.location": "Nicaragua · Remote collaboration · Español / English",
-      "cert.tag": "06 / TRAINING & CREDENTIALS",
+      "cert.tag": "07 / TRAINING & CREDENTIALS",
       "cert.title": "Knowledge I keep\nputting to the test.",
       "cert.summary": "4 certifications earned · 2 in progress",
       "cert.earned": "Earned",
@@ -261,7 +278,7 @@ window.PORTFOLIO = {
       "cert.syllabus": "View exam details ↗",
       "cert.note":
         "DP-800 and DP-300 are part of my development plan; they are not yet earned certifications.",
-      "contact.tag": "07 / NEXT STEP",
+      "contact.tag": "08 / NEXT STEP",
       "contact.title": "Your team has\nbetter things to do\nthan repeat tasks.",
       "contact.body":
         "Tell me which process consumes time, which report has slowed down or what you want to automate. We can start by defining the problem and the scope of a first engagement.",
@@ -281,6 +298,23 @@ window.PORTFOLIO = {
       "meta.title": "Richard Ampié | BI, Automation & AI Consulting",
       "meta.description":
         "Power BI, Microsoft Fabric, automation and applied AI consulting. Richard Ampié: technical leadership, Tableau-to-Power BI migrations and analytics operations optimization.",
+      "nav.engineering": "Engineering",
+      "theme.light": "Switch to light mode",
+      "theme.dark": "Switch to dark mode",
+      "engineering.tag": "03 / ENGINEERING & AUTOMATION",
+      "engineering.title": "What supports\nevery decision.",
+      "engineering.body":
+        "Professional case studies and engineering labs: data integration, trusted models, automation and governed delivery.",
+      "engineering.all": "All",
+      "engineering.corporate": "Professional experience",
+      "engineering.labs": "Labs",
+      "engineering.details": "View approach and outcome",
+      "engineering.problem": "The problem",
+      "engineering.approach": "The solution",
+      "engineering.result": "Outcome / scope",
+      "engineering.code": "Explore code on GitHub ↗",
+      "engineering.note":
+        "Professional experience and personal labs, presented with their technical context.",
     },
   },
   services: [
@@ -630,4 +664,234 @@ window.PORTFOLIO = {
   ],
   recognition:
     "https://community.fabric.microsoft.com/blog/community_blog/%F0%9F%8F%86-announcing-the-results-of-round-1-of-the-power-bi-dataviz-world-champs/4938838",
+  engineering: [
+    {
+      id: "bi-governance",
+      title: [
+        "Gobernanza de BI y Git Integration en Fabric",
+        "BI governance & Git integration in Fabric",
+      ],
+      desc: [
+        "Un flujo de desarrollo trazable para llevar los cambios de Power BI desde desarrollo hasta producción.",
+        "A traceable development workflow for taking Power BI changes from development to production.",
+      ],
+      stack: "PBIP · Azure DevOps · Git · Fabric",
+      flow: ["Dev", "Test", "Prod"],
+      problem: [
+        "Liberaciones lentas y dificultad para controlar versiones y cambios entre entornos.",
+        "Slow releases and difficulty controlling versions and changes across environments.",
+      ],
+      approach: [
+        "Integración de proyectos PBIP con Git en Azure DevOps, separación de workspaces Dev/Test/Prod y despliegues gobernados con capacidad de reversión.",
+        "PBIP integration with Git in Azure DevOps, separate Dev/Test/Prod workspaces and governed deployments with rollback capability.",
+      ],
+      result: [
+        "Ciclo de liberación reducido de 72 horas a aproximadamente 30 horas, con trazabilidad de los cambios.",
+        "Release cycle reduced from 72 hours to approximately 30 hours, with traceability of changes.",
+      ],
+      group: "corporate",
+      repo: null,
+    },
+    {
+      id: "dwh-migration",
+      title: [
+        "Migración de DWH y modernización de reportes",
+        "Data warehouse migration & reporting modernization",
+      ],
+      desc: [
+        "Evolución de un entorno SSIS hacia Microsoft Fabric, acompañada por la migración de Tableau y Excel a Power BI.",
+        "Evolution from an SSIS environment to Microsoft Fabric, alongside a Tableau and Excel migration to Power BI.",
+      ],
+      stack: "SSIS · Fabric Lakehouse · PySpark · SQL Server",
+      flow: ["SSIS", "Fabric", "Power BI"],
+      problem: [
+        "Cargas inestables, procesamiento prolongado y reportes dispersos en distintas herramientas.",
+        "Unstable loads, lengthy processing and reporting scattered across tools.",
+      ],
+      approach: [
+        "Construcción de una plataforma lakehouse/warehouse con cargas incrementales, particionamiento y validaciones, y modernización del modelado y los reportes.",
+        "A lakehouse/warehouse platform with incremental loading, partitioning and validation, alongside modernized models and reports.",
+      ],
+      result: [
+        "Ingesta de datos de 3 horas a 1 hora. En mi trayectoria: 80+ reportes migrados directamente y ~150 migraciones adicionales lideradas.",
+        "Data ingestion reduced from 3 hours to 1 hour. Across my career: 80+ reports migrated hands-on and ~150 additional migrations led.",
+      ],
+      group: "corporate",
+      repo: null,
+    },
+    {
+      id: "finance-automation",
+      title: [
+        "Reportería de márgenes y OPEX automatizada",
+        "Automated margin & OPEX reporting",
+      ],
+      desc: [
+        "Integración de fuentes financieras para reducir trabajo manual y mantener indicadores consistentes.",
+        "Financial source integration to reduce manual work and maintain consistent metrics.",
+      ],
+      stack: "Softland ERP · REST APIs · SQL Server · DAX",
+      flow: ["ERP / APIs", "SQL", "KPIs"],
+      problem: [
+        "Conciliaciones y distribución manual de información que retrasaban el análisis y el cierre.",
+        "Manual reconciliation and information distribution delaying analysis and financial close.",
+      ],
+      approach: [
+        "Conexión de fuentes de negocio con SQL Server y Power BI, estandarización de indicadores y automatización de actualización y entrega de reportes.",
+        "Business source connections to SQL Server and Power BI, standardized metrics and automated report refresh and delivery.",
+      ],
+      result: [
+        "En la experiencia profesional relacionada, el cierre mensual pasó de 5 días a 2.5 días.",
+        "In the related professional experience, month-end close decreased from 5 days to 2.5 days.",
+      ],
+      group: "corporate",
+      repo: null,
+    },
+    {
+      id: "fabric-capacity",
+      title: [
+        "Optimización de capacidad en Fabric",
+        "Fabric capacity optimization",
+      ],
+      desc: [
+        "Ajuste de cargas y consultas para aprovechar mejor la capacidad de la plataforma analítica.",
+        "Workload and query tuning to make better use of analytics platform capacity.",
+      ],
+      stack: "Fabric · Capacity Metrics · T-SQL · Azure",
+      flow: [
+        ["Medir", "Measure"],
+        ["Optimizar", "Tune"],
+        ["Validar", "Validate"],
+      ],
+      problem: [
+        "Consumo redundante, concurrencia de cargas y cuellos de botella en la capacidad.",
+        "Redundant consumption, concurrent loads and capacity bottlenecks.",
+      ],
+      approach: [
+        "Análisis de consumo, cargas incrementales, particionamiento, programación y optimización de consultas, con controles antes y después de las cargas.",
+        "Consumption analysis, incremental loads, partitioning, scheduling and query tuning, with pre- and post-load checks.",
+      ],
+      result: [
+        "Reducción aproximada del 50 % del uso de cómputo / capacidad en proyectos de mi trayectoria.",
+        "Approximately 50% lower compute / capacity usage in projects from my career.",
+      ],
+      group: "corporate",
+      repo: null,
+    },
+    {
+      id: "dax-framework",
+      title: [
+        "Framework de optimización DAX y Fabric Capacity",
+        "DAX & Fabric Capacity optimization framework",
+      ],
+      desc: [
+        "Scripts de diagnóstico y guías reutilizables para revisar modelos semánticos de Power BI.",
+        "Diagnostic scripts and reusable guides for reviewing Power BI semantic models.",
+      ],
+      stack: "Tabular Editor · DAX Studio · Fabric Monitor",
+      flow: [
+        ["Modelo", "Model"],
+        ["Diagnóstico", "Audit"],
+        ["Ajustes", "Tune"],
+      ],
+      problem: [
+        "La revisión manual de modelos grandes dificulta encontrar dependencias y patrones de consumo.",
+        "Manual review of large models makes it harder to find dependencies and consumption patterns.",
+      ],
+      approach: [
+        "Organización de scripts y buenas prácticas de auditoría para analizar medidas DAX, dependencias y oportunidades de optimización.",
+        "Organized scripts and auditing practices to analyze DAX measures, dependencies and optimization opportunities.",
+      ],
+      result: [
+        "Un proceso de diagnóstico semántico reutilizable para revisar modelos de Power BI de forma consistente.",
+        "A reusable semantic diagnostics process for consistently reviewing Power BI models.",
+      ],
+      group: "labs",
+      repo: null,
+    },
+    {
+      id: "api-etl",
+      title: [
+        "Ingesta y ETL de APIs REST públicas",
+        "Public REST API ingestion & ETL",
+      ],
+      desc: [
+        "Un pipeline en Python para extraer, transformar y almacenar datos de APIs en SQL Server.",
+        "A Python pipeline for extracting, transforming and storing API data in SQL Server.",
+      ],
+      stack: "Python · Pandas · Requests · SQL Server",
+      flow: ["REST API", "Python", "SQL Server"],
+      problem: [
+        "Datos de fuentes externas que requieren extracción, formato consistente y seguimiento de fallas.",
+        "External-source data requiring extraction, consistent formatting and failure tracking.",
+      ],
+      approach: [
+        "Extracción con Requests, transformación con Pandas y carga a una base relacional, incorporando registros de fallas del proceso.",
+        "Extraction with Requests, transformation with Pandas and relational database loading, including process failure logs.",
+      ],
+      result: [
+        "Laboratorio de integración de fuentes y automatización de la ingesta.",
+        "A lab for source integration and ingestion automation.",
+      ],
+      group: "labs",
+      repo: null,
+    },
+    {
+      id: "f1-medallion",
+      title: [
+        "Fórmula 1 · Pipeline Medallion en Fabric",
+        "Formula 1 · Medallion pipeline in Fabric",
+      ],
+      desc: [
+        "La ingeniería detrás del reporte: de los datos de carreras a tablas preparadas para análisis.",
+        "The engineering behind the report: from race data to analytics-ready tables.",
+      ],
+      stack: "Microsoft Fabric · PySpark · Pandas · Delta",
+      flow: ["Bronze", "Silver", "Gold"],
+      problem: [
+        "Integrar datos de carreras, clasificación y prácticas en una estructura reutilizable para BI.",
+        "Integrating race, qualifying and practice data into a reusable BI structure.",
+      ],
+      approach: [
+        "Extracción y transformación con Python/PySpark bajo una arquitectura Bronze/Silver/Gold, con lakehouses y un pipeline maestro de carga.",
+        "Python/PySpark extraction and transformation in a Bronze/Silver/Gold architecture, with lakehouses and a master loading pipeline.",
+      ],
+      result: [
+        "Proyecto público de ingeniería de datos y BI en Microsoft Fabric. El repositorio incluye las capas ETL y los artefactos de orquestación.",
+        "A public Microsoft Fabric data engineering and BI project. The repository includes ETL layers and orchestration artifacts.",
+      ],
+      group: "labs",
+      repo: "https://github.com/R1chardDs/Formula1",
+    },
+    {
+      id: "transaction-ml",
+      title: [
+        "Clasificación de transacciones con ML",
+        "Transaction classification with ML",
+      ],
+      desc: [
+        "Aplicación de aprendizaje automático a descripciones y referencias de transacciones financieras.",
+        "Machine learning applied to financial transaction descriptions and references.",
+      ],
+      stack: "Python · Scikit-learn · Streamlit · Airflow",
+      flow: [
+        ["Transacciones", "Transactions"],
+        "ML",
+        ["Clasificación", "Categories"],
+      ],
+      problem: [
+        "Clasificación repetitiva de movimientos bancarios a partir de texto contable.",
+        "Repetitive classification of bank transactions from accounting text.",
+      ],
+      approach: [
+        "Modelo de clasificación basado en descripciones y referencias, con una interfaz Streamlit y orquestación en Apache Airflow.",
+        "A classification model based on descriptions and references, with a Streamlit interface and Apache Airflow orchestration.",
+      ],
+      result: [
+        "Laboratorio que conecta finanzas, machine learning y automatización del flujo de trabajo.",
+        "A lab connecting finance, machine learning and workflow automation.",
+      ],
+      group: "labs",
+      repo: null,
+    },
+  ],
 };

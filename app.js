@@ -1,13 +1,14 @@
 "use strict";
 
 (() => {
-  const { ui, projects, services } = window.PORTFOLIO;
+  const { ui, projects, services, engineering } = window.PORTFOLIO;
   let language = "es";
   let activeProject = null;
   let lastProjectButton = null;
   const dialog = document.querySelector("#project-dialog");
   const nav = document.querySelector("#main-nav");
   const menu = document.querySelector(".menu-toggle");
+  const themeToggle = document.querySelector("#theme-toggle");
   const localized = (value) =>
     Array.isArray(value) ? value[language === "es" ? 0 : 1] : value;
   const escape = (value) =>
@@ -23,6 +24,29 @@
         })[c],
     );
   const tr = (key) => ui[language][key];
+
+  function updateThemeControl() {
+    const isDark = document.documentElement.dataset.theme === "dark";
+    const label = tr(isDark ? "theme.light" : "theme.dark");
+    themeToggle.setAttribute("aria-label", label);
+    themeToggle.title = label;
+    themeToggle.setAttribute("aria-pressed", String(isDark));
+    document.querySelector('meta[name="theme-color"]').content = isDark
+      ? "#0a1324"
+      : "#f4f7fc";
+  }
+
+  themeToggle.addEventListener("click", () => {
+    const next =
+      document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+    document.documentElement.dataset.theme = next;
+    try {
+      localStorage.setItem("ra-theme", next);
+    } catch {
+      /* Storage is optional. */
+    }
+    updateThemeControl();
+  });
 
   function closeMenu() {
     nav.classList.remove("is-open");
@@ -85,6 +109,23 @@
           : s[el.dataset.field],
       );
     });
+    document.querySelectorAll("[data-engineering]").forEach((el) => {
+      const c = engineering.find((item) => item.id === el.dataset.engineering);
+      const value =
+        el.dataset.field === "flow"
+          ? c.flow[Number(el.dataset.item)]
+          : c[el.dataset.field];
+      el.textContent = localized(value);
+    });
+    document
+      .querySelector(".engineering-filters")
+      .setAttribute(
+        "aria-label",
+        language === "es"
+          ? "Filtrar casos de ingeniería"
+          : "Filter engineering cases",
+      );
+    updateThemeControl();
     document
       .querySelectorAll("[data-lang]")
       .forEach((button) =>
@@ -176,6 +217,19 @@
         .forEach((b) => b.setAttribute("aria-pressed", String(b === button)));
     }),
   );
+
+  document.querySelectorAll("[data-engineering-filter]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const group = button.dataset.engineeringFilter;
+      document.querySelectorAll("[data-engineering-group]").forEach((card) => {
+        card.hidden =
+          group !== "all" && card.dataset.engineeringGroup !== group;
+      });
+      document.querySelectorAll("[data-engineering-filter]").forEach((item) => {
+        item.setAttribute("aria-pressed", String(item === button));
+      });
+    });
+  });
 
   document.querySelectorAll("[data-service-cta]").forEach((link) =>
     link.addEventListener("click", () => {

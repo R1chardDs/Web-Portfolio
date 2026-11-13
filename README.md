@@ -5,13 +5,14 @@ Portafolio bilingüe de consultoría independiente en datos, inteligencia de neg
 ## Archivos
 
 - `index.html`: contenido inicial en español, estructura accesible y metadatos.
-- `content.js`: textos en español e inglés, servicios y ocho proyectos.
+- `content.js`: textos en español e inglés, servicios, ocho reportes y ocho casos de ingeniería / laboratorios.
+- `theme-init.js`: aplica la preferencia de tema antes de cargar los estilos.
 - `app.js`: idioma, filtros, detalles de proyectos y guía de consulta.
 - `style.css`: identidad visual y estilos responsive.
 - `assets/`: vistas previas, insignias, monograma y tarjeta social.
 - `resume.md`: resumen profesional actualizado con el CV 2026 y el puesto actual indicado por Richard.
 
-No requiere npm, un backend, variables de entorno ni credenciales de Power BI. El sitio no envía ni almacena consultas: los botones abren el correo o WhatsApp del visitante. La elección de idioma se guarda únicamente en su navegador. Google Fonts es un recurso externo, con fuentes de respaldo del sistema.
+No requiere npm, un backend, variables de entorno ni credenciales de Power BI. El sitio no envía ni almacena consultas: los botones abren el correo o WhatsApp del visitante. Las elecciones de idioma y tema se guardan únicamente en su navegador. El tema inicial es oscuro y el botón del encabezado permite cambiar a claro. Google Fonts es un recurso externo, con fuentes de respaldo del sistema.
 
 ## Revisión local
 
@@ -25,9 +26,9 @@ Las rutas de recursos son relativas para funcionar bajo `/Web-Portfolio/`. Los r
 
 ## Publicación
 
-El rediseño se prepara en `codex/consulting-brand-refresh`, basada en `e175820afdff87c144dc7e4eb2a597051ed33619`, la versión remota observada durante la revisión. Antes de publicar, revisar el diff con `origin/main` e integrar en la rama configurada en GitHub Pages cuando se decida reemplazar la web pública.
+El sitio se publica en la rama `main` de este repositorio y se despliega con la configuración existente de GitHub Pages. La revisión incluye temas navy blue claro y oscuro, ocho casos de ingeniería y ocho reportes públicos.
 
-No se creó un Site en ChatGPT, no se cambió la configuración de GitHub Pages y no se configuró un dominio. Después de comprar el dominio, configurarlo en GitHub Pages y actualizar `og:image` y JSON-LD a la URL definitiva. No agregar un CNAME para un dominio todavía no adquirido/configurado.
+No se creó un Site en ChatGPT ni se configuró un dominio. Después de comprar el dominio, configurarlo en GitHub Pages y actualizar `og:image` y JSON-LD a la URL definitiva. No agregar un CNAME para un dominio todavía no adquirido/configurado.
 
 ## Criterio editorial
 
@@ -36,3 +37,7 @@ No se creó un Site en ChatGPT, no se cambió la configuración de GitHub Pages 
 - El reconocimiento enlaza al anuncio público de Judges’ Favorites. No se afirma haber ganado el campeonato ni se presenta un ranking específico sin una fuente que lo acredite.
 - Hay cuatro certificaciones obtenidas y dos en preparación.
 - Los reportes públicos son proyectos de portafolio y concurso. No se presentan como contratos de clientes ni como implementaciones productivas.
+
+## Ingeniería y laboratorios
+
+La sección de ingeniería conserva cuatro casos profesionales y cuatro laboratorios del portafolio previo. Los casos tienen resúmenes técnicos y resultados con contexto, sin datos internos. El laboratorio de Fórmula 1 enlaza al repositorio público verificado `R1chardDs/Formula1`. Los antiguos enlaces de ejemplo no se reutilizan.
