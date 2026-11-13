@@ -9,13 +9,14 @@ window.PORTFOLIO = {
       "nav.about": "Mi enfoque",
       "nav.contact": "Conversemos",
       menu: "Abrir menú",
-      "hero.eyebrow": "CONSULTORÍA EN DATOS, BI E IA APLICADA",
+      "hero.eyebrow": "FINANZAS, DATOS E INTELIGENCIA DE NEGOCIO",
       "hero.title": "Menos trabajo manual.\nMás capacidad\npara decidir.",
       "hero.body":
-        "Ayudo a equipos a automatizar su operación analítica, optimizar Power BI y convertir datos dispersos en información confiable. De la arquitectura a la entrega, con criterio de negocio y dirección técnica.",
+        "Con cinco años de experiencia en finanzas, ingeniería de datos e inteligencia de negocio, ayudo a empresas a conectar sus datos con las decisiones que importan. Como líder de BI y desarrollo de datos, aporto criterio financiero y dirección técnica para construir plataformas confiables, análisis con sentido de negocio y automatizaciones que le devuelvan tiempo al equipo.",
       "hero.primary": "Hablemos de tu proyecto",
       "hero.secondary": "Explorar mi trabajo",
-      "hero.signature": "Richard Ampié · Ingeniería, estrategia y ejecución",
+      "hero.signature":
+        "Richard Ampié · Finanzas, ingeniería y liderazgo de BI",
       "hero.visual.label": "DE LOS DATOS A LA OPERACIÓN",
       "hero.visual.title": "De datos dispersos\na mejores decisiones.",
       "hero.visual.source": "Fuentes de negocio",
@@ -98,11 +99,11 @@ window.PORTFOLIO = {
       "about.lead":
         "Liderazgo de BI. Mentalidad de ingeniería. Visión financiera.",
       "about.body":
-        "Mi carrera empezó en contabilidad y finanzas y evolucionó hacia la ingeniería de datos y la inteligencia de negocio. Esa combinación me permite conectar las necesidades de dirección con la arquitectura y el trabajo técnico que las hace posibles.",
+        "Mi trayectoria reúne cinco años de experiencia en contabilidad y finanzas, ingeniería de datos e inteligencia de negocio. Esa combinación me permite entender el negocio detrás de los números, plantear las preguntas correctas y convertir necesidades financieras y operativas en prioridades técnicas claras.",
       "about.body2":
-        "He liderado migraciones de Tableau a Power BI en distintas empresas, construido plataformas en Microsoft Fabric y establecido procesos de desarrollo y entrega. Actualmente soy supervisor de inteligencia de negocio y desarrollo de datos.",
+        "Actualmente lidero la inteligencia de negocio y el desarrollo de datos, conectando las prioridades del negocio con la arquitectura, el trabajo del equipo y la entrega. He dirigido migraciones de Tableau a Power BI en distintas empresas, construido plataformas en Microsoft Fabric y establecido procesos de desarrollo, automatización y entrega que el equipo pueda mantener.",
       "about.owner":
-        "Trabajás directamente conmigo: desde la definición del problema hasta la entrega y la transferencia de conocimiento.",
+        "Trabajás directamente conmigo: entendemos el problema, definimos qué conviene resolver y llevamos la solución hasta su puesta en marcha, con documentación y transferencia de conocimiento.",
       "about.current": "ACTUALMENTE",
       "about.role":
         "Supervisor de inteligencia de negocio y desarrollo de datos",
@@ -142,7 +143,7 @@ window.PORTFOLIO = {
       "footer.top": "Volver arriba ↑",
       "meta.title": "Portafolio | Richard Ampié",
       "meta.description":
-        "Consultoría en Power BI, Microsoft Fabric, automatización e IA aplicada. Richard Ampié: liderazgo técnico, migraciones Tableau a Power BI y optimización de operaciones analíticas.",
+        "Consultoría en inteligencia de negocio, ingeniería de datos y automatización. Richard Ampié combina cinco años de experiencia, criterio financiero y liderazgo de BI.",
       "nav.engineering": "Ingeniería",
       "theme.light": "Cambiar a modo claro",
       "theme.dark": "Cambiar a modo oscuro",
@@ -182,13 +183,13 @@ window.PORTFOLIO = {
       "nav.about": "My approach",
       "nav.contact": "Let’s talk",
       menu: "Open menu",
-      "hero.eyebrow": "DATA, BI & APPLIED AI CONSULTING",
+      "hero.eyebrow": "FINANCE, DATA & BUSINESS INTELLIGENCE",
       "hero.title": "Less manual work.\nMore room\nto make decisions.",
       "hero.body":
-        "I help teams automate analytics operations, optimize Power BI and turn fragmented data into reliable insight. From architecture to delivery, with business understanding and technical leadership.",
+        "With five years of experience across finance, data engineering and business intelligence, I help businesses connect their data to the decisions that matter. As a BI and Data Development leader, I bring financial perspective and technical direction to build reliable data platforms, meaningful analytics and automation that frees teams to focus on the business.",
       "hero.primary": "Let’s discuss your project",
       "hero.secondary": "Explore my work",
-      "hero.signature": "Richard Ampié · Engineering, strategy and delivery",
+      "hero.signature": "Richard Ampié · Finance, engineering & BI leadership",
       "hero.visual.label": "FROM DATA TO OPERATIONS",
       "hero.visual.title": "From fragmented data\nto better decisions.",
       "hero.visual.source": "Business sources",
@@ -268,11 +269,11 @@ window.PORTFOLIO = {
       "about.lead":
         "BI leadership. Engineering mindset. Financial perspective.",
       "about.body":
-        "My career started in accounting and finance and evolved into data engineering and business intelligence. That combination helps me connect leadership needs with the architecture and technical work that make them possible.",
+        "My career brings together five years of experience in accounting and finance, data engineering and business intelligence. That combination helps me understand the business behind the numbers, frame the right questions and translate financial and operational needs into clear technical priorities.",
       "about.body2":
-        "I have led Tableau-to-Power BI migrations across companies, built Microsoft Fabric platforms and established development and delivery processes. I currently supervise business intelligence and data development.",
+        "Today I lead business intelligence and data development, connecting business priorities with architecture, team execution and delivery. My experience includes leading Tableau-to-Power BI migrations across companies, building Microsoft Fabric platforms and establishing development, automation and delivery processes that teams can maintain.",
       "about.owner":
-        "You work directly with me: from defining the problem through delivery and knowledge transfer.",
+        "You work directly with me: we understand the problem, define what is worth solving and carry the solution through implementation, with documentation and knowledge transfer.",
       "about.current": "CURRENTLY",
       "about.role": "Business Intelligence & Data Development Supervisor",
       "about.history1": "Data engineering and BI leadership",
@@ -310,7 +311,7 @@ window.PORTFOLIO = {
       "footer.top": "Back to top ↑",
       "meta.title": "Portfolio | Richard Ampié",
       "meta.description":
-        "Power BI, Microsoft Fabric, automation and applied AI consulting. Richard Ampié: technical leadership, Tableau-to-Power BI migrations and analytics operations optimization.",
+        "Business intelligence, data engineering and automation consulting. Richard Ampié combines five years of experience, financial insight and BI leadership.",
       "nav.engineering": "Engineering",
       "theme.light": "Switch to light mode",
       "theme.dark": "Switch to dark mode",
