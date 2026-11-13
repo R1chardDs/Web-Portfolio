@@ -94,7 +94,9 @@
       el.textContent = localized(p[el.dataset.field]);
     });
     document.querySelectorAll(".project-card").forEach((card) => {
-      const id = card.querySelector("[data-open-project]").dataset.openProject;
+      const projectButton = card.querySelector("[data-open-project]");
+      if (!projectButton) return;
+      const id = projectButton.dataset.openProject;
       const p = projects.find((project) => project.id === id);
       card
         .querySelector(".project-image")
@@ -209,7 +211,7 @@
         const visible =
           category === "all" || card.dataset.category === category;
         card.hidden = !visible;
-        if (visible) count += 1;
+        if (visible && !card.hasAttribute("data-placeholder")) count += 1;
       });
       document.querySelector("#project-count").textContent = String(count);
       document

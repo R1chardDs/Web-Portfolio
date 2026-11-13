@@ -160,6 +160,7 @@ window.PORTFOLIO = {
       "engineering.code": "Explorar código en GitHub ↗",
       "engineering.note":
         "Casos de experiencia profesional y laboratorios personales, presentados con su contexto técnico.",
+      "project.financial2027": "Campeonato 2027 - Proyecciones financieras",
     },
     en: {
       skip: "Skip to content",
@@ -315,6 +316,7 @@ window.PORTFOLIO = {
       "engineering.code": "Explore code on GitHub ↗",
       "engineering.note":
         "Professional experience and personal labs, presented with their technical context.",
+      "project.financial2027": "Championship 2027 - Financial projections",
     },
   },
   services: [
