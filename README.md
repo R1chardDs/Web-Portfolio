@@ -28,7 +28,7 @@ Las rutas de recursos son relativas para funcionar bajo `/Web-Portfolio/`. Los r
 
 El sitio se publica en la rama `main` de este repositorio y se despliega con la configuración existente de GitHub Pages. La revisión incluye temas navy blue claro y oscuro, ocho casos de ingeniería y ocho reportes públicos.
 
-No se creó un Site en ChatGPT ni se configuró un dominio. Después de comprar el dominio, configurarlo en GitHub Pages y actualizar `og:image` y JSON-LD a la URL definitiva. No agregar un CNAME para un dominio todavía no adquirido/configurado.
+Dominio principal: https://richardampie.com/. GitHub Pages conserva la publicación desde `main`, con `CNAME` en la raíz y HTTPS obligatorio. Hostinger administra el DNS: cuatro registros A de GitHub Pages para `@`, CNAME `www` hacia `r1chardds.github.io` y TXT de verificación de propiedad. `www` redirige al dominio principal. Los metadatos, la URL canónica y JSON-LD usan el dominio propio. No se creó un Site en ChatGPT.
 
 ## Criterio editorial
 
