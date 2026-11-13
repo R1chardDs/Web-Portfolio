@@ -149,7 +149,7 @@ window.PORTFOLIO = {
       "engineering.tag": "03 / INGENIERÍA Y AUTOMATIZACIÓN",
       "engineering.title": "Lo que sostiene\ncada decisión.",
       "engineering.body":
-        "Casos de experiencia profesional y laboratorios de ingeniería: integración de datos, modelos confiables, automatización y entrega gobernada.",
+        "Casos profesionales y laboratorios de datos. Abrí un proyecto para explorar el enfoque y las herramientas.",
       "engineering.all": "Todos",
       "engineering.corporate": "Experiencia profesional",
       "engineering.labs": "Laboratorios",
@@ -305,7 +305,7 @@ window.PORTFOLIO = {
       "engineering.tag": "03 / ENGINEERING & AUTOMATION",
       "engineering.title": "What supports\nevery decision.",
       "engineering.body":
-        "Professional case studies and engineering labs: data integration, trusted models, automation and governed delivery.",
+        "Professional cases and data labs. Open a project to explore the approach and tools.",
       "engineering.all": "All",
       "engineering.corporate": "Professional experience",
       "engineering.labs": "Labs",
@@ -669,10 +669,7 @@ window.PORTFOLIO = {
   engineering: [
     {
       id: "bi-governance",
-      title: [
-        "Gobernanza de BI y Git Integration en Fabric",
-        "BI governance & Git integration in Fabric",
-      ],
+      title: ["DevOps para Power BI", "DevOps for Power BI"],
       desc: [
         "Un flujo de desarrollo trazable para llevar los cambios de Power BI desde desarrollo hasta producción.",
         "A traceable development workflow for taking Power BI changes from development to production.",
@@ -693,13 +690,20 @@ window.PORTFOLIO = {
       ],
       group: "corporate",
       repo: null,
+      fullTitle: [
+        "Gobernanza de BI y Git Integration en Fabric",
+        "BI governance & Git integration in Fabric",
+      ],
+      teaser: [
+        "Versionado y despliegues bajo control.",
+        "Versioned, controlled releases.",
+      ],
+      signal: ["72 h → 30 h", "72 h → 30 h"],
+      signalLabel: ["Ciclo de liberación", "Release cycle"],
     },
     {
       id: "dwh-migration",
-      title: [
-        "Migración de DWH y modernización de reportes",
-        "Data warehouse migration & reporting modernization",
-      ],
+      title: ["De SSIS a Microsoft Fabric", "From SSIS to Microsoft Fabric"],
       desc: [
         "Evolución de un entorno SSIS hacia Microsoft Fabric, acompañada por la migración de Tableau y Excel a Power BI.",
         "Evolution from an SSIS environment to Microsoft Fabric, alongside a Tableau and Excel migration to Power BI.",
@@ -720,13 +724,20 @@ window.PORTFOLIO = {
       ],
       group: "corporate",
       repo: null,
+      fullTitle: [
+        "Migración de DWH y modernización de reportes",
+        "Data warehouse migration & reporting modernization",
+      ],
+      teaser: [
+        "Una plataforma de datos más confiable.",
+        "A more reliable data platform.",
+      ],
+      signal: ["3 h → 1 h", "3 h → 1 h"],
+      signalLabel: ["Tiempo de ingesta", "Ingestion time"],
     },
     {
       id: "finance-automation",
-      title: [
-        "Reportería de márgenes y OPEX automatizada",
-        "Automated margin & OPEX reporting",
-      ],
+      title: ["Finanzas y OPEX automatizados", "Automated finance & OPEX"],
       desc: [
         "Integración de fuentes financieras para reducir trabajo manual y mantener indicadores consistentes.",
         "Financial source integration to reduce manual work and maintain consistent metrics.",
@@ -747,13 +758,20 @@ window.PORTFOLIO = {
       ],
       group: "corporate",
       repo: null,
+      fullTitle: [
+        "Reportería de márgenes y OPEX automatizada",
+        "Automated margin & OPEX reporting",
+      ],
+      teaser: [
+        "Indicadores al día y menos trabajo manual.",
+        "Up-to-date metrics and less manual work.",
+      ],
+      signal: ["5 d → 2.5 d", "5 d → 2.5 d"],
+      signalLabel: ["Cierre mensual", "Month-end close"],
     },
     {
       id: "fabric-capacity",
-      title: [
-        "Optimización de capacidad en Fabric",
-        "Fabric capacity optimization",
-      ],
+      title: ["Capacidad Fabric optimizada", "Optimized Fabric capacity"],
       desc: [
         "Ajuste de cargas y consultas para aprovechar mejor la capacidad de la plataforma analítica.",
         "Workload and query tuning to make better use of analytics platform capacity.",
@@ -778,13 +796,20 @@ window.PORTFOLIO = {
       ],
       group: "corporate",
       repo: null,
+      fullTitle: [
+        "Optimización de capacidad en Fabric",
+        "Fabric capacity optimization",
+      ],
+      teaser: [
+        "Cargas y consultas que consumen menos.",
+        "Workloads and queries that use less.",
+      ],
+      signal: ["~50 %", "~50%"],
+      signalLabel: ["Menos uso de cómputo", "Less compute usage"],
     },
     {
       id: "dax-framework",
-      title: [
-        "Framework de optimización DAX y Fabric Capacity",
-        "DAX & Fabric Capacity optimization framework",
-      ],
+      title: ["Diagnóstico DAX y modelos", "DAX & model diagnostics"],
       desc: [
         "Scripts de diagnóstico y guías reutilizables para revisar modelos semánticos de Power BI.",
         "Diagnostic scripts and reusable guides for reviewing Power BI semantic models.",
@@ -809,13 +834,20 @@ window.PORTFOLIO = {
       ],
       group: "labs",
       repo: null,
+      fullTitle: [
+        "Framework de optimización DAX y Fabric Capacity",
+        "DAX & Fabric Capacity optimization framework",
+      ],
+      teaser: [
+        "Una revisión semántica que se puede repetir.",
+        "A repeatable semantic review.",
+      ],
+      signal: ["Guías + scripts", "Guides + scripts"],
+      signalLabel: ["Trabajo reutilizable", "Reusable work"],
     },
     {
       id: "api-etl",
-      title: [
-        "Ingesta y ETL de APIs REST públicas",
-        "Public REST API ingestion & ETL",
-      ],
+      title: ["APIs → SQL Server", "APIs → SQL Server"],
       desc: [
         "Un pipeline en Python para extraer, transformar y almacenar datos de APIs en SQL Server.",
         "A Python pipeline for extracting, transforming and storing API data in SQL Server.",
@@ -836,12 +868,22 @@ window.PORTFOLIO = {
       ],
       group: "labs",
       repo: null,
+      fullTitle: [
+        "Ingesta y ETL de APIs REST públicas",
+        "Public REST API ingestion & ETL",
+      ],
+      teaser: [
+        "Ingesta automática con seguimiento de fallas.",
+        "Automated ingestion with failure tracking.",
+      ],
+      signal: ["API → SQL", "API → SQL"],
+      signalLabel: ["ETL en Python", "Python ETL"],
     },
     {
       id: "f1-medallion",
       title: [
-        "Fórmula 1 · Pipeline Medallion en Fabric",
-        "Formula 1 · Medallion pipeline in Fabric",
+        "Fórmula 1 · Ingeniería de datos",
+        "Formula 1 · Data engineering",
       ],
       desc: [
         "La ingeniería detrás del reporte: de los datos de carreras a tablas preparadas para análisis.",
@@ -863,12 +905,22 @@ window.PORTFOLIO = {
       ],
       group: "labs",
       repo: "https://github.com/R1chardDs/Formula1",
+      fullTitle: [
+        "Fórmula 1 · Pipeline Medallion en Fabric",
+        "Formula 1 · Medallion pipeline in Fabric",
+      ],
+      teaser: [
+        "De los datos de carreras al análisis.",
+        "From race data to analysis.",
+      ],
+      signal: ["Bronze → Gold", "Bronze → Gold"],
+      signalLabel: ["Arquitectura Medallion", "Medallion architecture"],
     },
     {
       id: "transaction-ml",
       title: [
-        "Clasificación de transacciones con ML",
-        "Transaction classification with ML",
+        "Clasificación financiera con ML",
+        "Financial classification with ML",
       ],
       desc: [
         "Aplicación de aprendizaje automático a descripciones y referencias de transacciones financieras.",
@@ -894,6 +946,16 @@ window.PORTFOLIO = {
       ],
       group: "labs",
       repo: null,
+      fullTitle: [
+        "Clasificación de transacciones con ML",
+        "Transaction classification with ML",
+      ],
+      teaser: [
+        "Categorías a partir de descripciones bancarias.",
+        "Categories from bank transaction descriptions.",
+      ],
+      signal: ["Texto → Categorías", "Text → Categories"],
+      signalLabel: ["Machine learning", "Machine learning"],
     },
   ],
 };

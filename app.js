@@ -269,4 +269,72 @@
     /* Defaults to Spanish. */
   }
   setLanguage(savedLanguage || "es");
+
+  // Scroll feedback is visual only; it never stores visitor activity.
+  const headerLinks = [...nav.querySelectorAll('a[href^="#"]')]
+    .map((link) => ({
+      link,
+      section: document.querySelector(link.getAttribute("href")),
+    }))
+    .filter((item) => item.section);
+  let scrollFramePending = false;
+  function updateReadingState() {
+    const available = document.documentElement.scrollHeight - innerHeight;
+    const progress =
+      available > 0 ? Math.min(1, Math.max(0, scrollY / available)) : 0;
+    let current;
+    let nearestTop = -Infinity;
+    headerLinks.forEach((item) => {
+      const top = item.section.getBoundingClientRect().top;
+      if (top <= 160 && top > nearestTop) {
+        current = item;
+        nearestTop = top;
+      }
+    });
+    document.documentElement.style.setProperty(
+      "--reading-progress",
+      String(progress),
+    );
+    headerLinks.forEach((item) => {
+      if (item === current) item.link.setAttribute("aria-current", "location");
+      else item.link.removeAttribute("aria-current");
+    });
+    scrollFramePending = false;
+  }
+  addEventListener(
+    "scroll",
+    () => {
+      if (!scrollFramePending) {
+        scrollFramePending = true;
+        requestAnimationFrame(updateReadingState);
+      }
+    },
+    { passive: true },
+  );
+  updateReadingState();
+
+  if (
+    "IntersectionObserver" in window &&
+    !matchMedia("(prefers-reduced-motion: reduce)").matches
+  ) {
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.05, rootMargin: "0px 0px 35px 0px" },
+    );
+    document
+      .querySelectorAll(
+        ".section-heading, .metrics-grid, .service-list, .engineering-grid, .recognition, .project-grid, .about-grid, .cert-grid, .contact-grid",
+      )
+      .forEach((element) => {
+        element.classList.add("reveal-item");
+        revealObserver.observe(element);
+      });
+  }
 })();

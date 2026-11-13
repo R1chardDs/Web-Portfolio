@@ -32,10 +32,10 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Manrope:wght@400;500;600;650;700;750;800&display=swap"
       rel="stylesheet"
     />
-    <script src="theme-init.js?v=cards-20261112"></script>
-    <link rel="stylesheet" href="style.css?v=cards-20261112" />
-    <script src="content.js?v=cards-20261112" defer></script>
-    <script src="app.js?v=cards-20261112" defer></script>
+    <script src="theme-init.js?v=editorial-20261113"></script>
+    <link rel="stylesheet" href="style.css?v=editorial-20261113" />
+    <script src="content.js?v=editorial-20261113" defer></script>
+    <script src="app.js?v=editorial-20261113" defer></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -473,9 +473,8 @@
               Lo que sostiene cada decisión.
             </h2>
             <p data-i18n="engineering.body">
-              Casos de experiencia profesional y laboratorios de ingeniería:
-              integración de datos, modelos confiables, automatización y entrega
-              gobernada.
+              Casos profesionales y laboratorios de datos. Abrí un proyecto para
+              explorar el enfoque y las herramientas.
             </p>
           </div>
           <div
@@ -511,58 +510,102 @@
               class="engineering-card"
               data-engineering-group="corporate"
             >
-              <div class="engineering-card-top">
-                <span class="case-number">01</span
-                ><span class="case-kind" data-i18n="engineering.corporate"
-                  >Experiencia profesional</span
-                >
-              </div>
-              <h3 class="" data-engineering="bi-governance" data-field="title">
-                Gobernanza de BI y Git Integration en Fabric
-              </h3>
-              <p class="" data-engineering="bi-governance" data-field="desc">
-                Un flujo de desarrollo trazable para llevar los cambios de Power
-                BI desde desarrollo hasta producción.
-              </p>
-              <div class="case-flow" aria-hidden="true">
-                <span>Dev</span><span>Test</span><span>Prod</span>
-              </div>
-              <p class="case-stack">PBIP · Azure DevOps · Git · Fabric</p>
-              <details class="case-detail">
-                <summary>
-                  <span data-i18n="engineering.details"
-                    >Ver enfoque y resultado</span
-                  ><span aria-hidden="true">+</span>
+              <details class="case-detail" name="engineering-cases">
+                <summary class="case-summary">
+                  <span class="case-number">01</span>
+                  <div class="case-main">
+                    <h3
+                      class=""
+                      data-engineering="bi-governance"
+                      data-field="title"
+                    >
+                      DevOps para Power BI
+                    </h3>
+                    <p
+                      class=""
+                      data-engineering="bi-governance"
+                      data-field="teaser"
+                    >
+                      Versionado y despliegues bajo control.
+                    </p>
+                  </div>
+                  <div class="case-meta">
+                    <span class="case-kind" data-i18n="engineering.corporate"
+                      >Experiencia profesional</span
+                    >
+                    <p class="case-stack">PBIP · Azure DevOps · Git · Fabric</p>
+                  </div>
+                  <div class="case-signal">
+                    <strong
+                      class=""
+                      data-engineering="bi-governance"
+                      data-field="signal"
+                      >72 h → 30 h</strong
+                    ><small
+                      class=""
+                      data-engineering="bi-governance"
+                      data-field="signalLabel"
+                      >Ciclo de liberación</small
+                    >
+                  </div>
+                  <span class="case-expand" aria-hidden="true">+</span>
                 </summary>
-                <div>
-                  <h4 data-i18n="engineering.problem">El problema</h4>
-                  <p
-                    class=""
-                    data-engineering="bi-governance"
-                    data-field="problem"
-                  >
-                    Liberaciones lentas y dificultad para controlar versiones y
-                    cambios entre entornos.
-                  </p>
-                  <h4 data-i18n="engineering.approach">La solución</h4>
-                  <p
-                    class=""
-                    data-engineering="bi-governance"
-                    data-field="approach"
-                  >
-                    Integración de proyectos PBIP con Git en Azure DevOps,
-                    separación de workspaces Dev/Test/Prod y despliegues
-                    gobernados con capacidad de reversión.
-                  </p>
-                  <h4 data-i18n="engineering.result">Resultado / alcance</h4>
-                  <p
-                    class=""
-                    data-engineering="bi-governance"
-                    data-field="result"
-                  >
-                    Ciclo de liberación reducido de 72 horas a aproximadamente
-                    30 horas, con trazabilidad de los cambios.
-                  </p>
+                <div class="case-detail-body">
+                  <section>
+                    <h4 data-i18n="engineering.problem">El problema</h4>
+                    <p
+                      class=""
+                      data-engineering="bi-governance"
+                      data-field="problem"
+                    >
+                      Liberaciones lentas y dificultad para controlar versiones
+                      y cambios entre entornos.
+                    </p>
+                  </section>
+                  <section>
+                    <h4 data-i18n="engineering.approach">La solución</h4>
+                    <p
+                      class=""
+                      data-engineering="bi-governance"
+                      data-field="approach"
+                    >
+                      Integración de proyectos PBIP con Git en Azure DevOps,
+                      separación de workspaces Dev/Test/Prod y despliegues
+                      gobernados con capacidad de reversión.
+                    </p>
+                  </section>
+                  <section>
+                    <h4 data-i18n="engineering.result">Resultado / alcance</h4>
+                    <p
+                      class=""
+                      data-engineering="bi-governance"
+                      data-field="result"
+                    >
+                      Ciclo de liberación reducido de 72 horas a aproximadamente
+                      30 horas, con trazabilidad de los cambios.
+                    </p>
+                  </section>
+                  <div class="case-detail-footer">
+                    <p class="case-tools">PBIP · Azure DevOps · Git · Fabric</p>
+                    <div class="case-flow" aria-hidden="true">
+                      <span
+                        data-engineering="bi-governance"
+                        data-field="flow"
+                        data-item="0"
+                        >Dev</span
+                      ><span
+                        data-engineering="bi-governance"
+                        data-field="flow"
+                        data-item="1"
+                        >Test</span
+                      ><span
+                        data-engineering="bi-governance"
+                        data-field="flow"
+                        data-item="2"
+                        >Prod</span
+                      >
+                    </div>
+                  </div>
                 </div>
               </details>
             </article>
@@ -570,61 +613,107 @@
               class="engineering-card"
               data-engineering-group="corporate"
             >
-              <div class="engineering-card-top">
-                <span class="case-number">02</span
-                ><span class="case-kind" data-i18n="engineering.corporate"
-                  >Experiencia profesional</span
-                >
-              </div>
-              <h3 class="" data-engineering="dwh-migration" data-field="title">
-                Migración de DWH y modernización de reportes
-              </h3>
-              <p class="" data-engineering="dwh-migration" data-field="desc">
-                Evolución de un entorno SSIS hacia Microsoft Fabric, acompañada
-                por la migración de Tableau y Excel a Power BI.
-              </p>
-              <div class="case-flow" aria-hidden="true">
-                <span>SSIS</span><span>Fabric</span><span>Power BI</span>
-              </div>
-              <p class="case-stack">
-                SSIS · Fabric Lakehouse · PySpark · SQL Server
-              </p>
-              <details class="case-detail">
-                <summary>
-                  <span data-i18n="engineering.details"
-                    >Ver enfoque y resultado</span
-                  ><span aria-hidden="true">+</span>
+              <details class="case-detail" name="engineering-cases">
+                <summary class="case-summary">
+                  <span class="case-number">02</span>
+                  <div class="case-main">
+                    <h3
+                      class=""
+                      data-engineering="dwh-migration"
+                      data-field="title"
+                    >
+                      De SSIS a Microsoft Fabric
+                    </h3>
+                    <p
+                      class=""
+                      data-engineering="dwh-migration"
+                      data-field="teaser"
+                    >
+                      Una plataforma de datos más confiable.
+                    </p>
+                  </div>
+                  <div class="case-meta">
+                    <span class="case-kind" data-i18n="engineering.corporate"
+                      >Experiencia profesional</span
+                    >
+                    <p class="case-stack">
+                      SSIS · Fabric Lakehouse · PySpark · SQL Server
+                    </p>
+                  </div>
+                  <div class="case-signal">
+                    <strong
+                      class=""
+                      data-engineering="dwh-migration"
+                      data-field="signal"
+                      >3 h → 1 h</strong
+                    ><small
+                      class=""
+                      data-engineering="dwh-migration"
+                      data-field="signalLabel"
+                      >Tiempo de ingesta</small
+                    >
+                  </div>
+                  <span class="case-expand" aria-hidden="true">+</span>
                 </summary>
-                <div>
-                  <h4 data-i18n="engineering.problem">El problema</h4>
-                  <p
-                    class=""
-                    data-engineering="dwh-migration"
-                    data-field="problem"
-                  >
-                    Cargas inestables, procesamiento prolongado y reportes
-                    dispersos en distintas herramientas.
-                  </p>
-                  <h4 data-i18n="engineering.approach">La solución</h4>
-                  <p
-                    class=""
-                    data-engineering="dwh-migration"
-                    data-field="approach"
-                  >
-                    Construcción de una plataforma lakehouse/warehouse con
-                    cargas incrementales, particionamiento y validaciones, y
-                    modernización del modelado y los reportes.
-                  </p>
-                  <h4 data-i18n="engineering.result">Resultado / alcance</h4>
-                  <p
-                    class=""
-                    data-engineering="dwh-migration"
-                    data-field="result"
-                  >
-                    Ingesta de datos de 3 horas a 1 hora. En mi trayectoria: 80+
-                    reportes migrados directamente y ~150 migraciones
-                    adicionales lideradas.
-                  </p>
+                <div class="case-detail-body">
+                  <section>
+                    <h4 data-i18n="engineering.problem">El problema</h4>
+                    <p
+                      class=""
+                      data-engineering="dwh-migration"
+                      data-field="problem"
+                    >
+                      Cargas inestables, procesamiento prolongado y reportes
+                      dispersos en distintas herramientas.
+                    </p>
+                  </section>
+                  <section>
+                    <h4 data-i18n="engineering.approach">La solución</h4>
+                    <p
+                      class=""
+                      data-engineering="dwh-migration"
+                      data-field="approach"
+                    >
+                      Construcción de una plataforma lakehouse/warehouse con
+                      cargas incrementales, particionamiento y validaciones, y
+                      modernización del modelado y los reportes.
+                    </p>
+                  </section>
+                  <section>
+                    <h4 data-i18n="engineering.result">Resultado / alcance</h4>
+                    <p
+                      class=""
+                      data-engineering="dwh-migration"
+                      data-field="result"
+                    >
+                      Ingesta de datos de 3 horas a 1 hora. En mi trayectoria:
+                      80+ reportes migrados directamente y ~150 migraciones
+                      adicionales lideradas.
+                    </p>
+                  </section>
+                  <div class="case-detail-footer">
+                    <p class="case-tools">
+                      SSIS · Fabric Lakehouse · PySpark · SQL Server
+                    </p>
+                    <div class="case-flow" aria-hidden="true">
+                      <span
+                        data-engineering="dwh-migration"
+                        data-field="flow"
+                        data-item="0"
+                        >SSIS</span
+                      ><span
+                        data-engineering="dwh-migration"
+                        data-field="flow"
+                        data-item="1"
+                        >Fabric</span
+                      ><span
+                        data-engineering="dwh-migration"
+                        data-field="flow"
+                        data-item="2"
+                        >Power BI</span
+                      >
+                    </div>
+                  </div>
                 </div>
               </details>
             </article>
@@ -632,68 +721,106 @@
               class="engineering-card"
               data-engineering-group="corporate"
             >
-              <div class="engineering-card-top">
-                <span class="case-number">03</span
-                ><span class="case-kind" data-i18n="engineering.corporate"
-                  >Experiencia profesional</span
-                >
-              </div>
-              <h3
-                class=""
-                data-engineering="finance-automation"
-                data-field="title"
-              >
-                Reportería de márgenes y OPEX automatizada
-              </h3>
-              <p
-                class=""
-                data-engineering="finance-automation"
-                data-field="desc"
-              >
-                Integración de fuentes financieras para reducir trabajo manual y
-                mantener indicadores consistentes.
-              </p>
-              <div class="case-flow" aria-hidden="true">
-                <span>ERP / APIs</span><span>SQL</span><span>KPIs</span>
-              </div>
-              <p class="case-stack">
-                Softland ERP · REST APIs · SQL Server · DAX
-              </p>
-              <details class="case-detail">
-                <summary>
-                  <span data-i18n="engineering.details"
-                    >Ver enfoque y resultado</span
-                  ><span aria-hidden="true">+</span>
+              <details class="case-detail" name="engineering-cases">
+                <summary class="case-summary">
+                  <span class="case-number">03</span>
+                  <div class="case-main">
+                    <h3
+                      class=""
+                      data-engineering="finance-automation"
+                      data-field="title"
+                    >
+                      Finanzas y OPEX automatizados
+                    </h3>
+                    <p
+                      class=""
+                      data-engineering="finance-automation"
+                      data-field="teaser"
+                    >
+                      Indicadores al día y menos trabajo manual.
+                    </p>
+                  </div>
+                  <div class="case-meta">
+                    <span class="case-kind" data-i18n="engineering.corporate"
+                      >Experiencia profesional</span
+                    >
+                    <p class="case-stack">
+                      Softland ERP · REST APIs · SQL Server · DAX
+                    </p>
+                  </div>
+                  <div class="case-signal">
+                    <strong
+                      class=""
+                      data-engineering="finance-automation"
+                      data-field="signal"
+                      >5 d → 2.5 d</strong
+                    ><small
+                      class=""
+                      data-engineering="finance-automation"
+                      data-field="signalLabel"
+                      >Cierre mensual</small
+                    >
+                  </div>
+                  <span class="case-expand" aria-hidden="true">+</span>
                 </summary>
-                <div>
-                  <h4 data-i18n="engineering.problem">El problema</h4>
-                  <p
-                    class=""
-                    data-engineering="finance-automation"
-                    data-field="problem"
-                  >
-                    Conciliaciones y distribución manual de información que
-                    retrasaban el análisis y el cierre.
-                  </p>
-                  <h4 data-i18n="engineering.approach">La solución</h4>
-                  <p
-                    class=""
-                    data-engineering="finance-automation"
-                    data-field="approach"
-                  >
-                    Conexión de fuentes de negocio con SQL Server y Power BI,
-                    estandarización de indicadores y automatización de
-                    actualización y entrega de reportes.
-                  </p>
-                  <h4 data-i18n="engineering.result">Resultado / alcance</h4>
-                  <p
-                    class=""
-                    data-engineering="finance-automation"
-                    data-field="result"
-                  >
-                    En la experiencia profesional relacionada, el cierre mensual
-                    pasó de 5 días a 2.5 días.
-                  </p>
+                <div class="case-detail-body">
+                  <section>
+                    <h4 data-i18n="engineering.problem">El problema</h4>
+                    <p
+                      class=""
+                      data-engineering="finance-automation"
+                      data-field="problem"
+                    >
+                      Conciliaciones y distribución manual de información que
+                      retrasaban el análisis y el cierre.
+                    </p>
+                  </section>
+                  <section>
+                    <h4 data-i18n="engineering.approach">La solución</h4>
+                    <p
+                      class=""
+                      data-engineering="finance-automation"
+                      data-field="approach"
+                    >
+                      Conexión de fuentes de negocio con SQL Server y Power BI,
+                      estandarización de indicadores y automatización de
+                      actualización y entrega de reportes.
+                    </p>
+                  </section>
+                  <section>
+                    <h4 data-i18n="engineering.result">Resultado / alcance</h4>
+                    <p
+                      class=""
+                      data-engineering="finance-automation"
+                      data-field="result"
+                    >
+                      En la experiencia profesional relacionada, el cierre
+                      mensual pasó de 5 días a 2.5 días.
+                    </p>
+                  </section>
+                  <div class="case-detail-footer">
+                    <p class="case-tools">
+                      Softland ERP · REST APIs · SQL Server · DAX
+                    </p>
+                    <div class="case-flow" aria-hidden="true">
+                      <span
+                        data-engineering="finance-automation"
+                        data-field="flow"
+                        data-item="0"
+                        >ERP / APIs</span
+                      ><span
+                        data-engineering="finance-automation"
+                        data-field="flow"
+                        data-item="1"
+                        >SQL</span
+                      ><span
+                        data-engineering="finance-automation"
+                        data-field="flow"
+                        data-item="2"
+                        >KPIs</span
+                      >
+                    </div>
+                  </div>
                 </div>
               </details>
             </article>
@@ -701,340 +828,519 @@
               class="engineering-card"
               data-engineering-group="corporate"
             >
-              <div class="engineering-card-top">
-                <span class="case-number">04</span
-                ><span class="case-kind" data-i18n="engineering.corporate"
-                  >Experiencia profesional</span
-                >
-              </div>
-              <h3
-                class=""
-                data-engineering="fabric-capacity"
-                data-field="title"
-              >
-                Optimización de capacidad en Fabric
-              </h3>
-              <p class="" data-engineering="fabric-capacity" data-field="desc">
-                Ajuste de cargas y consultas para aprovechar mejor la capacidad
-                de la plataforma analítica.
-              </p>
-              <div class="case-flow" aria-hidden="true">
-                <span
-                  data-engineering="fabric-capacity"
-                  data-field="flow"
-                  data-item="0"
-                  >Medir</span
-                ><span
-                  data-engineering="fabric-capacity"
-                  data-field="flow"
-                  data-item="1"
-                  >Optimizar</span
-                ><span
-                  data-engineering="fabric-capacity"
-                  data-field="flow"
-                  data-item="2"
-                  >Validar</span
-                >
-              </div>
-              <p class="case-stack">
-                Fabric · Capacity Metrics · T-SQL · Azure
-              </p>
-              <details class="case-detail">
-                <summary>
-                  <span data-i18n="engineering.details"
-                    >Ver enfoque y resultado</span
-                  ><span aria-hidden="true">+</span>
+              <details class="case-detail" name="engineering-cases">
+                <summary class="case-summary">
+                  <span class="case-number">04</span>
+                  <div class="case-main">
+                    <h3
+                      class=""
+                      data-engineering="fabric-capacity"
+                      data-field="title"
+                    >
+                      Capacidad Fabric optimizada
+                    </h3>
+                    <p
+                      class=""
+                      data-engineering="fabric-capacity"
+                      data-field="teaser"
+                    >
+                      Cargas y consultas que consumen menos.
+                    </p>
+                  </div>
+                  <div class="case-meta">
+                    <span class="case-kind" data-i18n="engineering.corporate"
+                      >Experiencia profesional</span
+                    >
+                    <p class="case-stack">
+                      Fabric · Capacity Metrics · T-SQL · Azure
+                    </p>
+                  </div>
+                  <div class="case-signal">
+                    <strong
+                      class=""
+                      data-engineering="fabric-capacity"
+                      data-field="signal"
+                      >~50 %</strong
+                    ><small
+                      class=""
+                      data-engineering="fabric-capacity"
+                      data-field="signalLabel"
+                      >Menos uso de cómputo</small
+                    >
+                  </div>
+                  <span class="case-expand" aria-hidden="true">+</span>
                 </summary>
-                <div>
-                  <h4 data-i18n="engineering.problem">El problema</h4>
-                  <p
-                    class=""
-                    data-engineering="fabric-capacity"
-                    data-field="problem"
-                  >
-                    Consumo redundante, concurrencia de cargas y cuellos de
-                    botella en la capacidad.
-                  </p>
-                  <h4 data-i18n="engineering.approach">La solución</h4>
-                  <p
-                    class=""
-                    data-engineering="fabric-capacity"
-                    data-field="approach"
-                  >
-                    Análisis de consumo, cargas incrementales, particionamiento,
-                    programación y optimización de consultas, con controles
-                    antes y después de las cargas.
-                  </p>
-                  <h4 data-i18n="engineering.result">Resultado / alcance</h4>
-                  <p
-                    class=""
-                    data-engineering="fabric-capacity"
-                    data-field="result"
-                  >
-                    Reducción aproximada del 50 % del uso de cómputo / capacidad
-                    en proyectos de mi trayectoria.
-                  </p>
+                <div class="case-detail-body">
+                  <section>
+                    <h4 data-i18n="engineering.problem">El problema</h4>
+                    <p
+                      class=""
+                      data-engineering="fabric-capacity"
+                      data-field="problem"
+                    >
+                      Consumo redundante, concurrencia de cargas y cuellos de
+                      botella en la capacidad.
+                    </p>
+                  </section>
+                  <section>
+                    <h4 data-i18n="engineering.approach">La solución</h4>
+                    <p
+                      class=""
+                      data-engineering="fabric-capacity"
+                      data-field="approach"
+                    >
+                      Análisis de consumo, cargas incrementales,
+                      particionamiento, programación y optimización de
+                      consultas, con controles antes y después de las cargas.
+                    </p>
+                  </section>
+                  <section>
+                    <h4 data-i18n="engineering.result">Resultado / alcance</h4>
+                    <p
+                      class=""
+                      data-engineering="fabric-capacity"
+                      data-field="result"
+                    >
+                      Reducción aproximada del 50 % del uso de cómputo /
+                      capacidad en proyectos de mi trayectoria.
+                    </p>
+                  </section>
+                  <div class="case-detail-footer">
+                    <p class="case-tools">
+                      Fabric · Capacity Metrics · T-SQL · Azure
+                    </p>
+                    <div class="case-flow" aria-hidden="true">
+                      <span
+                        data-engineering="fabric-capacity"
+                        data-field="flow"
+                        data-item="0"
+                        >Medir</span
+                      ><span
+                        data-engineering="fabric-capacity"
+                        data-field="flow"
+                        data-item="1"
+                        >Optimizar</span
+                      ><span
+                        data-engineering="fabric-capacity"
+                        data-field="flow"
+                        data-item="2"
+                        >Validar</span
+                      >
+                    </div>
+                  </div>
                 </div>
               </details>
             </article>
             <article class="engineering-card" data-engineering-group="labs">
-              <div class="engineering-card-top">
-                <span class="case-number">05</span
-                ><span class="case-kind" data-i18n="engineering.labs"
-                  >Laboratorios</span
-                >
-              </div>
-              <h3 class="" data-engineering="dax-framework" data-field="title">
-                Framework de optimización DAX y Fabric Capacity
-              </h3>
-              <p class="" data-engineering="dax-framework" data-field="desc">
-                Scripts de diagnóstico y guías reutilizables para revisar
-                modelos semánticos de Power BI.
-              </p>
-              <div class="case-flow" aria-hidden="true">
-                <span
-                  data-engineering="dax-framework"
-                  data-field="flow"
-                  data-item="0"
-                  >Modelo</span
-                ><span
-                  data-engineering="dax-framework"
-                  data-field="flow"
-                  data-item="1"
-                  >Diagnóstico</span
-                ><span
-                  data-engineering="dax-framework"
-                  data-field="flow"
-                  data-item="2"
-                  >Ajustes</span
-                >
-              </div>
-              <p class="case-stack">
-                Tabular Editor · DAX Studio · Fabric Monitor
-              </p>
-              <details class="case-detail">
-                <summary>
-                  <span data-i18n="engineering.details"
-                    >Ver enfoque y resultado</span
-                  ><span aria-hidden="true">+</span>
+              <details class="case-detail" name="engineering-cases">
+                <summary class="case-summary">
+                  <span class="case-number">05</span>
+                  <div class="case-main">
+                    <h3
+                      class=""
+                      data-engineering="dax-framework"
+                      data-field="title"
+                    >
+                      Diagnóstico DAX y modelos
+                    </h3>
+                    <p
+                      class=""
+                      data-engineering="dax-framework"
+                      data-field="teaser"
+                    >
+                      Una revisión semántica que se puede repetir.
+                    </p>
+                  </div>
+                  <div class="case-meta">
+                    <span class="case-kind" data-i18n="engineering.labs"
+                      >Laboratorios</span
+                    >
+                    <p class="case-stack">
+                      Tabular Editor · DAX Studio · Fabric Monitor
+                    </p>
+                  </div>
+                  <div class="case-signal">
+                    <strong
+                      class=""
+                      data-engineering="dax-framework"
+                      data-field="signal"
+                      >Guías + scripts</strong
+                    ><small
+                      class=""
+                      data-engineering="dax-framework"
+                      data-field="signalLabel"
+                      >Trabajo reutilizable</small
+                    >
+                  </div>
+                  <span class="case-expand" aria-hidden="true">+</span>
                 </summary>
-                <div>
-                  <h4 data-i18n="engineering.problem">El problema</h4>
-                  <p
-                    class=""
-                    data-engineering="dax-framework"
-                    data-field="problem"
-                  >
-                    La revisión manual de modelos grandes dificulta encontrar
-                    dependencias y patrones de consumo.
-                  </p>
-                  <h4 data-i18n="engineering.approach">La solución</h4>
-                  <p
-                    class=""
-                    data-engineering="dax-framework"
-                    data-field="approach"
-                  >
-                    Organización de scripts y buenas prácticas de auditoría para
-                    analizar medidas DAX, dependencias y oportunidades de
-                    optimización.
-                  </p>
-                  <h4 data-i18n="engineering.result">Resultado / alcance</h4>
-                  <p
-                    class=""
-                    data-engineering="dax-framework"
-                    data-field="result"
-                  >
-                    Un proceso de diagnóstico semántico reutilizable para
-                    revisar modelos de Power BI de forma consistente.
-                  </p>
+                <div class="case-detail-body">
+                  <section>
+                    <h4 data-i18n="engineering.problem">El problema</h4>
+                    <p
+                      class=""
+                      data-engineering="dax-framework"
+                      data-field="problem"
+                    >
+                      La revisión manual de modelos grandes dificulta encontrar
+                      dependencias y patrones de consumo.
+                    </p>
+                  </section>
+                  <section>
+                    <h4 data-i18n="engineering.approach">La solución</h4>
+                    <p
+                      class=""
+                      data-engineering="dax-framework"
+                      data-field="approach"
+                    >
+                      Organización de scripts y buenas prácticas de auditoría
+                      para analizar medidas DAX, dependencias y oportunidades de
+                      optimización.
+                    </p>
+                  </section>
+                  <section>
+                    <h4 data-i18n="engineering.result">Resultado / alcance</h4>
+                    <p
+                      class=""
+                      data-engineering="dax-framework"
+                      data-field="result"
+                    >
+                      Un proceso de diagnóstico semántico reutilizable para
+                      revisar modelos de Power BI de forma consistente.
+                    </p>
+                  </section>
+                  <div class="case-detail-footer">
+                    <p class="case-tools">
+                      Tabular Editor · DAX Studio · Fabric Monitor
+                    </p>
+                    <div class="case-flow" aria-hidden="true">
+                      <span
+                        data-engineering="dax-framework"
+                        data-field="flow"
+                        data-item="0"
+                        >Modelo</span
+                      ><span
+                        data-engineering="dax-framework"
+                        data-field="flow"
+                        data-item="1"
+                        >Diagnóstico</span
+                      ><span
+                        data-engineering="dax-framework"
+                        data-field="flow"
+                        data-item="2"
+                        >Ajustes</span
+                      >
+                    </div>
+                  </div>
                 </div>
               </details>
             </article>
             <article class="engineering-card" data-engineering-group="labs">
-              <div class="engineering-card-top">
-                <span class="case-number">06</span
-                ><span class="case-kind" data-i18n="engineering.labs"
-                  >Laboratorios</span
-                >
-              </div>
-              <h3 class="" data-engineering="api-etl" data-field="title">
-                Ingesta y ETL de APIs REST públicas
-              </h3>
-              <p class="" data-engineering="api-etl" data-field="desc">
-                Un pipeline en Python para extraer, transformar y almacenar
-                datos de APIs en SQL Server.
-              </p>
-              <div class="case-flow" aria-hidden="true">
-                <span>REST API</span><span>Python</span><span>SQL Server</span>
-              </div>
-              <p class="case-stack">Python · Pandas · Requests · SQL Server</p>
-              <details class="case-detail">
-                <summary>
-                  <span data-i18n="engineering.details"
-                    >Ver enfoque y resultado</span
-                  ><span aria-hidden="true">+</span>
+              <details class="case-detail" name="engineering-cases">
+                <summary class="case-summary">
+                  <span class="case-number">06</span>
+                  <div class="case-main">
+                    <h3 class="" data-engineering="api-etl" data-field="title">
+                      APIs → SQL Server
+                    </h3>
+                    <p class="" data-engineering="api-etl" data-field="teaser">
+                      Ingesta automática con seguimiento de fallas.
+                    </p>
+                  </div>
+                  <div class="case-meta">
+                    <span class="case-kind" data-i18n="engineering.labs"
+                      >Laboratorios</span
+                    >
+                    <p class="case-stack">
+                      Python · Pandas · Requests · SQL Server
+                    </p>
+                  </div>
+                  <div class="case-signal">
+                    <strong
+                      class=""
+                      data-engineering="api-etl"
+                      data-field="signal"
+                      >API → SQL</strong
+                    ><small
+                      class=""
+                      data-engineering="api-etl"
+                      data-field="signalLabel"
+                      >ETL en Python</small
+                    >
+                  </div>
+                  <span class="case-expand" aria-hidden="true">+</span>
                 </summary>
-                <div>
-                  <h4 data-i18n="engineering.problem">El problema</h4>
-                  <p class="" data-engineering="api-etl" data-field="problem">
-                    Datos de fuentes externas que requieren extracción, formato
-                    consistente y seguimiento de fallas.
-                  </p>
-                  <h4 data-i18n="engineering.approach">La solución</h4>
-                  <p class="" data-engineering="api-etl" data-field="approach">
-                    Extracción con Requests, transformación con Pandas y carga a
-                    una base relacional, incorporando registros de fallas del
-                    proceso.
-                  </p>
-                  <h4 data-i18n="engineering.result">Resultado / alcance</h4>
-                  <p class="" data-engineering="api-etl" data-field="result">
-                    Laboratorio de integración de fuentes y automatización de la
-                    ingesta.
-                  </p>
+                <div class="case-detail-body">
+                  <section>
+                    <h4 data-i18n="engineering.problem">El problema</h4>
+                    <p class="" data-engineering="api-etl" data-field="problem">
+                      Datos de fuentes externas que requieren extracción,
+                      formato consistente y seguimiento de fallas.
+                    </p>
+                  </section>
+                  <section>
+                    <h4 data-i18n="engineering.approach">La solución</h4>
+                    <p
+                      class=""
+                      data-engineering="api-etl"
+                      data-field="approach"
+                    >
+                      Extracción con Requests, transformación con Pandas y carga
+                      a una base relacional, incorporando registros de fallas
+                      del proceso.
+                    </p>
+                  </section>
+                  <section>
+                    <h4 data-i18n="engineering.result">Resultado / alcance</h4>
+                    <p class="" data-engineering="api-etl" data-field="result">
+                      Laboratorio de integración de fuentes y automatización de
+                      la ingesta.
+                    </p>
+                  </section>
+                  <div class="case-detail-footer">
+                    <p class="case-tools">
+                      Python · Pandas · Requests · SQL Server
+                    </p>
+                    <div class="case-flow" aria-hidden="true">
+                      <span
+                        data-engineering="api-etl"
+                        data-field="flow"
+                        data-item="0"
+                        >REST API</span
+                      ><span
+                        data-engineering="api-etl"
+                        data-field="flow"
+                        data-item="1"
+                        >Python</span
+                      ><span
+                        data-engineering="api-etl"
+                        data-field="flow"
+                        data-item="2"
+                        >SQL Server</span
+                      >
+                    </div>
+                  </div>
                 </div>
               </details>
             </article>
             <article class="engineering-card" data-engineering-group="labs">
-              <div class="engineering-card-top">
-                <span class="case-number">07</span
-                ><span class="case-kind" data-i18n="engineering.labs"
-                  >Laboratorios</span
-                >
-              </div>
-              <h3 class="" data-engineering="f1-medallion" data-field="title">
-                Fórmula 1 · Pipeline Medallion en Fabric
-              </h3>
-              <p class="" data-engineering="f1-medallion" data-field="desc">
-                La ingeniería detrás del reporte: de los datos de carreras a
-                tablas preparadas para análisis.
-              </p>
-              <div class="case-flow" aria-hidden="true">
-                <span>Bronze</span><span>Silver</span><span>Gold</span>
-              </div>
-              <p class="case-stack">
-                Microsoft Fabric · PySpark · Pandas · Delta
-              </p>
-              <details class="case-detail">
-                <summary>
-                  <span data-i18n="engineering.details"
-                    >Ver enfoque y resultado</span
-                  ><span aria-hidden="true">+</span>
+              <details class="case-detail" name="engineering-cases">
+                <summary class="case-summary">
+                  <span class="case-number">07</span>
+                  <div class="case-main">
+                    <h3
+                      class=""
+                      data-engineering="f1-medallion"
+                      data-field="title"
+                    >
+                      Fórmula 1 · Ingeniería de datos
+                    </h3>
+                    <p
+                      class=""
+                      data-engineering="f1-medallion"
+                      data-field="teaser"
+                    >
+                      De los datos de carreras al análisis.
+                    </p>
+                  </div>
+                  <div class="case-meta">
+                    <span class="case-kind" data-i18n="engineering.labs"
+                      >Laboratorios</span
+                    >
+                    <p class="case-stack">
+                      Microsoft Fabric · PySpark · Pandas · Delta
+                    </p>
+                  </div>
+                  <div class="case-signal">
+                    <strong
+                      class=""
+                      data-engineering="f1-medallion"
+                      data-field="signal"
+                      >Bronze → Gold</strong
+                    ><small
+                      class=""
+                      data-engineering="f1-medallion"
+                      data-field="signalLabel"
+                      >Arquitectura Medallion</small
+                    >
+                  </div>
+                  <span class="case-expand" aria-hidden="true">+</span>
                 </summary>
-                <div>
-                  <h4 data-i18n="engineering.problem">El problema</h4>
-                  <p
-                    class=""
-                    data-engineering="f1-medallion"
-                    data-field="problem"
-                  >
-                    Integrar datos de carreras, clasificación y prácticas en una
-                    estructura reutilizable para BI.
-                  </p>
-                  <h4 data-i18n="engineering.approach">La solución</h4>
-                  <p
-                    class=""
-                    data-engineering="f1-medallion"
-                    data-field="approach"
-                  >
-                    Extracción y transformación con Python/PySpark bajo una
-                    arquitectura Bronze/Silver/Gold, con lakehouses y un
-                    pipeline maestro de carga.
-                  </p>
-                  <h4 data-i18n="engineering.result">Resultado / alcance</h4>
-                  <p
-                    class=""
-                    data-engineering="f1-medallion"
-                    data-field="result"
-                  >
-                    Proyecto público de ingeniería de datos y BI en Microsoft
-                    Fabric. El repositorio incluye las capas ETL y los
-                    artefactos de orquestación.
-                  </p>
-                  <a
-                    class="text-link"
-                    data-i18n="engineering.code"
-                    href="https://github.com/R1chardDs/Formula1"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Explorar código en GitHub ↗</a
-                  >
+                <div class="case-detail-body">
+                  <section>
+                    <h4 data-i18n="engineering.problem">El problema</h4>
+                    <p
+                      class=""
+                      data-engineering="f1-medallion"
+                      data-field="problem"
+                    >
+                      Integrar datos de carreras, clasificación y prácticas en
+                      una estructura reutilizable para BI.
+                    </p>
+                  </section>
+                  <section>
+                    <h4 data-i18n="engineering.approach">La solución</h4>
+                    <p
+                      class=""
+                      data-engineering="f1-medallion"
+                      data-field="approach"
+                    >
+                      Extracción y transformación con Python/PySpark bajo una
+                      arquitectura Bronze/Silver/Gold, con lakehouses y un
+                      pipeline maestro de carga.
+                    </p>
+                  </section>
+                  <section>
+                    <h4 data-i18n="engineering.result">Resultado / alcance</h4>
+                    <p
+                      class=""
+                      data-engineering="f1-medallion"
+                      data-field="result"
+                    >
+                      Proyecto público de ingeniería de datos y BI en Microsoft
+                      Fabric. El repositorio incluye las capas ETL y los
+                      artefactos de orquestación.
+                    </p>
+                  </section>
+                  <div class="case-detail-footer">
+                    <p class="case-tools">
+                      Microsoft Fabric · PySpark · Pandas · Delta
+                    </p>
+                    <div class="case-flow" aria-hidden="true">
+                      <span
+                        data-engineering="f1-medallion"
+                        data-field="flow"
+                        data-item="0"
+                        >Bronze</span
+                      ><span
+                        data-engineering="f1-medallion"
+                        data-field="flow"
+                        data-item="1"
+                        >Silver</span
+                      ><span
+                        data-engineering="f1-medallion"
+                        data-field="flow"
+                        data-item="2"
+                        >Gold</span
+                      >
+                    </div>
+                    <a
+                      class="text-link"
+                      data-i18n="engineering.code"
+                      href="https://github.com/R1chardDs/Formula1"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Explorar código en GitHub ↗</a
+                    >
+                  </div>
                 </div>
               </details>
             </article>
             <article class="engineering-card" data-engineering-group="labs">
-              <div class="engineering-card-top">
-                <span class="case-number">08</span
-                ><span class="case-kind" data-i18n="engineering.labs"
-                  >Laboratorios</span
-                >
-              </div>
-              <h3 class="" data-engineering="transaction-ml" data-field="title">
-                Clasificación de transacciones con ML
-              </h3>
-              <p class="" data-engineering="transaction-ml" data-field="desc">
-                Aplicación de aprendizaje automático a descripciones y
-                referencias de transacciones financieras.
-              </p>
-              <div class="case-flow" aria-hidden="true">
-                <span
-                  data-engineering="transaction-ml"
-                  data-field="flow"
-                  data-item="0"
-                  >Transacciones</span
-                ><span>ML</span
-                ><span
-                  data-engineering="transaction-ml"
-                  data-field="flow"
-                  data-item="2"
-                  >Clasificación</span
-                >
-              </div>
-              <p class="case-stack">
-                Python · Scikit-learn · Streamlit · Airflow
-              </p>
-              <details class="case-detail">
-                <summary>
-                  <span data-i18n="engineering.details"
-                    >Ver enfoque y resultado</span
-                  ><span aria-hidden="true">+</span>
+              <details class="case-detail" name="engineering-cases">
+                <summary class="case-summary">
+                  <span class="case-number">08</span>
+                  <div class="case-main">
+                    <h3
+                      class=""
+                      data-engineering="transaction-ml"
+                      data-field="title"
+                    >
+                      Clasificación financiera con ML
+                    </h3>
+                    <p
+                      class=""
+                      data-engineering="transaction-ml"
+                      data-field="teaser"
+                    >
+                      Categorías a partir de descripciones bancarias.
+                    </p>
+                  </div>
+                  <div class="case-meta">
+                    <span class="case-kind" data-i18n="engineering.labs"
+                      >Laboratorios</span
+                    >
+                    <p class="case-stack">
+                      Python · Scikit-learn · Streamlit · Airflow
+                    </p>
+                  </div>
+                  <div class="case-signal">
+                    <strong
+                      class=""
+                      data-engineering="transaction-ml"
+                      data-field="signal"
+                      >Texto → Categorías</strong
+                    ><small
+                      class=""
+                      data-engineering="transaction-ml"
+                      data-field="signalLabel"
+                      >Machine learning</small
+                    >
+                  </div>
+                  <span class="case-expand" aria-hidden="true">+</span>
                 </summary>
-                <div>
-                  <h4 data-i18n="engineering.problem">El problema</h4>
-                  <p
-                    class=""
-                    data-engineering="transaction-ml"
-                    data-field="problem"
-                  >
-                    Clasificación repetitiva de movimientos bancarios a partir
-                    de texto contable.
-                  </p>
-                  <h4 data-i18n="engineering.approach">La solución</h4>
-                  <p
-                    class=""
-                    data-engineering="transaction-ml"
-                    data-field="approach"
-                  >
-                    Modelo de clasificación basado en descripciones y
-                    referencias, con una interfaz Streamlit y orquestación en
-                    Apache Airflow.
-                  </p>
-                  <h4 data-i18n="engineering.result">Resultado / alcance</h4>
-                  <p
-                    class=""
-                    data-engineering="transaction-ml"
-                    data-field="result"
-                  >
-                    Laboratorio que conecta finanzas, machine learning y
-                    automatización del flujo de trabajo.
-                  </p>
+                <div class="case-detail-body">
+                  <section>
+                    <h4 data-i18n="engineering.problem">El problema</h4>
+                    <p
+                      class=""
+                      data-engineering="transaction-ml"
+                      data-field="problem"
+                    >
+                      Clasificación repetitiva de movimientos bancarios a partir
+                      de texto contable.
+                    </p>
+                  </section>
+                  <section>
+                    <h4 data-i18n="engineering.approach">La solución</h4>
+                    <p
+                      class=""
+                      data-engineering="transaction-ml"
+                      data-field="approach"
+                    >
+                      Modelo de clasificación basado en descripciones y
+                      referencias, con una interfaz Streamlit y orquestación en
+                      Apache Airflow.
+                    </p>
+                  </section>
+                  <section>
+                    <h4 data-i18n="engineering.result">Resultado / alcance</h4>
+                    <p
+                      class=""
+                      data-engineering="transaction-ml"
+                      data-field="result"
+                    >
+                      Laboratorio que conecta finanzas, machine learning y
+                      automatización del flujo de trabajo.
+                    </p>
+                  </section>
+                  <div class="case-detail-footer">
+                    <p class="case-tools">
+                      Python · Scikit-learn · Streamlit · Airflow
+                    </p>
+                    <div class="case-flow" aria-hidden="true">
+                      <span
+                        data-engineering="transaction-ml"
+                        data-field="flow"
+                        data-item="0"
+                        >Transacciones</span
+                      ><span
+                        data-engineering="transaction-ml"
+                        data-field="flow"
+                        data-item="1"
+                        >ML</span
+                      ><span
+                        data-engineering="transaction-ml"
+                        data-field="flow"
+                        data-item="2"
+                        >Clasificación</span
+                      >
+                    </div>
+                  </div>
                 </div>
               </details>
             </article>
           </div>
-          <p class="footnote" data-i18n="engineering.note">
-            Casos de experiencia profesional y laboratorios personales,
-            presentados con su contexto técnico.
-          </p>
         </div>
       </section>
       <section id="method" class="section method">

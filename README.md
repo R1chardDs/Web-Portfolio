@@ -41,3 +41,9 @@ No se creó un Site en ChatGPT ni se configuró un dominio. Después de comprar 
 ## Ingeniería y laboratorios
 
 La sección de ingeniería conserva cuatro casos profesionales y cuatro laboratorios del portafolio previo. Los casos tienen resúmenes técnicos y resultados con contexto, sin datos internos. El laboratorio de Fórmula 1 enlaza al repositorio público verificado `R1chardDs/Formula1`. Los antiguos enlaces de ejemplo no se reutilizan.
+
+## Interacción y lectura
+
+Los casos se presentan como filas compactas con un titular, una frase breve y un resultado o alcance visible. El detalle técnico usa elementos `details` nativos y conserva la navegación por teclado. En móvil las herramientas se muestran dentro del detalle para mantener la vista inicial breve.
+
+La página incorpora entradas suaves al desplazarse, respuestas visuales al pasar el cursor, un indicador de lectura y el resaltado de la sección activa. Las animaciones respetan la preferencia de movimiento reducido del navegador. No se añadieron dependencias de JavaScript.
