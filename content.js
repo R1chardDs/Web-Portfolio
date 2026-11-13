@@ -16,8 +16,8 @@ window.PORTFOLIO = {
       "hero.primary": "Hablemos de tu proyecto",
       "hero.secondary": "Explorar mi trabajo",
       "hero.signature": "Richard Ampié · Ingeniería, estrategia y ejecución",
-      "hero.visual.label": "DE LA COMPLEJIDAD A LA CLARIDAD",
-      "hero.visual.title": "Tu operación,\nmejor conectada.",
+      "hero.visual.label": "DE LOS DATOS A LA OPERACIÓN",
+      "hero.visual.title": "De datos dispersos\na mejores decisiones.",
       "hero.visual.source": "Fuentes de negocio",
       "hero.visual.model": "Una base confiable",
       "hero.visual.auto": "Automatización + IA",
@@ -147,9 +147,9 @@ window.PORTFOLIO = {
       "theme.light": "Cambiar a modo claro",
       "theme.dark": "Cambiar a modo oscuro",
       "engineering.tag": "03 / INGENIERÍA Y AUTOMATIZACIÓN",
-      "engineering.title": "Lo que sostiene\ncada decisión.",
+      "engineering.title": "La ingeniería\ndetrás del análisis.",
       "engineering.body":
-        "Casos profesionales y laboratorios de datos. Abrí un proyecto para explorar el enfoque y las herramientas.",
+        "Proyectos reales, automatización práctica y datos pensados para la operación. Abrí un caso para conocer el enfoque.",
       "engineering.all": "Todos",
       "engineering.corporate": "Experiencia profesional",
       "engineering.labs": "Laboratorios",
@@ -161,6 +161,18 @@ window.PORTFOLIO = {
       "engineering.note":
         "Casos de experiencia profesional y laboratorios personales, presentados con su contexto técnico.",
       "project.financial2027": "Campeonato 2027 - Proyecciones financieras",
+      "hero.visual.connect": "Conectar",
+      "hero.visual.modelstep": "Modelar",
+      "hero.visual.automate": "Automatizar",
+      "hero.visual.decide": "Decidir",
+      "hero.visual.alt":
+        "Ilustración de fuentes de datos que se organizan en una plataforma y alimentan un panel de análisis.",
+      "engineering.visual.title": "La base detrás\nde cada reporte.",
+      "engineering.visual.caption":
+        "Fuentes conectadas, modelos confiables y una entrega que se puede mantener.",
+      "engineering.visual.link": "Explorar el proyecto de Fórmula 1",
+      "engineering.visual.alt":
+        "Ilustración arquitectónica de una plataforma de datos de tres capas conectadas.",
     },
     en: {
       skip: "Skip to content",
@@ -177,8 +189,8 @@ window.PORTFOLIO = {
       "hero.primary": "Let’s discuss your project",
       "hero.secondary": "Explore my work",
       "hero.signature": "Richard Ampié · Engineering, strategy and delivery",
-      "hero.visual.label": "FROM COMPLEXITY TO CLARITY",
-      "hero.visual.title": "Your operations,\nbetter connected.",
+      "hero.visual.label": "FROM DATA TO OPERATIONS",
+      "hero.visual.title": "From fragmented data\nto better decisions.",
       "hero.visual.source": "Business sources",
       "hero.visual.model": "A trusted foundation",
       "hero.visual.auto": "Automation + AI",
@@ -303,9 +315,9 @@ window.PORTFOLIO = {
       "theme.light": "Switch to light mode",
       "theme.dark": "Switch to dark mode",
       "engineering.tag": "03 / ENGINEERING & AUTOMATION",
-      "engineering.title": "What supports\nevery decision.",
+      "engineering.title": "The engineering\nbehind the insight.",
       "engineering.body":
-        "Professional cases and data labs. Open a project to explore the approach and tools.",
+        "Real projects, practical automation and data foundations built to support the business. Open a case to explore the approach.",
       "engineering.all": "All",
       "engineering.corporate": "Professional experience",
       "engineering.labs": "Labs",
@@ -317,6 +329,18 @@ window.PORTFOLIO = {
       "engineering.note":
         "Professional experience and personal labs, presented with their technical context.",
       "project.financial2027": "Championship 2027 - Financial projections",
+      "hero.visual.connect": "Connect",
+      "hero.visual.modelstep": "Model",
+      "hero.visual.automate": "Automate",
+      "hero.visual.decide": "Decide",
+      "hero.visual.alt":
+        "Illustration of data sources forming a structured platform and feeding an analytics panel.",
+      "engineering.visual.title": "The foundation behind\nevery report.",
+      "engineering.visual.caption":
+        "Connected sources, reliable models and a delivery process you can maintain.",
+      "engineering.visual.link": "Explore the Formula 1 build",
+      "engineering.visual.alt":
+        "Architectural illustration of three connected layers in a data platform.",
     },
   },
   services: [

@@ -2,7 +2,7 @@
 
 (() => {
   const { ui, projects, services, engineering } = window.PORTFOLIO;
-  let language = "es";
+  let language = "en";
   let activeProject = null;
   let lastProjectButton = null;
   const dialog = document.querySelector("#project-dialog");
@@ -33,7 +33,7 @@
     themeToggle.setAttribute("aria-pressed", String(isDark));
     document.querySelector('meta[name="theme-color"]').content = isDark
       ? "#0a1324"
-      : "#f4f7fc";
+      : "#f6f8fc";
   }
 
   themeToggle.addEventListener("click", () => {
@@ -41,7 +41,7 @@
       document.documentElement.dataset.theme === "dark" ? "light" : "dark";
     document.documentElement.dataset.theme = next;
     try {
-      localStorage.setItem("ra-theme", next);
+      localStorage.setItem("ra-theme-v2", next);
     } catch {
       /* Storage is optional. */
     }
@@ -73,8 +73,8 @@
     document.body.classList.add("modal-open");
   }
 
-  function setLanguage(next) {
-    language = next === "en" ? "en" : "es";
+  function setLanguage(next, persist = true) {
+    language = next === "es" ? "es" : "en";
     document.documentElement.lang = language;
     document.title = tr("meta.title");
     document.querySelector('meta[name="description"]').content =
@@ -88,6 +88,9 @@
     document.querySelectorAll("[data-i18n]").forEach((el) => {
       const value = tr(el.dataset.i18n);
       if (value !== undefined) el.textContent = value;
+    });
+    document.querySelectorAll("[data-i18n-alt]").forEach((el) => {
+      el.alt = tr(el.dataset.i18nAlt);
     });
     document.querySelectorAll("[data-project]").forEach((el) => {
       const p = projects.find((project) => project.id === el.dataset.project);
@@ -153,10 +156,12 @@
       `https://wa.me/50576896537?text=${encodeURIComponent(greeting)}`;
     document.querySelector("#copy-status").textContent = "";
     if (dialog.open && activeProject) showProject(activeProject);
-    try {
-      localStorage.setItem("ra-language", language);
-    } catch {
-      /* Storage is optional. */
+    if (persist) {
+      try {
+        localStorage.setItem("ra-language-v2", language);
+      } catch {
+        /* Storage is optional. */
+      }
     }
   }
 
@@ -180,7 +185,7 @@
     if (!nav.contains(event.target) && !menu.contains(event.target))
       closeMenu();
   });
-  const desktopMedia = matchMedia("(min-width: 901px)");
+  const desktopMedia = matchMedia("(min-width: 1051px)");
   desktopMedia.addEventListener("change", (event) => {
     if (event.matches) closeMenu();
   });
@@ -264,11 +269,11 @@
 
   let savedLanguage;
   try {
-    savedLanguage = localStorage.getItem("ra-language");
+    savedLanguage = localStorage.getItem("ra-language-v2");
   } catch {
-    /* Defaults to Spanish. */
+    /* Defaults to English. */
   }
-  setLanguage(savedLanguage || "es");
+  setLanguage(savedLanguage || "en", false);
 
   // Scroll feedback is visual only; it never stores visitor activity.
   const headerLinks = [...nav.querySelectorAll('a[href^="#"]')]
