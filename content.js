@@ -130,14 +130,11 @@ window.PORTFOLIO = {
         "Contame qué proceso consume tiempo, qué reporte dejó de responder o qué querés automatizar. Podemos empezar por definir el problema y el alcance de una primera intervención.",
       "contact.mail": "Escribirme por correo ↗",
       "contact.whatsapp": "Conversar por WhatsApp ↗",
-      "contact.brief": "Un buen punto de partida",
+      "contact.brief": "Preparemos tu consulta",
       "contact.briefbody":
-        "Contame el objetivo, las herramientas actuales y qué resultado esperás. Si todavía no lo tenés claro, lo definimos juntos.",
+        "Editá el asunto y contame qué querés mejorar. Te dejo una guía para comenzar.",
       "contact.prompt":
         "Hola Richard, quiero mejorar este proceso:\n\nObjetivo:\nHerramientas y fuentes actuales:\nPrincipal dificultad:\nResultado esperado:\nPlazo aproximado:",
-      "contact.copy": "Copiar guía para mi consulta",
-      "contact.copied": "Guía copiada. Podés pegarla en tu mensaje.",
-      "contact.copyfallback": "Seleccioná y copiá el texto de la guía.",
       "contact.direct": "Escribime para definir el alcance de tu proyecto.",
       "footer.line": "Consultoría independiente en datos, BI e IA aplicada.",
       "footer.top": "Volver arriba ↑",
@@ -161,7 +158,6 @@ window.PORTFOLIO = {
       "engineering.code": "Explorar código en GitHub ↗",
       "engineering.note":
         "Casos de experiencia profesional y laboratorios personales, presentados con su contexto técnico.",
-      "project.financial2027": "Campeonato 2027 - Proyecciones financieras",
       "hero.visual.connect": "Conectar",
       "hero.visual.modelstep": "Modelar",
       "hero.visual.automate": "Automatizar",
@@ -174,6 +170,12 @@ window.PORTFOLIO = {
       "engineering.visual.link": "Explorar el proyecto de Fórmula 1",
       "engineering.visual.alt":
         "Ilustración arquitectónica de una plataforma de datos de tres capas conectadas.",
+      "contact.subject": "Asunto",
+      "contact.subjectDefault": "Consulta sobre un proyecto de datos",
+      "contact.message": "Mensaje",
+      "contact.openDraft": "Abrir borrador en mi correo ↗",
+      "contact.draftHint":
+        "Se abrirá tu aplicación de correo con este borrador para que lo revisés y enviés.",
     },
     en: {
       skip: "Skip to content",
@@ -298,14 +300,11 @@ window.PORTFOLIO = {
         "Tell me which process consumes time, which report has slowed down or what you want to automate. We can start by defining the problem and the scope of a first engagement.",
       "contact.mail": "Email me ↗",
       "contact.whatsapp": "Talk on WhatsApp ↗",
-      "contact.brief": "A useful starting point",
+      "contact.brief": "Start the conversation",
       "contact.briefbody":
-        "Share your objective, current tools and expected outcome. If it is not yet clear, we can define it together.",
+        "Edit the subject and tell me what you would like to improve. Here is a starting point.",
       "contact.prompt":
         "Hi Richard, I would like to improve this process:\n\nObjective:\nCurrent tools and data sources:\nMain difficulty:\nExpected outcome:\nApproximate timeline:",
-      "contact.copy": "Copy the inquiry guide",
-      "contact.copied": "Guide copied. You can paste it into your message.",
-      "contact.copyfallback": "Select and copy the guide text.",
       "contact.direct": "Get in touch to define the scope of your project.",
       "footer.line": "Independent consulting in data, BI and applied AI.",
       "footer.top": "Back to top ↑",
@@ -329,7 +328,6 @@ window.PORTFOLIO = {
       "engineering.code": "Explore code on GitHub ↗",
       "engineering.note":
         "Professional experience and personal labs, presented with their technical context.",
-      "project.financial2027": "Championship 2027 - Financial projections",
       "hero.visual.connect": "Connect",
       "hero.visual.modelstep": "Model",
       "hero.visual.automate": "Automate",
@@ -342,6 +340,12 @@ window.PORTFOLIO = {
       "engineering.visual.link": "Explore the Formula 1 build",
       "engineering.visual.alt":
         "Architectural illustration of three connected layers in a data platform.",
+      "contact.subject": "Subject",
+      "contact.subjectDefault": "Data & automation project inquiry",
+      "contact.message": "Message",
+      "contact.openDraft": "Open email draft ↗",
+      "contact.draftHint":
+        "Your email application will open with this draft for you to review and send.",
     },
   },
   services: [
@@ -508,6 +512,38 @@ window.PORTFOLIO = {
       category: "explore",
       community:
         "https://community.fabric.microsoft.com/discussions/pbi_contestsgallery/the-life-we-fear-never-living/5376385",
+    },
+    {
+      id: "pebble-pine",
+      title: [
+        "Pebble & Pine · Estrategia de inversión",
+        "Pebble & Pine · Investment strategy",
+      ],
+      img: "assets/project-pebble-pine.png",
+      url: "https://app.fabric.microsoft.com/view?r=eyJrIjoiOWRkMDY5MWYtYWQwNS00Mjk4LThjYzQtNDRiOWVjOGZmNjJlIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9",
+      community:
+        "https://community.fabric.microsoft.com/discussions/pbi_contestsgallery/pebble--pine---strengthen-what-we-already-have/5429507",
+      category: "champs",
+      tag: [
+        "WORLD CHAMPS ATL 2027 · RONDA 1",
+        "WORLD CHAMPS ATL 2027 · ROUND 1",
+      ],
+      desc: [
+        "Diagnóstico financiero y escenarios de inversión para priorizar capital en una red de 45 resorts.",
+        "Financial diagnosis and investment scenarios to prioritize capital across a 45-resort network.",
+      ],
+      question: [
+        "¿Cómo priorizar un presupuesto de USD 145 M cuando hay más ideas que capital disponible?",
+        "How should a board prioritize a USD 145 M budget when there are more ideas than available capital?",
+      ],
+      approach: [
+        "Un reporte de dos páginas conecta cinco años de desempeño financiero con ocho iniciativas de inversión por USD 133.7 M. El diagnóstico identifica presión sobre el margen, estacionalidad, habitaciones antiguas y restricciones de capacidad; la propuesta compara escenarios bajo, esperado y alto, y explica qué no se financia.",
+        "A two-page report connects five years of financial performance with eight investment initiatives totaling USD 133.7 M. The diagnosis identifies margin pressure, seasonality, aging rooms and capacity constraints; the proposal compares Low, Expected and High scenarios and explains what is not funded.",
+      ],
+      value: [
+        "Una narrativa para dirección que conecta evidencia, asignación de capital y riesgos. Expone los límites del caso: el plan frena la caída del margen, pero no la revierte, y recupera el 48 % del capital para 2032. Proyecto de concurso, no una implementación de cliente.",
+        "A board-level narrative connecting evidence, capital allocation and risk. It makes the limitations explicit: the plan slows the margin decline but does not reverse it, and recovers 48% of capital by 2032. A competition project, not a client implementation.",
+      ],
     },
     {
       id: "finance",

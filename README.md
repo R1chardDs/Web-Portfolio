@@ -5,9 +5,9 @@ Portafolio bilingüe de consultoría independiente en datos, inteligencia de neg
 ## Archivos
 
 - `index.html`: contenido inicial en inglés, estructura accesible y metadatos.
-- `content.js`: textos en español e inglés, servicios, ocho reportes y ocho casos de ingeniería / laboratorios.
+- `content.js`: textos en español e inglés, servicios, nueve reportes y ocho casos de ingeniería / laboratorios.
 - `theme-init.js`: aplica la preferencia de tema antes de cargar los estilos.
-- `app.js`: idioma, filtros, detalles de proyectos y guía de consulta.
+- `app.js`: idioma, filtros, detalles de proyectos y borrador de correo.
 - `style.css`: identidad visual y estilos responsive.
 - `assets/`: vistas previas, insignias, monograma y tarjeta social.
 - `resume.md`: resumen profesional actualizado con el CV 2026 y el puesto actual indicado por Richard.
@@ -16,7 +16,7 @@ No requiere npm, un backend, variables de entorno ni credenciales de Power BI. E
 
 ## Revisión local
 
-Desde esta carpeta ejecutar `python -m http.server 8765 --bind 127.0.0.1` y abrir `http://127.0.0.1:8765`. También se puede abrir `index.html` directamente. Si el portapapeles no está disponible, la guía se selecciona para copiarla manualmente.
+Desde esta carpeta ejecutar `python -m http.server 8765 --bind 127.0.0.1` y abrir `http://127.0.0.1:8765`. También se puede abrir `index.html` directamente. El formulario prepara un correo con asunto y cuerpo editables y abre el cliente de correo del visitante. Requiere una aplicación o manejador de correo configurado; el envío lo confirma el visitante desde allí.
 
 ## Mantenimiento
 
@@ -26,7 +26,7 @@ Las rutas de recursos son relativas para funcionar bajo `/Web-Portfolio/`. Los r
 
 ## Publicación
 
-El sitio se publica en la rama `main` de este repositorio y se despliega con la configuración existente de GitHub Pages. La revisión incluye temas navy blue claro y oscuro, ocho casos de ingeniería y ocho reportes públicos.
+El sitio se publica en la rama `main` de este repositorio y se despliega con la configuración existente de GitHub Pages. La revisión incluye temas navy blue claro y oscuro, ocho casos de ingeniería y nueve reportes públicos.
 
 Dominio principal: https://richardampie.com/. GitHub Pages conserva la publicación desde `main`, con `CNAME` en la raíz y HTTPS obligatorio. Hostinger administra el DNS: cuatro registros A de GitHub Pages para `@`, CNAME `www` hacia `r1chardds.github.io` y TXT de verificación de propiedad. `www` redirige al dominio principal. Los metadatos, la URL canónica y JSON-LD usan el dominio propio. No se creó un Site en ChatGPT.
 

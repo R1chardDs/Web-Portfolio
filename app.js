@@ -1,5 +1,9 @@
 "use strict";
 
+function buildInquiryMailto(subject, body) {
+  return `mailto:rampiechamorro14@gmail.com?subject=${encodeURIComponent(subject.trim().replace(/[\r\n]+/g, " "))}&body=${encodeURIComponent(body.trim().replace(/\r?\n/g, "\r\n"))}`;
+}
+
 (() => {
   const { ui, projects, services, engineering } = window.PORTFOLIO;
   let language = "en";
@@ -9,6 +13,15 @@
   const nav = document.querySelector("#main-nav");
   const menu = document.querySelector(".menu-toggle");
   const themeToggle = document.querySelector("#theme-toggle");
+  const draftForm = document.querySelector("#contact-draft");
+  const draftSubject = document.querySelector("#inquiry-subject");
+  const draftMessage = document.querySelector("#inquiry-message");
+  let draftDefaults = {
+    subject: ui.en["contact.subjectDefault"],
+    body: ui.en["contact.prompt"],
+  };
+  let selectedService = null;
+  let serviceSubject = "";
   const localized = (value) =>
     Array.isArray(value) ? value[language === "es" ? 0 : 1] : value;
   const escape = (value) =>
@@ -147,14 +160,28 @@
         "aria-label",
         language === "es" ? "Filtrar proyectos" : "Filter projects",
       );
-    document.querySelector("#inquiry-guide").value = tr("contact.prompt");
+    if (draftSubject.value === draftDefaults.subject) {
+      draftSubject.value = tr("contact.subjectDefault");
+    } else if (
+      selectedService !== null &&
+      draftSubject.value === serviceSubject
+    ) {
+      serviceSubject = `${tr("contact.subjectDefault")} — ${localized(services[selectedService].title)}`;
+      draftSubject.value = serviceSubject;
+    }
+    if (draftMessage.value === draftDefaults.body) {
+      draftMessage.value = tr("contact.prompt");
+    }
+    draftDefaults = {
+      subject: tr("contact.subjectDefault"),
+      body: tr("contact.prompt"),
+    };
     const greeting =
       language === "es"
         ? "Hola Richard, quisiera conversar sobre un proyecto de datos."
         : "Hi Richard, I would like to discuss a data project.";
     document.querySelector('a[href^="https://wa.me/"]').href =
       `https://wa.me/50576896537?text=${encodeURIComponent(greeting)}`;
-    document.querySelector("#copy-status").textContent = "";
     if (dialog.open && activeProject) showProject(activeProject);
     if (persist) {
       try {
@@ -240,6 +267,10 @@
 
   document.querySelectorAll("[data-service-cta]").forEach((link) =>
     link.addEventListener("click", () => {
+      const canPrefill =
+        draftSubject.value === draftDefaults.subject ||
+        draftSubject.value === serviceSubject;
+      selectedService = Number(link.dataset.serviceCta);
       const service = localized(
         services[Number(link.dataset.serviceCta)].title,
       );
@@ -250,21 +281,18 @@
         '.contact-actions a[href^="mailto:"]',
       );
       email.href = `mailto:rampiechamorro14@gmail.com?subject=${subject}`;
+      if (canPrefill) {
+        serviceSubject = `${tr("contact.subjectDefault")} — ${service}`;
+        draftSubject.value = serviceSubject;
+      }
     }),
   );
 
-  document.querySelector("#copy-brief").addEventListener("click", async () => {
-    const guide = document.querySelector("#inquiry-guide");
-    try {
-      await navigator.clipboard.writeText(guide.value);
-      document.querySelector("#copy-status").textContent = tr("contact.copied");
-    } catch {
-      guide.focus();
-      guide.select();
-      document.querySelector("#copy-status").textContent = tr(
-        "contact.copyfallback",
-      );
-    }
+  draftForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    window.location.assign(
+      buildInquiryMailto(draftSubject.value, draftMessage.value),
+    );
   });
 
   let savedLanguage;

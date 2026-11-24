@@ -33,9 +33,9 @@
       rel="stylesheet"
     />
     <script src="theme-init.js?v=visual-20261113"></script>
-    <link rel="stylesheet" href="style.css?v=visual-20261113" />
-    <script src="content.js?v=positioning-20261113" defer></script>
-    <script src="app.js?v=visual-20261113" defer></script>
+    <link rel="stylesheet" href="style.css?v=contact-20261124" />
+    <script src="content.js?v=contact-20261124" defer></script>
+    <script src="app.js?v=contact-20261124" defer></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -1584,7 +1584,7 @@
               </button>
             </div>
             <p class="project-count" aria-live="polite">
-              <span id="project-count">8</span>
+              <span id="project-count">9</span>
               <span data-i18n="project.count">public projects</span>
             </p>
           </div>
@@ -1693,19 +1693,55 @@
                 >
               </div>
             </article>
-            <article
-              class="project-card project-placeholder"
-              data-category="champs"
-              data-placeholder="true"
-            >
-              <div
-                class="project-image placeholder-image"
-                aria-hidden="true"
-              ></div>
+            <article class="project-card" data-category="champs">
+              <a
+                class="project-image"
+                href="https://app.fabric.microsoft.com/view?r=eyJrIjoiOWRkMDY5MWYtYWQwNS00Mjk4LThjYzQtNDRiOWVjOGZmNjJlIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Pebble &amp; Pine · Investment strategy — Power BI"
+                ><img
+                  src="assets/project-pebble-pine.png"
+                  alt="Pebble &amp; Pine · Investment strategy"
+                  loading="lazy"
+                  width="1407"
+                  height="1036"
+                /><span class="project-arrow" aria-hidden="true">↗</span></a
+              >
               <div class="project-info">
-                <h3 data-i18n="project.financial2027">
-                  Championship 2027 - Financial projections
+                <p class="eyebrow" data-project="pebble-pine" data-field="tag">
+                  WORLD CHAMPS ATL 2027 · ROUND 1
+                </p>
+                <h3 data-project="pebble-pine" data-field="title">
+                  Pebble &amp; Pine · Investment strategy
                 </h3>
+                <p data-project="pebble-pine" data-field="desc">
+                  Financial diagnosis and investment scenarios to prioritize
+                  capital across a 45-resort network.
+                </p>
+                <div class="project-links">
+                  <a
+                    href="https://app.fabric.microsoft.com/view?r=eyJrIjoiOWRkMDY5MWYtYWQwNS00Mjk4LThjYzQtNDRiOWVjOGZmNjJlIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-i18n="project.open"
+                    >Explore report ↗</a
+                  ><button
+                    type="button"
+                    data-open-project="pebble-pine"
+                    data-i18n="project.details"
+                  >
+                    About the project
+                  </button>
+                </div>
+                <a
+                  class="community-link"
+                  href="https://community.fabric.microsoft.com/discussions/pbi_contestsgallery/pebble--pine---strengthen-what-we-already-have/5429507"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-i18n="project.community"
+                  >View on Microsoft Community ↗</a
+                >
               </div>
             </article>
 
@@ -2280,30 +2316,58 @@
           </div>
           <aside class="brief-card">
             <span class="brief-icon" aria-hidden="true">↗</span>
-            <h3 data-i18n="contact.brief">A useful starting point</h3>
+            <h3 data-i18n="contact.brief">Start the conversation</h3>
             <p data-i18n="contact.briefbody">
-              Share your objective, current tools and expected outcome. If it is
-              not yet clear, we can define it together.
+              Edit the subject and tell me what you would like to improve. Here
+              is a starting point.
             </p>
-            <label for="inquiry-guide" class="sr-only" data-i18n="contact.brief"
-              >A useful starting point</label
-            ><textarea readonly id="inquiry-guide" rows="9">
-Hola Richard, quiero mejorar este proceso:
-
-Objetivo:
-Herramientas y fuentes actuales:
-Principal dificultad:
-Resultado esperado:
-Plazo aproximado:</textarea
-            ><button
-              type="button"
-              id="copy-brief"
-              class="button outline"
-              data-i18n="contact.copy"
+            <form
+              id="contact-draft"
+              action="mailto:rampiechamorro14@gmail.com"
+              method="get"
             >
-              Copy the inquiry guide
-            </button>
-            <p id="copy-status" class="copy-status" aria-live="polite"></p>
+              <label for="inquiry-subject" data-i18n="contact.subject"
+                >Subject</label
+              ><input
+                id="inquiry-subject"
+                name="subject"
+                type="text"
+                value="Data &amp; automation project inquiry"
+                maxlength="160"
+                required
+              /><label for="inquiry-message" data-i18n="contact.message"
+                >Message</label
+              ><textarea
+                id="inquiry-message"
+                name="body"
+                rows="9"
+                maxlength="4000"
+                required
+                aria-describedby="draft-hint"
+              >
+Hi Richard, I would like to improve this process:
+
+Objective:
+Current tools and data sources:
+Main difficulty:
+Expected outcome:
+Approximate timeline:</textarea
+              ><button
+                type="submit"
+                class="button outline"
+                data-i18n="contact.openDraft"
+              >
+                Open email draft ↗
+              </button>
+              <p
+                id="draft-hint"
+                class="draft-hint"
+                data-i18n="contact.draftHint"
+              >
+                Your email application will open with this draft for you to
+                review and send.
+              </p>
+            </form>
           </aside>
         </div>
       </section>
