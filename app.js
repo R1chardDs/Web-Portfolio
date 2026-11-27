@@ -8,7 +8,7 @@ function buildInquiryMailto(subject, body) {
   const { ui, projects, services, engineering } = window.PORTFOLIO;
   let language = "en";
   let activeProject = null;
-  let lastProjectButton = null;
+  let dialogTrigger = null;
   const dialog = document.querySelector("#project-dialog");
   const nav = document.querySelector("#main-nav");
   const menu = document.querySelector(".menu-toggle");
@@ -232,10 +232,28 @@ function buildInquiryMailto(subject, body) {
 
   document.querySelectorAll("[data-open-project]").forEach((button) =>
     button.addEventListener("click", () => {
-      lastProjectButton = button;
+      dialogTrigger = button;
       showProject(button.dataset.openProject);
     }),
   );
+  document.querySelectorAll("[data-open-service]").forEach((link) => {
+    if (typeof dialog.showModal !== "function") return;
+    link.setAttribute("aria-haspopup", "dialog");
+    link.setAttribute("aria-controls", dialog.id);
+    link.addEventListener("click", (event) => {
+      if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      const body = document.querySelector(link.hash).firstElementChild.cloneNode(true);
+      body.querySelector("h2").id = "dialog-title";
+      document.querySelector("#dialog-content").replaceChildren(body);
+      document.querySelector("#close-dialog").setAttribute("aria-label", tr("services.close"));
+      dialogTrigger = link;
+      activeProject = null;
+      dialog.showModal();
+      dialog.scrollTop = 0;
+      document.body.classList.add("modal-open");
+    });
+  });
   document
     .querySelector("#close-dialog")
     .addEventListener("click", () => dialog.close());
@@ -245,7 +263,7 @@ function buildInquiryMailto(subject, body) {
   dialog.addEventListener("close", () => {
     document.body.classList.remove("modal-open");
     activeProject = null;
-    lastProjectButton?.focus();
+    dialogTrigger?.focus();
   });
 
   const gallery = document.querySelector("#business-cases");
@@ -328,7 +346,7 @@ function buildInquiryMailto(subject, body) {
 
   function revealCase(hash) {
     const target = document.getElementById(hash.slice(1));
-    if (!target?.matches("details.case-detail, details.service")) return;
+    if (!target?.matches("details.case-detail")) return;
     if (target.closest("[hidden]")) document.querySelector('[data-engineering-filter="all"]').click();
     target.open = true;
     return target;
@@ -340,13 +358,20 @@ function buildInquiryMailto(subject, body) {
     if (!link || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
     const key = link.dataset.inquiry;
     if (!key) {
-      if (link.hash && link.origin === location.origin && link.pathname === location.pathname) revealCase(link.hash);
+      if (!event.defaultPrevented && link.hash && link.origin === location.origin && link.pathname === location.pathname) {
+        const target = revealCase(link.hash);
+        if (target && dialog.open) {
+          dialogTrigger = null;
+          dialog.close();
+          requestAnimationFrame(() => target.querySelector("summary").focus({ preventScroll: true }));
+        }
+      }
       return;
     }
     inquiryContext = services.find(s => s.id === key) || engineering.find(c => c.id === key) || projects.find(p => p.id === key);
     if (!inquiryContext) return;
     if (dialog.open) {
-      lastProjectButton = null;
+      dialogTrigger = null;
       dialog.close();
     }
     updateInquiryDraft();
@@ -432,7 +457,7 @@ function buildInquiryMailto(subject, body) {
     );
     document
       .querySelectorAll(
-        ".section-heading, .metrics-grid, .service-list, .engineering-grid, .recognition, .project-grid, .about-grid, .cert-grid, .contact-grid",
+        ".section-heading, .metrics-grid, .offer-grid, .engineering-grid, .recognition, .project-grid, .about-grid, .cert-grid, .contact-grid",
       )
       .forEach((element) => {
         element.classList.add("reveal-item");

@@ -33,9 +33,9 @@
       rel="stylesheet"
     />
     <script src="theme-init.js?v=visual-20261113"></script>
-    <link rel="stylesheet" href="style.css?v=services-gallery-20261127" />
-    <script src="content.js?v=services-gallery-20261127" defer></script>
-    <script src="app.js?v=services-gallery-20261127" defer></script>
+    <link rel="stylesheet" href="style.css?v=service-cards-20261127" />
+    <script src="content.js?v=service-cards-20261127" defer></script>
+    <script src="app.js?v=service-cards-20261127" defer></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -579,84 +579,116 @@
           <p class="eyebrow" data-i18n="services.tag">02 / HOW I CAN HELP</p>
           <div class="section-heading">
             <h2 data-i18n="services.title">What does your data platform need today?</h2>
-            <p data-i18n="services.body">We can investigate a failing load, migrate your data warehouse to Fabric or work with your team each month. We agree on the scope and how to verify the outcome before we start.</p>
+            <p data-i18n="services.body">We start with the decision your team needs to make and agree on how to measure the improvement.</p>
           </div>
-          <div class="service-list">
-            <details class="service" id="bi-diagnostic">
-              <summary><span class="service-num">01</span>
-                <h3 data-service="0" data-field="title">BI reliability and performance audit</h3>
-                <span class="expand" aria-hidden="true">+</span>
-              </summary>
-              <div class="service-body">
-                <div>
-                  <p data-service="0" data-field="intro">If two reports disagree on margin or a refresh misses the close, I trace one number from the report to its source to find the cause.</p>
-                  <p class="tech">Microsoft Fabric · SQL · DAX · Power BI</p>
-                  <div class="service-evidence">
-                    <a class="text-link" href="#case-fabric-capacity" data-service="0" data-field="proof" data-item="0">Professional case · Tuning Fabric capacity</a>
-                  </div>
-                </div>
-                <div>
-                  <h4 data-i18n="services.deliver">What you receive</h4>
-                  <ul>
-                    <li data-service="0" data-field="items" data-item="0">A map of the sources, pipelines and models behind the process.</li>
-                    <li data-service="0" data-field="items" data-item="1">A baseline for load times, Fabric usage and discrepancies against source totals.</li>
-                    <li data-service="0" data-field="items" data-item="2">Prioritized fixes with an agreed test for each improvement.</li>
-                  </ul>
-                  <a class="text-link" href="#contact-draft" data-inquiry="bi-diagnostic" data-i18n="services.cta">Discuss this service</a>
-                </div>
+          <div class="offer-grid">
+            <article class="offer-card" id="bi-diagnostic">
+              <div class="offer-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="26" height="26" fill="none"
+                     stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M7 7h10M7 17h10M5 9v6m14-6v6M7 7l10 10" />
+                  <circle cx="5" cy="6" r="2" />
+                  <circle cx="19" cy="6" r="2" />
+                  <circle cx="5" cy="18" r="2" />
+                  <circle cx="19" cy="18" r="2" />
+                </svg>
               </div>
-            </details>
-            <details class="service" id="fabric-data-engineering" open>
-              <summary><span class="service-num">02</span>
-                <h3 data-service="1" data-field="title">Data engineering and warehouse migration to Fabric</h3>
-                <span class="expand" aria-hidden="true">+</span>
-              </summary>
-              <div class="service-body">
-                <div>
-                  <p data-service="1" data-field="intro">If the close depends on someone combining files by hand, I can automate that workflow. When the warehouse also needs to move to Fabric, I migrate loads in stages and reconcile totals with finance before switching the reports to the new source.</p>
-                  <p class="tech">SSIS · SQL Server · Microsoft Fabric · PySpark · Power BI</p>
-                  <div class="service-evidence">
-                    <a class="text-link" href="#case-dwh-migration" data-service="1" data-field="proof" data-item="0">SSIS to Fabric migration · Ingestion from 3 hours to 1</a>
-                    <a class="text-link" href="#case-f1-medallion" data-service="1" data-field="proof" data-item="1">Public lab · Formula 1 pipeline in Fabric</a>
-                    <a class="text-link" href="#case-finance-automation" data-service="1" data-field="proof" data-item="2">Finance automation · Month-end close from 5 to 2.5 days</a>
-                  </div>
-                </div>
-                <div>
-                  <h4 data-i18n="services.deliver">What you receive</h4>
-                  <ul>
-                    <li data-service="1" data-field="items" data-item="0">A data warehouse migration plan with dependencies, cutover sequence and acceptance criteria.</li>
-                    <li data-service="1" data-field="items" data-item="1">Incremental ingestion pipelines with data quality checks, failure logs and recovery instructions.</li>
-                    <li data-service="1" data-field="items" data-item="2">Reconciled tables and a shared semantic model for automating reports or migrating them from Tableau and Excel to Power BI.</li>
-                  </ul>
-                  <a class="text-link" href="#contact-draft" data-inquiry="fabric-data-engineering" data-i18n="services.cta">Discuss this service</a>
-                </div>
+              <h3 data-service="0" data-field="headline">BI performance audit</h3>
+              <p data-service="0" data-field="summary">I trace conflicting figures and late refreshes back to their source. You get the root causes, a prioritized fix list and a way to test each improvement.</p>
+              <div class="offer-actions">
+                <a class="offer-inquiry" href="#contact-draft" data-inquiry="bi-diagnostic" data-i18n="services.cta">Discuss this service</a>
+                <a class="offer-details-link" href="#scope-bi-diagnostic" data-open-service data-i18n="services.details">View details</a>
               </div>
-            </details>
-            <details class="service" id="monthly-data-support">
-              <summary><span class="service-num">03</span>
-                <h3 data-service="2" data-field="title">Monthly BI and data engineering support</h3>
-                <span class="expand" aria-hidden="true">+</span>
-              </summary>
-              <div class="service-body">
-                <div>
-                  <p data-service="2" data-field="intro">Once the platform is in production, I work with your team on failing loads, changes awaiting release and processes that still need manual intervention.</p>
-                  <p class="tech">Microsoft Fabric · Azure DevOps · Python · Power Automate</p>
-                  <div class="service-evidence">
-                    <a class="text-link" href="#case-bi-governance" data-service="2" data-field="proof" data-item="0">Professional case · How changes moved from development to production</a>
-                  </div>
-                </div>
-                <div>
-                  <h4 data-i18n="services.deliver">What you receive</h4>
-                  <ul>
-                    <li data-service="2" data-field="items" data-item="0">A prioritized backlog and a scope agreed with your team each month.</li>
-                    <li data-service="2" data-field="items" data-item="1">A review of pipeline runs, data quality and capacity usage to decide what to tune.</li>
-                    <li data-service="2" data-field="items" data-item="2">Tested releases, documented automations and a handover your team can operate.</li>
-                  </ul>
-                  <a class="text-link" href="#contact-draft" data-inquiry="monthly-data-support" data-i18n="services.cta">Discuss this service</a>
-                </div>
+            </article>
+            <article class="offer-card" id="fabric-data-engineering">
+              <div class="offer-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="26" height="26" fill="none"
+                     stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <ellipse cx="10" cy="5" rx="7" ry="3" />
+                  <path d="M3 5v12c0 1.7 3.1 3 7 3M3 11c0 1.7 3.1 3 7 3M17 5v5m-3 6h8m-3-3 3 3-3 3" />
+                </svg>
               </div>
-            </details>
+              <h3 data-service="1" data-field="headline">Data engineering in Fabric</h3>
+              <p data-service="1" data-field="summary">I migrate your data warehouse and automate loads with incremental pipelines. Before cutover, I reconcile the figures with your team so you can keep relying on your reports.</p>
+              <div class="offer-actions">
+                <a class="offer-inquiry" href="#contact-draft" data-inquiry="fabric-data-engineering" data-i18n="services.cta">Discuss this service</a>
+                <a class="offer-details-link" href="#scope-fabric-data-engineering" data-open-service data-i18n="services.details">View details</a>
+              </div>
+            </article>
+            <article class="offer-card" id="monthly-data-support">
+              <div class="offer-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="26" height="26" fill="none"
+                     stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6 5v12a3 3 0 0 0 6 0V9a4 4 0 0 1 4-4h2" />
+                  <circle cx="6" cy="4" r="2" />
+                  <circle cx="18" cy="5" r="2" />
+                  <circle cx="12" cy="18" r="2" />
+                </svg>
+              </div>
+              <h3 data-service="2" data-field="headline">Monthly BI support</h3>
+              <p data-service="2" data-field="summary">I work with your team each month to resolve issues and improve the platform. We agree on priorities, and you receive tested changes with operating notes.</p>
+              <div class="offer-actions">
+                <a class="offer-inquiry" href="#contact-draft" data-inquiry="monthly-data-support" data-i18n="services.cta">Discuss this service</a>
+                <a class="offer-details-link" href="#scope-monthly-data-support" data-open-service data-i18n="services.details">View details</a>
+              </div>
+            </article>
           </div>
+          <section id="scope-bi-diagnostic" class="service-scope">
+            <div class="dialog-body offer-scope-body">
+              <h2 data-service="0" data-field="title">BI reliability and performance audit</h2>
+              <p data-service="0" data-field="intro">If two reports disagree on margin or a refresh misses the close, I trace one number from the report to its source to find the cause.</p>
+              <h3 data-i18n="services.deliver">What you receive</h3>
+              <ul>
+                <li data-service="0" data-field="items" data-item="0">A map of the sources, pipelines and models behind the process.</li>
+                <li data-service="0" data-field="items" data-item="1">A baseline for load times, Fabric usage and discrepancies against source totals.</li>
+                <li data-service="0" data-field="items" data-item="2">Prioritized fixes with an agreed test for each improvement.</li>
+              </ul>
+              <p class="offer-tools">Microsoft Fabric · SQL · DAX · Power BI</p>
+              <h3 data-i18n="services.examples">Related cases</h3>
+              <div class="service-evidence">
+                <a class="text-link" href="#case-fabric-capacity" data-service="0" data-field="proof" data-item="0">Professional case · Tuning Fabric capacity</a>
+              </div>
+              <a class="offer-inquiry" href="#contact-draft" data-inquiry="bi-diagnostic" data-i18n="services.cta">Discuss this service</a>
+            </div>
+          </section>
+          <section id="scope-fabric-data-engineering" class="service-scope">
+            <div class="dialog-body offer-scope-body">
+              <h2 data-service="1" data-field="title">Data engineering and warehouse migration to Fabric</h2>
+              <p data-service="1" data-field="intro">If the close depends on someone combining files by hand, I can automate that workflow. When the warehouse also needs to move to Fabric, I migrate loads in stages and reconcile totals with finance before switching the reports to the new source.</p>
+              <h3 data-i18n="services.deliver">What you receive</h3>
+              <ul>
+                <li data-service="1" data-field="items" data-item="0">A data warehouse migration plan with dependencies, cutover sequence and acceptance criteria.</li>
+                <li data-service="1" data-field="items" data-item="1">Incremental ingestion pipelines with data quality checks, failure logs and recovery instructions.</li>
+                <li data-service="1" data-field="items" data-item="2">Reconciled tables and a shared semantic model for automating reports or migrating them from Tableau and Excel to Power BI.</li>
+              </ul>
+              <p class="offer-tools">SSIS · SQL Server · Microsoft Fabric · PySpark · Power BI</p>
+              <h3 data-i18n="services.examples">Related cases</h3>
+              <div class="service-evidence">
+                <a class="text-link" href="#case-dwh-migration" data-service="1" data-field="proof" data-item="0">SSIS to Fabric migration · Ingestion from 3 hours to 1</a>
+                <a class="text-link" href="#case-f1-medallion" data-service="1" data-field="proof" data-item="1">Public lab · Formula 1 pipeline in Fabric</a>
+                <a class="text-link" href="#case-finance-automation" data-service="1" data-field="proof" data-item="2">Finance automation · Month-end close from 5 to 2.5 days</a>
+              </div>
+              <a class="offer-inquiry" href="#contact-draft" data-inquiry="fabric-data-engineering" data-i18n="services.cta">Discuss this service</a>
+            </div>
+          </section>
+          <section id="scope-monthly-data-support" class="service-scope">
+            <div class="dialog-body offer-scope-body">
+              <h2 data-service="2" data-field="title">Monthly BI and data engineering support</h2>
+              <p data-service="2" data-field="intro">Once the platform is in production, I work with your team on failing loads, changes awaiting release and processes that still need manual intervention.</p>
+              <h3 data-i18n="services.deliver">What you receive</h3>
+              <ul>
+                <li data-service="2" data-field="items" data-item="0">A prioritized backlog and a scope agreed with your team each month.</li>
+                <li data-service="2" data-field="items" data-item="1">A review of pipeline runs, data quality and capacity usage to decide what to tune.</li>
+                <li data-service="2" data-field="items" data-item="2">Tested releases, documented automations and a handover your team can operate.</li>
+              </ul>
+              <p class="offer-tools">Microsoft Fabric · Azure DevOps · Python · Power Automate</p>
+              <h3 data-i18n="services.examples">Related cases</h3>
+              <div class="service-evidence">
+                <a class="text-link" href="#case-bi-governance" data-service="2" data-field="proof" data-item="0">Professional case · How changes moved from development to production</a>
+              </div>
+              <a class="offer-inquiry" href="#contact-draft" data-inquiry="monthly-data-support" data-i18n="services.cta">Discuss this service</a>
+            </div>
+          </section>
         </div>
       </section>
       <section id="engineering" class="section engineering">
@@ -1776,6 +1808,11 @@
                 >GitHub ↗</a
               >
             </div>
+            <div class="cv-downloads">
+              <span data-i18n="cv.download">Download CV</span>
+              <a href="assets/Richard-Ampie-CV-EN.pdf" download hreflang="en" lang="en">English <span aria-hidden="true">↓</span></a>
+              <a href="assets/Richard-Ampie-CV-ES.pdf" download hreflang="es" lang="es">Español <span aria-hidden="true">↓</span></a>
+            </div>
             <p class="location" data-i18n="about.location">
               Nicaragua · Remote collaboration · Español / English
             </p>
@@ -1987,6 +2024,11 @@
             <a class="email-address" href="mailto:rampiechamorro14@gmail.com"
               >rampiechamorro14@gmail.com</a
             >
+            <div class="cv-downloads">
+              <span data-i18n="cv.download">Download CV</span>
+              <a href="assets/Richard-Ampie-CV-EN.pdf" download hreflang="en" lang="en">English <span aria-hidden="true">↓</span></a>
+              <a href="assets/Richard-Ampie-CV-ES.pdf" download hreflang="es" lang="es">Español <span aria-hidden="true">↓</span></a>
+            </div>
             <p class="footnote" data-i18n="contact.direct">
               Get in touch to define the scope of your project.
             </p>

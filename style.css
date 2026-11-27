@@ -761,6 +761,50 @@ h1 {
   text-decoration: underline;
   text-underline-offset: 4px;
 }
+.offer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(.85rem, 2vw, 1.5rem);
+}
+.offer-card {
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+  padding: clamp(1rem, 2.2vw, 1.65rem);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--accent);
+  border-radius: 5px;
+}
+.offer-icon { color: var(--accent); }
+.offer-icon svg { display: block; width: 26px; height: 26px; }
+.offer-card h3 { font-size: clamp(1.25rem, 2vw, 1.55rem); line-height: 1.2; letter-spacing: -.025em; }
+.offer-card > p { color: var(--muted); font-size: 1.05rem; line-height: 1.55; }
+.offer-actions { display: flex; flex-wrap: wrap; gap: .35rem 1rem; align-items: center; margin-top: auto; padding-top: .3rem; }
+.offer-inquiry, .offer-details-link, .cv-downloads a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: 1rem;
+}
+.offer-inquiry { font-weight: 700; color: var(--accent); }
+.offer-details-link, .cv-downloads a { text-decoration: underline; text-underline-offset: .22em; }
+.service-scope:not(:target) { display: none; }
+.service-scope:target { margin-top: 1.2rem; border: 1px solid var(--line); border-radius: 5px; }
+.offer-scope-body { padding: clamp(1.25rem, 4vw, 2.3rem); }
+.offer-scope-body h2 { padding-inline-end: 2rem; }
+.offer-scope-body h3 { margin: 1.1rem 0 .4rem; font-size: 1.1rem; }
+.offer-scope-body ul { margin: 0; padding-inline-start: 1.25rem; color: var(--muted); }
+.offer-scope-body li + li { margin-top: .3rem; }
+.offer-scope-body .offer-tools { margin-top: 1rem; font-size: .95rem; color: var(--accent); }
+.offer-scope-body .offer-inquiry { margin-top: 1rem; }
+.cv-downloads { display: flex; align-items: center; flex-wrap: wrap; gap: .3rem .9rem; margin-top: .55rem; color: var(--accent); }
+.cv-downloads > span { color: var(--muted); font-size: 1rem; }
+@media (max-width: 800px) {
+  .offer-grid { grid-template-columns: 1fr; }
+  .offer-card { gap: .55rem; }
+  .offer-card > p { max-width: 65ch; }
+}
 .method {
   background: var(--accent);
   color: var(--paper);

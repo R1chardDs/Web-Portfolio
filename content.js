@@ -2,6 +2,10 @@
 window.PORTFOLIO = {
   ui: {
     es: {
+      "services.details": "Ver detalles",
+      "services.examples": "Casos relacionados",
+      "services.close": "Cerrar detalles del servicio",
+      "cv.download": "Descargar CV",
       "gallery.eyebrow": "Portafolio",
       "gallery.title": "Proyectos por tema",
       "gallery.body": "Explorá los casos de negocio, los reportes de la comunidad y los laboratorios. Usá las etiquetas para encontrar un problema parecido al de tu equipo.",
@@ -86,7 +90,7 @@ window.PORTFOLIO = {
       "services.title":
         "¿Qué necesita hoy tu plataforma de datos?",
       "services.body":
-        "Podemos revisar por qué falla una carga, migrar tu almacén de datos a Fabric o trabajar mes a mes con tu equipo. Acordamos el alcance y cómo comprobar el resultado antes de empezar.",
+        "Partimos de la decisión que tu equipo necesita tomar y acordamos cómo medir la mejora.",
       "services.deliver": "Qué recibís",
       "services.cta": "Consultar por este servicio",
       "method.tag": "04 / MI FORMA DE TRABAJAR",
@@ -221,6 +225,10 @@ window.PORTFOLIO = {
         "Se abrirá tu aplicación de correo con este borrador para que lo revisés y enviés.",
     },
     en: {
+      "services.details": "View details",
+      "services.examples": "Related cases",
+      "services.close": "Close service details",
+      "cv.download": "Download CV",
       "gallery.eyebrow": "Portfolio",
       "gallery.title": "Explore projects by topic",
       "gallery.body": "Explore business cases, community reports and independent work. Use the tags to find a question your team is working on.",
@@ -303,7 +311,7 @@ window.PORTFOLIO = {
       "services.tag": "02 / HOW I CAN HELP",
       "services.title": "What does your data platform need today?",
       "services.body":
-        "We can investigate a failing load, migrate your data warehouse to Fabric or work with your team each month. We agree on the scope and how to verify the outcome before we start.",
+        "We start with the decision your team needs to make and agree on how to measure the improvement.",
       "services.deliver": "What you receive",
       "services.cta": "Discuss this service",
       "method.tag": "04 / HOW I WORK",
@@ -473,6 +481,14 @@ window.PORTFOLIO = {
             "Professional case · Tuning Fabric capacity"
           ]
         }
+      ],
+      "headline": [
+        "Auditoría de BI",
+        "BI performance audit"
+      ],
+      "summary": [
+        "Rastreo cifras que no coinciden y cargas que llegan tarde. Recibís las causas, las correcciones prioritarias y una forma de comprobar cada mejora.",
+        "I trace conflicting figures and late refreshes back to their source. You get the root causes, a prioritized fix list and a way to test each improvement."
       ]
     },
     {
@@ -527,6 +543,14 @@ window.PORTFOLIO = {
             "Finance automation · Month-end close from 5 to 2.5 days"
           ]
         }
+      ],
+      "headline": [
+        "Ingeniería de datos en Fabric",
+        "Data engineering in Fabric"
+      ],
+      "summary": [
+        "Migro tu almacén de datos (DWH) y automatizo cargas con pipelines incrementales. Antes del cambio, concilio las cifras con tu equipo para que los reportes sigan siendo confiables.",
+        "I migrate your data warehouse and automate loads with incremental pipelines. Before cutover, I reconcile the figures with your team so you can keep relying on your reports."
       ]
     },
     {
@@ -567,6 +591,14 @@ window.PORTFOLIO = {
             "Professional case · How changes moved from development to production"
           ]
         }
+      ],
+      "headline": [
+        "Acompañamiento mensual de BI",
+        "Monthly BI support"
+      ],
+      "summary": [
+        "Trabajo mes a mes con tu equipo para resolver fallas y mejorar la plataforma. Acordamos prioridades y entrego cambios probados, con documentación para operarlos.",
+        "I work with your team each month to resolve issues and improve the platform. We agree on priorities, and you receive tested changes with operating notes."
       ]
     }
   ],
