@@ -72,12 +72,18 @@ function buildInquiryMailto(subject, body) {
     activeProject = id;
     const section = (key, field) =>
       `<section><h3>${escape(tr(key))}</h3><p>${escape(localized(p[field]))}</p></section>`;
+    const reportLink = p.url || (!p.upcoming && p.img);
+    const primaryAction = reportLink
+      ? `<a class="button primary" href="${escape(reportLink)}" target="_blank" rel="noopener noreferrer">${escape(tr(p.url ? "project.open" : "gallery.preview"))}</a>`
+      : `<span class="demo-status" aria-disabled="true" role="link">${escape(tr("gallery.soon"))}</span>`;
+    const sourceNote = p.collection === "pillow-key"
+      ? `<p class="case-source">${escape(tr("gallery.source"))}</p>` : "";
     document.querySelector("#dialog-content").innerHTML = `
       <img class="dialog-image" src="${escape(p.img)}" alt="${escape(localized(p.title))}">
       <div class="dialog-body"><p class="eyebrow">${escape(localized(p.tag))}</p>
       <h2 id="dialog-title">${escape(localized(p.title))}</h2>
       ${section("project.challenge", "question")}${section("project.approach", "approach")}${section("project.value", "value")}
-      <div class="dialog-actions"><a class="button primary" href="${escape(p.url)}" target="_blank" rel="noopener noreferrer">${escape(tr("project.open"))}</a>
+      ${sourceNote}<div class="dialog-actions">${primaryAction}
       ${p.community ? `<a class="text-link" href="${escape(p.community)}" target="_blank" rel="noopener noreferrer">${escape(tr("project.community"))}</a>` : ""}</div></div>`;
     document
       .querySelector("#close-dialog")
@@ -102,6 +108,9 @@ function buildInquiryMailto(subject, body) {
       const value = tr(el.dataset.i18n);
       if (value !== undefined) el.textContent = value;
     });
+    document.querySelectorAll("[data-i18n-label]").forEach((el) => {
+      el.setAttribute("aria-label", tr(el.dataset.i18nLabel));
+    });
     document.querySelectorAll("[data-i18n-alt]").forEach((el) => {
       el.alt = tr(el.dataset.i18nAlt);
     });
@@ -114,9 +123,11 @@ function buildInquiryMailto(subject, body) {
       if (!projectButton) return;
       const id = projectButton.dataset.openProject;
       const p = projects.find((project) => project.id === id);
-      card
-        .querySelector(".project-image")
-        .setAttribute("aria-label", `${localized(p.title)} — Power BI`);
+      const previewLink = card.querySelector("a.project-image");
+      if (previewLink) {
+        const action = tr(p.url ? "project.open" : "gallery.preview");
+        previewLink.setAttribute("aria-label", `${localized(p.title)} — ${action}`);
+      }
       card.querySelector("img").alt = localized(p.title);
     });
     document.querySelectorAll("[data-service]").forEach((el) => {
@@ -155,7 +166,7 @@ function buildInquiryMailto(subject, body) {
     menu.setAttribute("aria-label", tr("menu"));
     nav.setAttribute("aria-label", language === "es" ? "Principal" : "Main");
     document
-      .querySelector(".project-filters")
+      .querySelector("#projects .project-filters")
       .setAttribute(
         "aria-label",
         language === "es" ? "Filtrar proyectos" : "Filter projects",
@@ -235,22 +246,46 @@ function buildInquiryMailto(subject, body) {
     lastProjectButton?.focus();
   });
 
-  document.querySelectorAll("[data-filter]").forEach((button) =>
-    button.addEventListener("click", () => {
-      const category = button.dataset.filter;
-      let count = 0;
-      document.querySelectorAll(".project-card").forEach((card) => {
-        const visible =
-          category === "all" || card.dataset.category === category;
-        card.hidden = !visible;
-        if (visible && !card.hasAttribute("data-placeholder")) count += 1;
-      });
-      document.querySelector("#project-count").textContent = String(count);
-      document
-        .querySelectorAll("[data-filter]")
-        .forEach((b) => b.setAttribute("aria-pressed", String(b === button)));
-    }),
-  );
+  document.querySelectorAll(".project-filters").forEach((filters) => {
+    const gallery = filters.closest("section");
+    const cards = [...gallery.querySelectorAll(".project-card")];
+    const count = gallery.querySelector("[data-count], #project-count");
+    const expand = gallery.querySelector(".business-expand");
+    const buttons = filters.querySelectorAll("[data-filter]");
+    let category = "all";
+    let expanded = false;
+    function updateGallery() {
+      const matches = cards.filter(card => category === "all" || card.dataset.category === category);
+      const collapsible = expand && category === "all" && matches.length > 3;
+      const visible = collapsible && !expanded ? matches.slice(0, 3) : matches;
+      cards.forEach(card => { card.hidden = !visible.includes(card); });
+      count.textContent = visible.length === matches.length
+        ? String(matches.length) : `${visible.length} / ${matches.length}`;
+      const countLabel = count.nextElementSibling;
+      const noun = expand ? "gallery" : "project";
+      countLabel.dataset.i18n = `${noun}.${matches.length === 1 ? "single" : "count"}`;
+      countLabel.textContent = tr(countLabel.dataset.i18n);
+      buttons.forEach(button => button.setAttribute("aria-pressed", String(button.dataset.filter === category)));
+      if (expand) {
+        expand.hidden = !collapsible;
+        expand.setAttribute("aria-expanded", String(expanded));
+        expand.dataset.i18n = expanded ? "gallery.less" : "gallery.more";
+        expand.textContent = tr(expand.dataset.i18n);
+      }
+    }
+    buttons.forEach(button => button.addEventListener("click", () => {
+      category = button.dataset.filter;
+      expanded = false;
+      updateGallery();
+    }));
+    expand?.addEventListener("click", () => {
+      expanded = !expanded;
+      updateGallery();
+      if (expanded) cards[3].querySelector(".project-image[href], [data-open-project]").focus();
+      else filters.querySelector('[aria-pressed="true"]').focus();
+    });
+    updateGallery();
+  });
 
   document.querySelectorAll("[data-engineering-filter]").forEach((button) => {
     button.addEventListener("click", () => {

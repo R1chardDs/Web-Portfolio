@@ -926,6 +926,27 @@ h1 {
   letter-spacing: 3px;
   margin-top: 10px;
 }
+.business-cases .section-heading { margin-bottom: 1.6rem; }
+.gallery-craft { display: inline-block; margin-top: .65rem; }
+.practice-note {
+  padding: clamp(1rem, 2.2vw, 1.7rem);
+  border: 1px solid var(--line);
+  border-inline-start: 4px solid var(--accent);
+  background: var(--soft);
+  border-radius: 4px;
+}
+.practice-note .eyebrow { color: var(--accent); }
+.practice-note h3 { font-size: clamp(1.3rem, 2.3vw, 1.8rem); margin: .4rem 0; }
+.practice-note p:not(.eyebrow) { max-width: 86ch; }
+.practice-note details { margin-top: .6rem; }
+.practice-note summary { cursor: pointer; color: var(--accent); font-weight: 650; width: fit-content; }
+.practice-note details p { margin: .65rem 0; }
+.business-cases .work-toolbar { flex-wrap: wrap; margin: 1.6rem 0 1.2rem; }
+.business-cases .project-count { white-space: nowrap; }
+.business-expand { display: block; margin: 2rem auto 0; background: var(--surface); border: 1px solid var(--line); color: var(--accent); }
+.business-expand:hover { border-color: var(--accent); }
+.demo-status, .case-source { font-size: .9rem; color: var(--muted); }
+.case-source { margin-top: 1rem; }
 .work-toolbar {
   margin: 40px 0 25px;
   display: flex;

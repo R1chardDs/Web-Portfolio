@@ -33,9 +33,9 @@
       rel="stylesheet"
     />
     <script src="theme-init.js?v=visual-20261113"></script>
-    <link rel="stylesheet" href="style.css?v=contact-20261124" />
-    <script src="content.js?v=contact-20261124" defer></script>
-    <script src="app.js?v=contact-20261124" defer></script>
+    <link rel="stylesheet" href="style.css?v=cases-20261127" />
+    <script src="content.js?v=cases-20261127" defer></script>
+    <script src="app.js?v=cases-20261127" defer></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -72,7 +72,7 @@
           <a data-i18n="nav.services" href="#services">Services</a
           ><a data-i18n="nav.impact" href="#impact">Impact</a
           ><a data-i18n="nav.engineering" href="#engineering">Engineering</a
-          ><a data-i18n="nav.work" href="#projects">Selected work</a
+          ><a data-i18n="nav.work" href="#business-cases">Selected work</a
           ><a data-i18n="nav.about" href="#about">My approach</a>
         </nav>
         <div class="header-actions">
@@ -160,7 +160,7 @@
               ><a
                 class="text-link arrow-link"
                 data-i18n="hero.secondary"
-                href="#projects"
+                href="#business-cases"
                 >Explore my work</a
               >
             </div>
@@ -266,6 +266,137 @@
             Career outcomes documented in my CV. These refer to specific
             projects; each engagement starts with its own assessment.
           </p>
+        </div>
+      </section>
+      <section id="business-cases" class="section projects business-cases" aria-labelledby="business-title">
+        <div class="container">
+          <p class="eyebrow" data-i18n="gallery.eyebrow">Business cases</p>
+          <div class="section-heading">
+            <h2 id="business-title" data-i18n="gallery.title">What decision is your team facing?</h2>
+            <div><p data-i18n="gallery.body">Choose a business area to see the question, how I built the analysis and the decision the numbers support.</p><a class="text-link gallery-craft" href="#projects" data-i18n="gallery.craft">Competitions and explorations ↓</a></div>
+          </div>
+          <aside class="practice-note" aria-labelledby="practice-title">
+            <p class="eyebrow" data-i18n="practice.label">Field notes · Semantic models</p>
+            <h3 id="practice-title" data-i18n="practice.title">One model for five departments and one brand</h3>
+            <p data-i18n="practice.body">For Pillow &amp; Key, a fictional hotel group, I built six analyses on the semantic model from my ATL 2027 challenge report. Finance and the board can start with the same group margin and investigate different questions without loading sales again for each report.</p>
+            <details><summary data-i18n="practice.detail">How I keep the numbers comparable</summary>
+              <p data-i18n="practice.example">Group Performance and Finance &amp; Cost both show a 32.2% group margin for 2025. Filter to Pebble &amp; Pine and the same definition returns 28.2%. I divide total operating profit by total revenue for the selected hotels and aggregate distribution costs by hotel and month before adding them.</p><p data-i18n="practice.takeaway">In an audit, I start by locating copies of the sales table, comparing their rules and agreeing with Finance on who owns the shared definition. That gives each correction a clear home and lets the team validate it across the reports that use it.</p>
+              <a class="text-link" data-i18n="practice.origin" href="https://community.fabric.microsoft.com/discussions/pbi_contestsgallery/pebble--pine---strengthen-what-we-already-have/5429507" target="_blank" rel="noopener noreferrer">See the original ATL 2027 case ↗</a>
+            </details>
+          </aside>
+          <div class="work-toolbar">
+            <div class="project-filters" role="group" aria-label="Filter by business area" data-i18n-label="gallery.filter">
+              <button type="button" data-filter="all" aria-pressed="true" aria-controls="business-grid" data-i18n="gallery.all">All areas</button>
+              <button type="button" data-filter="strategy" aria-pressed="false" aria-controls="business-grid" data-i18n="gallery.strategy">Strategy</button>
+              <button type="button" data-filter="finance" aria-pressed="false" aria-controls="business-grid" data-i18n="gallery.finance">Finance</button>
+              <button type="button" data-filter="commercial" aria-pressed="false" aria-controls="business-grid" data-i18n="gallery.commercial">Commercial</button>
+              <button type="button" data-filter="operations" aria-pressed="false" aria-controls="business-grid" data-i18n="gallery.operations">Customer experience</button>
+              <button type="button" data-filter="logistics" aria-pressed="false" aria-controls="business-grid" data-i18n="gallery.logistics">Logistics</button>
+              <button type="button" data-filter="service" aria-pressed="false" aria-controls="business-grid" data-i18n="gallery.service">Service desk</button>
+            </div>
+            <p class="project-count" aria-live="polite"><span data-count>8</span> <span data-i18n="gallery.count">cases</span></p>
+          </div>
+          <div class="project-grid" id="business-grid">
+            <!-- business cards start -->
+            <article class="project-card" data-category="strategy">
+              <a class="project-image" href="assets/group-performance.png" target="_blank" rel="noopener noreferrer" aria-label="Group Performance — View screenshot ↗"><img src="assets/group-performance.png" alt="Group Performance" loading="lazy" width="1280" height="720" /><span class="project-arrow" aria-hidden="true">↗</span></a>
+              <div class="project-info">
+                <p class="eyebrow" data-project="group-performance" data-field="tag">Board of directors · Pillow &amp; Key</p>
+                <h3 data-project="group-performance" data-field="title">Group Performance</h3>
+                <p data-project="group-performance" data-field="desc">Pebble &amp; Pine earns 28% of revenue and 25% of profit. Which brand needs the board’s attention?</p>
+                <div class="project-links">
+                  <a href="assets/group-performance.png" target="_blank" rel="noopener noreferrer" data-i18n="gallery.preview">View screenshot ↗</a>
+                  <button type="button" data-open-project="group-performance" data-i18n="project.details">About the project</button>
+                </div>
+              </div>
+            </article>
+            <article class="project-card" data-category="finance">
+              <a class="project-image" href="https://app.fabric.microsoft.com/view?r=eyJrIjoiNTdjYmRlMGMtZWQ5YS00ZGUwLWE5YTgtNzMzN2VmNzYzZTk2IiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" rel="noopener noreferrer" aria-label="Capital Allocation — Explore report ↗"><img src="assets/capital-allocation.png" alt="Capital Allocation" loading="lazy" width="1280" height="720" /><span class="project-arrow" aria-hidden="true">↗</span></a>
+              <div class="project-info">
+                <p class="eyebrow" data-project="capital-allocation" data-field="tag">Investment committee · Pillow &amp; Key</p>
+                <h3 data-project="capital-allocation" data-field="title">Capital Allocation</h3>
+                <p data-project="capital-allocation" data-field="desc">With $550M available for $924M in requests, which projects should compete for a common budget?</p>
+                <div class="project-links">
+                  <a href="https://app.fabric.microsoft.com/view?r=eyJrIjoiNTdjYmRlMGMtZWQ5YS00ZGUwLWE5YTgtNzMzN2VmNzYzZTk2IiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" rel="noopener noreferrer" data-i18n="project.open">Explore report ↗</a>
+                  <button type="button" data-open-project="capital-allocation" data-i18n="project.details">About the project</button>
+                </div>
+              </div>
+            </article>
+            <article class="project-card" data-category="operations">
+              <a class="project-image" href="https://app.fabric.microsoft.com/view?r=eyJrIjoiZTgwNjcwZTctYTkxOC00NDA2LTg0ZDItY2UzOWZiYTAxM2ZiIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" rel="noopener noreferrer" aria-label="Guest Experience — Explore report ↗"><img src="assets/guest-experience.png" alt="Guest Experience" loading="lazy" width="1280" height="720" /><span class="project-arrow" aria-hidden="true">↗</span></a>
+              <div class="project-info">
+                <p class="eyebrow" data-project="guest-experience" data-field="tag">Hotel operations · Pillow &amp; Key</p>
+                <h3 data-project="guest-experience" data-field="title">Guest Experience</h3>
+                <p data-project="guest-experience" data-field="desc">Guest NPS has fallen four years in a row. Which hotels and complaints warrant attention first?</p>
+                <div class="project-links">
+                  <a href="https://app.fabric.microsoft.com/view?r=eyJrIjoiZTgwNjcwZTctYTkxOC00NDA2LTg0ZDItY2UzOWZiYTAxM2ZiIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" rel="noopener noreferrer" data-i18n="project.open">Explore report ↗</a>
+                  <button type="button" data-open-project="guest-experience" data-i18n="project.details">About the project</button>
+                </div>
+              </div>
+            </article>
+            <article class="project-card" data-category="commercial">
+              <a class="project-image" href="https://app.fabric.microsoft.com/view?r=eyJrIjoiYzM4YWM4NWUtNmY2ZC00MjEyLWIxOWMtOTBkOWEyZWVkMDdiIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" rel="noopener noreferrer" aria-label="Commercial &amp; Revenue — Explore report ↗"><img src="assets/commercial-revenue.png" alt="Commercial &amp; Revenue" loading="lazy" width="1280" height="720" /><span class="project-arrow" aria-hidden="true">↗</span></a>
+              <div class="project-info">
+                <p class="eyebrow" data-project="commercial-revenue" data-field="tag">Revenue management · Pillow &amp; Key</p>
+                <h3 data-project="commercial-revenue" data-field="title">Commercial &amp; Revenue</h3>
+                <p data-project="commercial-revenue" data-field="desc">Revenue per available room reached $183. How much growth came from pricing and how much from occupancy?</p>
+                <div class="project-links">
+                  <a href="https://app.fabric.microsoft.com/view?r=eyJrIjoiYzM4YWM4NWUtNmY2ZC00MjEyLWIxOWMtOTBkOWEyZWVkMDdiIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" rel="noopener noreferrer" data-i18n="project.open">Explore report ↗</a>
+                  <button type="button" data-open-project="commercial-revenue" data-i18n="project.details">About the project</button>
+                </div>
+              </div>
+            </article>
+            <article class="project-card" data-category="finance">
+              <a class="project-image" href="https://app.fabric.microsoft.com/view?r=eyJrIjoiM2E3NGMyOWQtZGUxNS00NGExLThhY2ItY2NiODI1NzgxOTNlIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" rel="noopener noreferrer" aria-label="Finance &amp; Cost — Explore report ↗"><img src="assets/finance-cost.png" alt="Finance &amp; Cost" loading="lazy" width="1280" height="720" /><span class="project-arrow" aria-hidden="true">↗</span></a>
+              <div class="project-info">
+                <p class="eyebrow" data-project="finance-cost" data-field="tag">FP&amp;A · Pillow &amp; Key</p>
+                <h3 data-project="finance-cost" data-field="title">Finance &amp; Cost</h3>
+                <p data-project="finance-cost" data-field="desc">49 of 165 hotels fall below the group margin. Where should FP&amp;A focus its review?</p>
+                <div class="project-links">
+                  <a href="https://app.fabric.microsoft.com/view?r=eyJrIjoiM2E3NGMyOWQtZGUxNS00NGExLThhY2ItY2NiODI1NzgxOTNlIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" rel="noopener noreferrer" data-i18n="project.open">Explore report ↗</a>
+                  <button type="button" data-open-project="finance-cost" data-i18n="project.details">About the project</button>
+                </div>
+              </div>
+            </article>
+            <article class="project-card" data-category="strategy">
+              <a class="project-image" href="https://app.fabric.microsoft.com/view?r=eyJrIjoiYzk1OWE4ZmItMTNjMy00NWMxLWJmNmMtMGI4YzgyYTk4NDk4IiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" rel="noopener noreferrer" aria-label="Pebble &amp; Pine Brand Performance — Explore report ↗"><img src="assets/brand-performance.png" alt="Pebble &amp; Pine Brand Performance" loading="lazy" width="1280" height="720" /><span class="project-arrow" aria-hidden="true">↗</span></a>
+              <div class="project-info">
+                <p class="eyebrow" data-project="brand-performance" data-field="tag">Brand management · Pebble &amp; Pine</p>
+                <h3 data-project="brand-performance" data-field="title">Pebble &amp; Pine Brand Performance</h3>
+                <p data-project="brand-performance" data-field="desc">A brand earning less margin than the group has $145M to invest. Which assumptions support the plan?</p>
+                <div class="project-links">
+                  <a href="https://app.fabric.microsoft.com/view?r=eyJrIjoiYzk1OWE4ZmItMTNjMy00NWMxLWJmNmMtMGI4YzgyYTk4NDk4IiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" rel="noopener noreferrer" data-i18n="project.open">Explore report ↗</a>
+                  <button type="button" data-open-project="brand-performance" data-i18n="project.details">About the project</button>
+                </div>
+              </div>
+            </article>
+            <article class="project-card" data-category="logistics">
+              <div class="project-image"><img src="assets/logistics-delivery.webp" alt="Logistics &amp; Delivery Performance" loading="lazy" width="1280" height="720" /></div>
+              <div class="project-info">
+                <p class="eyebrow" data-project="logistics-delivery" data-field="tag">Supply chain · Olist</p>
+                <h3 data-project="logistics-delivery" data-field="title">Logistics &amp; Delivery Performance</h3>
+                <p data-project="logistics-delivery" data-field="desc">Where do orders fall behind and which delivery commitments need attention?</p>
+                <div class="project-links">
+                  <span class="demo-status" role="link" aria-disabled="true" data-i18n="gallery.soon">Demo coming soon</span>
+                  <button type="button" data-open-project="logistics-delivery" data-i18n="project.details">About the project</button>
+                </div>
+              </div>
+            </article>
+            <article class="project-card" data-category="service">
+              <div class="project-image"><img src="assets/service-desk.webp" alt="Service Desk &amp; Operational Efficiency" loading="lazy" width="1280" height="720" /></div>
+              <div class="project-info">
+                <p class="eyebrow" data-project="service-desk" data-field="tag">IT operations · Service desk</p>
+                <h3 data-project="service-desk" data-field="title">Service Desk &amp; Operational Efficiency</h3>
+                <p data-project="service-desk" data-field="desc">Where do tickets accumulate, and how should the team distribute its workload?</p>
+                <div class="project-links">
+                  <span class="demo-status" role="link" aria-disabled="true" data-i18n="gallery.soon">Demo coming soon</span>
+                  <button type="button" data-open-project="service-desk" data-i18n="project.details">About the project</button>
+                </div>
+              </div>
+            </article>
+            <!-- business cards end -->
+          </div>
+          <button hidden type="button" class="button business-expand" aria-controls="business-grid" aria-expanded="false" data-i18n="gallery.more">Show all cases</button>
         </div>
       </section>
       <section id="services" class="section services">

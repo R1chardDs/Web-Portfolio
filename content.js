@@ -2,6 +2,33 @@
 window.PORTFOLIO = {
   ui: {
     es: {
+      "gallery.eyebrow": "Casos de negocio",
+      "gallery.title": "¿Qué decisión tiene que tomar tu equipo?",
+      "gallery.body": "Elegí un área para ver qué pregunta hizo el equipo, cómo construí el análisis y qué decisión permiten tomar los datos.",
+      "gallery.craft": "Concursos y exploraciones ↓",
+      "gallery.all": "Todas las áreas",
+      "gallery.strategy": "Dirección",
+      "gallery.finance": "Finanzas",
+      "gallery.commercial": "Comercial",
+      "gallery.operations": "Experiencia del cliente",
+      "gallery.logistics": "Logística",
+      "gallery.service": "Mesa de servicio",
+      "gallery.count": "casos",
+      "gallery.single": "caso",
+      "project.single": "proyecto público",
+      "gallery.filter": "Filtrar por área de negocio",
+      "gallery.more": "Ver todos los casos",
+      "gallery.less": "Mostrar selección",
+      "gallery.preview": "Ver captura ↗",
+      "gallery.soon": "Demo próximamente",
+      "gallery.source": "Caso de portafolio con datos ficticios del reto Pillow & Key.",
+      "practice.label": "Buena práctica · Modelos semánticos",
+      "practice.title": "Un modelo para cinco departamentos y una marca",
+      "practice.body": "Para Pillow & Key, un grupo hotelero ficticio, construí seis análisis sobre el modelo semántico de mi reporte del reto ATL 2027. Finanzas y dirección pueden consultar el mismo margen del grupo y luego investigar preguntas distintas sin volver a cargar ventas para cada reporte.",
+      "practice.detail": "Cómo mantengo comparables las cifras",
+      "practice.example": "En Group Performance y Finance & Cost, el margen del grupo en 2025 es 32,2 %. Al filtrar Pebble & Pine, la misma definición da 28,2 %. Calculo la utilidad total sobre los ingresos totales del conjunto seleccionado y consolido los costos de distribución por hotel y mes antes de sumarlos.",
+      "practice.takeaway": "En una auditoría, empiezo por localizar las copias de la tabla de ventas, comparar sus reglas y acordar con Finanzas quién mantiene la definición compartida. Así, una corrección tiene un lugar claro y se puede validar en cada reporte que la usa.",
+      "practice.origin": "Ver el caso original de ATL 2027 ↗",
       skip: "Ir al contenido",
       "nav.services": "Servicios",
       "nav.impact": "Resultados",
@@ -178,6 +205,33 @@ window.PORTFOLIO = {
         "Se abrirá tu aplicación de correo con este borrador para que lo revisés y enviés.",
     },
     en: {
+      "gallery.eyebrow": "Business cases",
+      "gallery.title": "What decision is your team facing?",
+      "gallery.body": "Choose a business area to see the question, how I built the analysis and the decision the numbers support.",
+      "gallery.craft": "Competitions and explorations ↓",
+      "gallery.all": "All areas",
+      "gallery.strategy": "Strategy",
+      "gallery.finance": "Finance",
+      "gallery.commercial": "Commercial",
+      "gallery.operations": "Customer experience",
+      "gallery.logistics": "Logistics",
+      "gallery.service": "Service desk",
+      "gallery.count": "cases",
+      "gallery.single": "case",
+      "project.single": "public project",
+      "gallery.filter": "Filter by business area",
+      "gallery.more": "Show all cases",
+      "gallery.less": "Show selected cases",
+      "gallery.preview": "View screenshot ↗",
+      "gallery.soon": "Demo coming soon",
+      "gallery.source": "Portfolio case using fictional data from the Pillow & Key challenge.",
+      "practice.label": "Field notes · Semantic models",
+      "practice.title": "One model for five departments and one brand",
+      "practice.body": "For Pillow & Key, a fictional hotel group, I built six analyses on the semantic model from my ATL 2027 challenge report. Finance and the board can start with the same group margin and investigate different questions without loading sales again for each report.",
+      "practice.detail": "How I keep the numbers comparable",
+      "practice.example": "Group Performance and Finance & Cost both show a 32.2% group margin for 2025. Filter to Pebble & Pine and the same definition returns 28.2%. I divide total operating profit by total revenue for the selected hotels and aggregate distribution costs by hotel and month before adding them.",
+      "practice.takeaway": "In an audit, I start by locating copies of the sales table, comparing their rules and agreeing with Finance on who owns the shared definition. That gives each correction a clear home and lets the team validate it across the reports that use it.",
+      "practice.origin": "See the original ATL 2027 case ↗",
       skip: "Skip to content",
       "nav.services": "Services",
       "nav.impact": "Impact",
@@ -455,6 +509,262 @@ window.PORTFOLIO = {
     },
   ],
   projects: [
+    {
+      id: "group-performance",
+      category: "business",
+      collection: "pillow-key",
+      area: "strategy",
+      title: [
+        "Desempeño del grupo",
+        "Group Performance"
+      ],
+      tag: [
+        "Directorio · Pillow & Key",
+        "Board of directors · Pillow & Key"
+      ],
+      desc: [
+        "Pebble & Pine aporta el 28 % de los ingresos y el 25 % de la utilidad. ¿Qué marca necesita atención?",
+        "Pebble & Pine earns 28% of revenue and 25% of profit. Which brand needs the board’s attention?"
+      ],
+      question: [
+        "¿Qué marcas sostienen la rentabilidad del grupo y cuáles requieren una revisión?",
+        "Which brands sustain group profitability, and where should the board intervene?"
+      ],
+      approach: [
+        "Comparé cuatro marcas por margen y participación en ingresos y utilidad. Consolidé los costos de distribución por hotel y mes antes de sumarlos. El margen de cada selección divide la utilidad total entre los ingresos totales.",
+        "I compared four brands by margin and by their shares of revenue and profit. I aggregated distribution costs by hotel and month before adding them. Each margin divides total profit by total revenue for the selected hotels."
+      ],
+      value: [
+        "En 2025, el grupo facturó USD 3.830 millones con un margen operativo del 32,2 %. Pebble & Pine alcanzó el 28,2 %, frente al 34,7 % de P&K Select. La comparación histórica empieza en 2022 para separar la recuperación de 2021.",
+        "In 2025 the group earned $3.83B in revenue at a 32.2% operating margin. Pebble & Pine reached 28.2%, compared with 34.7% for P&K Select. Growth comparisons start in 2022 to account for the 2021 recovery."
+      ],
+      img: "assets/group-performance.png",
+      url: null
+    },
+    {
+      id: "capital-allocation",
+      category: "business",
+      collection: "pillow-key",
+      area: "finance",
+      title: [
+        "Asignación de capital",
+        "Capital Allocation"
+      ],
+      tag: [
+        "Comité de inversión · Pillow & Key",
+        "Investment committee · Pillow & Key"
+      ],
+      desc: [
+        "Con USD 550 millones para solicitudes por 924 millones, ¿qué proyectos conviene financiar juntos?",
+        "With $550M available for $924M in requests, which projects should compete for a common budget?"
+      ],
+      question: [
+        "¿Cuándo conviene compartir el presupuesto entre marcas y qué proyectos resisten un cambio de escenario?",
+        "When does pooling capital across brands pay off, and which projects survive a change in assumptions?"
+      ],
+      approach: [
+        "Comparé presupuestos separados y compartidos en tres escenarios. Calculé la asignación óptima y comprobé la selección con un segundo optimizador independiente.",
+        "I compared separate and pooled budgets under three scenarios, solved for the optimal funding mix and checked the selection with an independent solver."
+      ],
+      value: [
+        "En el escenario esperado, compartir el presupuesto añade USD 3,4 millones de utilidad anual a plena operación. De 40 proyectos, 22 reciben fondos en los tres escenarios. El cálculo precede la puesta en marcha y las interrupciones por obras.",
+        "In the expected scenario, pooling adds $3.4M in annual profit at maturity. Of 40 projects, 22 receive funding in all three scenarios. The estimate precedes ramp-up and disruption during construction."
+      ],
+      img: "assets/capital-allocation.png",
+      url: "https://app.fabric.microsoft.com/view?r=eyJrIjoiNTdjYmRlMGMtZWQ5YS00ZGUwLWE5YTgtNzMzN2VmNzYzZTk2IiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9"
+    },
+    {
+      id: "guest-experience",
+      category: "business",
+      collection: "pillow-key",
+      area: "operations",
+      title: [
+        "Experiencia del huésped",
+        "Guest Experience"
+      ],
+      tag: [
+        "Operaciones hoteleras · Pillow & Key",
+        "Hotel operations · Pillow & Key"
+      ],
+      desc: [
+        "Cuatro años de caída del NPS. ¿Qué hoteles y qué quejas merecen atención primero?",
+        "Guest NPS has fallen four years in a row. Which hotels and complaints warrant attention first?"
+      ],
+      question: [
+        "¿Dónde debería intervenir el equipo de operaciones para mejorar la experiencia del huésped?",
+        "Where should the operations team investigate declining guest satisfaction?"
+      ],
+      approach: [
+        "Comparé el NPS por marca y la frecuencia de quejas por cada 1.000 noches ocupadas. Así, un hotel grande y uno pequeño se pueden evaluar en condiciones comparables.",
+        "I compared guest NPS across brands and complaints per 1,000 occupied room nights so that small and large hotels could be assessed on the same basis."
+      ],
+      value: [
+        "El NPS del grupo bajó de 23,3 a 17,8. El estado de las habitaciones concentró más quejas y registró el mayor aumento desde 2021. La regla de seguimiento identifica 48 hoteles para revisión.",
+        "Group NPS fell from 23.3 to 17.8. Room condition drew the most complaints and the largest increase since 2021. The watch rule identifies 48 hotels for review."
+      ],
+      img: "assets/guest-experience.png",
+      url: "https://app.fabric.microsoft.com/view?r=eyJrIjoiZTgwNjcwZTctYTkxOC00NDA2LTg0ZDItY2UzOWZiYTAxM2ZiIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9"
+    },
+    {
+      id: "commercial-revenue",
+      category: "business",
+      collection: "pillow-key",
+      area: "commercial",
+      title: [
+        "Desempeño comercial e ingresos",
+        "Commercial & Revenue"
+      ],
+      tag: [
+        "Gestión de ingresos · Pillow & Key",
+        "Revenue management · Pillow & Key"
+      ],
+      desc: [
+        "El ingreso por habitación disponible llegó a USD 183. ¿Cuánto crecimiento provino de la tarifa y cuánto de la ocupación?",
+        "Revenue per available room reached $183. How much growth came from pricing and how much from occupancy?"
+      ],
+      question: [
+        "¿Qué combinación de tarifas, ocupación y canales mejora el ingreso por noche?",
+        "Which mix of pricing, occupancy and distribution channels improves revenue per night?"
+      ],
+      approach: [
+        "Separé el crecimiento del ingreso por habitación disponible en efectos de tarifa y ocupación que suman el cambio total. Estimé el costo del cambio de canal por marca para captar diferencias que el promedio oculta.",
+        "I split growth in revenue per available room into rate and occupancy effects that reconcile to the total change. I estimated channel shifts by brand because the group average hides opposing movements."
+      ],
+      value: [
+        "La tarifa explica el 24 % del crecimiento del RevPAR. El canal web deja USD 280 netos por noche, frente a USD 204 en agencias en línea. La comparación ayuda a priorizar dónde revisar la distribución.",
+        "Rate accounts for 24% of RevPAR growth. The website nets $280 per room night versus $204 through online agencies, giving revenue managers a basis for reviewing their channel mix."
+      ],
+      img: "assets/commercial-revenue.png",
+      url: "https://app.fabric.microsoft.com/view?r=eyJrIjoiYzM4YWM4NWUtNmY2ZC00MjEyLWIxOWMtOTBkOWEyZWVkMDdiIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9"
+    },
+    {
+      id: "finance-cost",
+      category: "business",
+      collection: "pillow-key",
+      area: "finance",
+      title: [
+        "Finanzas y costos",
+        "Finance & Cost"
+      ],
+      tag: [
+        "Planeación financiera · Pillow & Key",
+        "FP&A · Pillow & Key"
+      ],
+      desc: [
+        "49 de 165 hoteles están por debajo del margen del grupo. ¿Dónde profundizar durante la revisión financiera?",
+        "49 of 165 hotels fall below the group margin. Where should FP&A focus its review?"
+      ],
+      question: [
+        "¿Qué costos explican la utilidad actual y qué riesgo aparece al proyectar el margen?",
+        "Which costs explain current profit, and what margin risk emerges in the outlook?"
+      ],
+      approach: [
+        "Una cascada reconcilia ingresos, costos y utilidad del ejercicio. Contrasté el escenario de continuidad con un cálculo previo de una marca y mostré los años proyectados por separado.",
+        "A waterfall reconciles revenue, costs and operating profit for the selected year. I cross-checked the baseline scenario against an earlier brand model and distinguished projected years from historical results."
+      ],
+      value: [
+        "El margen observado en 2025 es del 32,2 %. Bajo los supuestos de continuidad, baja al 29,0 % en 2032. La brecha anual de USD 44 millones frente al margen del grupo sirve para seleccionar hoteles que conviene investigar.",
+        "The observed 2025 margin is 32.2%. Under the baseline assumptions it reaches 29.0% in 2032. The $44M annual gap to group margin helps FP&A select hotels for investigation."
+      ],
+      img: "assets/finance-cost.png",
+      url: "https://app.fabric.microsoft.com/view?r=eyJrIjoiM2E3NGMyOWQtZGUxNS00NGExLThhY2ItY2NiODI1NzgxOTNlIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9"
+    },
+    {
+      id: "brand-performance",
+      category: "business",
+      collection: "pillow-key",
+      area: "strategy",
+      title: [
+        "Pebble & Pine · Desempeño de marca",
+        "Pebble & Pine Brand Performance"
+      ],
+      tag: [
+        "Dirección de marca · Pebble & Pine",
+        "Brand management · Pebble & Pine"
+      ],
+      desc: [
+        "Una marca con menos margen que el grupo tiene USD 145 millones para invertir. ¿Qué supuestos sostienen el plan?",
+        "A brand earning less margin than the group has $145M to invest. Which assumptions support the plan?"
+      ],
+      question: [
+        "¿Qué inversiones merecen prioridad en los 45 resorts de Pebble & Pine?",
+        "Which investments deserve priority across Pebble & Pine’s 45 resorts?"
+      ],
+      approach: [
+        "Limité la demanda base a las habitaciones físicas de cada hotel e incorporé la puesta en marcha gradual y la pérdida de ingresos durante obras. Documenté la fuente, fórmula y límite de cada estimación para evitar duplicar impactos.",
+        "I capped the baseline at each hotel’s physical room count and modeled project ramp-up and disruption during works. Each estimate documents its source, formula and limits, with checks against double counting."
+      ],
+      value: [
+        "La marca opera con un margen del 28,2 % frente al 32,2 % del grupo. Su NPS cayó de 26,1 a 20,3 y la cartera solicita USD 245,3 millones. La dirección puede contrastar las inversiones con un presupuesto de USD 145 millones.",
+        "The brand earns a 28.2% margin against the group’s 32.2%. NPS fell from 26.1 to 20.3, and the investment catalogue asks $245.3M. Brand leaders can weigh the proposals against a $145M budget."
+      ],
+      img: "assets/brand-performance.png",
+      url: "https://app.fabric.microsoft.com/view?r=eyJrIjoiYzk1OWE4ZmItMTNjMy00NWMxLWJmNmMtMGI4YzgyYTk4NDk4IiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9"
+    },
+    {
+      id: "logistics-delivery",
+      category: "business",
+      area: "logistics",
+      title: [
+        "Logística y desempeño de entregas",
+        "Logistics & Delivery Performance"
+      ],
+      tag: [
+        "Cadena de suministro · Olist",
+        "Supply chain · Olist"
+      ],
+      desc: [
+        "¿Dónde se atrasan los pedidos y qué compromisos de entrega merecen una revisión?",
+        "Where do orders fall behind and which delivery commitments need attention?"
+      ],
+      question: [
+        "¿En qué etapas del pedido conviene intervenir para mejorar la confiabilidad de las entregas?",
+        "Where in the order lifecycle should a logistics team investigate unreliable deliveries?"
+      ],
+      approach: [
+        "El análisis recorre pedidos, tiempos de entrega y cumplimiento de compromisos con datos históricos de comercio electrónico de Olist.",
+        "The analysis follows order fulfillment, delivery times and service commitments using historical e-commerce data from Olist."
+      ],
+      value: [
+        "Permite priorizar cuellos de botella y evaluar cómo la puntualidad de las entregas se relaciona con la experiencia del cliente.",
+        "The report supports prioritizing bottlenecks and examining how delivery reliability relates to customer experience."
+      ],
+      img: "assets/logistics-delivery.webp",
+      url: null,
+      upcoming: true
+    },
+    {
+      id: "service-desk",
+      category: "business",
+      area: "service",
+      title: [
+        "Mesa de servicio y eficiencia operativa",
+        "Service Desk & Operational Efficiency"
+      ],
+      tag: [
+        "Operaciones de TI · Mesa de servicio",
+        "IT operations · Service desk"
+      ],
+      desc: [
+        "¿Dónde se acumulan los tickets y cómo distribuir la carga para mejorar la atención?",
+        "Where do tickets accumulate, and how should the team distribute its workload?"
+      ],
+      question: [
+        "¿Qué parte del ciclo de atención requiere más capacidad o una revisión del proceso?",
+        "Which stage of ticket handling needs more capacity or a change in process?"
+      ],
+      approach: [
+        "El análisis usa datos históricos de mesa de ayuda para estudiar demanda, primera respuesta, resolución y distribución de trabajo a lo largo del ciclo del ticket.",
+        "The analysis uses historical help desk data to examine demand, first response, resolution and workload distribution across the ticket lifecycle."
+      ],
+      value: [
+        "Ayuda a priorizar mejoras de servicio y a decidir dónde reasignar recursos según la demanda y los tiempos de atención.",
+        "Service managers can prioritize improvements and decide where to reallocate resources based on demand and handling times."
+      ],
+      img: "assets/service-desk.webp",
+      url: null,
+      upcoming: true
+    },
     {
       id: "movies",
       title: "What Makes a Movie Successful?",
