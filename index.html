@@ -33,9 +33,9 @@
       rel="stylesheet"
     />
     <script src="theme-init.js?v=visual-20261113"></script>
-    <link rel="stylesheet" href="style.css?v=cases-20261127" />
-    <script src="content.js?v=cases-20261127" defer></script>
-    <script src="app.js?v=cases-20261127" defer></script>
+    <link rel="stylesheet" href="style.css?v=services-gallery-20261127" />
+    <script src="content.js?v=services-gallery-20261127" defer></script>
+    <script src="app.js?v=services-gallery-20261127" defer></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -146,14 +146,7 @@
             <h1 data-i18n="hero.title">
               Less manual work. More room to make decisions.
             </h1>
-            <p class="hero-description" data-i18n="hero.body">
-              With five years of experience across finance, data engineering and
-              business intelligence, I help businesses connect their data to the
-              decisions that matter. As a BI and Data Development leader, I
-              bring financial perspective and technical direction to build
-              reliable data platforms, meaningful analytics and automation that
-              frees teams to focus on the business.
-            </p>
+            <p class="hero-description" data-i18n="hero.body">I bring five years of experience across finance, data engineering and business intelligence. As a BI and Data Development leader, I help finance and operations teams trust their numbers. I migrate data warehouses, automate pipelines and apply AI where it saves the team time.</p>
             <div class="hero-actions">
               <a class="button primary" data-i18n="hero.primary" href="#contact"
                 >Let’s discuss your project</a
@@ -270,11 +263,274 @@
       </section>
       <section id="business-cases" class="section projects business-cases" aria-labelledby="business-title">
         <div class="container">
-          <p class="eyebrow" data-i18n="gallery.eyebrow">Business cases</p>
+          <p id="projects" class="eyebrow" data-i18n="gallery.eyebrow">Portfolio</p>
           <div class="section-heading">
-            <h2 id="business-title" data-i18n="gallery.title">What decision is your team facing?</h2>
-            <div><p data-i18n="gallery.body">Choose a business area to see the question, how I built the analysis and the decision the numbers support.</p><a class="text-link gallery-craft" href="#projects" data-i18n="gallery.craft">Competitions and explorations ↓</a></div>
+            <h2 id="business-title" data-i18n="gallery.title">Explore projects by topic</h2>
+            <div><p data-i18n="gallery.body">Explore business cases, community reports and independent work. Use the tags to find a question your team is working on.</p></div>
           </div>
+          <div class="gallery-controls" hidden>
+            <label for="project-topic"><span data-i18n="gallery.topic">Topic</span>
+              <select id="project-topic" aria-controls="business-grid">
+                <option value="all" data-i18n="gallery.all">All topics</option>
+                <option value="strategy" data-i18n="gallery.strategy">Strategy</option>
+                <option value="finance" data-i18n="gallery.finance">Finance</option>
+                <option value="commercial" data-i18n="gallery.commercial">Commercial</option>
+                <option value="operations" data-i18n="gallery.operations">Operations &amp; customer experience</option>
+                <option value="logistics" data-i18n="gallery.logistics">Logistics</option>
+                <option value="service" data-i18n="gallery.service">Service desk</option>
+                <option value="engineering" data-i18n="gallery.engineering">Data engineering</option>
+                <option value="story" data-i18n="gallery.story">Data storytelling</option>
+                <option value="sports" data-i18n="gallery.sports">Sports</option>
+                <option value="environment" data-i18n="gallery.environment">Cities &amp; environment</option>
+              </select>
+            </label>
+            <label for="project-collection"><span data-i18n="gallery.collection">Collection</span>
+              <select id="project-collection" aria-controls="business-grid">
+                <option value="all" data-i18n="gallery.allCollections">All collections</option>
+                <option value="business" data-i18n="gallery.business">Business cases</option>
+                <option value="community" data-i18n="gallery.community">Microsoft Community</option>
+                <option value="champs" data-i18n="filter.champs">World Champs</option>
+                <option value="labs" data-i18n="gallery.labs">Labs</option>
+              </select>
+            </label>
+            <button type="button" class="text-link" id="reset-project-filters" data-i18n="gallery.reset" hidden>Clear filters</button>
+            <p class="project-count" aria-live="polite"><span data-count>17</span> <span data-i18n="gallery.count">projects</span></p>
+          </div>
+          <p hidden id="no-project-matches" data-i18n="gallery.empty">No projects match those tags.</p>
+          <div class="project-grid" id="business-grid">
+            <!-- business cards start -->
+            <article class="project-card" data-topics="strategy finance" data-collections="business">
+              <a class="project-image" href="assets/group-performance.png" target="_blank" rel="noopener noreferrer" aria-label="Group Performance — View screenshot ↗"><img src="assets/group-performance.png" alt="Group Performance" loading="lazy" width="1280" height="720" /><span class="project-arrow" aria-hidden="true">↗</span></a>
+              <div class="project-info">
+                <p class="eyebrow" data-project="group-performance" data-field="tag">Board of directors · Pillow &amp; Key</p>
+                <h3 data-project="group-performance" data-field="title">Group Performance</h3>
+                <p data-project="group-performance" data-field="desc">Pebble &amp; Pine earns 28% of revenue and 25% of profit. Which brand needs the board’s attention?</p>
+                <div class="topic-tags"><span data-i18n="gallery.strategy">Strategy</span> <span data-i18n="gallery.finance">Finance</span></div>
+                <div class="project-links">
+                  <a href="assets/group-performance.png" target="_blank" rel="noopener noreferrer" data-i18n="gallery.preview">View screenshot ↗</a>
+                  <button type="button" data-open-project="group-performance" data-i18n="project.details">About the project</button>
+                </div>
+              </div>
+            </article>
+            <article class="project-card" data-topics="finance strategy" data-collections="champs community">
+              <a class="project-image" href="https://app.fabric.microsoft.com/view?r=eyJrIjoiOWRkMDY5MWYtYWQwNS00Mjk4LThjYzQtNDRiOWVjOGZmNjJlIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" rel="noopener noreferrer" aria-label="Pebble &amp; Pine · Investment strategy — Explore report ↗"><img src="assets/project-pebble-pine.png" alt="Pebble &amp; Pine · Investment strategy" loading="lazy" width="1280" height="720" /><span class="project-arrow" aria-hidden="true">↗</span></a>
+              <div class="project-info">
+                <p class="eyebrow" data-project="pebble-pine" data-field="tag">WORLD CHAMPS ATL 2027 · ROUND 1</p>
+                <h3 data-project="pebble-pine" data-field="title">Pebble &amp; Pine · Investment strategy</h3>
+                <p data-project="pebble-pine" data-field="desc">Financial diagnosis and investment scenarios to prioritize capital across a 45-resort network.</p>
+                <div class="topic-tags"><span data-i18n="gallery.finance">Finance</span> <span data-i18n="gallery.strategy">Strategy</span></div>
+                <div class="project-links">
+                  <a href="https://app.fabric.microsoft.com/view?r=eyJrIjoiOWRkMDY5MWYtYWQwNS00Mjk4LThjYzQtNDRiOWVjOGZmNjJlIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" rel="noopener noreferrer" data-i18n="project.open">Explore report ↗</a>
+                  <button type="button" data-open-project="pebble-pine" data-i18n="project.details">About the project</button>
+                </div>
+                <a class="community-link" href="https://community.fabric.microsoft.com/discussions/pbi_contestsgallery/pebble--pine---strengthen-what-we-already-have/5429507" target="_blank" rel="noopener noreferrer" data-i18n="project.community">View on Microsoft Community ↗</a>
+              </div>
+            </article>
+            <article class="project-card" data-topics="commercial" data-collections="business">
+              <a class="project-image" href="https://app.fabric.microsoft.com/view?r=eyJrIjoiYzM4YWM4NWUtNmY2ZC00MjEyLWIxOWMtOTBkOWEyZWVkMDdiIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" rel="noopener noreferrer" aria-label="Commercial &amp; Revenue — Explore report ↗"><img src="assets/commercial-revenue.png" alt="Commercial &amp; Revenue" loading="lazy" width="1280" height="720" /><span class="project-arrow" aria-hidden="true">↗</span></a>
+              <div class="project-info">
+                <p class="eyebrow" data-project="commercial-revenue" data-field="tag">Revenue management · Pillow &amp; Key</p>
+                <h3 data-project="commercial-revenue" data-field="title">Commercial &amp; Revenue</h3>
+                <p data-project="commercial-revenue" data-field="desc">Revenue per available room reached $183. How much growth came from pricing and how much from occupancy?</p>
+                <div class="topic-tags"><span data-i18n="gallery.commercial">Commercial</span></div>
+                <div class="project-links">
+                  <a href="https://app.fabric.microsoft.com/view?r=eyJrIjoiYzM4YWM4NWUtNmY2ZC00MjEyLWIxOWMtOTBkOWEyZWVkMDdiIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" rel="noopener noreferrer" data-i18n="project.open">Explore report ↗</a>
+                  <button type="button" data-open-project="commercial-revenue" data-i18n="project.details">About the project</button>
+                </div>
+              </div>
+            </article>
+            <article class="project-card" data-topics="story" data-collections="champs community">
+              <a class="project-image" href="https://app.fabric.microsoft.com/view?r=eyJrIjoiZWEzM2E0NDEtZGY5NC00YzdmLWE2MWEtMWFlNGI3OWVhZDNlIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" rel="noopener noreferrer" aria-label="What Makes a Movie Successful? — Explore report ↗"><img src="assets/project-movies.png" alt="What Makes a Movie Successful?" loading="lazy" width="1280" height="720" /><span class="project-arrow" aria-hidden="true">↗</span></a>
+              <div class="project-info">
+                <p class="eyebrow" data-project="movies" data-field="tag">WORLD CHAMPS BCN 2026 · ROUND 3</p>
+                <h3 data-project="movies" data-field="title">What Makes a Movie Successful?</h3>
+                <p data-project="movies" data-field="desc">A three-act story about what money buys in film: audience, return and ratings.</p>
+                <div class="topic-tags"><span data-i18n="gallery.story">Data storytelling</span></div>
+                <div class="project-links">
+                  <a href="https://app.fabric.microsoft.com/view?r=eyJrIjoiZWEzM2E0NDEtZGY5NC00YzdmLWE2MWEtMWFlNGI3OWVhZDNlIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" rel="noopener noreferrer" data-i18n="project.open">Explore report ↗</a>
+                  <button type="button" data-open-project="movies" data-i18n="project.details">About the project</button>
+                </div>
+                <a class="community-link" href="https://community.fabric.microsoft.com/discussions/pbi_contestsgallery/richard-ampie---world-champs-bcn-26---round-3/5355053" target="_blank" rel="noopener noreferrer" data-i18n="project.community">View on Microsoft Community ↗</a>
+              </div>
+            </article>
+            <article class="project-card" data-topics="operations" data-collections="business">
+              <a class="project-image" href="https://app.fabric.microsoft.com/view?r=eyJrIjoiZTgwNjcwZTctYTkxOC00NDA2LTg0ZDItY2UzOWZiYTAxM2ZiIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" rel="noopener noreferrer" aria-label="Guest Experience — Explore report ↗"><img src="assets/guest-experience.png" alt="Guest Experience" loading="lazy" width="1280" height="720" /><span class="project-arrow" aria-hidden="true">↗</span></a>
+              <div class="project-info">
+                <p class="eyebrow" data-project="guest-experience" data-field="tag">Hotel operations · Pillow &amp; Key</p>
+                <h3 data-project="guest-experience" data-field="title">Guest Experience</h3>
+                <p data-project="guest-experience" data-field="desc">Guest NPS has fallen four years in a row. Which hotels and complaints warrant attention first?</p>
+                <div class="topic-tags"><span data-i18n="gallery.operations">Operations &amp; customer experience</span></div>
+                <div class="project-links">
+                  <a href="https://app.fabric.microsoft.com/view?r=eyJrIjoiZTgwNjcwZTctYTkxOC00NDA2LTg0ZDItY2UzOWZiYTAxM2ZiIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" rel="noopener noreferrer" data-i18n="project.open">Explore report ↗</a>
+                  <button type="button" data-open-project="guest-experience" data-i18n="project.details">About the project</button>
+                </div>
+              </div>
+            </article>
+            <article class="project-card" data-topics="sports engineering" data-collections="explore labs">
+              <a class="project-image" href="https://app.fabric.microsoft.com/view?r=eyJrIjoiYzY1Y2Y1YWQtNDM5NC00Y2RhLWFjZmItNmQ0NTQ0MDhkMWYxIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" rel="noopener noreferrer" aria-label="F1 Analytics — Explore report ↗"><img src="assets/Portfolio_PbiDemo_F1.png" alt="F1 Analytics" loading="lazy" width="1280" height="720" /><span class="project-arrow" aria-hidden="true">↗</span></a>
+              <div class="project-info">
+                <p class="eyebrow" data-project="f1" data-field="tag">LAB · SPORTS ANALYTICS</p>
+                <h3 data-project="f1" data-field="title">F1 Analytics</h3>
+                <p data-project="f1" data-field="desc">An independent Formula 1 analytics project exploring race results.</p>
+                <div class="topic-tags"><span data-i18n="gallery.sports">Sports</span> <span data-i18n="gallery.engineering">Data engineering</span></div>
+                <div class="project-links">
+                  <a href="https://app.fabric.microsoft.com/view?r=eyJrIjoiYzY1Y2Y1YWQtNDM5NC00Y2RhLWFjZmItNmQ0NTQ0MDhkMWYxIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" rel="noopener noreferrer" data-i18n="project.open">Explore report ↗</a>
+                  <button type="button" data-open-project="f1" data-i18n="project.details">About the project</button>
+                </div>
+              </div>
+            </article>
+            <article class="project-card" data-topics="finance strategy" data-collections="business">
+              <a class="project-image" href="https://app.fabric.microsoft.com/view?r=eyJrIjoiNTdjYmRlMGMtZWQ5YS00ZGUwLWE5YTgtNzMzN2VmNzYzZTk2IiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" rel="noopener noreferrer" aria-label="Capital Allocation — Explore report ↗"><img src="assets/capital-allocation.png" alt="Capital Allocation" loading="lazy" width="1280" height="720" /><span class="project-arrow" aria-hidden="true">↗</span></a>
+              <div class="project-info">
+                <p class="eyebrow" data-project="capital-allocation" data-field="tag">Investment committee · Pillow &amp; Key</p>
+                <h3 data-project="capital-allocation" data-field="title">Capital Allocation</h3>
+                <p data-project="capital-allocation" data-field="desc">With $550M available for $924M in requests, which projects should compete for a common budget?</p>
+                <div class="topic-tags"><span data-i18n="gallery.finance">Finance</span> <span data-i18n="gallery.strategy">Strategy</span></div>
+                <div class="project-links">
+                  <a href="https://app.fabric.microsoft.com/view?r=eyJrIjoiNTdjYmRlMGMtZWQ5YS00ZGUwLWE5YTgtNzMzN2VmNzYzZTk2IiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" rel="noopener noreferrer" data-i18n="project.open">Explore report ↗</a>
+                  <button type="button" data-open-project="capital-allocation" data-i18n="project.details">About the project</button>
+                </div>
+              </div>
+            </article>
+            <article class="project-card" data-topics="commercial finance" data-collections="champs community">
+              <a class="project-image" href="https://app.fabric.microsoft.com/view?r=eyJrIjoiYmJiM2EyZmMtNjI2ZC00MzJiLThjODktNGE2OGZmMWEwMWMyIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" rel="noopener noreferrer" aria-label="PitchSide Pro · Financial analysis — Explore report ↗"><img src="assets/Portfolio_PbiDemo_WC2026S2R1.png" alt="PitchSide Pro · Financial analysis" loading="lazy" width="1280" height="720" /><span class="project-arrow" aria-hidden="true">↗</span></a>
+              <div class="project-info">
+                <p class="eyebrow" data-project="finance" data-field="tag">WORLD CHAMPS BCN 2026 · ROUND 1</p>
+                <h3 data-project="finance" data-field="title">PitchSide Pro · Financial analysis</h3>
+                <p data-project="finance" data-field="desc">Revenue, margin, categories and regions in an experience exploring business performance.</p>
+                <div class="topic-tags"><span data-i18n="gallery.commercial">Commercial</span> <span data-i18n="gallery.finance">Finance</span></div>
+                <div class="project-links">
+                  <a href="https://app.fabric.microsoft.com/view?r=eyJrIjoiYmJiM2EyZmMtNjI2ZC00MzJiLThjODktNGE2OGZmMWEwMWMyIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" rel="noopener noreferrer" data-i18n="project.open">Explore report ↗</a>
+                  <button type="button" data-open-project="finance" data-i18n="project.details">About the project</button>
+                </div>
+                <a class="community-link" href="https://community.fabric.microsoft.com/discussions/pbi_contestsgallery/week-1---world-champs-bcn-2026-richard-ampie/5241525" target="_blank" rel="noopener noreferrer" data-i18n="project.community">View on Microsoft Community ↗</a>
+              </div>
+            </article>
+            <article class="project-card" data-topics="strategy operations" data-collections="business">
+              <a class="project-image" href="https://app.fabric.microsoft.com/view?r=eyJrIjoiYzk1OWE4ZmItMTNjMy00NWMxLWJmNmMtMGI4YzgyYTk4NDk4IiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" rel="noopener noreferrer" aria-label="Pebble &amp; Pine Brand Performance — Explore report ↗"><img src="assets/brand-performance.png" alt="Pebble &amp; Pine Brand Performance" loading="lazy" width="1280" height="720" /><span class="project-arrow" aria-hidden="true">↗</span></a>
+              <div class="project-info">
+                <p class="eyebrow" data-project="brand-performance" data-field="tag">Brand management · Pebble &amp; Pine</p>
+                <h3 data-project="brand-performance" data-field="title">Pebble &amp; Pine Brand Performance</h3>
+                <p data-project="brand-performance" data-field="desc">A brand earning less margin than the group has $145M to invest. Which assumptions support the plan?</p>
+                <div class="topic-tags"><span data-i18n="gallery.strategy">Strategy</span> <span data-i18n="gallery.operations">Operations &amp; customer experience</span></div>
+                <div class="project-links">
+                  <a href="https://app.fabric.microsoft.com/view?r=eyJrIjoiYzk1OWE4ZmItMTNjMy00NWMxLWJmNmMtMGI4YzgyYTk4NDk4IiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" rel="noopener noreferrer" data-i18n="project.open">Explore report ↗</a>
+                  <button type="button" data-open-project="brand-performance" data-i18n="project.details">About the project</button>
+                </div>
+              </div>
+            </article>
+            <article class="project-card" data-topics="environment story" data-collections="champs community">
+              <a class="project-image" href="https://app.fabric.microsoft.com/view?r=eyJrIjoiOTU5MTc2ZmUtMjE3YS00ZWQ1LWFjYzktYWIyNGIwNjQ4ZTY2IiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" rel="noopener noreferrer" aria-label="Briarport · Urban livability — Explore report ↗"><img src="assets/Portfolio_PbiDemo_WC2026R1.png" alt="Briarport · Urban livability" loading="lazy" width="1280" height="720" /><span class="project-arrow" aria-hidden="true">↗</span></a>
+              <div class="project-info">
+                <p class="eyebrow" data-project="world1" data-field="tag">WORLD CHAMPS ATL 2026 · ROUND 1</p>
+                <h3 data-project="world1" data-field="title">Briarport · Urban livability</h3>
+                <p data-project="world1" data-field="desc">Housing, transit and sustainability with card-driven navigation. Recognized among Microsoft’s Judges’ Favorites.</p>
+                <div class="topic-tags"><span data-i18n="gallery.environment">Cities &amp; environment</span> <span data-i18n="gallery.story">Data storytelling</span></div>
+                <div class="project-links">
+                  <a href="https://app.fabric.microsoft.com/view?r=eyJrIjoiOTU5MTc2ZmUtMjE3YS00ZWQ1LWFjYzktYWIyNGIwNjQ4ZTY2IiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" rel="noopener noreferrer" data-i18n="project.open">Explore report ↗</a>
+                  <button type="button" data-open-project="world1" data-i18n="project.details">About the project</button>
+                </div>
+                <a class="community-link" href="https://community.fabric.microsoft.com/discussions/pbi_contestsgallery/week-1---world-champs-2026-richard-ampie/4921469" target="_blank" rel="noopener noreferrer" data-i18n="project.community">View on Microsoft Community ↗</a>
+              </div>
+            </article>
+            <article class="project-card" data-topics="finance" data-collections="business">
+              <a class="project-image" href="https://app.fabric.microsoft.com/view?r=eyJrIjoiM2E3NGMyOWQtZGUxNS00NGExLThhY2ItY2NiODI1NzgxOTNlIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" rel="noopener noreferrer" aria-label="Finance &amp; Cost — Explore report ↗"><img src="assets/finance-cost.png" alt="Finance &amp; Cost" loading="lazy" width="1280" height="720" /><span class="project-arrow" aria-hidden="true">↗</span></a>
+              <div class="project-info">
+                <p class="eyebrow" data-project="finance-cost" data-field="tag">FP&amp;A · Pillow &amp; Key</p>
+                <h3 data-project="finance-cost" data-field="title">Finance &amp; Cost</h3>
+                <p data-project="finance-cost" data-field="desc">49 of 165 hotels fall below the group margin. Where should FP&amp;A focus its review?</p>
+                <div class="topic-tags"><span data-i18n="gallery.finance">Finance</span></div>
+                <div class="project-links">
+                  <a href="https://app.fabric.microsoft.com/view?r=eyJrIjoiM2E3NGMyOWQtZGUxNS00NGExLThhY2ItY2NiODI1NzgxOTNlIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" rel="noopener noreferrer" data-i18n="project.open">Explore report ↗</a>
+                  <button type="button" data-open-project="finance-cost" data-i18n="project.details">About the project</button>
+                </div>
+              </div>
+            </article>
+            <article class="project-card" data-topics="story" data-collections="champs community">
+              <a class="project-image" href="https://app.fabric.microsoft.com/view?r=eyJrIjoiYmMxY2Y0NDAtZDhkNy00Y2Y1LWIyOGItOTU1MjY3NGVjMWJlIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" rel="noopener noreferrer" aria-label="Interactive LEGO museum — Explore report ↗"><img src="assets/Portfolio_PbiDemo_WC2026S2R2.png" alt="Interactive LEGO museum" loading="lazy" width="1280" height="720" /><span class="project-arrow" aria-hidden="true">↗</span></a>
+              <div class="project-info">
+                <p class="eyebrow" data-project="lego" data-field="tag">WORLD CHAMPS BCN 2026 · ROUND 2</p>
+                <h3 data-project="lego" data-field="title">Interactive LEGO museum</h3>
+                <p data-project="lego" data-field="desc">An experience exploring the history of sets, collections and releases.</p>
+                <div class="topic-tags"><span data-i18n="gallery.story">Data storytelling</span></div>
+                <div class="project-links">
+                  <a href="https://app.fabric.microsoft.com/view?r=eyJrIjoiYmMxY2Y0NDAtZDhkNy00Y2Y1LWIyOGItOTU1MjY3NGVjMWJlIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" rel="noopener noreferrer" data-i18n="project.open">Explore report ↗</a>
+                  <button type="button" data-open-project="lego" data-i18n="project.details">About the project</button>
+                </div>
+                <a class="community-link" href="https://community.fabric.microsoft.com/discussions/pbi_contestsgallery/lego-data-museum---world-champs-bcn-26---round-2---richard-ampie/5307161" target="_blank" rel="noopener noreferrer" data-i18n="project.community">View on Microsoft Community ↗</a>
+              </div>
+            </article>
+            <article class="project-card" data-topics="story" data-collections="explore community">
+              <a class="project-image" href="https://app.fabric.microsoft.com/view?r=eyJrIjoiOGEwMjUzNWItNzM1OC00YmE4LWE3ZDUtNTQyMWIxNzI0YTc1IiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" rel="noopener noreferrer" aria-label="The life we fear never living — Explore report ↗"><img src="assets/project-fears.png" alt="The life we fear never living" loading="lazy" width="1280" height="720" /><span class="project-arrow" aria-hidden="true">↗</span></a>
+              <div class="project-info">
+                <p class="eyebrow" data-project="fears" data-field="tag">HALLOWEEN CONTEST · DATA STORY</p>
+                <h3 data-project="fears" data-field="title">The life we fear never living</h3>
+                <p data-project="fears" data-field="desc">A one-page story about uncertainty, potential and the fears that change as we grow.</p>
+                <div class="topic-tags"><span data-i18n="gallery.story">Data storytelling</span></div>
+                <div class="project-links">
+                  <a href="https://app.fabric.microsoft.com/view?r=eyJrIjoiOGEwMjUzNWItNzM1OC00YmE4LWE3ZDUtNTQyMWIxNzI0YTc1IiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" rel="noopener noreferrer" data-i18n="project.open">Explore report ↗</a>
+                  <button type="button" data-open-project="fears" data-i18n="project.details">About the project</button>
+                </div>
+                <a class="community-link" href="https://community.fabric.microsoft.com/discussions/pbi_contestsgallery/the-life-we-fear-never-living/5376385" target="_blank" rel="noopener noreferrer" data-i18n="project.community">View on Microsoft Community ↗</a>
+              </div>
+            </article>
+            <article class="project-card" data-topics="environment" data-collections="champs community">
+              <a class="project-image" href="https://app.fabric.microsoft.com/view?r=eyJrIjoiNDQ0YWQyN2UtZjI0Zi00Mzk0LTkxMGMtM2YyODk4NDEzMjVhIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" rel="noopener noreferrer" aria-label="Global Climate Signals — Explore report ↗"><img src="assets/Portfolio_PbiDemo_WC2026R2.png" alt="Global Climate Signals" loading="lazy" width="1280" height="720" /><span class="project-arrow" aria-hidden="true">↗</span></a>
+              <div class="project-info">
+                <p class="eyebrow" data-project="world2" data-field="tag">WORLD CHAMPS ATL 2026 · ROUND 2</p>
+                <h3 data-project="world2" data-field="title">Global Climate Signals</h3>
+                <p data-project="world2" data-field="desc">Exploration of temperature anomalies, emissions and sea-level changes over time.</p>
+                <div class="topic-tags"><span data-i18n="gallery.environment">Cities &amp; environment</span></div>
+                <div class="project-links">
+                  <a href="https://app.fabric.microsoft.com/view?r=eyJrIjoiNDQ0YWQyN2UtZjI0Zi00Mzk0LTkxMGMtM2YyODk4NDEzMjVhIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" rel="noopener noreferrer" data-i18n="project.open">Explore report ↗</a>
+                  <button type="button" data-open-project="world2" data-i18n="project.details">About the project</button>
+                </div>
+                <a class="community-link" href="https://community.fabric.microsoft.com/discussions/pbi_contestsgallery/week-2---world-champs-2026-richard-ampie/4927764" target="_blank" rel="noopener noreferrer" data-i18n="project.community">View on Microsoft Community ↗</a>
+              </div>
+            </article>
+            <article class="project-card" data-topics="sports story" data-collections="champs community">
+              <a class="project-image" href="https://app.fabric.microsoft.com/view?r=eyJrIjoiNjIzYzBiNTAtMjZjMi00NGIzLTlmM2UtYjg3NzBkOGEyNjdmIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" rel="noopener noreferrer" aria-label="The Olympic Games by the Numbers — Explore report ↗"><img src="assets/Portfolio_PbiDemo_WC2026R3.png" alt="The Olympic Games by the Numbers" loading="lazy" width="1280" height="720" /><span class="project-arrow" aria-hidden="true">↗</span></a>
+              <div class="project-info">
+                <p class="eyebrow" data-project="world3" data-field="tag">WORLD CHAMPS ATL 2026 · ROUND 3</p>
+                <h3 data-project="world3" data-field="title">The Olympic Games by the Numbers</h3>
+                <p data-project="world3" data-field="desc">A view of the scale, participation and historical evolution of the Olympic Games.</p>
+                <div class="topic-tags"><span data-i18n="gallery.sports">Sports</span> <span data-i18n="gallery.story">Data storytelling</span></div>
+                <div class="project-links">
+                  <a href="https://app.fabric.microsoft.com/view?r=eyJrIjoiNjIzYzBiNTAtMjZjMi00NGIzLTlmM2UtYjg3NzBkOGEyNjdmIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" rel="noopener noreferrer" data-i18n="project.open">Explore report ↗</a>
+                  <button type="button" data-open-project="world3" data-i18n="project.details">About the project</button>
+                </div>
+                <a class="community-link" href="https://community.fabric.microsoft.com/discussions/pbi_contestsgallery/week-3-world-champs-26---richard-ampie/4993293" target="_blank" rel="noopener noreferrer" data-i18n="project.community">View on Microsoft Community ↗</a>
+              </div>
+            </article>
+            <article class="project-card" data-topics="logistics operations" data-collections="business">
+              <div class="project-image"><img src="assets/logistics-delivery.webp" alt="Logistics &amp; Delivery Performance" loading="lazy" width="1280" height="720" /></div>
+              <div class="project-info">
+                <p class="eyebrow" data-project="logistics-delivery" data-field="tag">Supply chain · Olist</p>
+                <h3 data-project="logistics-delivery" data-field="title">Logistics &amp; Delivery Performance</h3>
+                <p data-project="logistics-delivery" data-field="desc">Where do orders fall behind and which delivery commitments need attention?</p>
+                <div class="topic-tags"><span data-i18n="gallery.logistics">Logistics</span> <span data-i18n="gallery.operations">Operations &amp; customer experience</span></div>
+                <div class="project-links">
+                  <span class="demo-status" role="link" aria-disabled="true" data-i18n="gallery.soon">Demo coming soon</span>
+                  <button type="button" data-open-project="logistics-delivery" data-i18n="project.details">About the project</button>
+                </div>
+              </div>
+            </article>
+            <article class="project-card" data-topics="service operations" data-collections="business">
+              <div class="project-image"><img src="assets/service-desk.webp" alt="Service Desk &amp; Operational Efficiency" loading="lazy" width="1280" height="720" /></div>
+              <div class="project-info">
+                <p class="eyebrow" data-project="service-desk" data-field="tag">IT operations · Service desk</p>
+                <h3 data-project="service-desk" data-field="title">Service Desk &amp; Operational Efficiency</h3>
+                <p data-project="service-desk" data-field="desc">Where do tickets accumulate, and how should the team distribute its workload?</p>
+                <div class="topic-tags"><span data-i18n="gallery.service">Service desk</span> <span data-i18n="gallery.operations">Operations &amp; customer experience</span></div>
+                <div class="project-links">
+                  <span class="demo-status" role="link" aria-disabled="true" data-i18n="gallery.soon">Demo coming soon</span>
+                  <button type="button" data-open-project="service-desk" data-i18n="project.details">About the project</button>
+                </div>
+              </div>
+            </article>
+            <!-- business cards end -->
+          </div>
+          <button hidden type="button" class="button business-expand" aria-controls="business-grid" aria-expanded="false" data-i18n="gallery.more">Show all projects</button>
           <aside class="practice-note" aria-labelledby="practice-title">
             <p class="eyebrow" data-i18n="practice.label">Field notes · Semantic models</p>
             <h3 id="practice-title" data-i18n="practice.title">One model for five departments and one brand</h3>
@@ -284,291 +540,119 @@
               <a class="text-link" data-i18n="practice.origin" href="https://community.fabric.microsoft.com/discussions/pbi_contestsgallery/pebble--pine---strengthen-what-we-already-have/5429507" target="_blank" rel="noopener noreferrer">See the original ATL 2027 case ↗</a>
             </details>
           </aside>
-          <div class="work-toolbar">
-            <div class="project-filters" role="group" aria-label="Filter by business area" data-i18n-label="gallery.filter">
-              <button type="button" data-filter="all" aria-pressed="true" aria-controls="business-grid" data-i18n="gallery.all">All areas</button>
-              <button type="button" data-filter="strategy" aria-pressed="false" aria-controls="business-grid" data-i18n="gallery.strategy">Strategy</button>
-              <button type="button" data-filter="finance" aria-pressed="false" aria-controls="business-grid" data-i18n="gallery.finance">Finance</button>
-              <button type="button" data-filter="commercial" aria-pressed="false" aria-controls="business-grid" data-i18n="gallery.commercial">Commercial</button>
-              <button type="button" data-filter="operations" aria-pressed="false" aria-controls="business-grid" data-i18n="gallery.operations">Customer experience</button>
-              <button type="button" data-filter="logistics" aria-pressed="false" aria-controls="business-grid" data-i18n="gallery.logistics">Logistics</button>
-              <button type="button" data-filter="service" aria-pressed="false" aria-controls="business-grid" data-i18n="gallery.service">Service desk</button>
+          <aside class="recognition">
+            <div class="recognition-icon" aria-hidden="true">✳</div>
+            <div>
+              <p class="eyebrow" data-i18n="work.recognition">
+                MICROSOFT RECOGNITION
+              </p>
+              <h3 data-i18n="work.recognitiontitle">
+                Among the Judges’ Favorites.
+              </h3>
+              <p data-i18n="work.recognitionbody">
+                Microsoft included me among the Judges’ Favorites in round 1 of
+                the 2026 Power BI Dataviz World Champs, highlighting intuitive
+                interactions, card-driven navigation and data exploration.
+              </p>
+              <a
+                class="text-link"
+                data-i18n="work.source"
+                href="https://community.fabric.microsoft.com/blog/community_blog/%F0%9F%8F%86-announcing-the-results-of-round-1-of-the-power-bi-dataviz-world-champs/4938838"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Read the Microsoft recognition ↗</a
+              >
             </div>
-            <p class="project-count" aria-live="polite"><span data-count>8</span> <span data-i18n="gallery.count">cases</span></p>
-          </div>
-          <div class="project-grid" id="business-grid">
-            <!-- business cards start -->
-            <article class="project-card" data-category="strategy">
-              <a class="project-image" href="assets/group-performance.png" target="_blank" rel="noopener noreferrer" aria-label="Group Performance — View screenshot ↗"><img src="assets/group-performance.png" alt="Group Performance" loading="lazy" width="1280" height="720" /><span class="project-arrow" aria-hidden="true">↗</span></a>
-              <div class="project-info">
-                <p class="eyebrow" data-project="group-performance" data-field="tag">Board of directors · Pillow &amp; Key</p>
-                <h3 data-project="group-performance" data-field="title">Group Performance</h3>
-                <p data-project="group-performance" data-field="desc">Pebble &amp; Pine earns 28% of revenue and 25% of profit. Which brand needs the board’s attention?</p>
-                <div class="project-links">
-                  <a href="assets/group-performance.png" target="_blank" rel="noopener noreferrer" data-i18n="gallery.preview">View screenshot ↗</a>
-                  <button type="button" data-open-project="group-performance" data-i18n="project.details">About the project</button>
-                </div>
-              </div>
-            </article>
-            <article class="project-card" data-category="finance">
-              <a class="project-image" href="https://app.fabric.microsoft.com/view?r=eyJrIjoiNTdjYmRlMGMtZWQ5YS00ZGUwLWE5YTgtNzMzN2VmNzYzZTk2IiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" rel="noopener noreferrer" aria-label="Capital Allocation — Explore report ↗"><img src="assets/capital-allocation.png" alt="Capital Allocation" loading="lazy" width="1280" height="720" /><span class="project-arrow" aria-hidden="true">↗</span></a>
-              <div class="project-info">
-                <p class="eyebrow" data-project="capital-allocation" data-field="tag">Investment committee · Pillow &amp; Key</p>
-                <h3 data-project="capital-allocation" data-field="title">Capital Allocation</h3>
-                <p data-project="capital-allocation" data-field="desc">With $550M available for $924M in requests, which projects should compete for a common budget?</p>
-                <div class="project-links">
-                  <a href="https://app.fabric.microsoft.com/view?r=eyJrIjoiNTdjYmRlMGMtZWQ5YS00ZGUwLWE5YTgtNzMzN2VmNzYzZTk2IiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" rel="noopener noreferrer" data-i18n="project.open">Explore report ↗</a>
-                  <button type="button" data-open-project="capital-allocation" data-i18n="project.details">About the project</button>
-                </div>
-              </div>
-            </article>
-            <article class="project-card" data-category="operations">
-              <a class="project-image" href="https://app.fabric.microsoft.com/view?r=eyJrIjoiZTgwNjcwZTctYTkxOC00NDA2LTg0ZDItY2UzOWZiYTAxM2ZiIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" rel="noopener noreferrer" aria-label="Guest Experience — Explore report ↗"><img src="assets/guest-experience.png" alt="Guest Experience" loading="lazy" width="1280" height="720" /><span class="project-arrow" aria-hidden="true">↗</span></a>
-              <div class="project-info">
-                <p class="eyebrow" data-project="guest-experience" data-field="tag">Hotel operations · Pillow &amp; Key</p>
-                <h3 data-project="guest-experience" data-field="title">Guest Experience</h3>
-                <p data-project="guest-experience" data-field="desc">Guest NPS has fallen four years in a row. Which hotels and complaints warrant attention first?</p>
-                <div class="project-links">
-                  <a href="https://app.fabric.microsoft.com/view?r=eyJrIjoiZTgwNjcwZTctYTkxOC00NDA2LTg0ZDItY2UzOWZiYTAxM2ZiIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" rel="noopener noreferrer" data-i18n="project.open">Explore report ↗</a>
-                  <button type="button" data-open-project="guest-experience" data-i18n="project.details">About the project</button>
-                </div>
-              </div>
-            </article>
-            <article class="project-card" data-category="commercial">
-              <a class="project-image" href="https://app.fabric.microsoft.com/view?r=eyJrIjoiYzM4YWM4NWUtNmY2ZC00MjEyLWIxOWMtOTBkOWEyZWVkMDdiIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" rel="noopener noreferrer" aria-label="Commercial &amp; Revenue — Explore report ↗"><img src="assets/commercial-revenue.png" alt="Commercial &amp; Revenue" loading="lazy" width="1280" height="720" /><span class="project-arrow" aria-hidden="true">↗</span></a>
-              <div class="project-info">
-                <p class="eyebrow" data-project="commercial-revenue" data-field="tag">Revenue management · Pillow &amp; Key</p>
-                <h3 data-project="commercial-revenue" data-field="title">Commercial &amp; Revenue</h3>
-                <p data-project="commercial-revenue" data-field="desc">Revenue per available room reached $183. How much growth came from pricing and how much from occupancy?</p>
-                <div class="project-links">
-                  <a href="https://app.fabric.microsoft.com/view?r=eyJrIjoiYzM4YWM4NWUtNmY2ZC00MjEyLWIxOWMtOTBkOWEyZWVkMDdiIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" rel="noopener noreferrer" data-i18n="project.open">Explore report ↗</a>
-                  <button type="button" data-open-project="commercial-revenue" data-i18n="project.details">About the project</button>
-                </div>
-              </div>
-            </article>
-            <article class="project-card" data-category="finance">
-              <a class="project-image" href="https://app.fabric.microsoft.com/view?r=eyJrIjoiM2E3NGMyOWQtZGUxNS00NGExLThhY2ItY2NiODI1NzgxOTNlIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" rel="noopener noreferrer" aria-label="Finance &amp; Cost — Explore report ↗"><img src="assets/finance-cost.png" alt="Finance &amp; Cost" loading="lazy" width="1280" height="720" /><span class="project-arrow" aria-hidden="true">↗</span></a>
-              <div class="project-info">
-                <p class="eyebrow" data-project="finance-cost" data-field="tag">FP&amp;A · Pillow &amp; Key</p>
-                <h3 data-project="finance-cost" data-field="title">Finance &amp; Cost</h3>
-                <p data-project="finance-cost" data-field="desc">49 of 165 hotels fall below the group margin. Where should FP&amp;A focus its review?</p>
-                <div class="project-links">
-                  <a href="https://app.fabric.microsoft.com/view?r=eyJrIjoiM2E3NGMyOWQtZGUxNS00NGExLThhY2ItY2NiODI1NzgxOTNlIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" rel="noopener noreferrer" data-i18n="project.open">Explore report ↗</a>
-                  <button type="button" data-open-project="finance-cost" data-i18n="project.details">About the project</button>
-                </div>
-              </div>
-            </article>
-            <article class="project-card" data-category="strategy">
-              <a class="project-image" href="https://app.fabric.microsoft.com/view?r=eyJrIjoiYzk1OWE4ZmItMTNjMy00NWMxLWJmNmMtMGI4YzgyYTk4NDk4IiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" rel="noopener noreferrer" aria-label="Pebble &amp; Pine Brand Performance — Explore report ↗"><img src="assets/brand-performance.png" alt="Pebble &amp; Pine Brand Performance" loading="lazy" width="1280" height="720" /><span class="project-arrow" aria-hidden="true">↗</span></a>
-              <div class="project-info">
-                <p class="eyebrow" data-project="brand-performance" data-field="tag">Brand management · Pebble &amp; Pine</p>
-                <h3 data-project="brand-performance" data-field="title">Pebble &amp; Pine Brand Performance</h3>
-                <p data-project="brand-performance" data-field="desc">A brand earning less margin than the group has $145M to invest. Which assumptions support the plan?</p>
-                <div class="project-links">
-                  <a href="https://app.fabric.microsoft.com/view?r=eyJrIjoiYzk1OWE4ZmItMTNjMy00NWMxLWJmNmMtMGI4YzgyYTk4NDk4IiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" rel="noopener noreferrer" data-i18n="project.open">Explore report ↗</a>
-                  <button type="button" data-open-project="brand-performance" data-i18n="project.details">About the project</button>
-                </div>
-              </div>
-            </article>
-            <article class="project-card" data-category="logistics">
-              <div class="project-image"><img src="assets/logistics-delivery.webp" alt="Logistics &amp; Delivery Performance" loading="lazy" width="1280" height="720" /></div>
-              <div class="project-info">
-                <p class="eyebrow" data-project="logistics-delivery" data-field="tag">Supply chain · Olist</p>
-                <h3 data-project="logistics-delivery" data-field="title">Logistics &amp; Delivery Performance</h3>
-                <p data-project="logistics-delivery" data-field="desc">Where do orders fall behind and which delivery commitments need attention?</p>
-                <div class="project-links">
-                  <span class="demo-status" role="link" aria-disabled="true" data-i18n="gallery.soon">Demo coming soon</span>
-                  <button type="button" data-open-project="logistics-delivery" data-i18n="project.details">About the project</button>
-                </div>
-              </div>
-            </article>
-            <article class="project-card" data-category="service">
-              <div class="project-image"><img src="assets/service-desk.webp" alt="Service Desk &amp; Operational Efficiency" loading="lazy" width="1280" height="720" /></div>
-              <div class="project-info">
-                <p class="eyebrow" data-project="service-desk" data-field="tag">IT operations · Service desk</p>
-                <h3 data-project="service-desk" data-field="title">Service Desk &amp; Operational Efficiency</h3>
-                <p data-project="service-desk" data-field="desc">Where do tickets accumulate, and how should the team distribute its workload?</p>
-                <div class="project-links">
-                  <span class="demo-status" role="link" aria-disabled="true" data-i18n="gallery.soon">Demo coming soon</span>
-                  <button type="button" data-open-project="service-desk" data-i18n="project.details">About the project</button>
-                </div>
-              </div>
-            </article>
-            <!-- business cards end -->
-          </div>
-          <button hidden type="button" class="button business-expand" aria-controls="business-grid" aria-expanded="false" data-i18n="gallery.more">Show all cases</button>
+            <div class="recognition-side">
+              <span>Power BI<br />Dataviz<br />World Champs</span
+              ><span class="recognition-year">2026</span>
+            </div>
+          </aside>
+          <p class="passion-note" data-i18n="work.passion">
+            Power BI is also a personal pursuit: I enter competitions,
+            experiment and build because I enjoy getting better at it.
+          </p>
         </div>
       </section>
       <section id="services" class="section services">
         <div class="container">
           <p class="eyebrow" data-i18n="services.tag">02 / HOW I CAN HELP</p>
           <div class="section-heading">
-            <h2 data-i18n="services.title">
-              Resolve the bottleneck. Build lasting capability.
-            </h2>
-            <p data-i18n="services.body">
-              Focused engagements with a defined scope, clear deliverables and
-              knowledge transfer to your team.
-            </p>
+            <h2 data-i18n="services.title">What does your data platform need today?</h2>
+            <p data-i18n="services.body">We can investigate a failing load, migrate your data warehouse to Fabric or work with your team each month. We agree on the scope and how to verify the outcome before we start.</p>
           </div>
           <div class="service-list">
-            <details class="service" open>
-              <summary>
-                <span class="service-num">01</span>
-                <h3 data-service="0" data-field="title">
-                  Power BI &amp; Fabric optimization
-                </h3>
+            <details class="service" id="bi-diagnostic">
+              <summary><span class="service-num">01</span>
+                <h3 data-service="0" data-field="title">BI reliability and performance audit</h3>
                 <span class="expand" aria-hidden="true">+</span>
               </summary>
               <div class="service-body">
                 <div>
-                  <p data-service="0" data-field="intro">
-                    When reports are slow, loads fail or capacity costs too
-                    much.
-                  </p>
-                  <p class="tech">Power BI · DAX · SQL · Microsoft Fabric</p>
+                  <p data-service="0" data-field="intro">If two reports disagree on margin or a refresh misses the close, I trace one number from the report to its source to find the cause.</p>
+                  <p class="tech">Microsoft Fabric · SQL · DAX · Power BI</p>
+                  <div class="service-evidence">
+                    <a class="text-link" href="#case-fabric-capacity" data-service="0" data-field="proof" data-item="0">Professional case · Tuning Fabric capacity</a>
+                  </div>
                 </div>
                 <div>
                   <h4 data-i18n="services.deliver">What you receive</h4>
                   <ul>
-                    <li data-service="0" data-field="items" data-item="0">
-                      Assessment of models, DAX, SQL and workloads.
-                    </li>
-                    <li data-service="0" data-field="items" data-item="1">
-                      Prioritized plan to improve performance and resource
-                      usage.
-                    </li>
-                    <li data-service="0" data-field="items" data-item="2">
-                      Implementation and outcome comparison.
-                    </li>
+                    <li data-service="0" data-field="items" data-item="0">A map of the sources, pipelines and models behind the process.</li>
+                    <li data-service="0" data-field="items" data-item="1">A baseline for load times, Fabric usage and discrepancies against source totals.</li>
+                    <li data-service="0" data-field="items" data-item="2">Prioritized fixes with an agreed test for each improvement.</li>
                   </ul>
-                  <a
-                    href="#contact"
-                    class="text-link"
-                    data-service-cta="0"
-                    data-i18n="services.cta"
-                    >Discuss this service</a
-                  >
+                  <a class="text-link" href="#contact-draft" data-inquiry="bi-diagnostic" data-i18n="services.cta">Discuss this service</a>
                 </div>
               </div>
             </details>
-            <details class="service">
-              <summary>
-                <span class="service-num">02</span>
-                <h3 data-service="1" data-field="title">
-                  Automation &amp; applied AI for BI
-                </h3>
+            <details class="service" id="fabric-data-engineering" open>
+              <summary><span class="service-num">02</span>
+                <h3 data-service="1" data-field="title">Data engineering and warehouse migration to Fabric</h3>
                 <span class="expand" aria-hidden="true">+</span>
               </summary>
               <div class="service-body">
                 <div>
-                  <p data-service="1" data-field="intro">
-                    When your team repeats tasks that should already be handled.
-                  </p>
-                  <p class="tech">
-                    Python · Power Automate · Codex · Claude Code
-                  </p>
+                  <p data-service="1" data-field="intro">If the close depends on someone combining files by hand, I can automate that workflow. When the warehouse also needs to move to Fabric, I migrate loads in stages and reconcile totals with finance before switching the reports to the new source.</p>
+                  <p class="tech">SSIS · SQL Server · Microsoft Fabric · PySpark · Power BI</p>
+                  <div class="service-evidence">
+                    <a class="text-link" href="#case-dwh-migration" data-service="1" data-field="proof" data-item="0">SSIS to Fabric migration · Ingestion from 3 hours to 1</a>
+                    <a class="text-link" href="#case-f1-medallion" data-service="1" data-field="proof" data-item="1">Public lab · Formula 1 pipeline in Fabric</a>
+                    <a class="text-link" href="#case-finance-automation" data-service="1" data-field="proof" data-item="2">Finance automation · Month-end close from 5 to 2.5 days</a>
+                  </div>
                 </div>
                 <div>
                   <h4 data-i18n="services.deliver">What you receive</h4>
                   <ul>
-                    <li data-service="1" data-field="items" data-item="0">
-                      Task mapping and automation opportunities.
-                    </li>
-                    <li data-service="1" data-field="items" data-item="1">
-                      Data workflows and agent-assisted development.
-                    </li>
-                    <li data-service="1" data-field="items" data-item="2">
-                      Reusable guides, validation and documentation.
-                    </li>
+                    <li data-service="1" data-field="items" data-item="0">A data warehouse migration plan with dependencies, cutover sequence and acceptance criteria.</li>
+                    <li data-service="1" data-field="items" data-item="1">Incremental ingestion pipelines with data quality checks, failure logs and recovery instructions.</li>
+                    <li data-service="1" data-field="items" data-item="2">Reconciled tables and a shared semantic model for automating reports or migrating them from Tableau and Excel to Power BI.</li>
                   </ul>
-                  <a
-                    href="#contact"
-                    class="text-link"
-                    data-service-cta="1"
-                    data-i18n="services.cta"
-                    >Discuss this service</a
-                  >
+                  <a class="text-link" href="#contact-draft" data-inquiry="fabric-data-engineering" data-i18n="services.cta">Discuss this service</a>
                 </div>
               </div>
             </details>
-            <details class="service">
-              <summary>
-                <span class="service-num">03</span>
-                <h3 data-service="2" data-field="title">
-                  BI migration &amp; modernization
-                </h3>
+            <details class="service" id="monthly-data-support">
+              <summary><span class="service-num">03</span>
+                <h3 data-service="2" data-field="title">Monthly BI and data engineering support</h3>
                 <span class="expand" aria-hidden="true">+</span>
               </summary>
               <div class="service-body">
                 <div>
-                  <p data-service="2" data-field="intro">
-                    When your platform needs to evolve while retaining business
-                    logic.
-                  </p>
-                  <p class="tech">
-                    Tableau → Power BI · PBIP / PBIR · Azure DevOps
-                  </p>
+                  <p data-service="2" data-field="intro">Once the platform is in production, I work with your team on failing loads, changes awaiting release and processes that still need manual intervention.</p>
+                  <p class="tech">Microsoft Fabric · Azure DevOps · Python · Power Automate</p>
+                  <div class="service-evidence">
+                    <a class="text-link" href="#case-bi-governance" data-service="2" data-field="proof" data-item="0">Professional case · How changes moved from development to production</a>
+                  </div>
                 </div>
                 <div>
                   <h4 data-i18n="services.deliver">What you receive</h4>
                   <ul>
-                    <li data-service="2" data-field="items" data-item="0">
-                      Inventory, dependencies and business rules.
-                    </li>
-                    <li data-service="2" data-field="items" data-item="1">
-                      Tableau or Excel migration to Power BI.
-                    </li>
-                    <li data-service="2" data-field="items" data-item="2">
-                      Governed models, version control and team handover.
-                    </li>
+                    <li data-service="2" data-field="items" data-item="0">A prioritized backlog and a scope agreed with your team each month.</li>
+                    <li data-service="2" data-field="items" data-item="1">A review of pipeline runs, data quality and capacity usage to decide what to tune.</li>
+                    <li data-service="2" data-field="items" data-item="2">Tested releases, documented automations and a handover your team can operate.</li>
                   </ul>
-                  <a
-                    href="#contact"
-                    class="text-link"
-                    data-service-cta="2"
-                    data-i18n="services.cta"
-                    >Discuss this service</a
-                  >
-                </div>
-              </div>
-            </details>
-            <details class="service">
-              <summary>
-                <span class="service-num">04</span>
-                <h3 data-service="3" data-field="title">
-                  Data engineering &amp; executive reporting
-                </h3>
-                <span class="expand" aria-hidden="true">+</span>
-              </summary>
-              <div class="service-body">
-                <div>
-                  <p data-service="3" data-field="intro">
-                    When decisions depend on scattered data or inconsistent
-                    metrics.
-                  </p>
-                  <p class="tech">Fabric · SQL Server · PySpark · Power BI</p>
-                </div>
-                <div>
-                  <h4 data-i18n="services.deliver">What you receive</h4>
-                  <ul>
-                    <li data-service="3" data-field="items" data-item="0">
-                      Source integration and KPI definition.
-                    </li>
-                    <li data-service="3" data-field="items" data-item="1">
-                      Pipelines, lakehouse and semantic models.
-                    </li>
-                    <li data-service="3" data-field="items" data-item="2">
-                      Decision-oriented reports and knowledge transfer.
-                    </li>
-                  </ul>
-                  <a
-                    href="#contact"
-                    class="text-link"
-                    data-service-cta="3"
-                    data-i18n="services.cta"
-                    >Discuss this service</a
-                  >
+                  <a class="text-link" href="#contact-draft" data-inquiry="monthly-data-support" data-i18n="services.cta">Discuss this service</a>
                 </div>
               </div>
             </details>
@@ -584,10 +668,7 @@
             <h2 data-i18n="engineering.title">
               The engineering behind the insight.
             </h2>
-            <p data-i18n="engineering.body">
-              Real projects, practical automation and data foundations built to
-              support the business. Open a case to explore the approach.
-            </p>
+            <p data-i18n="engineering.body">These cases show how I migrated workloads from SSIS to Fabric, automated ingestion and shortened the wait between a transaction and the report that uses it. Open a case to see the approach and outcome.</p>
           </div>
           <div class="engineering-layout">
             <figure class="engineering-visual">
@@ -654,7 +735,7 @@
                   class="engineering-card"
                   data-engineering-group="corporate"
                 >
-                  <details class="case-detail" name="engineering-cases">
+                  <details id="case-bi-governance" class="case-detail" name="engineering-cases">
                     <summary class="case-summary">
                       <span class="case-symbol" aria-hidden="true"
                         ><svg
@@ -761,6 +842,7 @@
                           >
                         </div>
                       </div>
+                    <a class="text-link case-inquiry" href="#contact-draft" data-inquiry="bi-governance" data-i18n="case.inquire">Discuss a similar challenge</a>
                     </div>
                   </details>
                 </article>
@@ -768,7 +850,7 @@
                   class="engineering-card"
                   data-engineering-group="corporate"
                 >
-                  <details class="case-detail" name="engineering-cases">
+                  <details id="case-dwh-migration" class="case-detail" name="engineering-cases">
                     <summary class="case-summary">
                       <span class="case-symbol" aria-hidden="true"
                         ><svg
@@ -876,6 +958,7 @@
                           >
                         </div>
                       </div>
+                    <a class="text-link case-inquiry" href="#contact-draft" data-inquiry="dwh-migration" data-i18n="case.inquire">Discuss a similar challenge</a>
                     </div>
                   </details>
                 </article>
@@ -883,7 +966,7 @@
                   class="engineering-card"
                   data-engineering-group="corporate"
                 >
-                  <details class="case-detail" name="engineering-cases">
+                  <details id="case-finance-automation" class="case-detail" name="engineering-cases">
                     <summary class="case-summary">
                       <span class="case-symbol" aria-hidden="true"
                         ><svg
@@ -989,6 +1072,7 @@
                           >
                         </div>
                       </div>
+                    <a class="text-link case-inquiry" href="#contact-draft" data-inquiry="finance-automation" data-i18n="case.inquire">Discuss a similar challenge</a>
                     </div>
                   </details>
                 </article>
@@ -996,7 +1080,7 @@
                   class="engineering-card"
                   data-engineering-group="corporate"
                 >
-                  <details class="case-detail" name="engineering-cases">
+                  <details id="case-fabric-capacity" class="case-detail" name="engineering-cases">
                     <summary class="case-summary">
                       <span class="case-symbol" aria-hidden="true"
                         ><svg
@@ -1103,11 +1187,12 @@
                           >
                         </div>
                       </div>
+                    <a class="text-link case-inquiry" href="#contact-draft" data-inquiry="fabric-capacity" data-i18n="case.inquire">Discuss a similar challenge</a>
                     </div>
                   </details>
                 </article>
                 <article class="engineering-card" data-engineering-group="labs">
-                  <details class="case-detail" name="engineering-cases">
+                  <details id="case-dax-framework" class="case-detail" name="engineering-cases">
                     <summary class="case-summary">
                       <span class="case-symbol" aria-hidden="true"
                         ><svg
@@ -1215,11 +1300,12 @@
                           >
                         </div>
                       </div>
+                    <a class="text-link case-inquiry" href="#contact-draft" data-inquiry="dax-framework" data-i18n="case.inquire">Discuss a similar challenge</a>
                     </div>
                   </details>
                 </article>
                 <article class="engineering-card" data-engineering-group="labs">
-                  <details class="case-detail" name="engineering-cases">
+                  <details id="case-api-etl" class="case-detail" name="engineering-cases">
                     <summary class="case-summary">
                       <span class="case-symbol" aria-hidden="true"
                         ><svg
@@ -1324,11 +1410,12 @@
                           >
                         </div>
                       </div>
+                    <a class="text-link case-inquiry" href="#contact-draft" data-inquiry="api-etl" data-i18n="case.inquire">Discuss a similar challenge</a>
                     </div>
                   </details>
                 </article>
                 <article class="engineering-card" data-engineering-group="labs">
-                  <details class="case-detail" name="engineering-cases">
+                  <details id="case-f1-medallion" class="case-detail" name="engineering-cases">
                     <summary class="case-summary">
                       <span class="case-symbol" aria-hidden="true"
                         ><svg
@@ -1443,11 +1530,12 @@
                           >Explore code on GitHub ↗</a
                         >
                       </div>
+                    <a class="text-link case-inquiry" href="#contact-draft" data-inquiry="f1-medallion" data-i18n="case.inquire">Discuss a similar challenge</a>
                     </div>
                   </details>
                 </article>
                 <article class="engineering-card" data-engineering-group="labs">
-                  <details class="case-detail" name="engineering-cases">
+                  <details id="case-transaction-ml" class="case-detail" name="engineering-cases">
                     <summary class="case-summary">
                       <span class="case-symbol" aria-hidden="true"
                         ><svg
@@ -1555,6 +1643,7 @@
                           >
                         </div>
                       </div>
+                    <a class="text-link case-inquiry" href="#contact-draft" data-inquiry="transaction-ml" data-i18n="case.inquire">Discuss a similar challenge</a>
                     </div>
                   </details>
                 </article>
@@ -1642,549 +1731,6 @@
               </li>
             </ol>
           </div>
-        </div>
-      </section>
-      <section id="projects" class="section projects">
-        <div class="container">
-          <p class="eyebrow" data-i18n="work.tag">05 / SELECTED WORK</p>
-          <div class="section-heading">
-            <h2 data-i18n="work.title">
-              Rigor in the data. Purpose in every visual.
-            </h2>
-            <p data-i18n="work.body">
-              Public reports built to explore, explain and push Power BI
-              further. The same attention to detail I bring to a business
-              solution.
-            </p>
-          </div>
-          <aside class="recognition">
-            <div class="recognition-icon" aria-hidden="true">✳</div>
-            <div>
-              <p class="eyebrow" data-i18n="work.recognition">
-                MICROSOFT RECOGNITION
-              </p>
-              <h3 data-i18n="work.recognitiontitle">
-                Among the Judges’ Favorites.
-              </h3>
-              <p data-i18n="work.recognitionbody">
-                Microsoft included me among the Judges’ Favorites in round 1 of
-                the 2026 Power BI Dataviz World Champs, highlighting intuitive
-                interactions, card-driven navigation and data exploration.
-              </p>
-              <a
-                class="text-link"
-                data-i18n="work.source"
-                href="https://community.fabric.microsoft.com/blog/community_blog/%F0%9F%8F%86-announcing-the-results-of-round-1-of-the-power-bi-dataviz-world-champs/4938838"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Read the Microsoft recognition ↗</a
-              >
-            </div>
-            <div class="recognition-side">
-              <span>Power BI<br />Dataviz<br />World Champs</span
-              ><span class="recognition-year">2026</span>
-            </div>
-          </aside>
-          <div class="work-toolbar">
-            <div
-              class="project-filters"
-              role="group"
-              aria-label="Filter projects"
-            >
-              <button
-                type="button"
-                data-filter="all"
-                aria-pressed="true"
-                data-i18n="filter.all"
-              >
-                All projects</button
-              ><button
-                type="button"
-                data-filter="champs"
-                aria-pressed="false"
-                data-i18n="filter.champs"
-              >
-                World Champs</button
-              ><button
-                type="button"
-                data-filter="explore"
-                aria-pressed="false"
-                data-i18n="filter.explore"
-              >
-                Exploration
-              </button>
-            </div>
-            <p class="project-count" aria-live="polite">
-              <span id="project-count">9</span>
-              <span data-i18n="project.count">public projects</span>
-            </p>
-          </div>
-          <div class="project-grid">
-            <article class="project-card" data-category="champs">
-              <a
-                class="project-image"
-                href="https://app.fabric.microsoft.com/view?r=eyJrIjoiZWEzM2E0NDEtZGY5NC00YzdmLWE2MWEtMWFlNGI3OWVhZDNlIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="What Makes a Movie Successful? — Power BI"
-              >
-                <img
-                  src="assets/project-movies.png"
-                  alt="What Makes a Movie Successful?"
-                  loading="lazy"
-                  width="1600"
-                  height="900"
-                /><span class="project-arrow" aria-hidden="true">↗</span></a
-              >
-              <div class="project-info">
-                <p class="eyebrow" data-project="movies" data-field="tag">
-                  WORLD CHAMPS BCN 2026 · ROUND 3
-                </p>
-                <h3 class="" data-project="movies" data-field="title">
-                  What Makes a Movie Successful?
-                </h3>
-                <p class="" data-project="movies" data-field="desc">
-                  A three-act story about what money buys in film: audience,
-                  return and ratings.
-                </p>
-                <div class="project-links">
-                  <a
-                    data-i18n="project.open"
-                    href="https://app.fabric.microsoft.com/view?r=eyJrIjoiZWEzM2E0NDEtZGY5NC00YzdmLWE2MWEtMWFlNGI3OWVhZDNlIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Explore report ↗</a
-                  ><button
-                    type="button"
-                    data-open-project="movies"
-                    data-i18n="project.details"
-                  >
-                    About the project
-                  </button>
-                </div>
-                <a
-                  class="community-link"
-                  data-i18n="project.community"
-                  href="https://community.fabric.microsoft.com/discussions/pbi_contestsgallery/richard-ampie---world-champs-bcn-26---round-3/5355053"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >View on Microsoft Community ↗</a
-                >
-              </div>
-            </article>
-            <article class="project-card" data-category="explore">
-              <a
-                class="project-image"
-                href="https://app.fabric.microsoft.com/view?r=eyJrIjoiOGEwMjUzNWItNzM1OC00YmE4LWE3ZDUtNTQyMWIxNzI0YTc1IiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="The life we fear never living — Power BI"
-              >
-                <img
-                  src="assets/project-fears.png"
-                  alt="The life we fear never living"
-                  loading="lazy"
-                  width="1600"
-                  height="900"
-                /><span class="project-arrow" aria-hidden="true">↗</span></a
-              >
-              <div class="project-info">
-                <p class="eyebrow" data-project="fears" data-field="tag">
-                  HALLOWEEN CONTEST · DATA STORY
-                </p>
-                <h3 class="" data-project="fears" data-field="title">
-                  The life we fear never living
-                </h3>
-                <p class="" data-project="fears" data-field="desc">
-                  A one-page story about uncertainty, potential and the fears
-                  that change as we grow.
-                </p>
-                <div class="project-links">
-                  <a
-                    data-i18n="project.open"
-                    href="https://app.fabric.microsoft.com/view?r=eyJrIjoiOGEwMjUzNWItNzM1OC00YmE4LWE3ZDUtNTQyMWIxNzI0YTc1IiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Explore report ↗</a
-                  ><button
-                    type="button"
-                    data-open-project="fears"
-                    data-i18n="project.details"
-                  >
-                    About the project
-                  </button>
-                </div>
-                <a
-                  class="community-link"
-                  data-i18n="project.community"
-                  href="https://community.fabric.microsoft.com/discussions/pbi_contestsgallery/the-life-we-fear-never-living/5376385"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >View on Microsoft Community ↗</a
-                >
-              </div>
-            </article>
-            <article class="project-card" data-category="champs">
-              <a
-                class="project-image"
-                href="https://app.fabric.microsoft.com/view?r=eyJrIjoiOWRkMDY5MWYtYWQwNS00Mjk4LThjYzQtNDRiOWVjOGZmNjJlIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Pebble &amp; Pine · Investment strategy — Power BI"
-                ><img
-                  src="assets/project-pebble-pine.png"
-                  alt="Pebble &amp; Pine · Investment strategy"
-                  loading="lazy"
-                  width="1407"
-                  height="1036"
-                /><span class="project-arrow" aria-hidden="true">↗</span></a
-              >
-              <div class="project-info">
-                <p class="eyebrow" data-project="pebble-pine" data-field="tag">
-                  WORLD CHAMPS ATL 2027 · ROUND 1
-                </p>
-                <h3 data-project="pebble-pine" data-field="title">
-                  Pebble &amp; Pine · Investment strategy
-                </h3>
-                <p data-project="pebble-pine" data-field="desc">
-                  Financial diagnosis and investment scenarios to prioritize
-                  capital across a 45-resort network.
-                </p>
-                <div class="project-links">
-                  <a
-                    href="https://app.fabric.microsoft.com/view?r=eyJrIjoiOWRkMDY5MWYtYWQwNS00Mjk4LThjYzQtNDRiOWVjOGZmNjJlIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    data-i18n="project.open"
-                    >Explore report ↗</a
-                  ><button
-                    type="button"
-                    data-open-project="pebble-pine"
-                    data-i18n="project.details"
-                  >
-                    About the project
-                  </button>
-                </div>
-                <a
-                  class="community-link"
-                  href="https://community.fabric.microsoft.com/discussions/pbi_contestsgallery/pebble--pine---strengthen-what-we-already-have/5429507"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  data-i18n="project.community"
-                  >View on Microsoft Community ↗</a
-                >
-              </div>
-            </article>
-
-            <article class="project-card" data-category="champs">
-              <a
-                class="project-image"
-                href="https://app.fabric.microsoft.com/view?r=eyJrIjoiYmJiM2EyZmMtNjI2ZC00MzJiLThjODktNGE2OGZmMWEwMWMyIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="PitchSide Pro · Análisis financiero — Power BI"
-              >
-                <img
-                  src="assets/Portfolio_PbiDemo_WC2026S2R1.png"
-                  alt="PitchSide Pro · Análisis financiero"
-                  loading="lazy"
-                  width="1600"
-                  height="900"
-                /><span class="project-arrow" aria-hidden="true">↗</span></a
-              >
-              <div class="project-info">
-                <p class="eyebrow" data-project="finance" data-field="tag">
-                  WORLD CHAMPS BCN 2026 · ROUND 1
-                </p>
-                <h3 class="" data-project="finance" data-field="title">
-                  PitchSide Pro · Financial analysis
-                </h3>
-                <p class="" data-project="finance" data-field="desc">
-                  Revenue, margin, categories and regions in an experience
-                  exploring business performance.
-                </p>
-                <div class="project-links">
-                  <a
-                    data-i18n="project.open"
-                    href="https://app.fabric.microsoft.com/view?r=eyJrIjoiYmJiM2EyZmMtNjI2ZC00MzJiLThjODktNGE2OGZmMWEwMWMyIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Explore report ↗</a
-                  ><button
-                    type="button"
-                    data-open-project="finance"
-                    data-i18n="project.details"
-                  >
-                    About the project
-                  </button>
-                </div>
-                <a
-                  class="community-link"
-                  data-i18n="project.community"
-                  href="https://community.fabric.microsoft.com/discussions/pbi_contestsgallery/week-1---world-champs-bcn-2026-richard-ampie/5241525"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >View on Microsoft Community ↗</a
-                >
-              </div>
-            </article>
-            <article class="project-card" data-category="champs">
-              <a
-                class="project-image"
-                href="https://app.fabric.microsoft.com/view?r=eyJrIjoiYmMxY2Y0NDAtZDhkNy00Y2Y1LWIyOGItOTU1MjY3NGVjMWJlIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Museo interactivo LEGO — Power BI"
-              >
-                <img
-                  src="assets/Portfolio_PbiDemo_WC2026S2R2.png"
-                  alt="Museo interactivo LEGO"
-                  loading="lazy"
-                  width="1600"
-                  height="900"
-                /><span class="project-arrow" aria-hidden="true">↗</span></a
-              >
-              <div class="project-info">
-                <p class="eyebrow" data-project="lego" data-field="tag">
-                  WORLD CHAMPS BCN 2026 · ROUND 2
-                </p>
-                <h3 class="" data-project="lego" data-field="title">
-                  Interactive LEGO museum
-                </h3>
-                <p class="" data-project="lego" data-field="desc">
-                  An experience exploring the history of sets, collections and
-                  releases.
-                </p>
-                <div class="project-links">
-                  <a
-                    data-i18n="project.open"
-                    href="https://app.fabric.microsoft.com/view?r=eyJrIjoiYmMxY2Y0NDAtZDhkNy00Y2Y1LWIyOGItOTU1MjY3NGVjMWJlIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Explore report ↗</a
-                  ><button
-                    type="button"
-                    data-open-project="lego"
-                    data-i18n="project.details"
-                  >
-                    About the project
-                  </button>
-                </div>
-                <a
-                  class="community-link"
-                  data-i18n="project.community"
-                  href="https://community.fabric.microsoft.com/discussions/pbi_contestsgallery/lego-data-museum---world-champs-bcn-26---round-2---richard-ampie/5307161"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >View on Microsoft Community ↗</a
-                >
-              </div>
-            </article>
-            <article class="project-card" data-category="champs">
-              <a
-                class="project-image"
-                href="https://app.fabric.microsoft.com/view?r=eyJrIjoiOTU5MTc2ZmUtMjE3YS00ZWQ1LWFjYzktYWIyNGIwNjQ4ZTY2IiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Briarport · Calidad de vida urbana — Power BI"
-              >
-                <img
-                  src="assets/Portfolio_PbiDemo_WC2026R1.png"
-                  alt="Briarport · Calidad de vida urbana"
-                  loading="lazy"
-                  width="1600"
-                  height="900"
-                /><span class="project-arrow" aria-hidden="true">↗</span></a
-              >
-              <div class="project-info">
-                <p class="eyebrow" data-project="world1" data-field="tag">
-                  WORLD CHAMPS ATL 2026 · ROUND 1
-                </p>
-                <h3 class="" data-project="world1" data-field="title">
-                  Briarport · Urban livability
-                </h3>
-                <p class="" data-project="world1" data-field="desc">
-                  Housing, transit and sustainability with card-driven
-                  navigation. Recognized among Microsoft’s Judges’ Favorites.
-                </p>
-                <div class="project-links">
-                  <a
-                    data-i18n="project.open"
-                    href="https://app.fabric.microsoft.com/view?r=eyJrIjoiOTU5MTc2ZmUtMjE3YS00ZWQ1LWFjYzktYWIyNGIwNjQ4ZTY2IiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Explore report ↗</a
-                  ><button
-                    type="button"
-                    data-open-project="world1"
-                    data-i18n="project.details"
-                  >
-                    About the project
-                  </button>
-                </div>
-                <a
-                  class="community-link"
-                  data-i18n="project.community"
-                  href="https://community.fabric.microsoft.com/discussions/pbi_contestsgallery/week-1---world-champs-2026-richard-ampie/4921469"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >View on Microsoft Community ↗</a
-                >
-              </div>
-            </article>
-            <article class="project-card" data-category="champs">
-              <a
-                class="project-image"
-                href="https://app.fabric.microsoft.com/view?r=eyJrIjoiNDQ0YWQyN2UtZjI0Zi00Mzk0LTkxMGMtM2YyODk4NDEzMjVhIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Global Climate Signals — Power BI"
-              >
-                <img
-                  src="assets/Portfolio_PbiDemo_WC2026R2.png"
-                  alt="Global Climate Signals"
-                  loading="lazy"
-                  width="1600"
-                  height="900"
-                /><span class="project-arrow" aria-hidden="true">↗</span></a
-              >
-              <div class="project-info">
-                <p class="eyebrow" data-project="world2" data-field="tag">
-                  WORLD CHAMPS ATL 2026 · ROUND 2
-                </p>
-                <h3 class="" data-project="world2" data-field="title">
-                  Global Climate Signals
-                </h3>
-                <p class="" data-project="world2" data-field="desc">
-                  Exploration of temperature anomalies, emissions and sea-level
-                  changes over time.
-                </p>
-                <div class="project-links">
-                  <a
-                    data-i18n="project.open"
-                    href="https://app.fabric.microsoft.com/view?r=eyJrIjoiNDQ0YWQyN2UtZjI0Zi00Mzk0LTkxMGMtM2YyODk4NDEzMjVhIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Explore report ↗</a
-                  ><button
-                    type="button"
-                    data-open-project="world2"
-                    data-i18n="project.details"
-                  >
-                    About the project
-                  </button>
-                </div>
-                <a
-                  class="community-link"
-                  data-i18n="project.community"
-                  href="https://community.fabric.microsoft.com/discussions/pbi_contestsgallery/week-2---world-champs-2026-richard-ampie/4927764"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >View on Microsoft Community ↗</a
-                >
-              </div>
-            </article>
-            <article class="project-card" data-category="champs">
-              <a
-                class="project-image"
-                href="https://app.fabric.microsoft.com/view?r=eyJrIjoiNjIzYzBiNTAtMjZjMi00NGIzLTlmM2UtYjg3NzBkOGEyNjdmIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="The Olympic Games by the Numbers — Power BI"
-              >
-                <img
-                  src="assets/Portfolio_PbiDemo_WC2026R3.png"
-                  alt="The Olympic Games by the Numbers"
-                  loading="lazy"
-                  width="1600"
-                  height="900"
-                /><span class="project-arrow" aria-hidden="true">↗</span></a
-              >
-              <div class="project-info">
-                <p class="eyebrow" data-project="world3" data-field="tag">
-                  WORLD CHAMPS ATL 2026 · ROUND 3
-                </p>
-                <h3 class="" data-project="world3" data-field="title">
-                  The Olympic Games by the Numbers
-                </h3>
-                <p class="" data-project="world3" data-field="desc">
-                  A view of the scale, participation and historical evolution of
-                  the Olympic Games.
-                </p>
-                <div class="project-links">
-                  <a
-                    data-i18n="project.open"
-                    href="https://app.fabric.microsoft.com/view?r=eyJrIjoiNjIzYzBiNTAtMjZjMi00NGIzLTlmM2UtYjg3NzBkOGEyNjdmIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Explore report ↗</a
-                  ><button
-                    type="button"
-                    data-open-project="world3"
-                    data-i18n="project.details"
-                  >
-                    About the project
-                  </button>
-                </div>
-                <a
-                  class="community-link"
-                  data-i18n="project.community"
-                  href="https://community.fabric.microsoft.com/discussions/pbi_contestsgallery/week-3-world-champs-26---richard-ampie/4993293"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >View on Microsoft Community ↗</a
-                >
-              </div>
-            </article>
-            <article class="project-card" data-category="explore">
-              <a
-                class="project-image"
-                href="https://app.fabric.microsoft.com/view?r=eyJrIjoiYzY1Y2Y1YWQtNDM5NC00Y2RhLWFjZmItNmQ0NTQ0MDhkMWYxIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="F1 Analytics — Power BI"
-              >
-                <img
-                  src="assets/Portfolio_PbiDemo_F1.png"
-                  alt="F1 Analytics"
-                  loading="lazy"
-                  width="1600"
-                  height="900"
-                /><span class="project-arrow" aria-hidden="true">↗</span></a
-              >
-              <div class="project-info">
-                <p class="eyebrow" data-project="f1" data-field="tag">
-                  LAB · SPORTS ANALYTICS
-                </p>
-                <h3 class="" data-project="f1" data-field="title">
-                  F1 Analytics
-                </h3>
-                <p class="" data-project="f1" data-field="desc">
-                  An independent Formula 1 analytics project exploring race
-                  results.
-                </p>
-                <div class="project-links">
-                  <a
-                    data-i18n="project.open"
-                    href="https://app.fabric.microsoft.com/view?r=eyJrIjoiYzY1Y2Y1YWQtNDM5NC00Y2RhLWFjZmItNmQ0NTQ0MDhkMWYxIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Explore report ↗</a
-                  ><button
-                    type="button"
-                    data-open-project="f1"
-                    data-i18n="project.details"
-                  >
-                    About the project
-                  </button>
-                </div>
-              </div>
-            </article>
-          </div>
-          <p class="passion-note" data-i18n="work.passion">
-            Power BI is also a personal pursuit: I enter competitions,
-            experiment and build because I enjoy getting better at it.
-          </p>
         </div>
       </section>
       <section id="about" class="section about">

@@ -20,8 +20,7 @@ function buildInquiryMailto(subject, body) {
     subject: ui.en["contact.subjectDefault"],
     body: ui.en["contact.prompt"],
   };
-  let selectedService = null;
-  let serviceSubject = "";
+  let inquiryContext = null;
   const localized = (value) =>
     Array.isArray(value) ? value[language === "es" ? 0 : 1] : value;
   const escape = (value) =>
@@ -37,6 +36,26 @@ function buildInquiryMailto(subject, body) {
         })[c],
     );
   const tr = (key) => ui[language][key];
+
+  function replaceSharedUrl(url) {
+    if (location.protocol === "https:" || location.protocol === "http:") {
+      history.replaceState(history.state, "", url);
+    }
+  }
+
+  function updateInquiryDraft() {
+    const title = inquiryContext && localized(inquiryContext.title);
+    const subject = title ? tr("contact.subjectDefault") + " — " + title : tr("contact.subjectDefault");
+    const opening = inquiryContext?.inquiry ? localized(inquiryContext.inquiry) : tr("contact.related");
+    const body = title
+      ? [tr("contact.contextGreeting"), opening, tr("contact.contextPrompt")].join("\n\n")
+      : tr("contact.prompt");
+    if (draftSubject.value === draftDefaults.subject) draftSubject.value = subject;
+    if (draftMessage.value === draftDefaults.body) draftMessage.value = body;
+    draftDefaults = { subject, body };
+    const email = document.querySelector('.contact-actions a[href^="mailto:"]');
+    email.href = title ? buildInquiryMailto(draftSubject.value, draftMessage.value) : "mailto:rampiechamorro14@gmail.com";
+  }
 
   function updateThemeControl() {
     const isDark = document.documentElement.dataset.theme === "dark";
@@ -84,7 +103,8 @@ function buildInquiryMailto(subject, body) {
       <h2 id="dialog-title">${escape(localized(p.title))}</h2>
       ${section("project.challenge", "question")}${section("project.approach", "approach")}${section("project.value", "value")}
       ${sourceNote}<div class="dialog-actions">${primaryAction}
-      ${p.community ? `<a class="text-link" href="${escape(p.community)}" target="_blank" rel="noopener noreferrer">${escape(tr("project.community"))}</a>` : ""}</div></div>`;
+      ${p.community ? `<a class="text-link" href="${escape(p.community)}" target="_blank" rel="noopener noreferrer">${escape(tr("project.community"))}</a>` : ""}</div>
+      <a class="text-link case-inquiry" href="#contact-draft" data-inquiry="${escape(p.id)}">${escape(tr("case.inquire"))}</a></div>`;
     document
       .querySelector("#close-dialog")
       .setAttribute("aria-label", tr("project.close"));
@@ -132,11 +152,11 @@ function buildInquiryMailto(subject, body) {
     });
     document.querySelectorAll("[data-service]").forEach((el) => {
       const s = services[Number(el.dataset.service)];
-      el.textContent = localized(
-        el.dataset.field === "items"
-          ? s.items[Number(el.dataset.item)]
-          : s[el.dataset.field],
-      );
+      const { field, item } = el.dataset;
+      let value = s[field];
+      if (field === "items") value = s.items[Number(item)];
+      if (field === "proof") value = s.proof[Number(item)].label;
+      el.textContent = localized(value);
     });
     document.querySelectorAll("[data-engineering]").forEach((el) => {
       const c = engineering.find((item) => item.id === el.dataset.engineering);
@@ -165,28 +185,7 @@ function buildInquiryMailto(subject, body) {
       );
     menu.setAttribute("aria-label", tr("menu"));
     nav.setAttribute("aria-label", language === "es" ? "Principal" : "Main");
-    document
-      .querySelector("#projects .project-filters")
-      .setAttribute(
-        "aria-label",
-        language === "es" ? "Filtrar proyectos" : "Filter projects",
-      );
-    if (draftSubject.value === draftDefaults.subject) {
-      draftSubject.value = tr("contact.subjectDefault");
-    } else if (
-      selectedService !== null &&
-      draftSubject.value === serviceSubject
-    ) {
-      serviceSubject = `${tr("contact.subjectDefault")} — ${localized(services[selectedService].title)}`;
-      draftSubject.value = serviceSubject;
-    }
-    if (draftMessage.value === draftDefaults.body) {
-      draftMessage.value = tr("contact.prompt");
-    }
-    draftDefaults = {
-      subject: tr("contact.subjectDefault"),
-      body: tr("contact.prompt"),
-    };
+    updateInquiryDraft();
     const greeting =
       language === "es"
         ? "Hola Richard, quisiera conversar sobre un proyecto de datos."
@@ -195,6 +194,9 @@ function buildInquiryMailto(subject, body) {
       `https://wa.me/50576896537?text=${encodeURIComponent(greeting)}`;
     if (dialog.open && activeProject) showProject(activeProject);
     if (persist) {
+      const url = new URL(location.href);
+      url.searchParams.set("lang", language);
+      replaceSharedUrl(url);
       try {
         localStorage.setItem("ra-language-v2", language);
       } catch {
@@ -246,46 +248,70 @@ function buildInquiryMailto(subject, body) {
     lastProjectButton?.focus();
   });
 
-  document.querySelectorAll(".project-filters").forEach((filters) => {
-    const gallery = filters.closest("section");
-    const cards = [...gallery.querySelectorAll(".project-card")];
-    const count = gallery.querySelector("[data-count], #project-count");
-    const expand = gallery.querySelector(".business-expand");
-    const buttons = filters.querySelectorAll("[data-filter]");
-    let category = "all";
-    let expanded = false;
-    function updateGallery() {
-      const matches = cards.filter(card => category === "all" || card.dataset.category === category);
-      const collapsible = expand && category === "all" && matches.length > 3;
-      const visible = collapsible && !expanded ? matches.slice(0, 3) : matches;
-      cards.forEach(card => { card.hidden = !visible.includes(card); });
-      count.textContent = visible.length === matches.length
-        ? String(matches.length) : `${visible.length} / ${matches.length}`;
-      const countLabel = count.nextElementSibling;
-      const noun = expand ? "gallery" : "project";
-      countLabel.dataset.i18n = `${noun}.${matches.length === 1 ? "single" : "count"}`;
-      countLabel.textContent = tr(countLabel.dataset.i18n);
-      buttons.forEach(button => button.setAttribute("aria-pressed", String(button.dataset.filter === category)));
-      if (expand) {
-        expand.hidden = !collapsible;
-        expand.setAttribute("aria-expanded", String(expanded));
-        expand.dataset.i18n = expanded ? "gallery.less" : "gallery.more";
-        expand.textContent = tr(expand.dataset.i18n);
-      }
+  const gallery = document.querySelector("#business-cases");
+  const cards = [...gallery.querySelectorAll(".project-card")];
+  const topic = gallery.querySelector("#project-topic");
+  const collection = gallery.querySelector("#project-collection");
+  const resetFilters = gallery.querySelector("#reset-project-filters");
+  const expand = gallery.querySelector(".business-expand");
+  const count = gallery.querySelector("[data-count]");
+  const selectionSize = 6;
+  let expanded = false;
+
+  function updateGallery() {
+    const filtered = topic.value !== "all" || collection.value !== "all";
+    const matches = cards.filter(card =>
+      (topic.value === "all" || card.dataset.topics.split(" ").includes(topic.value)) &&
+      (collection.value === "all" || card.dataset.collections.split(" ").includes(collection.value))
+    );
+    const visible = filtered || expanded ? matches : matches.slice(0, selectionSize);
+    cards.forEach(card => { card.hidden = !visible.includes(card); });
+    count.textContent = visible.length === matches.length ? String(matches.length) : visible.length + " / " + matches.length;
+    const label = count.nextElementSibling;
+    label.dataset.i18n = matches.length === 1 ? "gallery.single" : "gallery.count";
+    label.textContent = tr(label.dataset.i18n);
+    resetFilters.hidden = !filtered;
+    gallery.querySelector("#no-project-matches").hidden = matches.length > 0;
+    expand.hidden = filtered || matches.length <= selectionSize;
+    expand.setAttribute("aria-expanded", String(expanded));
+    expand.dataset.i18n = expanded ? "gallery.less" : "gallery.more";
+    expand.textContent = tr(expand.dataset.i18n);
+  }
+
+  function saveGalleryFilters() {
+    const url = new URL(location.href);
+    for (const [key, select] of [["topic", topic], ["collection", collection]]) {
+      if (select.value === "all") url.searchParams.delete(key);
+      else url.searchParams.set(key, select.value);
     }
-    buttons.forEach(button => button.addEventListener("click", () => {
-      category = button.dataset.filter;
-      expanded = false;
-      updateGallery();
-    }));
-    expand?.addEventListener("click", () => {
-      expanded = !expanded;
-      updateGallery();
-      if (expanded) cards[3].querySelector(".project-image[href], [data-open-project]").focus();
-      else filters.querySelector('[aria-pressed="true"]').focus();
-    });
+    replaceSharedUrl(url);
+  }
+
+  const shared = new URLSearchParams(location.search);
+  for (const [key, select] of [["topic", topic], ["collection", collection]]) {
+    const value = shared.get(key);
+    if ([...select.options].some(option => option.value === value)) select.value = value;
+  }
+  [topic, collection].forEach(select => select.addEventListener("change", () => {
+    expanded = false;
+    saveGalleryFilters();
     updateGallery();
+  }));
+  resetFilters.addEventListener("click", () => {
+    topic.value = collection.value = "all";
+    expanded = false;
+    saveGalleryFilters();
+    updateGallery();
+    topic.focus();
   });
+  expand.addEventListener("click", () => {
+    expanded = !expanded;
+    updateGallery();
+    if (expanded) cards[selectionSize].querySelector("[href], [data-open-project]").focus();
+    else topic.focus();
+  });
+  gallery.querySelector(".gallery-controls").hidden = false;
+  updateGallery();
 
   document.querySelectorAll("[data-engineering-filter]").forEach((button) => {
     button.addEventListener("click", () => {
@@ -300,28 +326,35 @@ function buildInquiryMailto(subject, body) {
     });
   });
 
-  document.querySelectorAll("[data-service-cta]").forEach((link) =>
-    link.addEventListener("click", () => {
-      const canPrefill =
-        draftSubject.value === draftDefaults.subject ||
-        draftSubject.value === serviceSubject;
-      selectedService = Number(link.dataset.serviceCta);
-      const service = localized(
-        services[Number(link.dataset.serviceCta)].title,
-      );
-      const subject = encodeURIComponent(
-        `${language === "es" ? "Consulta" : "Inquiry"}: ${service}`,
-      );
-      const email = document.querySelector(
-        '.contact-actions a[href^="mailto:"]',
-      );
-      email.href = `mailto:rampiechamorro14@gmail.com?subject=${subject}`;
-      if (canPrefill) {
-        serviceSubject = `${tr("contact.subjectDefault")} — ${service}`;
-        draftSubject.value = serviceSubject;
-      }
-    }),
-  );
+  function revealCase(hash) {
+    const target = document.getElementById(hash.slice(1));
+    if (!target?.matches("details.case-detail, details.service")) return;
+    if (target.closest("[hidden]")) document.querySelector('[data-engineering-filter="all"]').click();
+    target.open = true;
+    return target;
+  }
+  window.addEventListener("hashchange", () => revealCase(location.hash)?.scrollIntoView());
+  revealCase(location.hash)?.scrollIntoView();
+  document.addEventListener("click", event => {
+    const link = event.target.closest("a[href]");
+    if (!link || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+    const key = link.dataset.inquiry;
+    if (!key) {
+      if (link.hash && link.origin === location.origin && link.pathname === location.pathname) revealCase(link.hash);
+      return;
+    }
+    inquiryContext = services.find(s => s.id === key) || engineering.find(c => c.id === key) || projects.find(p => p.id === key);
+    if (!inquiryContext) return;
+    if (dialog.open) {
+      lastProjectButton = null;
+      dialog.close();
+    }
+    updateInquiryDraft();
+    requestAnimationFrame(() => draftSubject.focus({ preventScroll: true }));
+  });
+  draftForm.addEventListener("input", () => {
+    if (inquiryContext) document.querySelector('.contact-actions a[href^="mailto:"]').href = buildInquiryMailto(draftSubject.value, draftMessage.value);
+  });
 
   draftForm.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -336,7 +369,8 @@ function buildInquiryMailto(subject, body) {
   } catch {
     /* Defaults to English. */
   }
-  setLanguage(savedLanguage || "en", false);
+  const sharedLanguage = shared.get("lang");
+  setLanguage(["en", "es"].includes(sharedLanguage) ? sharedLanguage : savedLanguage || "en", false);
 
   // Scroll feedback is visual only; it never stores visitor activity.
   const headerLinks = [...nav.querySelectorAll('a[href^="#"]')]

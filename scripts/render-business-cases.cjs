@@ -9,10 +9,9 @@ const { projects, ui } = context.window.PORTFOLIO;
 const en = value => Array.isArray(value) ? value[1] : value;
 const escape = value => String(value).replaceAll("&", "&amp;").replaceAll('"', "&quot;").replaceAll("<", "&lt;").replaceAll(">", "&gt;");
 const text = key => `data-i18n="${key}">${escape(ui.en[key])}`;
-const cases = projects.filter(project => project.category === "business");
 
 function renderCard(project) {
-  const { id, area, img, url, upcoming } = project;
+  const { id, img, url, upcoming, topics, category, community } = project;
   const field = key => `data-project="${id}" data-field="${key}">${escape(en(project[key]))}`;
   const primary = url ? "project.open" : "gallery.preview";
   const href = escape(url || img);
@@ -23,16 +22,20 @@ function renderCard(project) {
     `<a class="project-image" ${link} aria-label="${title} — ${escape(ui.en[primary])}">${preview}<span class="project-arrow" aria-hidden="true">↗</span></a>`;
   const action = upcoming ? `<span class="demo-status" role="link" aria-disabled="true" ${text("gallery.soon")}</span>` :
     `<a ${link} ${text(primary)}</a>`;
-  return `            <article class="project-card" data-category="${area}">
+  const collections = [category, community && "community", !community && category === "explore" && "labs"].filter(Boolean);
+  const topicTags = topics.map(topic => `<span ${text("gallery." + topic)}</span>`).join(" ");
+  const communityLink = community ? `<a class="community-link" href="${escape(community)}" target="_blank" rel="noopener noreferrer" ${text("project.community")}</a>` : "";
+  return `            <article class="project-card" data-topics="${escape(topics.join(" "))}" data-collections="${escape(collections.join(" "))}">
               ${media}
               <div class="project-info">
                 <p class="eyebrow" ${field("tag")}</p>
                 <h3 ${field("title")}</h3>
                 <p ${field("desc")}</p>
+                <div class="topic-tags">${topicTags}</div>
                 <div class="project-links">
                   ${action}
                   <button type="button" data-open-project="${id}" ${text("project.details")}</button>
-                </div>
+                </div>${communityLink ? "\n                " + communityLink : ""}
               </div>
             </article>`;
 }
@@ -41,8 +44,8 @@ const file = path.join(root, "index.html");
 const html = fs.readFileSync(file, "utf8").replaceAll("\r\n", "\n");
 const markers = /<!-- business cards start -->[\s\S]*?<!-- business cards end -->/;
 if (!markers.test(html)) throw new Error("Business gallery markers missing");
-const updated = html.replace(markers, () => `<!-- business cards start -->\n${cases.map(renderCard).join("\n")}\n            <!-- business cards end -->`)
-  .replace(/(<span data-count>)\d+(<\/span>)/, (_, start, end) => `${start}${cases.length}${end}`);
+const updated = html.replace(markers, () => `<!-- business cards start -->\n${projects.map(renderCard).join("\n")}\n            <!-- business cards end -->`)
+  .replace(/(<span data-count>)\d+(<\/span>)/, (_, start, end) => `${start}${projects.length}${end}`);
 if (process.argv.includes("--check")) {
   if (html !== updated) throw new Error("Run node scripts/render-business-cases.cjs");
 } else {

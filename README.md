@@ -5,14 +5,14 @@ Portafolio bilingüe de consultoría independiente en datos, inteligencia de neg
 ## Archivos
 
 - `index.html`: contenido inicial en inglés, estructura accesible y metadatos.
-- `content.js`: textos en español e inglés, servicios, la galería por área, nueve proyectos de concurso y exploración, y ocho casos de ingeniería / laboratorios.
+- `content.js`: textos en español e inglés, tres servicios de consultoría, un catálogo de 17 proyectos y ocho casos de ingeniería y laboratorios.
 - `theme-init.js`: aplica la preferencia de tema antes de cargar los estilos.
 - `app.js`: idioma, filtros, detalles de proyectos y borrador de correo.
 - `style.css`: identidad visual y estilos responsive.
 - `assets/`: vistas previas, insignias, monograma y tarjeta social.
 - `resume.md`: resumen profesional actualizado con el CV 2026 y el puesto actual indicado por Richard.
 
-No requiere npm, un backend, variables de entorno ni credenciales de Power BI. El sitio no envía ni almacena consultas: los botones abren el correo o WhatsApp del visitante. Comienza en inglés y modo claro. El encabezado permite elegir español y modo oscuro; esas elecciones se guardan únicamente en el navegador. Esta revisión usa preferencias v2 para aplicar el nuevo inicio a visitantes anteriores. Google Fonts es un recurso externo, con fuentes de respaldo del sistema.
+No requiere npm, un backend, variables de entorno ni credenciales de Power BI. El sitio no envía ni almacena consultas: los botones abren el correo o WhatsApp del visitante. Comienza en inglés y modo claro. El encabezado permite elegir español y modo oscuro; el navegador recuerda esas elecciones. El idioma y los filtros también pueden compartirse mediante `?lang=es&topic=finance&collection=community#projects`. Esta revisión usa preferencias v2 para aplicar el nuevo inicio a visitantes anteriores. Google Fonts es un recurso externo, con fuentes de respaldo del sistema.
 
 ## Revisión local
 
@@ -22,13 +22,13 @@ Desde esta carpeta ejecutar `python -m http.server 8765 --bind 127.0.0.1` y abri
 
 En `content.js`, los valores en listas siguen el orden español, inglés. Los enlaces de Microsoft Community están en el campo `community` de cada proyecto. Actualizar también el HTML inicial cuando se cambie texto o enlaces visibles, para mantener la versión sin JavaScript y la vista traducida consistentes.
 
-Las fichas por área usan la categoría `business` y un `area` en `content.js`. Tras editarlas, ejecutar `node scripts/render-business-cases.cjs` para actualizar el HTML en inglés. Con `--check` se verifica la sincronización. Una ficha con captura y sin URL ofrece la captura. El indicador `upcoming` reserva el espacio de una demo pendiente.
+Cada proyecto define sus etiquetas en `topics`. Los filtros de colección usan `category` y el enlace `community`. El orden del catálogo determina la selección inicial. Tras editarlas, ejecutar `node scripts/render-business-cases.cjs` para actualizar el HTML en inglés. Con `--check` se verifica la sincronización. Una ficha con captura y sin URL ofrece la captura. El indicador `upcoming` reserva el espacio de una demo pendiente.
 
 Las rutas de recursos son relativas para funcionar bajo `/Web-Portfolio/`. Los reportes se abren en otra pestaña; no se precargan iframes de Power BI.
 
 ## Publicación
 
-El sitio se publica en la rama `main` de este repositorio y se despliega con la configuración existente de GitHub Pages. La revisión incluye temas navy blue claro y oscuro, ocho casos de ingeniería y dos galerías de proyectos.
+El sitio se publica en la rama `main` de este repositorio y se despliega con la configuración existente de GitHub Pages. La revisión incluye temas navy blue claro y oscuro, ocho casos de ingeniería y una galería con filtros combinables por tema y colección.
 
 Dominio principal: https://richardampie.com/. GitHub Pages conserva la publicación desde `main`, con `CNAME` en la raíz y HTTPS obligatorio. Hostinger administra el DNS: cuatro registros A de GitHub Pages para `@`, CNAME `www` hacia `r1chardds.github.io` y TXT de verificación de propiedad. `www` redirige al dominio principal. Los metadatos, la URL canónica y JSON-LD usan el dominio propio. No se creó un Site en ChatGPT.
 

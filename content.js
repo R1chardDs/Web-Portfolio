@@ -2,23 +2,23 @@
 window.PORTFOLIO = {
   ui: {
     es: {
-      "gallery.eyebrow": "Casos de negocio",
-      "gallery.title": "¿Qué decisión tiene que tomar tu equipo?",
-      "gallery.body": "Elegí un área para ver qué pregunta hizo el equipo, cómo construí el análisis y qué decisión permiten tomar los datos.",
+      "gallery.eyebrow": "Portafolio",
+      "gallery.title": "Proyectos por tema",
+      "gallery.body": "Explorá los casos de negocio, los reportes de la comunidad y los laboratorios. Usá las etiquetas para encontrar un problema parecido al de tu equipo.",
       "gallery.craft": "Concursos y exploraciones ↓",
-      "gallery.all": "Todas las áreas",
+      "gallery.all": "Todos los temas",
       "gallery.strategy": "Dirección",
       "gallery.finance": "Finanzas",
       "gallery.commercial": "Comercial",
-      "gallery.operations": "Experiencia del cliente",
+      "gallery.operations": "Operaciones y experiencia del cliente",
       "gallery.logistics": "Logística",
       "gallery.service": "Mesa de servicio",
-      "gallery.count": "casos",
-      "gallery.single": "caso",
+      "gallery.count": "proyectos",
+      "gallery.single": "proyecto",
       "project.single": "proyecto público",
       "gallery.filter": "Filtrar por área de negocio",
-      "gallery.more": "Ver todos los casos",
-      "gallery.less": "Mostrar selección",
+      "gallery.more": "Ver todos los proyectos",
+      "gallery.less": "Volver a la selección",
       "gallery.preview": "Ver captura ↗",
       "gallery.soon": "Demo próximamente",
       "gallery.source": "Caso de portafolio con datos ficticios del reto Pillow & Key.",
@@ -29,6 +29,22 @@ window.PORTFOLIO = {
       "practice.example": "En Group Performance y Finance & Cost, el margen del grupo en 2025 es 32,2 %. Al filtrar Pebble & Pine, la misma definición da 28,2 %. Calculo la utilidad total sobre los ingresos totales del conjunto seleccionado y consolido los costos de distribución por hotel y mes antes de sumarlos.",
       "practice.takeaway": "En una auditoría, empiezo por localizar las copias de la tabla de ventas, comparar sus reglas y acordar con Finanzas quién mantiene la definición compartida. Así, una corrección tiene un lugar claro y se puede validar en cada reporte que la usa.",
       "practice.origin": "Ver el caso original de ATL 2027 ↗",
+      "case.inquire": "Consultar un problema parecido",
+      "contact.contextGreeting": "Hola Richard,",
+      "contact.contextPrompt": "Proceso y fuentes actuales:\nQué queremos mejorar:\nPlazo aproximado:",
+      "contact.related": "Me interesa aplicar un enfoque parecido en mi equipo.",
+      "gallery.topic": "Tema",
+      "gallery.collection": "Colección",
+      "gallery.allCollections": "Todas las colecciones",
+      "gallery.business": "Casos de negocio",
+      "gallery.community": "Comunidad Microsoft",
+      "gallery.labs": "Laboratorios",
+      "gallery.story": "Narrativa de datos",
+      "gallery.sports": "Deportes",
+      "gallery.environment": "Ciudades y medioambiente",
+      "gallery.engineering": "Ingeniería de datos",
+      "gallery.empty": "Ningún proyecto coincide con esas etiquetas.",
+      "gallery.reset": "Quitar filtros",
       skip: "Ir al contenido",
       "nav.services": "Servicios",
       "nav.impact": "Resultados",
@@ -39,7 +55,7 @@ window.PORTFOLIO = {
       "hero.eyebrow": "FINANZAS, DATOS E INTELIGENCIA DE NEGOCIO",
       "hero.title": "Menos trabajo manual.\nMás capacidad\npara decidir.",
       "hero.body":
-        "Con cinco años de experiencia en finanzas, ingeniería de datos e inteligencia de negocio, ayudo a empresas a conectar sus datos con las decisiones que importan. Como líder de BI y desarrollo de datos, aporto criterio financiero y dirección técnica para construir plataformas confiables, análisis con sentido de negocio y automatizaciones que le devuelvan tiempo al equipo.",
+        "Llevo cinco años trabajando entre finanzas, ingeniería de datos e inteligencia de negocio. Como líder de BI y desarrollo de datos, ayudo a Finanzas y Operaciones a confiar en sus cifras. Migro almacenes de datos, automatizo cargas y aplico IA donde le ahorra trabajo al equipo.",
       "hero.primary": "Hablemos de tu proyecto",
       "hero.secondary": "Explorar mi trabajo",
       "hero.signature":
@@ -68,9 +84,9 @@ window.PORTFOLIO = {
         "Resultados de experiencia profesional documentados en mi CV. Son referencias de proyectos específicos; cada intervención parte de su propio diagnóstico.",
       "services.tag": "02 / CÓMO PUEDO AYUDARTE",
       "services.title":
-        "Resolver el cuello de botella.\nDejar capacidad instalada.",
+        "¿Qué necesita hoy tu plataforma de datos?",
       "services.body":
-        "Intervenciones con un alcance definido, entregables claros y transferencia de conocimiento a tu equipo.",
+        "Podemos revisar por qué falla una carga, migrar tu almacén de datos a Fabric o trabajar mes a mes con tu equipo. Acordamos el alcance y cómo comprobar el resultado antes de empezar.",
       "services.deliver": "Qué recibís",
       "services.cta": "Consultar por este servicio",
       "method.tag": "04 / MI FORMA DE TRABAJAR",
@@ -172,9 +188,9 @@ window.PORTFOLIO = {
       "theme.light": "Cambiar a modo claro",
       "theme.dark": "Cambiar a modo oscuro",
       "engineering.tag": "03 / INGENIERÍA Y AUTOMATIZACIÓN",
-      "engineering.title": "La ingeniería\ndetrás del análisis.",
+      "engineering.title": "Del sistema de origen al reporte de negocio",
       "engineering.body":
-        "Proyectos reales, automatización práctica y datos pensados para la operación. Abrí un caso para conocer el enfoque.",
+        "Estos casos muestran cómo migré cargas de SSIS a Fabric, automaticé la ingesta y reduje el tiempo que pasa entre una transacción y el reporte que la usa. Podés abrir cada caso para ver el método y el resultado.",
       "engineering.all": "Todos",
       "engineering.corporate": "Experiencia profesional",
       "engineering.labs": "Laboratorios",
@@ -205,23 +221,23 @@ window.PORTFOLIO = {
         "Se abrirá tu aplicación de correo con este borrador para que lo revisés y enviés.",
     },
     en: {
-      "gallery.eyebrow": "Business cases",
-      "gallery.title": "What decision is your team facing?",
-      "gallery.body": "Choose a business area to see the question, how I built the analysis and the decision the numbers support.",
+      "gallery.eyebrow": "Portfolio",
+      "gallery.title": "Explore projects by topic",
+      "gallery.body": "Explore business cases, community reports and independent work. Use the tags to find a question your team is working on.",
       "gallery.craft": "Competitions and explorations ↓",
-      "gallery.all": "All areas",
+      "gallery.all": "All topics",
       "gallery.strategy": "Strategy",
       "gallery.finance": "Finance",
       "gallery.commercial": "Commercial",
-      "gallery.operations": "Customer experience",
+      "gallery.operations": "Operations & customer experience",
       "gallery.logistics": "Logistics",
       "gallery.service": "Service desk",
-      "gallery.count": "cases",
-      "gallery.single": "case",
+      "gallery.count": "projects",
+      "gallery.single": "project",
       "project.single": "public project",
       "gallery.filter": "Filter by business area",
-      "gallery.more": "Show all cases",
-      "gallery.less": "Show selected cases",
+      "gallery.more": "Show all projects",
+      "gallery.less": "Show selected projects",
       "gallery.preview": "View screenshot ↗",
       "gallery.soon": "Demo coming soon",
       "gallery.source": "Portfolio case using fictional data from the Pillow & Key challenge.",
@@ -232,6 +248,22 @@ window.PORTFOLIO = {
       "practice.example": "Group Performance and Finance & Cost both show a 32.2% group margin for 2025. Filter to Pebble & Pine and the same definition returns 28.2%. I divide total operating profit by total revenue for the selected hotels and aggregate distribution costs by hotel and month before adding them.",
       "practice.takeaway": "In an audit, I start by locating copies of the sales table, comparing their rules and agreeing with Finance on who owns the shared definition. That gives each correction a clear home and lets the team validate it across the reports that use it.",
       "practice.origin": "See the original ATL 2027 case ↗",
+      "case.inquire": "Discuss a similar challenge",
+      "contact.contextGreeting": "Hi Richard,",
+      "contact.contextPrompt": "Current process and data sources:\nWhat we want to improve:\nTarget timeline:",
+      "contact.related": "I’d like to discuss a similar approach for my team.",
+      "gallery.topic": "Topic",
+      "gallery.collection": "Collection",
+      "gallery.allCollections": "All collections",
+      "gallery.business": "Business cases",
+      "gallery.community": "Microsoft Community",
+      "gallery.labs": "Labs",
+      "gallery.story": "Data storytelling",
+      "gallery.sports": "Sports",
+      "gallery.environment": "Cities & environment",
+      "gallery.engineering": "Data engineering",
+      "gallery.empty": "No projects match those tags.",
+      "gallery.reset": "Clear filters",
       skip: "Skip to content",
       "nav.services": "Services",
       "nav.impact": "Impact",
@@ -242,7 +274,7 @@ window.PORTFOLIO = {
       "hero.eyebrow": "FINANCE, DATA & BUSINESS INTELLIGENCE",
       "hero.title": "Less manual work.\nMore room\nto make decisions.",
       "hero.body":
-        "With five years of experience across finance, data engineering and business intelligence, I help businesses connect their data to the decisions that matter. As a BI and Data Development leader, I bring financial perspective and technical direction to build reliable data platforms, meaningful analytics and automation that frees teams to focus on the business.",
+        "I bring five years of experience across finance, data engineering and business intelligence. As a BI and Data Development leader, I help finance and operations teams trust their numbers. I migrate data warehouses, automate pipelines and apply AI where it saves the team time.",
       "hero.primary": "Let’s discuss your project",
       "hero.secondary": "Explore my work",
       "hero.signature": "Richard Ampié · Finance, engineering & BI leadership",
@@ -269,9 +301,9 @@ window.PORTFOLIO = {
       "impact.note":
         "Career outcomes documented in my CV. These refer to specific projects; each engagement starts with its own assessment.",
       "services.tag": "02 / HOW I CAN HELP",
-      "services.title": "Resolve the bottleneck.\nBuild lasting capability.",
+      "services.title": "What does your data platform need today?",
       "services.body":
-        "Focused engagements with a defined scope, clear deliverables and knowledge transfer to your team.",
+        "We can investigate a failing load, migrate your data warehouse to Fabric or work with your team each month. We agree on the scope and how to verify the outcome before we start.",
       "services.deliver": "What you receive",
       "services.cta": "Discuss this service",
       "method.tag": "04 / HOW I WORK",
@@ -369,9 +401,9 @@ window.PORTFOLIO = {
       "theme.light": "Switch to light mode",
       "theme.dark": "Switch to dark mode",
       "engineering.tag": "03 / ENGINEERING & AUTOMATION",
-      "engineering.title": "The engineering\nbehind the insight.",
+      "engineering.title": "From source systems to business reports",
       "engineering.body":
-        "Real projects, practical automation and data foundations built to support the business. Open a case to explore the approach.",
+        "These cases show how I migrated workloads from SSIS to Fabric, automated ingestion and shortened the wait between a transaction and the report that uses it. Open a case to see the approach and outcome.",
       "engineering.all": "All",
       "engineering.corporate": "Professional experience",
       "engineering.labs": "Labs",
@@ -404,116 +436,147 @@ window.PORTFOLIO = {
   },
   services: [
     {
-      n: "01",
-      title: [
-        "Optimización de Power BI y Fabric",
-        "Power BI & Fabric optimization",
+      "id": "bi-diagnostic",
+      "n": "01",
+      "title": [
+        "Diagnóstico de BI y rendimiento de datos",
+        "BI reliability and performance audit"
       ],
-      intro: [
-        "Cuando los reportes tardan, las cargas fallan o la capacidad cuesta demasiado.",
-        "When reports are slow, loads fail or capacity costs too much.",
+      "intro": [
+        "Si dos reportes dan márgenes distintos o una carga termina después del cierre, sigo una cifra desde el reporte hasta el origen para encontrar la causa.",
+        "If two reports disagree on margin or a refresh misses the close, I trace one number from the report to its source to find the cause."
       ],
-      items: [
+      "items": [
         [
-          "Diagnóstico de modelos, DAX, SQL y cargas.",
-          "Assessment of models, DAX, SQL and workloads.",
+          "Inventario de las fuentes, pipelines y modelos que alimentan el proceso.",
+          "A map of the sources, pipelines and models behind the process."
         ],
         [
-          "Plan priorizado de mejoras de rendimiento y consumo.",
-          "Prioritized plan to improve performance and resource usage.",
+          "Medición de tiempos, consumo de Fabric y diferencias con la fuente.",
+          "A baseline for load times, Fabric usage and discrepancies against source totals."
         ],
         [
-          "Implementación y comparación de resultados.",
-          "Implementation and outcome comparison.",
-        ],
+          "Correcciones priorizadas y una prueba acordada para verificar cada mejora.",
+          "Prioritized fixes with an agreed test for each improvement."
+        ]
       ],
-      tech: "Power BI · DAX · SQL · Microsoft Fabric",
+      "tech": "Microsoft Fabric · SQL · DAX · Power BI",
+      "inquiry": [
+        "Quiero identificar por qué los datos llegan tarde o las cifras de mis reportes difieren.",
+        "I’d like to understand why our data arrives late or why our reports disagree."
+      ],
+      "proof": [
+        {
+          "id": "fabric-capacity",
+          "label": [
+            "Caso profesional · Optimización de capacidad Fabric",
+            "Professional case · Tuning Fabric capacity"
+          ]
+        }
+      ]
     },
     {
-      n: "02",
-      title: [
-        "Automatización e IA aplicada a BI",
-        "Automation & applied AI for BI",
+      "id": "fabric-data-engineering",
+      "n": "02",
+      "title": [
+        "Ingeniería de datos y migración de DWH a Fabric",
+        "Data engineering and warehouse migration to Fabric"
       ],
-      intro: [
-        "Cuando tu equipo repite tareas que ya deberían estar resueltas.",
-        "When your team repeats tasks that should already be handled.",
+      "intro": [
+        "Si el cierre depende de archivos que alguien consolida a mano, automatizo ese flujo. Si además necesitás migrar el DWH a Fabric, traslado las cargas por etapas y concilio los totales con Finanzas antes de cambiar la fuente de los reportes.",
+        "If the close depends on someone combining files by hand, I can automate that workflow. When the warehouse also needs to move to Fabric, I migrate loads in stages and reconcile totals with finance before switching the reports to the new source."
       ],
-      items: [
+      "items": [
         [
-          "Mapeo de tareas y oportunidades de automatización.",
-          "Task mapping and automation opportunities.",
+          "Plan de migración del almacén de datos (DWH), con dependencias, orden de transición y criterios de aceptación.",
+          "A data warehouse migration plan with dependencies, cutover sequence and acceptance criteria."
         ],
         [
-          "Flujos de datos y desarrollo asistido por agentes.",
-          "Data workflows and agent-assisted development.",
+          "Pipelines de ingesta incremental con controles de calidad, registro de fallos e instrucciones de recuperación.",
+          "Incremental ingestion pipelines with data quality checks, failure logs and recovery instructions."
         ],
         [
-          "Guías reutilizables, validaciones y documentación.",
-          "Reusable guides, validation and documentation.",
-        ],
+          "Tablas conciliadas y un modelo semántico compartido para automatizar reportes o migrarlos de Tableau y Excel a Power BI.",
+          "Reconciled tables and a shared semantic model for automating reports or migrating them from Tableau and Excel to Power BI."
+        ]
       ],
-      tech: "Python · Power Automate · Codex · Claude Code",
+      "tech": "SSIS · SQL Server · Microsoft Fabric · PySpark · Power BI",
+      "inquiry": [
+        "Quiero revisar cómo migrar nuestro DWH o automatizar un pipeline sin interrumpir los reportes que ya usa el equipo.",
+        "I’d like to discuss migrating our warehouse or automating a pipeline while keeping the reports our team relies on available."
+      ],
+      "proof": [
+        {
+          "id": "dwh-migration",
+          "label": [
+            "Migración con SSIS y Fabric · Ingesta de 3 h a 1 h",
+            "SSIS to Fabric migration · Ingestion from 3 hours to 1"
+          ]
+        },
+        {
+          "id": "f1-medallion",
+          "label": [
+            "Laboratorio público · Pipeline de Fórmula 1 en Fabric",
+            "Public lab · Formula 1 pipeline in Fabric"
+          ]
+        },
+        {
+          "id": "finance-automation",
+          "label": [
+            "Automatización financiera · Cierre de 5 a 2,5 días",
+            "Finance automation · Month-end close from 5 to 2.5 days"
+          ]
+        }
+      ]
     },
     {
-      n: "03",
-      title: [
-        "Migración y modernización de BI",
-        "BI migration & modernization",
+      "id": "monthly-data-support",
+      "n": "03",
+      "title": [
+        "Acompañamiento mensual de BI e ingeniería de datos",
+        "Monthly BI and data engineering support"
       ],
-      intro: [
-        "Cuando necesitás evolucionar la plataforma sin perder la lógica del negocio.",
-        "When your platform needs to evolve while retaining business logic.",
+      "intro": [
+        "Cuando la plataforma ya está en producción, trabajo con tu equipo sobre las cargas que fallan, los cambios que esperan despliegue y los procesos que siguen siendo manuales.",
+        "Once the platform is in production, I work with your team on failing loads, changes awaiting release and processes that still need manual intervention."
       ],
-      items: [
+      "items": [
         [
-          "Inventario, dependencias y reglas de negocio.",
-          "Inventory, dependencies and business rules.",
+          "Una cartera de mejoras priorizada con el equipo y un alcance acordado para cada mes.",
+          "A prioritized backlog and a scope agreed with your team each month."
         ],
         [
-          "Migración de Tableau o Excel a Power BI.",
-          "Tableau or Excel migration to Power BI.",
+          "Revisión de ejecuciones, calidad de datos y consumo de capacidad para decidir qué ajustar.",
+          "A review of pipeline runs, data quality and capacity usage to decide what to tune."
         ],
         [
-          "Modelos gobernados, control de versiones y entrega al equipo.",
-          "Governed models, version control and team handover.",
-        ],
+          "Cambios probados, automatizaciones documentadas y una entrega que el equipo pueda operar.",
+          "Tested releases, documented automations and a handover your team can operate."
+        ]
       ],
-      tech: "Tableau → Power BI · PBIP / PBIR · Azure DevOps",
-    },
-    {
-      n: "04",
-      title: [
-        "Ingeniería de datos y reporting ejecutivo",
-        "Data engineering & executive reporting",
+      "tech": "Microsoft Fabric · Azure DevOps · Python · Power Automate",
+      "inquiry": [
+        "Me interesa acordar un plan mensual para mantener nuestros pipelines y modelos, y priorizar mejoras con mi equipo.",
+        "I’d like to discuss monthly support for our pipelines and models and agree on improvement priorities with my team."
       ],
-      intro: [
-        "Cuando las decisiones dependen de datos dispersos o indicadores inconsistentes.",
-        "When decisions depend on scattered data or inconsistent metrics.",
-      ],
-      items: [
-        [
-          "Integración de fuentes y definición de indicadores.",
-          "Source integration and KPI definition.",
-        ],
-        [
-          "Pipelines, lakehouse y modelos semánticos.",
-          "Pipelines, lakehouse and semantic models.",
-        ],
-        [
-          "Reportes orientados a decisiones y transferencia de conocimiento.",
-          "Decision-oriented reports and knowledge transfer.",
-        ],
-      ],
-      tech: "Fabric · SQL Server · PySpark · Power BI",
-    },
+      "proof": [
+        {
+          "id": "bi-governance",
+          "label": [
+            "Caso profesional · Cómo pasaban los cambios de desarrollo a producción",
+            "Professional case · How changes moved from development to production"
+          ]
+        }
+      ]
+    }
   ],
   projects: [
     {
       id: "group-performance",
+      topics: ["strategy", "finance"],
+      inquiry: ["Quiero que dirección y Finanzas usen la misma definición de margen para comparar unidades de negocio.", "I’d like finance and leadership to use the same definition of margin when comparing business units."],
       category: "business",
       collection: "pillow-key",
-      area: "strategy",
       title: [
         "Desempeño del grupo",
         "Group Performance"
@@ -542,289 +605,8 @@ window.PORTFOLIO = {
       url: null
     },
     {
-      id: "capital-allocation",
-      category: "business",
-      collection: "pillow-key",
-      area: "finance",
-      title: [
-        "Asignación de capital",
-        "Capital Allocation"
-      ],
-      tag: [
-        "Comité de inversión · Pillow & Key",
-        "Investment committee · Pillow & Key"
-      ],
-      desc: [
-        "Con USD 550 millones para solicitudes por 924 millones, ¿qué proyectos conviene financiar juntos?",
-        "With $550M available for $924M in requests, which projects should compete for a common budget?"
-      ],
-      question: [
-        "¿Cuándo conviene compartir el presupuesto entre marcas y qué proyectos resisten un cambio de escenario?",
-        "When does pooling capital across brands pay off, and which projects survive a change in assumptions?"
-      ],
-      approach: [
-        "Comparé presupuestos separados y compartidos en tres escenarios. Calculé la asignación óptima y comprobé la selección con un segundo optimizador independiente.",
-        "I compared separate and pooled budgets under three scenarios, solved for the optimal funding mix and checked the selection with an independent solver."
-      ],
-      value: [
-        "En el escenario esperado, compartir el presupuesto añade USD 3,4 millones de utilidad anual a plena operación. De 40 proyectos, 22 reciben fondos en los tres escenarios. El cálculo precede la puesta en marcha y las interrupciones por obras.",
-        "In the expected scenario, pooling adds $3.4M in annual profit at maturity. Of 40 projects, 22 receive funding in all three scenarios. The estimate precedes ramp-up and disruption during construction."
-      ],
-      img: "assets/capital-allocation.png",
-      url: "https://app.fabric.microsoft.com/view?r=eyJrIjoiNTdjYmRlMGMtZWQ5YS00ZGUwLWE5YTgtNzMzN2VmNzYzZTk2IiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9"
-    },
-    {
-      id: "guest-experience",
-      category: "business",
-      collection: "pillow-key",
-      area: "operations",
-      title: [
-        "Experiencia del huésped",
-        "Guest Experience"
-      ],
-      tag: [
-        "Operaciones hoteleras · Pillow & Key",
-        "Hotel operations · Pillow & Key"
-      ],
-      desc: [
-        "Cuatro años de caída del NPS. ¿Qué hoteles y qué quejas merecen atención primero?",
-        "Guest NPS has fallen four years in a row. Which hotels and complaints warrant attention first?"
-      ],
-      question: [
-        "¿Dónde debería intervenir el equipo de operaciones para mejorar la experiencia del huésped?",
-        "Where should the operations team investigate declining guest satisfaction?"
-      ],
-      approach: [
-        "Comparé el NPS por marca y la frecuencia de quejas por cada 1.000 noches ocupadas. Así, un hotel grande y uno pequeño se pueden evaluar en condiciones comparables.",
-        "I compared guest NPS across brands and complaints per 1,000 occupied room nights so that small and large hotels could be assessed on the same basis."
-      ],
-      value: [
-        "El NPS del grupo bajó de 23,3 a 17,8. El estado de las habitaciones concentró más quejas y registró el mayor aumento desde 2021. La regla de seguimiento identifica 48 hoteles para revisión.",
-        "Group NPS fell from 23.3 to 17.8. Room condition drew the most complaints and the largest increase since 2021. The watch rule identifies 48 hotels for review."
-      ],
-      img: "assets/guest-experience.png",
-      url: "https://app.fabric.microsoft.com/view?r=eyJrIjoiZTgwNjcwZTctYTkxOC00NDA2LTg0ZDItY2UzOWZiYTAxM2ZiIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9"
-    },
-    {
-      id: "commercial-revenue",
-      category: "business",
-      collection: "pillow-key",
-      area: "commercial",
-      title: [
-        "Desempeño comercial e ingresos",
-        "Commercial & Revenue"
-      ],
-      tag: [
-        "Gestión de ingresos · Pillow & Key",
-        "Revenue management · Pillow & Key"
-      ],
-      desc: [
-        "El ingreso por habitación disponible llegó a USD 183. ¿Cuánto crecimiento provino de la tarifa y cuánto de la ocupación?",
-        "Revenue per available room reached $183. How much growth came from pricing and how much from occupancy?"
-      ],
-      question: [
-        "¿Qué combinación de tarifas, ocupación y canales mejora el ingreso por noche?",
-        "Which mix of pricing, occupancy and distribution channels improves revenue per night?"
-      ],
-      approach: [
-        "Separé el crecimiento del ingreso por habitación disponible en efectos de tarifa y ocupación que suman el cambio total. Estimé el costo del cambio de canal por marca para captar diferencias que el promedio oculta.",
-        "I split growth in revenue per available room into rate and occupancy effects that reconcile to the total change. I estimated channel shifts by brand because the group average hides opposing movements."
-      ],
-      value: [
-        "La tarifa explica el 24 % del crecimiento del RevPAR. El canal web deja USD 280 netos por noche, frente a USD 204 en agencias en línea. La comparación ayuda a priorizar dónde revisar la distribución.",
-        "Rate accounts for 24% of RevPAR growth. The website nets $280 per room night versus $204 through online agencies, giving revenue managers a basis for reviewing their channel mix."
-      ],
-      img: "assets/commercial-revenue.png",
-      url: "https://app.fabric.microsoft.com/view?r=eyJrIjoiYzM4YWM4NWUtNmY2ZC00MjEyLWIxOWMtOTBkOWEyZWVkMDdiIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9"
-    },
-    {
-      id: "finance-cost",
-      category: "business",
-      collection: "pillow-key",
-      area: "finance",
-      title: [
-        "Finanzas y costos",
-        "Finance & Cost"
-      ],
-      tag: [
-        "Planeación financiera · Pillow & Key",
-        "FP&A · Pillow & Key"
-      ],
-      desc: [
-        "49 de 165 hoteles están por debajo del margen del grupo. ¿Dónde profundizar durante la revisión financiera?",
-        "49 of 165 hotels fall below the group margin. Where should FP&A focus its review?"
-      ],
-      question: [
-        "¿Qué costos explican la utilidad actual y qué riesgo aparece al proyectar el margen?",
-        "Which costs explain current profit, and what margin risk emerges in the outlook?"
-      ],
-      approach: [
-        "Una cascada reconcilia ingresos, costos y utilidad del ejercicio. Contrasté el escenario de continuidad con un cálculo previo de una marca y mostré los años proyectados por separado.",
-        "A waterfall reconciles revenue, costs and operating profit for the selected year. I cross-checked the baseline scenario against an earlier brand model and distinguished projected years from historical results."
-      ],
-      value: [
-        "El margen observado en 2025 es del 32,2 %. Bajo los supuestos de continuidad, baja al 29,0 % en 2032. La brecha anual de USD 44 millones frente al margen del grupo sirve para seleccionar hoteles que conviene investigar.",
-        "The observed 2025 margin is 32.2%. Under the baseline assumptions it reaches 29.0% in 2032. The $44M annual gap to group margin helps FP&A select hotels for investigation."
-      ],
-      img: "assets/finance-cost.png",
-      url: "https://app.fabric.microsoft.com/view?r=eyJrIjoiM2E3NGMyOWQtZGUxNS00NGExLThhY2ItY2NiODI1NzgxOTNlIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9"
-    },
-    {
-      id: "brand-performance",
-      category: "business",
-      collection: "pillow-key",
-      area: "strategy",
-      title: [
-        "Pebble & Pine · Desempeño de marca",
-        "Pebble & Pine Brand Performance"
-      ],
-      tag: [
-        "Dirección de marca · Pebble & Pine",
-        "Brand management · Pebble & Pine"
-      ],
-      desc: [
-        "Una marca con menos margen que el grupo tiene USD 145 millones para invertir. ¿Qué supuestos sostienen el plan?",
-        "A brand earning less margin than the group has $145M to invest. Which assumptions support the plan?"
-      ],
-      question: [
-        "¿Qué inversiones merecen prioridad en los 45 resorts de Pebble & Pine?",
-        "Which investments deserve priority across Pebble & Pine’s 45 resorts?"
-      ],
-      approach: [
-        "Limité la demanda base a las habitaciones físicas de cada hotel e incorporé la puesta en marcha gradual y la pérdida de ingresos durante obras. Documenté la fuente, fórmula y límite de cada estimación para evitar duplicar impactos.",
-        "I capped the baseline at each hotel’s physical room count and modeled project ramp-up and disruption during works. Each estimate documents its source, formula and limits, with checks against double counting."
-      ],
-      value: [
-        "La marca opera con un margen del 28,2 % frente al 32,2 % del grupo. Su NPS cayó de 26,1 a 20,3 y la cartera solicita USD 245,3 millones. La dirección puede contrastar las inversiones con un presupuesto de USD 145 millones.",
-        "The brand earns a 28.2% margin against the group’s 32.2%. NPS fell from 26.1 to 20.3, and the investment catalogue asks $245.3M. Brand leaders can weigh the proposals against a $145M budget."
-      ],
-      img: "assets/brand-performance.png",
-      url: "https://app.fabric.microsoft.com/view?r=eyJrIjoiYzk1OWE4ZmItMTNjMy00NWMxLWJmNmMtMGI4YzgyYTk4NDk4IiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9"
-    },
-    {
-      id: "logistics-delivery",
-      category: "business",
-      area: "logistics",
-      title: [
-        "Logística y desempeño de entregas",
-        "Logistics & Delivery Performance"
-      ],
-      tag: [
-        "Cadena de suministro · Olist",
-        "Supply chain · Olist"
-      ],
-      desc: [
-        "¿Dónde se atrasan los pedidos y qué compromisos de entrega merecen una revisión?",
-        "Where do orders fall behind and which delivery commitments need attention?"
-      ],
-      question: [
-        "¿En qué etapas del pedido conviene intervenir para mejorar la confiabilidad de las entregas?",
-        "Where in the order lifecycle should a logistics team investigate unreliable deliveries?"
-      ],
-      approach: [
-        "El análisis recorre pedidos, tiempos de entrega y cumplimiento de compromisos con datos históricos de comercio electrónico de Olist.",
-        "The analysis follows order fulfillment, delivery times and service commitments using historical e-commerce data from Olist."
-      ],
-      value: [
-        "Permite priorizar cuellos de botella y evaluar cómo la puntualidad de las entregas se relaciona con la experiencia del cliente.",
-        "The report supports prioritizing bottlenecks and examining how delivery reliability relates to customer experience."
-      ],
-      img: "assets/logistics-delivery.webp",
-      url: null,
-      upcoming: true
-    },
-    {
-      id: "service-desk",
-      category: "business",
-      area: "service",
-      title: [
-        "Mesa de servicio y eficiencia operativa",
-        "Service Desk & Operational Efficiency"
-      ],
-      tag: [
-        "Operaciones de TI · Mesa de servicio",
-        "IT operations · Service desk"
-      ],
-      desc: [
-        "¿Dónde se acumulan los tickets y cómo distribuir la carga para mejorar la atención?",
-        "Where do tickets accumulate, and how should the team distribute its workload?"
-      ],
-      question: [
-        "¿Qué parte del ciclo de atención requiere más capacidad o una revisión del proceso?",
-        "Which stage of ticket handling needs more capacity or a change in process?"
-      ],
-      approach: [
-        "El análisis usa datos históricos de mesa de ayuda para estudiar demanda, primera respuesta, resolución y distribución de trabajo a lo largo del ciclo del ticket.",
-        "The analysis uses historical help desk data to examine demand, first response, resolution and workload distribution across the ticket lifecycle."
-      ],
-      value: [
-        "Ayuda a priorizar mejoras de servicio y a decidir dónde reasignar recursos según la demanda y los tiempos de atención.",
-        "Service managers can prioritize improvements and decide where to reallocate resources based on demand and handling times."
-      ],
-      img: "assets/service-desk.webp",
-      url: null,
-      upcoming: true
-    },
-    {
-      id: "movies",
-      title: "What Makes a Movie Successful?",
-      img: "assets/project-movies.png",
-      url: "https://app.fabric.microsoft.com/view?r=eyJrIjoiZWEzM2E0NDEtZGY5NC00YzdmLWE2MWEtMWFlNGI3OWVhZDNlIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9",
-      tag: [
-        "WORLD CHAMPS BCN 2026 · RONDA 3",
-        "WORLD CHAMPS BCN 2026 · ROUND 3",
-      ],
-      desc: [
-        "Una historia en tres actos sobre lo que el dinero compra en el cine: audiencia, retorno y valoración.",
-        "A three-act story about what money buys in film: audience, return and ratings.",
-      ],
-      question: [
-        "¿Un mayor presupuesto compra una película más exitosa?",
-        "Does a bigger budget buy a more successful movie?",
-      ],
-      approach: [
-        "Tres definiciones de éxito, comparadas dentro del año de estreno de cada película. El recorrido explora presupuesto, secuelas, género y calendario; reúne 7,160 películas con cifras verificadas y encuentra 100 que alcanzan las tres coronas.",
-        "Three definitions of success, compared within each film’s release year. The story explores budgets, sequels, genres and release calendars; it brings together 7,160 films with verified figures and identifies 100 that achieve all three crowns.",
-      ],
-      value: [
-        "Definición de métricas, comparaciones con contexto y una experiencia narrativa que conecta la perspectiva del público con la del negocio.",
-        "Metric definition, contextual comparisons and a narrative experience connecting audience and business perspectives.",
-      ],
-      category: "champs",
-      community:
-        "https://community.fabric.microsoft.com/discussions/pbi_contestsgallery/richard-ampie---world-champs-bcn-26---round-3/5355053",
-    },
-    {
-      id: "fears",
-      title: "The life we fear never living",
-      img: "assets/project-fears.png",
-      url: "https://app.fabric.microsoft.com/view?r=eyJrIjoiOGEwMjUzNWItNzM1OC00YmE4LWE3ZDUtNTQyMWIxNzI0YTc1IiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9",
-      tag: [
-        "HALLOWEEN CONTEST · HISTORIA DE DATOS",
-        "HALLOWEEN CONTEST · DATA STORY",
-      ],
-      desc: [
-        "Una página sobre incertidumbre, potencial y los miedos que cambian al crecer.",
-        "A one-page story about uncertainty, potential and the fears that change as we grow.",
-      ],
-      question: [
-        "¿Cómo cambian nuestros miedos entre la infancia y la adultez?",
-        "How do our fears change between childhood and adulthood?",
-      ],
-      approach: [
-        "Una historia basada en las respuestas de las mismas 105 personas: del patrón compartido a los miedos individuales. Cierra conectando los datos con una reflexión sobre el sentido, la elección y el tiempo, a través del nihilismo existencial y el estoicismo.",
-        "A story based on responses from the same 105 people, moving from a shared pattern to individual fears. It closes by connecting the data with a reflection on meaning, choice and time through existential nihilism and Stoicism.",
-      ],
-      value: [
-        "Storytelling en una página, diseño editorial y comunicación cuidadosa de cambios en puntos porcentuales.",
-        "One-page storytelling, editorial design and careful communication of percentage-point changes.",
-      ],
-      category: "explore",
-      community:
-        "https://community.fabric.microsoft.com/discussions/pbi_contestsgallery/the-life-we-fear-never-living/5376385",
-    },
-    {
       id: "pebble-pine",
+      topics: ["finance", "strategy"],
       title: [
         "Pebble & Pine · Estrategia de inversión",
         "Pebble & Pine · Investment strategy",
@@ -856,7 +638,163 @@ window.PORTFOLIO = {
       ],
     },
     {
+      id: "commercial-revenue",
+      topics: ["commercial"],
+      inquiry: ["Quiero separar el efecto del precio y el volumen para entender de dónde viene el crecimiento de ingresos.", "I’d like to separate price and volume effects to understand what drives revenue growth."],
+      category: "business",
+      collection: "pillow-key",
+      title: [
+        "Desempeño comercial e ingresos",
+        "Commercial & Revenue"
+      ],
+      tag: [
+        "Gestión de ingresos · Pillow & Key",
+        "Revenue management · Pillow & Key"
+      ],
+      desc: [
+        "El ingreso por habitación disponible llegó a USD 183. ¿Cuánto crecimiento provino de la tarifa y cuánto de la ocupación?",
+        "Revenue per available room reached $183. How much growth came from pricing and how much from occupancy?"
+      ],
+      question: [
+        "¿Qué combinación de tarifas, ocupación y canales mejora el ingreso por noche?",
+        "Which mix of pricing, occupancy and distribution channels improves revenue per night?"
+      ],
+      approach: [
+        "Separé el crecimiento del ingreso por habitación disponible en efectos de tarifa y ocupación que suman el cambio total. Estimé el costo del cambio de canal por marca para captar diferencias que el promedio oculta.",
+        "I split growth in revenue per available room into rate and occupancy effects that reconcile to the total change. I estimated channel shifts by brand because the group average hides opposing movements."
+      ],
+      value: [
+        "La tarifa explica el 24 % del crecimiento del RevPAR. El canal web deja USD 280 netos por noche, frente a USD 204 en agencias en línea. La comparación ayuda a priorizar dónde revisar la distribución.",
+        "Rate accounts for 24% of RevPAR growth. The website nets $280 per room night versus $204 through online agencies, giving revenue managers a basis for reviewing their channel mix."
+      ],
+      img: "assets/commercial-revenue.png",
+      url: "https://app.fabric.microsoft.com/view?r=eyJrIjoiYzM4YWM4NWUtNmY2ZC00MjEyLWIxOWMtOTBkOWEyZWVkMDdiIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9"
+    },
+    {
+      id: "movies",
+      topics: ["story"],
+      title: "What Makes a Movie Successful?",
+      img: "assets/project-movies.png",
+      url: "https://app.fabric.microsoft.com/view?r=eyJrIjoiZWEzM2E0NDEtZGY5NC00YzdmLWE2MWEtMWFlNGI3OWVhZDNlIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9",
+      tag: [
+        "WORLD CHAMPS BCN 2026 · RONDA 3",
+        "WORLD CHAMPS BCN 2026 · ROUND 3",
+      ],
+      desc: [
+        "Una historia en tres actos sobre lo que el dinero compra en el cine: audiencia, retorno y valoración.",
+        "A three-act story about what money buys in film: audience, return and ratings.",
+      ],
+      question: [
+        "¿Un mayor presupuesto compra una película más exitosa?",
+        "Does a bigger budget buy a more successful movie?",
+      ],
+      approach: [
+        "Tres definiciones de éxito, comparadas dentro del año de estreno de cada película. El recorrido explora presupuesto, secuelas, género y calendario; reúne 7,160 películas con cifras verificadas y encuentra 100 que alcanzan las tres coronas.",
+        "Three definitions of success, compared within each film’s release year. The story explores budgets, sequels, genres and release calendars; it brings together 7,160 films with verified figures and identifies 100 that achieve all three crowns.",
+      ],
+      value: [
+        "Definición de métricas, comparaciones con contexto y una experiencia narrativa que conecta la perspectiva del público con la del negocio.",
+        "Metric definition, contextual comparisons and a narrative experience connecting audience and business perspectives.",
+      ],
+      category: "champs",
+      community:
+        "https://community.fabric.microsoft.com/discussions/pbi_contestsgallery/richard-ampie---world-champs-bcn-26---round-3/5355053",
+    },
+    {
+      id: "guest-experience",
+      topics: ["operations"],
+      inquiry: ["Quiero identificar qué sedes necesitan atención a partir de las quejas y la satisfacción de los clientes.", "I’d like to use complaints and customer satisfaction to decide which locations need attention."],
+      category: "business",
+      collection: "pillow-key",
+      title: [
+        "Experiencia del huésped",
+        "Guest Experience"
+      ],
+      tag: [
+        "Operaciones hoteleras · Pillow & Key",
+        "Hotel operations · Pillow & Key"
+      ],
+      desc: [
+        "Cuatro años de caída del NPS. ¿Qué hoteles y qué quejas merecen atención primero?",
+        "Guest NPS has fallen four years in a row. Which hotels and complaints warrant attention first?"
+      ],
+      question: [
+        "¿Dónde debería intervenir el equipo de operaciones para mejorar la experiencia del huésped?",
+        "Where should the operations team investigate declining guest satisfaction?"
+      ],
+      approach: [
+        "Comparé el NPS por marca y la frecuencia de quejas por cada 1.000 noches ocupadas. Así, un hotel grande y uno pequeño se pueden evaluar en condiciones comparables.",
+        "I compared guest NPS across brands and complaints per 1,000 occupied room nights so that small and large hotels could be assessed on the same basis."
+      ],
+      value: [
+        "El NPS del grupo bajó de 23,3 a 17,8. El estado de las habitaciones concentró más quejas y registró el mayor aumento desde 2021. La regla de seguimiento identifica 48 hoteles para revisión.",
+        "Group NPS fell from 23.3 to 17.8. Room condition drew the most complaints and the largest increase since 2021. The watch rule identifies 48 hotels for review."
+      ],
+      img: "assets/guest-experience.png",
+      url: "https://app.fabric.microsoft.com/view?r=eyJrIjoiZTgwNjcwZTctYTkxOC00NDA2LTg0ZDItY2UzOWZiYTAxM2ZiIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9"
+    },
+    {
+      id: "f1",
+      topics: ["sports", "engineering"],
+      title: ["F1 Analytics", "F1 Analytics"],
+      img: "assets/Portfolio_PbiDemo_F1.png",
+      url: "https://app.fabric.microsoft.com/view?r=eyJrIjoiYzY1Y2Y1YWQtNDM5NC00Y2RhLWFjZmItNmQ0NTQ0MDhkMWYxIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9",
+      tag: ["LABORATORIO · ANALÍTICA DEPORTIVA", "LAB · SPORTS ANALYTICS"],
+      desc: [
+        "Un proyecto independiente de analítica de Fórmula 1 y exploración de resultados.",
+        "An independent Formula 1 analytics project exploring race results.",
+      ],
+      question: [
+        "¿Cómo explorar resultados y evolución del rendimiento en Fórmula 1?",
+        "How can Formula 1 results and performance trends be explored?",
+      ],
+      approach: [
+        "Un proyecto independiente de analítica de Fórmula 1 y exploración de resultados.",
+        "An independent Formula 1 analytics project exploring race results.",
+      ],
+      value: [
+        "Modelado, interacción y diseño de reportes en Power BI. Proyecto público de portafolio.",
+        "Modeling, interaction and report design in Power BI. A public portfolio project.",
+      ],
+      category: "explore",
+      community: null,
+    },
+    {
+      id: "capital-allocation",
+      topics: ["finance", "strategy"],
+      inquiry: ["Quiero comparar proyectos de inversión y decidir cuáles financiar con un presupuesto limitado.", "I’d like to compare investment projects and decide which to fund within a fixed budget."],
+      category: "business",
+      collection: "pillow-key",
+      title: [
+        "Asignación de capital",
+        "Capital Allocation"
+      ],
+      tag: [
+        "Comité de inversión · Pillow & Key",
+        "Investment committee · Pillow & Key"
+      ],
+      desc: [
+        "Con USD 550 millones para solicitudes por 924 millones, ¿qué proyectos conviene financiar juntos?",
+        "With $550M available for $924M in requests, which projects should compete for a common budget?"
+      ],
+      question: [
+        "¿Cuándo conviene compartir el presupuesto entre marcas y qué proyectos resisten un cambio de escenario?",
+        "When does pooling capital across brands pay off, and which projects survive a change in assumptions?"
+      ],
+      approach: [
+        "Comparé presupuestos separados y compartidos en tres escenarios. Calculé la asignación óptima y comprobé la selección con un segundo optimizador independiente.",
+        "I compared separate and pooled budgets under three scenarios, solved for the optimal funding mix and checked the selection with an independent solver."
+      ],
+      value: [
+        "En el escenario esperado, compartir el presupuesto añade USD 3,4 millones de utilidad anual a plena operación. De 40 proyectos, 22 reciben fondos en los tres escenarios. El cálculo precede la puesta en marcha y las interrupciones por obras.",
+        "In the expected scenario, pooling adds $3.4M in annual profit at maturity. Of 40 projects, 22 receive funding in all three scenarios. The estimate precedes ramp-up and disruption during construction."
+      ],
+      img: "assets/capital-allocation.png",
+      url: "https://app.fabric.microsoft.com/view?r=eyJrIjoiNTdjYmRlMGMtZWQ5YS00ZGUwLWE5YTgtNzMzN2VmNzYzZTk2IiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9"
+    },
+    {
       id: "finance",
+      topics: ["commercial", "finance"],
       title: [
         "PitchSide Pro · Análisis financiero",
         "PitchSide Pro · Financial analysis",
@@ -888,36 +826,41 @@ window.PORTFOLIO = {
         "https://community.fabric.microsoft.com/discussions/pbi_contestsgallery/week-1---world-champs-bcn-2026-richard-ampie/5241525",
     },
     {
-      id: "lego",
-      title: ["Museo interactivo LEGO", "Interactive LEGO museum"],
-      img: "assets/Portfolio_PbiDemo_WC2026S2R2.png",
-      url: "https://app.fabric.microsoft.com/view?r=eyJrIjoiYmMxY2Y0NDAtZDhkNy00Y2Y1LWIyOGItOTU1MjY3NGVjMWJlIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9",
+      id: "brand-performance",
+      topics: ["strategy", "operations"],
+      inquiry: ["Quiero comparar el desempeño de una marca con el grupo antes de priorizar inversiones.", "I’d like to compare a brand’s performance with the group before prioritizing investments."],
+      category: "business",
+      collection: "pillow-key",
+      title: [
+        "Pebble & Pine · Desempeño de marca",
+        "Pebble & Pine Brand Performance"
+      ],
       tag: [
-        "WORLD CHAMPS BCN 2026 · RONDA 2",
-        "WORLD CHAMPS BCN 2026 · ROUND 2",
+        "Dirección de marca · Pebble & Pine",
+        "Brand management · Pebble & Pine"
       ],
       desc: [
-        "Una experiencia de exploración histórica de sets, colecciones y lanzamientos.",
-        "An experience exploring the history of sets, collections and releases.",
+        "Una marca con menos margen que el grupo tiene USD 145 millones para invertir. ¿Qué supuestos sostienen el plan?",
+        "A brand earning less margin than the group has $145M to invest. Which assumptions support the plan?"
       ],
       question: [
-        "¿Cómo evolucionan los sets y las colecciones LEGO a través del tiempo?",
-        "How do LEGO sets and collections evolve over time?",
+        "¿Qué inversiones merecen prioridad en los 45 resorts de Pebble & Pine?",
+        "Which investments deserve priority across Pebble & Pine’s 45 resorts?"
       ],
       approach: [
-        "Un museo de datos construido sobre la base Rebrickable: cuatro salas conectan 77 años de historia, construcciones emblemáticas y cultura LEGO. La experiencia incorpora un guía y una sala de juegos dentro del reporte.",
-        "A data museum built on the Rebrickable database: four halls connect 77 years of history, landmark builds and LEGO culture. The experience includes a guide and a games room inside the report.",
+        "Limité la demanda base a las habitaciones físicas de cada hotel e incorporé la puesta en marcha gradual y la pérdida de ingresos durante obras. Documenté la fuente, fórmula y límite de cada estimación para evitar duplicar impactos.",
+        "I capped the baseline at each hotel’s physical room count and modeled project ramp-up and disruption during works. Each estimate documents its source, formula and limits, with checks against double counting."
       ],
       value: [
-        "Diseño de una experiencia completa dentro de Power BI, combinando exploración, historia e interacción.",
-        "Designing a complete experience within Power BI by combining exploration, history and interaction.",
+        "La marca opera con un margen del 28,2 % frente al 32,2 % del grupo. Su NPS cayó de 26,1 a 20,3 y la cartera solicita USD 245,3 millones. La dirección puede contrastar las inversiones con un presupuesto de USD 145 millones.",
+        "The brand earns a 28.2% margin against the group’s 32.2%. NPS fell from 26.1 to 20.3, and the investment catalogue asks $245.3M. Brand leaders can weigh the proposals against a $145M budget."
       ],
-      category: "champs",
-      community:
-        "https://community.fabric.microsoft.com/discussions/pbi_contestsgallery/lego-data-museum---world-champs-bcn-26---round-2---richard-ampie/5307161",
+      img: "assets/brand-performance.png",
+      url: "https://app.fabric.microsoft.com/view?r=eyJrIjoiYzk1OWE4ZmItMTNjMy00NWMxLWJmNmMtMGI4YzgyYTk4NDk4IiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9"
     },
     {
       id: "world1",
+      topics: ["environment", "story"],
       title: [
         "Briarport · Calidad de vida urbana",
         "Briarport · Urban livability",
@@ -949,7 +892,101 @@ window.PORTFOLIO = {
         "https://community.fabric.microsoft.com/discussions/pbi_contestsgallery/week-1---world-champs-2026-richard-ampie/4921469",
     },
     {
+      id: "finance-cost",
+      topics: ["finance"],
+      inquiry: ["Quiero revisar cómo calculamos el margen por unidad de negocio y qué costos explican las diferencias.", "I’d like to review how we calculate margin by business unit and which costs explain the differences."],
+      category: "business",
+      collection: "pillow-key",
+      title: [
+        "Finanzas y costos",
+        "Finance & Cost"
+      ],
+      tag: [
+        "Planeación financiera · Pillow & Key",
+        "FP&A · Pillow & Key"
+      ],
+      desc: [
+        "49 de 165 hoteles están por debajo del margen del grupo. ¿Dónde profundizar durante la revisión financiera?",
+        "49 of 165 hotels fall below the group margin. Where should FP&A focus its review?"
+      ],
+      question: [
+        "¿Qué costos explican la utilidad actual y qué riesgo aparece al proyectar el margen?",
+        "Which costs explain current profit, and what margin risk emerges in the outlook?"
+      ],
+      approach: [
+        "Una cascada reconcilia ingresos, costos y utilidad del ejercicio. Contrasté el escenario de continuidad con un cálculo previo de una marca y mostré los años proyectados por separado.",
+        "A waterfall reconciles revenue, costs and operating profit for the selected year. I cross-checked the baseline scenario against an earlier brand model and distinguished projected years from historical results."
+      ],
+      value: [
+        "El margen observado en 2025 es del 32,2 %. Bajo los supuestos de continuidad, baja al 29,0 % en 2032. La brecha anual de USD 44 millones frente al margen del grupo sirve para seleccionar hoteles que conviene investigar.",
+        "The observed 2025 margin is 32.2%. Under the baseline assumptions it reaches 29.0% in 2032. The $44M annual gap to group margin helps FP&A select hotels for investigation."
+      ],
+      img: "assets/finance-cost.png",
+      url: "https://app.fabric.microsoft.com/view?r=eyJrIjoiM2E3NGMyOWQtZGUxNS00NGExLThhY2ItY2NiODI1NzgxOTNlIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9"
+    },
+    {
+      id: "lego",
+      topics: ["story"],
+      title: ["Museo interactivo LEGO", "Interactive LEGO museum"],
+      img: "assets/Portfolio_PbiDemo_WC2026S2R2.png",
+      url: "https://app.fabric.microsoft.com/view?r=eyJrIjoiYmMxY2Y0NDAtZDhkNy00Y2Y1LWIyOGItOTU1MjY3NGVjMWJlIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9",
+      tag: [
+        "WORLD CHAMPS BCN 2026 · RONDA 2",
+        "WORLD CHAMPS BCN 2026 · ROUND 2",
+      ],
+      desc: [
+        "Una experiencia de exploración histórica de sets, colecciones y lanzamientos.",
+        "An experience exploring the history of sets, collections and releases.",
+      ],
+      question: [
+        "¿Cómo evolucionan los sets y las colecciones LEGO a través del tiempo?",
+        "How do LEGO sets and collections evolve over time?",
+      ],
+      approach: [
+        "Un museo de datos construido sobre la base Rebrickable: cuatro salas conectan 77 años de historia, construcciones emblemáticas y cultura LEGO. La experiencia incorpora un guía y una sala de juegos dentro del reporte.",
+        "A data museum built on the Rebrickable database: four halls connect 77 years of history, landmark builds and LEGO culture. The experience includes a guide and a games room inside the report.",
+      ],
+      value: [
+        "Diseño de una experiencia completa dentro de Power BI, combinando exploración, historia e interacción.",
+        "Designing a complete experience within Power BI by combining exploration, history and interaction.",
+      ],
+      category: "champs",
+      community:
+        "https://community.fabric.microsoft.com/discussions/pbi_contestsgallery/lego-data-museum---world-champs-bcn-26---round-2---richard-ampie/5307161",
+    },
+    {
+      id: "fears",
+      topics: ["story"],
+      title: "The life we fear never living",
+      img: "assets/project-fears.png",
+      url: "https://app.fabric.microsoft.com/view?r=eyJrIjoiOGEwMjUzNWItNzM1OC00YmE4LWE3ZDUtNTQyMWIxNzI0YTc1IiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9",
+      tag: [
+        "HALLOWEEN CONTEST · HISTORIA DE DATOS",
+        "HALLOWEEN CONTEST · DATA STORY",
+      ],
+      desc: [
+        "Una página sobre incertidumbre, potencial y los miedos que cambian al crecer.",
+        "A one-page story about uncertainty, potential and the fears that change as we grow.",
+      ],
+      question: [
+        "¿Cómo cambian nuestros miedos entre la infancia y la adultez?",
+        "How do our fears change between childhood and adulthood?",
+      ],
+      approach: [
+        "Una historia basada en las respuestas de las mismas 105 personas: del patrón compartido a los miedos individuales. Cierra conectando los datos con una reflexión sobre el sentido, la elección y el tiempo, a través del nihilismo existencial y el estoicismo.",
+        "A story based on responses from the same 105 people, moving from a shared pattern to individual fears. It closes by connecting the data with a reflection on meaning, choice and time through existential nihilism and Stoicism.",
+      ],
+      value: [
+        "Storytelling en una página, diseño editorial y comunicación cuidadosa de cambios en puntos porcentuales.",
+        "One-page storytelling, editorial design and careful communication of percentage-point changes.",
+      ],
+      category: "explore",
+      community:
+        "https://community.fabric.microsoft.com/discussions/pbi_contestsgallery/the-life-we-fear-never-living/5376385",
+    },
+    {
       id: "world2",
+      topics: ["environment"],
       title: ["Global Climate Signals", "Global Climate Signals"],
       img: "assets/Portfolio_PbiDemo_WC2026R2.png",
       url: "https://app.fabric.microsoft.com/view?r=eyJrIjoiNDQ0YWQyN2UtZjI0Zi00Mzk0LTkxMGMtM2YyODk4NDEzMjVhIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9",
@@ -979,6 +1016,7 @@ window.PORTFOLIO = {
     },
     {
       id: "world3",
+      topics: ["sports", "story"],
       title: [
         "The Olympic Games by the Numbers",
         "The Olympic Games by the Numbers",
@@ -1010,29 +1048,70 @@ window.PORTFOLIO = {
         "https://community.fabric.microsoft.com/discussions/pbi_contestsgallery/week-3-world-champs-26---richard-ampie/4993293",
     },
     {
-      id: "f1",
-      title: ["F1 Analytics", "F1 Analytics"],
-      img: "assets/Portfolio_PbiDemo_F1.png",
-      url: "https://app.fabric.microsoft.com/view?r=eyJrIjoiYzY1Y2Y1YWQtNDM5NC00Y2RhLWFjZmItNmQ0NTQ0MDhkMWYxIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9",
-      tag: ["LABORATORIO · ANALÍTICA DEPORTIVA", "LAB · SPORTS ANALYTICS"],
+      id: "logistics-delivery",
+      topics: ["logistics", "operations"],
+      inquiry: ["Quiero identificar en qué etapa se atrasan los pedidos y dónde intervenir primero.", "I’d like to identify where orders fall behind and which delivery bottleneck to address first."],
+      category: "business",
+      title: [
+        "Logística y desempeño de entregas",
+        "Logistics & Delivery Performance"
+      ],
+      tag: [
+        "Cadena de suministro · Olist",
+        "Supply chain · Olist"
+      ],
       desc: [
-        "Un proyecto independiente de analítica de Fórmula 1 y exploración de resultados.",
-        "An independent Formula 1 analytics project exploring race results.",
+        "¿Dónde se atrasan los pedidos y qué compromisos de entrega merecen una revisión?",
+        "Where do orders fall behind and which delivery commitments need attention?"
       ],
       question: [
-        "¿Cómo explorar resultados y evolución del rendimiento en Fórmula 1?",
-        "How can Formula 1 results and performance trends be explored?",
+        "¿En qué etapas del pedido conviene intervenir para mejorar la confiabilidad de las entregas?",
+        "Where in the order lifecycle should a logistics team investigate unreliable deliveries?"
       ],
       approach: [
-        "Un proyecto independiente de analítica de Fórmula 1 y exploración de resultados.",
-        "An independent Formula 1 analytics project exploring race results.",
+        "El análisis recorre pedidos, tiempos de entrega y cumplimiento de compromisos con datos históricos de comercio electrónico de Olist.",
+        "The analysis follows order fulfillment, delivery times and service commitments using historical e-commerce data from Olist."
       ],
       value: [
-        "Modelado, interacción y diseño de reportes en Power BI. Proyecto público de portafolio.",
-        "Modeling, interaction and report design in Power BI. A public portfolio project.",
+        "Permite priorizar cuellos de botella y evaluar cómo la puntualidad de las entregas se relaciona con la experiencia del cliente.",
+        "The report supports prioritizing bottlenecks and examining how delivery reliability relates to customer experience."
       ],
-      category: "explore",
-      community: null,
+      img: "assets/logistics-delivery.webp",
+      url: null,
+      upcoming: true
+    },
+    {
+      id: "service-desk",
+      topics: ["service", "operations"],
+      inquiry: ["Quiero revisar tiempos de resolución y carga de trabajo para mejorar la atención de tickets.", "I’d like to review resolution times and workload to improve how we handle support tickets."],
+      category: "business",
+      title: [
+        "Mesa de servicio y eficiencia operativa",
+        "Service Desk & Operational Efficiency"
+      ],
+      tag: [
+        "Operaciones de TI · Mesa de servicio",
+        "IT operations · Service desk"
+      ],
+      desc: [
+        "¿Dónde se acumulan los tickets y cómo distribuir la carga para mejorar la atención?",
+        "Where do tickets accumulate, and how should the team distribute its workload?"
+      ],
+      question: [
+        "¿Qué parte del ciclo de atención requiere más capacidad o una revisión del proceso?",
+        "Which stage of ticket handling needs more capacity or a change in process?"
+      ],
+      approach: [
+        "El análisis usa datos históricos de mesa de ayuda para estudiar demanda, primera respuesta, resolución y distribución de trabajo a lo largo del ciclo del ticket.",
+        "The analysis uses historical help desk data to examine demand, first response, resolution and workload distribution across the ticket lifecycle."
+      ],
+      value: [
+        "Ayuda a priorizar mejoras de servicio y a decidir dónde reasignar recursos según la demanda y los tiempos de atención.",
+        "Service managers can prioritize improvements and decide where to reallocate resources based on demand and handling times."
+      ],
+      img: "assets/service-desk.webp",
+      url: null,
+      upcoming: true
     },
   ],
   recognition:
@@ -1040,6 +1119,7 @@ window.PORTFOLIO = {
   engineering: [
     {
       id: "bi-governance",
+      inquiry: ["Quiero revisar cómo probamos, versionamos y desplegamos los cambios de BI.", "I’d like to review how we test, version and deploy BI changes."],
       title: ["DevOps para Power BI", "DevOps for Power BI"],
       desc: [
         "Un flujo de desarrollo trazable para llevar los cambios de Power BI desde desarrollo hasta producción.",
@@ -1074,6 +1154,7 @@ window.PORTFOLIO = {
     },
     {
       id: "dwh-migration",
+      inquiry: ["Queremos migrar nuestro almacén de datos y sus cargas a Fabric. Me gustaría definir un piloto y cómo conciliar las cifras antes del cambio.", "We want to migrate our warehouse and its loads to Fabric. I’d like to scope a pilot and agree on how to reconcile the numbers before cutover."],
       title: ["De SSIS a Microsoft Fabric", "From SSIS to Microsoft Fabric"],
       desc: [
         "Evolución de un entorno SSIS hacia Microsoft Fabric, acompañada por la migración de Tableau y Excel a Power BI.",
@@ -1108,6 +1189,7 @@ window.PORTFOLIO = {
     },
     {
       id: "finance-automation",
+      inquiry: ["Quiero automatizar la consolidación de fuentes para reducir trabajo manual durante el cierre.", "I’d like to automate source consolidation and reduce manual work during the close."],
       title: ["Finanzas y OPEX automatizados", "Automated finance & OPEX"],
       desc: [
         "Integración de fuentes financieras para reducir trabajo manual y mantener indicadores consistentes.",
@@ -1142,6 +1224,7 @@ window.PORTFOLIO = {
     },
     {
       id: "fabric-capacity",
+      inquiry: ["Quiero identificar qué cargas consumen más capacidad Fabric y cómo medir una mejora.", "I’d like to identify which workloads use the most Fabric capacity and how to measure an improvement."],
       title: ["Capacidad Fabric optimizada", "Optimized Fabric capacity"],
       desc: [
         "Ajuste de cargas y consultas para aprovechar mejor la capacidad de la plataforma analítica.",
@@ -1180,6 +1263,7 @@ window.PORTFOLIO = {
     },
     {
       id: "dax-framework",
+      inquiry: ["Quiero diagnosticar qué medidas o dependencias están ralentizando nuestro modelo semántico.", "I’d like to identify which measures or dependencies are slowing down our semantic model."],
       title: ["Diagnóstico DAX y modelos", "DAX & model diagnostics"],
       desc: [
         "Scripts de diagnóstico y guías reutilizables para revisar modelos semánticos de Power BI.",
@@ -1218,6 +1302,7 @@ window.PORTFOLIO = {
     },
     {
       id: "api-etl",
+      inquiry: ["Quiero automatizar la ingesta desde una API y poder detectar y recuperar cargas fallidas.", "I’d like to automate ingestion from an API and detect and recover failed loads."],
       title: ["APIs → SQL Server", "APIs → SQL Server"],
       desc: [
         "Un pipeline en Python para extraer, transformar y almacenar datos de APIs en SQL Server.",
@@ -1252,6 +1337,7 @@ window.PORTFOLIO = {
     },
     {
       id: "f1-medallion",
+      inquiry: ["Quiero diseñar un pipeline en Fabric que conecte los datos de origen con tablas listas para análisis.", "I’d like to design a Fabric pipeline that turns source data into analytics-ready tables."],
       title: [
         "Fórmula 1 · Ingeniería de datos",
         "Formula 1 · Data engineering",
@@ -1289,6 +1375,7 @@ window.PORTFOLIO = {
     },
     {
       id: "transaction-ml",
+      inquiry: ["Quiero evaluar si podemos automatizar la clasificación de transacciones y cómo validar el resultado.", "I’d like to evaluate automating transaction classification and how to validate the results."],
       title: [
         "Clasificación financiera con ML",
         "Financial classification with ML",
