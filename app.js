@@ -5,7 +5,8 @@ function buildInquiryMailto(subject, body) {
 }
 
 (() => {
-  const { ui, projects, services, engineering } = window.PORTFOLIO;
+  const { ui, projects, services, engineering, platformReview } = window.PORTFOLIO;
+  const inquiryOptions = [platformReview, ...services, ...engineering, ...projects];
   let language = "en";
   let activeProject = null;
   let dialogTrigger = null;
@@ -425,7 +426,7 @@ function buildInquiryMailto(subject, body) {
       }
       return;
     }
-    inquiryContext = services.find(s => s.id === key) || engineering.find(c => c.id === key) || projects.find(p => p.id === key);
+    inquiryContext = inquiryOptions.find(option => option.id === key);
     if (!inquiryContext) return;
     if (dialog.open) {
       dialogTrigger = null;

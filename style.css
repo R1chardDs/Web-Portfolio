@@ -4123,3 +4123,73 @@ nav a,
 @media (max-width: 640px) {
   .audience-cases, .design-access { grid-template-columns: 1fr; gap: .6rem; }
 }
+
+/* Data platform overview and the client-facing access matrix */
+.platform-overview {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(215px, 30%);
+  align-items: center;
+  gap: clamp(1.5rem, 5vw, 4.5rem);
+  margin: 1.35rem 0 clamp(2rem, 4vw, 3.25rem);
+}
+.platform-story h2 { font-size: clamp(2rem, 3.2vw, 3rem); letter-spacing: -.045em; max-width: 24ch; }
+.platform-lead { margin: .9rem 0 1.35rem; max-width: 72ch; font-size: 1.07rem; }
+.platform-stages { margin: 0; }
+.platform-stages > div {
+  display: grid;
+  grid-template-columns: minmax(6.5rem, 25%) 1fr;
+  gap: 1rem;
+  align-items: baseline;
+  padding: .7rem 0;
+  border-top: 1px solid var(--line);
+}
+.platform-stages dt { color: var(--accent); font-weight: 700; }
+.platform-stages dd { margin: 0; color: var(--muted); }
+.platform-migration { margin-top: .65rem; }
+.platform-migration summary { color: var(--accent); font-weight: 650; cursor: pointer; }
+.platform-migration p { margin: .45rem 0; }
+.platform-figure { margin: 0; justify-self: center; width: 100%; max-width: 22.5rem; }
+.platform-figure img {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: .6rem;
+}
+.platform-figure figcaption { display: grid; gap: .15rem; justify-items: start; margin-top: .55rem; }
+.platform-access {
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--accent);
+  border-radius: .5rem;
+  background: var(--surface);
+  padding: clamp(1rem, 3vw, 2.3rem);
+  scroll-margin-top: 1rem;
+}
+.platform-access h3, .engineering-cases-heading h3 { font-size: clamp(1.45rem, 2.4vw, 2.05rem); letter-spacing: -.025em; }
+.access-intro { margin-top: .6rem; max-width: 88ch; }
+.access-matrix { width: 100%; border-collapse: collapse; text-align: start; }
+.access-matrix caption { text-align: start; color: var(--muted); font-size: .95rem; padding: 1.2rem 0 .5rem; }
+.access-matrix th, .access-matrix td { padding: .62rem .8rem; border-bottom: 1px solid var(--line); text-align: start; vertical-align: top; }
+.access-matrix thead { background: var(--soft); color: var(--accent); }
+.access-matrix .mobile-field { display: none; }
+.access-notes { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1rem 2rem; margin: 1.35rem 0; }
+.access-notes h4 { font-size: 1.12rem; margin-bottom: .35rem; }
+.access-actions { display: flex; flex-wrap: wrap; gap: .8rem 1.5rem; align-items: center; }
+.engineering-cases-heading { margin: clamp(2rem,4vw,3.5rem) 0 1rem; }
+.engineering-cases-heading p { max-width: 82ch; margin-top: .45rem; }
+@media (max-width: 760px) {
+  .platform-overview { grid-template-columns: 1fr; gap: 1rem; }
+  .platform-figure { max-width: none; display: flex; align-items: center; gap: 1rem; }
+  .platform-figure img { width: clamp(4.5rem,18vw,7rem); }
+  .platform-figure figcaption { margin: 0; }
+  .access-notes { grid-template-columns: 1fr; }
+}
+@media (max-width: 620px) {
+  .platform-stages > div { grid-template-columns: 1fr; gap: .12rem; }
+  .access-matrix, .access-matrix caption, .access-matrix tbody { display: block; }
+  .access-matrix thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .access-matrix tbody tr { display: block; padding: .65rem 0; border-bottom: 1px solid var(--line); }
+  .access-matrix tbody th { display: block; color: var(--accent); padding: 0 0 .25rem; border: 0; }
+  .access-matrix td { display: grid; grid-template-columns: minmax(0,1.15fr) minmax(0,1fr); gap: .6rem; padding: .16rem 0; border: 0; }
+  .access-matrix .mobile-field { display: block; color: var(--muted); }
+  .access-actions .button { white-space: normal; text-align: center; }
+}

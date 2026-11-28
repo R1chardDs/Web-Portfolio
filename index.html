@@ -39,9 +39,9 @@
       rel="stylesheet"
     />
     <script src="theme-init.js?v=visual-20261113"></script>
-    <link rel="stylesheet" href="style.css?v=model-lineage-20261127" />
-    <script src="content.js?v=portfolio-polish-20261127" defer></script>
-    <script src="app.js?v=portfolio-polish-20261127" defer></script>
+    <link rel="stylesheet" href="style.css?v=platform-access-20261127" />
+    <script src="content.js?v=platform-access-20261127" defer></script>
+    <script src="app.js?v=platform-access-20261127" defer></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -822,46 +822,91 @@
           <p class="eyebrow" data-i18n="engineering.tag">
             ENGINEERING &amp; AUTOMATION
           </p>
-          <div class="section-heading">
-            <h2 data-i18n="engineering.title">
-              The engineering behind the insight.
-            </h2>
-            <p data-i18n="engineering.body">These cases show how I migrated workloads from SSIS to Fabric, automated ingestion and shortened the wait between a transaction and the report that uses it. Open a case to see the approach and outcome.</p>
-          </div>
-          <div class="engineering-layout">
-            <figure class="engineering-visual">
-              <div class="engineering-image-frame">
-                <img
-                  src="assets/engineering-data-platform-v3.webp"
-                  srcset="assets/engineering-data-platform-v3-576.webp 576w, assets/engineering-data-platform-v3.webp 1122w"
-                  sizes="(max-width: 640px) 90vw, (max-width: 1050px) 40vw, 300px"
-                  width="1122"
-                  height="1402"
-                  loading="lazy"
-                  decoding="async"
-                  alt="Architectural illustration of three connected layers in a data platform."
-                  data-i18n-alt="engineering.visual.alt"
-                />
-              </div>
+          <div class="platform-overview">
+            <div class="platform-story">
+              <h2 data-i18n="platform.title">One data platform, access by role</h2>
+              <p class="platform-lead" data-i18n="platform.lead">At month-end, the board needs the group margin and regional managers need to explain their own. I design Microsoft Fabric platforms so both start with the same sales and a definition of margin agreed with Finance.</p>
+              <dl class="platform-stages">
+                <div>
+                  <dt data-i18n="platform.connect">Connect</dt>
+                  <dd data-i18n="platform.connectBody">I schedule loads with pipelines, use Mirroring to replicate changes from supported sources and bring in streaming events where the operation needs live updates.</dd>
+                </div>
+                <div>
+                  <dt data-i18n="platform.prepare">Prepare and store</dt>
+                  <dd data-i18n="platform.prepareBody">OneLake brings the data together. I transform transactions in notebooks and reconcile totals in the warehouse before the close.</dd>
+                </div>
+                <div>
+                  <dt data-i18n="platform.use">Analyze and query</dt>
+                  <dd data-i18n="platform.useBody">A semantic model shares measures across Power BI reports. An ontology can connect hotels, bookings and revenue, giving an AI agent business context when it queries authorized sources.</dd>
+                </div>
+              </dl>
+              <details class="platform-migration">
+                <summary data-i18n="platform.legacy">How I modernize SSIS, Analysis Services and Reporting Services</summary>
+                <p data-i18n="platform.legacyBody">I map dependencies between integration packages, models and reports. I migrate in stages and reconcile results against the existing platform before switching the team to the new source.</p>
+                <a class="text-link" href="#case-dwh-migration" data-i18n="platform.case">See how I cut ingestion from 3 hours to 1</a>
+              </details>
+            </div>
+            <figure class="platform-figure">
+              <img src="assets/engineering-data-platform-v3.webp"
+                srcset="assets/engineering-data-platform-v3-576.webp 576w, assets/engineering-data-platform-v3.webp 1122w"
+                sizes="(max-width: 760px) 92vw, (max-width: 1150px) 32vw, 360px"
+                width="1122" height="1402" loading="lazy" decoding="async"
+                alt="Architectural illustration of three connected layers in a data platform." data-i18n-alt="engineering.visual.alt" />
               <figcaption>
-                <h3 data-i18n="engineering.visual.title">
-                  The foundation behind every report.
-                </h3>
-                <p data-i18n="engineering.visual.caption">
-                  Connected sources, reliable models and a delivery process you
-                  can maintain.
-                </p>
-                <a
-                  class="text-link"
-                  href="https://github.com/R1chardDs/Formula1"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  data-i18n="engineering.visual.link"
-                  >Explore the Formula 1 build</a
-                >
+                <strong data-i18n="platform.image">From transaction to report</strong>
+                <a class="text-link" href="https://github.com/R1chardDs/Formula1" target="_blank" rel="noopener noreferrer" data-i18n="engineering.visual.link">Explore the Formula 1 build</a>
               </figcaption>
             </figure>
-            <div class="engineering-index">
+          </div>
+          <section id="platform-access" class="platform-access" aria-labelledby="platform-access-title">
+            <h3 id="platform-access-title" data-i18n="platform.security">A ten-page report. What can each person see?</h3>
+            <p class="access-intro" data-i18n="platform.identity">I assign permissions to Microsoft Entra ID groups. Row-level security (RLS) limits the records each role can read. Object-level security (OLS) protects sensitive tables or columns, such as unit cost.</p>
+            <table class="access-matrix" role="table">
+              <caption data-i18n="platform.caption">Example access matrix</caption>
+              <thead role="rowgroup">
+                <tr role="row"><th scope="col" role="columnheader" data-i18n="platform.profile">Reader role</th><th scope="col" role="columnheader" data-i18n="platform.rows">Allowed rows · RLS</th><th scope="col" role="columnheader" data-i18n="platform.objects">Unit cost access · OLS</th><th scope="col" role="columnheader" data-i18n="platform.pages">Pages in the menu</th></tr>
+              </thead>
+              <tbody role="rowgroup">
+                  <tr role="row">
+                    <th scope="row" role="rowheader" data-i18n="platform.board">Executive team</th>
+                    <td role="cell"><span class="mobile-field" aria-hidden="true" data-i18n="platform.rowsShort">Rows</span><span data-i18n="platform.group">Entire group</span></td>
+                    <td role="cell"><span class="mobile-field" aria-hidden="true" data-i18n="platform.objectsShort">Unit cost</span><span data-i18n="platform.allowed">Allowed</span></td>
+                    <td role="cell"><span class="mobile-field" aria-hidden="true" data-i18n="platform.pagesShort">Menu</span><span data-i18n="platform.allPages">10 of 10</span></td>
+                  </tr>
+                  <tr role="row">
+                    <th scope="row" role="rowheader" data-i18n="platform.finance">Finance</th>
+                    <td role="cell"><span class="mobile-field" aria-hidden="true" data-i18n="platform.rowsShort">Rows</span><span data-i18n="platform.assigned">Assigned units</span></td>
+                    <td role="cell"><span class="mobile-field" aria-hidden="true" data-i18n="platform.objectsShort">Unit cost</span><span data-i18n="platform.allowed">Allowed</span></td>
+                    <td role="cell"><span class="mobile-field" aria-hidden="true" data-i18n="platform.pagesShort">Menu</span><span data-i18n="platform.financePages">6 of 10</span></td>
+                  </tr>
+                  <tr role="row">
+                    <th scope="row" role="rowheader" data-i18n="platform.ops">Regional operations</th>
+                    <td role="cell"><span class="mobile-field" aria-hidden="true" data-i18n="platform.rowsShort">Rows</span><span data-i18n="platform.region">Own region</span></td>
+                    <td role="cell"><span class="mobile-field" aria-hidden="true" data-i18n="platform.objectsShort">Unit cost</span><span data-i18n="platform.restricted">Restricted</span></td>
+                    <td role="cell"><span class="mobile-field" aria-hidden="true" data-i18n="platform.pagesShort">Menu</span><span data-i18n="platform.opsPages">3 of 10</span></td>
+                  </tr>
+              </tbody>
+            </table>
+            <div class="access-notes">
+              <section>
+                <h4 data-i18n="platform.appTitle">Role-based navigation</h4>
+                <p data-i18n="platform.appBody">I built a Fabric app that checks each menu destination against the signed-in user’s role. I can adapt it to your teams. When an entire analysis is confidential, I distribute it as a separately permissioned report on the same model.</p>
+              </section>
+              <section>
+                <h4 data-i18n="platform.deliveryTitle">What your team receives</h4>
+                <p data-i18n="platform.deliveryBody">I deliver an access matrix validated with test users. Together we check the total each role sees, the fields it can read and the analyses it can open from the menu.</p>
+              </section>
+            </div>
+            <div class="access-actions">
+              <a class="button primary" href="#contact-draft" data-inquiry="platform-access-review" data-i18n="platform.cta">Review my platform and its permissions</a>
+              <a class="text-link" href="#semantic-lineage" data-i18n="platform.lineage">See one model behind seven reports</a>
+            </div>
+          </section>
+          <div class="engineering-index">
+            <div class="engineering-cases-heading">
+              <h3 data-i18n="platform.cases">Migration and automation cases</h3>
+              <p data-i18n="engineering.body">These cases show how I migrated workloads from SSIS to Fabric, automated ingestion and shortened the wait between a transaction and the report that uses it. Open a case to see the approach and outcome.</p>
+            </div>
               <div
                 class="engineering-filters"
                 role="group"
@@ -1808,7 +1853,6 @@
                   </details>
                 </article>
               </div>
-            </div>
           </div>
         </div>
       </section>
