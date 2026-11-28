@@ -1307,6 +1307,39 @@ h1 {
 .issuer {
   font-size: 12px;
 }
+.cert-description {
+  margin-top: .65rem;
+  font-size: 1rem;
+  line-height: 1.55;
+}
+.cert-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+  margin: .75rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+.cert-tools li {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  padding: .17rem .5rem;
+  border: 1px solid var(--line);
+  border-radius: .35rem;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: .8125rem;
+  font-weight: 600;
+}
+.cert-tools img {
+  object-fit: contain;
+}
+:root[data-theme="dark"] .cert-tools img {
+  background: #f5f7fa;
+  border-radius: 3px;
+  padding: 1px;
+}
 .cert > a {
   font-size: 12px;
   font-weight: 600;
@@ -1329,8 +1362,29 @@ h1 {
   font-size: 30px;
   color: var(--muted);
 }
-.certifications .footnote {
-  font-size: 12px;
+.cert-additional {
+  margin-top: 1.5rem;
+  padding-inline-start: 1rem;
+  border-inline-start: 2px solid var(--accent);
+}
+.cert-additional h3 {
+  font-size: 1.125rem;
+}
+.cert-additional p {
+  margin-top: .25rem;
+  max-width: 80ch;
+  font-size: 1rem;
+}
+@media (max-width: 580px) {
+  .certifications .cert-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .cert .cert-top {
+    flex-direction: row;
+    align-items: center;
+    min-height: 0;
+    height: auto;
+  }
 }
 .contact {
   background: var(--soft);
@@ -2286,9 +2340,6 @@ dialog::backdrop {
   .planned-symbol {
     font-size: 33px;
     line-height: 48px;
-  }
-  .certifications .footnote {
-    font-size: 12px;
   }
   .contact-grid {
     grid-template-columns: 1fr;
@@ -3261,9 +3312,6 @@ nav a,
 }
 .cert-summary {
   font-size: 14px !important;
-}
-.certifications .footnote {
-  font-size: 13px;
 }
 .contact-description {
   font-size: 18px;
