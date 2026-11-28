@@ -219,15 +219,14 @@ window.PORTFOLIO = {
         "Actualmente lidero la inteligencia de negocio y el desarrollo de datos, conectando las prioridades del negocio con la arquitectura, el trabajo del equipo y la entrega. He dirigido migraciones de Tableau a Power BI en distintas empresas, construido plataformas en Microsoft Fabric y establecido procesos de desarrollo, automatización y entrega que el equipo pueda mantener.",
       "about.owner":
         "Trabajás directamente conmigo: entendemos el problema, definimos qué conviene resolver y llevamos la solución hasta su puesta en marcha, con documentación y transferencia de conocimiento.",
-      "about.current": "ACTUALMENTE",
-      "about.role":
-        "Supervisor de inteligencia de negocio y desarrollo de datos",
-      "about.history1": "Ingeniería de datos y liderazgo de BI",
-      "about.history1body":
-        "Migraciones, modelos semánticos, Fabric y gobierno de la entrega.",
-      "about.history2": "Base en contabilidad y finanzas",
-      "about.history2body":
-        "Indicadores, conciliaciones, cierres y automatización operativa.",
+      "about.experience": "Experiencia profesional",
+      "about.nowDates": "Abril de 2025 – actualidad",
+      "about.nowRole": "Supervisor de inteligencia de negocio y desarrollo de datos",
+      "about.nowScope": "Entré como líder de desarrollo SQL y BI. Hoy dirijo el equipo que trabaja con finanzas, ventas y operaciones para que las tres empresas del grupo usen las mismas definiciones de sus indicadores.",
+      "about.previousDates": "Junio de 2021 – marzo de 2025",
+      "about.previousRole": "Grupo E. Chamorro-Monisa",
+      "about.previousScope": "Empecé en contabilidad y análisis financiero en E. Chamorro Industrial. Como analista sénior de datos, también di consultoría interna y soporte a Droguería Rocha, Farmacity, WAPI Industrial y Molinos de Nicaragua (MONISA).",
+      "about.previousDelivery": "En las cinco empresas lideré la migración de Tableau a Power BI y la implementación de Microsoft Fabric. En conjunto, migramos cerca de 50 reportes para 60 usuarios.",
       "about.location": "Nicaragua · Colaboración remota · Español / English",
       "cert.tag": "FORMACIÓN Y CREDENCIALES",
       "cert.title": "Conocimiento que sigo\nponiendo a prueba.",
@@ -506,14 +505,14 @@ window.PORTFOLIO = {
         "Today I lead business intelligence and data development, connecting business priorities with architecture, team execution and delivery. My experience includes leading Tableau-to-Power BI migrations across companies, building Microsoft Fabric platforms and establishing development, automation and delivery processes that teams can maintain.",
       "about.owner":
         "You work directly with me: we understand the problem, define what is worth solving and carry the solution through implementation, with documentation and knowledge transfer.",
-      "about.current": "CURRENTLY",
-      "about.role": "Business Intelligence & Data Development Supervisor",
-      "about.history1": "Data engineering and BI leadership",
-      "about.history1body":
-        "Migrations, semantic models, Fabric and delivery governance.",
-      "about.history2": "Accounting and finance foundation",
-      "about.history2body":
-        "KPIs, reconciliations, financial close and operational automation.",
+      "about.experience": "Professional experience",
+      "about.nowDates": "April 2025 – present",
+      "about.nowRole": "Business Intelligence & Data Development Supervisor",
+      "about.nowScope": "I joined as SQL & BI Developer Lead. Today I lead the team that works with finance, sales and operations to give all three companies in the group a common set of KPI definitions.",
+      "about.previousDates": "June 2021 – March 2025",
+      "about.previousRole": "E. Chamorro-Monisa Group",
+      "about.previousScope": "I started in accounting and financial analysis at E. Chamorro Industrial. As a senior data analyst, I also provided internal consulting and support to Droguería Rocha, Farmacity, WAPI Industrial and Molinos de Nicaragua (MONISA).",
+      "about.previousDelivery": "I led the Tableau-to-Power BI migration and the implementation of Microsoft Fabric across all five companies. Together we migrated about 50 reports serving 60 users.",
       "about.location": "Nicaragua · Remote collaboration · Español / English",
       "cert.tag": "TRAINING & CREDENTIALS",
       "cert.title": "Knowledge I keep\nputting to the test.",

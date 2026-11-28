@@ -1209,53 +1209,41 @@ h1 {
   background: var(--surface);
   padding: 31px;
 }
-.leadership-mark {
-  font-family: var(--display);
-  font-size: 90px;
-  font-weight: 750;
-  letter-spacing: -12px;
-  line-height: 1.1;
-  margin-bottom: 29px;
-}
-.leadership-mark > span {
-  color: var(--accent);
-  letter-spacing: 0;
-}
-.leadership-panel > .eyebrow {
-  font-size: 12px;
-}
 .leadership-panel > h3 {
   font-size: 23px;
   letter-spacing: -0.7px;
   line-height: 1.35;
-  margin-top: 11px;
-  max-width: 315px;
 }
 .leadership-history {
-  border-top: 1px solid var(--line);
-  margin-top: 27px;
-  padding-top: 20px;
+  margin-top: 18px;
 }
 .leadership-history article {
-  display: flex;
-  gap: 20px;
-  margin-bottom: 20px;
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
 }
-.leadership-history article:last-child {
-  margin-bottom: 0;
+.leadership-history article + article {
+  margin-top: 20px;
 }
-.leadership-history article > span {
-  font-size: 12px;
-  color: var(--muted);
+.leadership-history .tenure {
+  color: var(--accent);
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin: 0 0 4px;
+}
+.leadership-history .experience-role {
+  color: var(--ink);
+  line-height: 1.4;
+  font-weight: 550;
+  margin: 2px 0 8px;
 }
 .leadership-history h4 {
   font-family: var(--font);
-  font-size: 15px;
-  line-height: 1.5;
-  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.35;
+  font-weight: 650;
 }
 .leadership-history p {
-  font-size: 12px;
+  font-size: 1rem;
   line-height: 1.65;
   margin-top: 5px;
 }
@@ -2254,19 +2242,8 @@ dialog::backdrop {
   .leadership-panel {
     padding: 28px;
   }
-  .leadership-mark {
-    font-size: 80px;
-    margin-bottom: 25px;
-  }
   .leadership-panel > h3 {
     font-size: 24px;
-    max-width: 330px;
-  }
-  .leadership-history h4 {
-    font-size: 15px;
-  }
-  .leadership-history p {
-    font-size: 12px;
   }
   .cert-summary {
     display: inline-block;
@@ -3268,15 +3245,6 @@ nav a,
 .about-copy .location {
   font-size: 14px !important;
 }
-.leadership-history h4 {
-  font-size: 16px;
-}
-.leadership-history p {
-  font-size: 15px;
-}
-.leadership-panel > .eyebrow {
-  font-size: 12px;
-}
 .social-links {
   font-size: 16px;
 }
@@ -3747,12 +3715,6 @@ nav a,
   }
   .leadership-panel > h3 {
     font-size: 25px;
-  }
-  .leadership-history h4 {
-    font-size: 16px;
-  }
-  .leadership-history p {
-    font-size: 15px;
   }
   .cert h3 {
     font-size: 18px;
