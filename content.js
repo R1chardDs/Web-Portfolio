@@ -687,7 +687,7 @@ window.PORTFOLIO = {
         "En 2025, el grupo facturó USD 3.830 millones con un margen operativo del 32,2 %. Pebble & Pine alcanzó el 28,2 %, frente al 34,7 % de P&K Select. La comparación histórica empieza en 2022 para separar la recuperación de 2021.",
         "In 2025 the group earned $3.83B in revenue at a 32.2% operating margin. Pebble & Pine reached 28.2%, compared with 34.7% for P&K Select. Growth comparisons start in 2022 to account for the 2021 recovery."
       ],
-      img: "assets/group-performance.png",
+      img: "assets/group-performance.webp",
       url: null
     },
     {
@@ -698,7 +698,7 @@ window.PORTFOLIO = {
         "Pebble & Pine · Estrategia de inversión",
         "Pebble & Pine · Investment strategy",
       ],
-      img: "assets/project-pebble-pine.png",
+      img: "assets/project-pebble-pine.webp",
       url: "https://app.fabric.microsoft.com/view?r=eyJrIjoiOWRkMDY5MWYtYWQwNS00Mjk4LThjYzQtNDRiOWVjOGZmNjJlIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9",
       community:
         "https://community.fabric.microsoft.com/discussions/pbi_contestsgallery/pebble--pine---strengthen-what-we-already-have/5429507",
@@ -754,14 +754,14 @@ window.PORTFOLIO = {
         "La tarifa explica el 24 % del crecimiento del RevPAR. El canal web deja USD 280 netos por noche, frente a USD 204 en agencias en línea. La comparación ayuda a priorizar dónde revisar la distribución.",
         "Rate accounts for 24% of RevPAR growth. The website nets $280 per room night versus $204 through online agencies, giving revenue managers a basis for reviewing their channel mix."
       ],
-      img: "assets/commercial-revenue.png",
+      img: "assets/commercial-revenue.webp",
       url: "https://app.fabric.microsoft.com/view?r=eyJrIjoiYzM4YWM4NWUtNmY2ZC00MjEyLWIxOWMtOTBkOWEyZWVkMDdiIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9"
     },
     {
       id: "movies",
       topics: ["story"],
       title: "What Makes a Movie Successful?",
-      img: "assets/project-movies.png",
+      img: "assets/project-movies.webp",
       url: "https://app.fabric.microsoft.com/view?r=eyJrIjoiZWEzM2E0NDEtZGY5NC00YzdmLWE2MWEtMWFlNGI3OWVhZDNlIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9",
       tag: [
         "WORLD CHAMPS BCN 2026 · RONDA 3",
@@ -817,7 +817,7 @@ window.PORTFOLIO = {
         "El NPS del grupo bajó de 23,3 a 17,8. El estado de las habitaciones concentró más quejas y registró el mayor aumento desde 2021. La regla de seguimiento identifica 48 hoteles para revisión.",
         "Group NPS fell from 23.3 to 17.8. Room condition drew the most complaints and the largest increase since 2021. The watch rule identifies 48 hotels for review."
       ],
-      img: "assets/guest-experience.png",
+      img: "assets/guest-experience.webp",
       url: "https://app.fabric.microsoft.com/view?r=eyJrIjoiZTgwNjcwZTctYTkxOC00NDA2LTg0ZDItY2UzOWZiYTAxM2ZiIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9"
     },
     {
@@ -876,7 +876,7 @@ window.PORTFOLIO = {
         "En el escenario esperado, compartir el presupuesto añade USD 3,4 millones de utilidad anual a plena operación. De 40 proyectos, 22 reciben fondos en los tres escenarios. El cálculo precede la puesta en marcha y las interrupciones por obras.",
         "In the expected scenario, pooling adds $3.4M in annual profit at maturity. Of 40 projects, 22 receive funding in all three scenarios. The estimate precedes ramp-up and disruption during construction."
       ],
-      img: "assets/capital-allocation.png",
+      img: "assets/capital-allocation.webp",
       url: "https://app.fabric.microsoft.com/view?r=eyJrIjoiNTdjYmRlMGMtZWQ5YS00ZGUwLWE5YTgtNzMzN2VmNzYzZTk2IiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9"
     },
     {
@@ -942,7 +942,7 @@ window.PORTFOLIO = {
         "La marca opera con un margen del 28,2 % frente al 32,2 % del grupo. Su NPS cayó de 26,1 a 20,3 y la cartera solicita USD 245,3 millones. La dirección puede contrastar las inversiones con un presupuesto de USD 145 millones.",
         "The brand earns a 28.2% margin against the group’s 32.2%. NPS fell from 26.1 to 20.3, and the investment catalogue asks $245.3M. Brand leaders can weigh the proposals against a $145M budget."
       ],
-      img: "assets/brand-performance.png",
+      img: "assets/brand-performance.webp",
       url: "https://app.fabric.microsoft.com/view?r=eyJrIjoiYzk1OWE4ZmItMTNjMy00NWMxLWJmNmMtMGI4YzgyYTk4NDk4IiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9"
     },
     {
@@ -1008,7 +1008,7 @@ window.PORTFOLIO = {
         "El margen observado en 2025 es del 32,2 %. Bajo los supuestos de continuidad, baja al 29,0 % en 2032. La brecha anual de USD 44 millones frente al margen del grupo sirve para seleccionar hoteles que conviene investigar.",
         "The observed 2025 margin is 32.2%. Under the baseline assumptions it reaches 29.0% in 2032. The $44M annual gap to group margin helps FP&A select hotels for investigation."
       ],
-      img: "assets/finance-cost.png",
+      img: "assets/finance-cost.webp",
       url: "https://app.fabric.microsoft.com/view?r=eyJrIjoiM2E3NGMyOWQtZGUxNS00NGExLThhY2ItY2NiODI1NzgxOTNlIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9"
     },
     {
