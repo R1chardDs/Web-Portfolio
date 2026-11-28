@@ -2,6 +2,7 @@
 window.PORTFOLIO = {
   ui: {
     es: {
+      "meta.imageAlt": "Richard Ampié, Data & AI Consulting. Menos trabajo manual. Más capacidad para decidir.",
       "tech.fabric": "Integro la ingesta, el almacenamiento y el análisis en Microsoft Fabric. Un pipeline carga las ventas al almacén y deja los datos listos para Finanzas y Operaciones.",
       "tech.power-bi": "Migro reportes de Excel y Tableau a Power BI. Diseño modelos con medidas compartidas para que dirección y analistas exploren las mismas cifras a distinto nivel de detalle.",
       "tech.azure": "En Azure aprovisiono bases de datos y almacenamiento en la nube. Configuro el acceso y monitoreo el uso para ajustar los recursos a la carga de trabajo.",
@@ -79,8 +80,8 @@ window.PORTFOLIO = {
       skip: "Ir al contenido",
       "nav.services": "Servicios",
       "nav.impact": "Resultados",
-      "nav.work": "Proyectos",
-      "nav.about": "Mi enfoque",
+      "nav.work": "Casos y proyectos",
+      "nav.about": "Perfil",
       "nav.contact": "Conversemos",
       menu: "Abrir menú",
       "hero.eyebrow": "FINANZAS, DATOS E INTELIGENCIA DE NEGOCIO",
@@ -99,7 +100,7 @@ window.PORTFOLIO = {
       "hero.visual.decision": "Decisiones informadas",
       "hero.visual.footer": "Diseño técnico con una visión de negocio.",
       "trust.label": "TECNOLOGÍA AL SERVICIO DE LA OPERACIÓN",
-      "impact.tag": "01 / EXPERIENCIA QUE SE TRADUCE EN RESULTADOS",
+      "impact.tag": "EXPERIENCIA QUE SE TRADUCE EN RESULTADOS",
       "impact.title": "La mejora se mide\nen la operación.",
       "impact.body":
         "Experiencia en finanzas, ingeniería de datos y liderazgo de BI. Estos son algunos resultados de mi trayectoria profesional.",
@@ -113,14 +114,14 @@ window.PORTFOLIO = {
       "impact.metric4sub": "Control de versiones y despliegues gobernados.",
       "impact.note":
         "Las migraciones y auditorías son cifras acumuladas de mi trayectoria. Los cambios en tiempos y capacidad corresponden a proyectos concretos.",
-      "services.tag": "02 / CÓMO PUEDO AYUDARTE",
+      "services.tag": "CÓMO PUEDO AYUDARTE",
       "services.title":
         "¿Qué necesita hoy tu plataforma de datos?",
       "services.body":
         "Partimos de la decisión que tu equipo necesita tomar y acordamos cómo medir la mejora.",
       "services.deliver": "Qué recibís",
       "services.cta": "Consultar por este servicio",
-      "method.tag": "04 / MI FORMA DE TRABAJAR",
+      "method.tag": "MI FORMA DE TRABAJAR",
       "method.title":
         "La IA acelera la ejecución.\nEl criterio dirige el resultado.",
       "method.body":
@@ -146,7 +147,7 @@ window.PORTFOLIO = {
       "method.step4": "Validar y entregar",
       "method.step4body":
         "Revisión de lógica, visuales, publicación y documentación.",
-      "work.tag": "05 / TRABAJO SELECCIONADO",
+      "work.tag": "TRABAJO SELECCIONADO",
       "work.title": "Rigor en los datos.\nIntención en cada visual.",
       "work.body":
         "Una selección de reportes públicos creados para explorar, explicar y llevar Power BI más lejos. La misma atención al detalle que llevo a una solución de negocio.",
@@ -168,7 +169,7 @@ window.PORTFOLIO = {
       "project.value": "Qué demuestra",
       "project.close": "Cerrar proyecto",
       "project.count": "proyectos públicos",
-      "about.tag": "06 / EL CONSULTOR DETRÁS DEL TRABAJO",
+      "about.tag": "EL CONSULTOR DETRÁS DEL TRABAJO",
       "about.title": "Richard Ampié",
       "about.lead":
         "Liderazgo de BI. Mentalidad de ingeniería. Visión financiera.",
@@ -188,7 +189,7 @@ window.PORTFOLIO = {
       "about.history2body":
         "Indicadores, conciliaciones, cierres y automatización operativa.",
       "about.location": "Nicaragua · Colaboración remota · Español / English",
-      "cert.tag": "07 / FORMACIÓN Y CREDENCIALES",
+      "cert.tag": "FORMACIÓN Y CREDENCIALES",
       "cert.title": "Conocimiento que sigo\nponiendo a prueba.",
       "cert.summary": "4 certificaciones obtenidas · 2 en preparación",
       "cert.earned": "Obtenida",
@@ -197,7 +198,7 @@ window.PORTFOLIO = {
       "cert.syllabus": "Ver programa del examen ↗",
       "cert.note":
         "DP-800 y DP-300 forman parte de mi plan de desarrollo; aún no son certificaciones obtenidas.",
-      "contact.tag": "08 / EL SIGUIENTE PASO",
+      "contact.tag": "EL SIGUIENTE PASO",
       "contact.title":
         "Tu equipo tiene\nmejores cosas que hacer\nque repetir tareas.",
       "contact.body":
@@ -218,7 +219,7 @@ window.PORTFOLIO = {
       "nav.engineering": "Ingeniería",
       "theme.light": "Cambiar a modo claro",
       "theme.dark": "Cambiar a modo oscuro",
-      "engineering.tag": "03 / INGENIERÍA Y AUTOMATIZACIÓN",
+      "engineering.tag": "INGENIERÍA Y AUTOMATIZACIÓN",
       "engineering.title": "Del sistema de origen al reporte de negocio",
       "engineering.body":
         "Estos casos muestran cómo migré cargas de SSIS a Fabric, automaticé la ingesta y reduje el tiempo que pasa entre una transacción y el reporte que la usa. Podés abrir cada caso para ver el método y el resultado.",
@@ -252,6 +253,7 @@ window.PORTFOLIO = {
         "Se abrirá tu aplicación de correo con este borrador para que lo revisés y enviés.",
     },
     en: {
+      "meta.imageAlt": "Richard Ampié, Data & AI Consulting. Less manual work. More room to make decisions.",
       "tech.fabric": "I use Microsoft Fabric to bring ingestion, storage and analytics together. A pipeline loads sales into the warehouse and prepares them for Finance and Operations.",
       "tech.power-bi": "I migrate Excel and Tableau reports to Power BI and build models with shared measures so executives and analysts can explore the same figures at different levels of detail.",
       "tech.azure": "I use Azure to provision cloud databases and storage, manage access and monitor usage so resources match the workload.",
@@ -329,8 +331,8 @@ window.PORTFOLIO = {
       skip: "Skip to content",
       "nav.services": "Services",
       "nav.impact": "Impact",
-      "nav.work": "Selected work",
-      "nav.about": "My approach",
+      "nav.work": "Case studies & projects",
+      "nav.about": "Profile",
       "nav.contact": "Let’s talk",
       menu: "Open menu",
       "hero.eyebrow": "FINANCE, DATA & BUSINESS INTELLIGENCE",
@@ -348,7 +350,7 @@ window.PORTFOLIO = {
       "hero.visual.decision": "Informed decisions",
       "hero.visual.footer": "Technical design with a business perspective.",
       "trust.label": "TECHNOLOGY IN SERVICE OF OPERATIONS",
-      "impact.tag": "01 / EXPERIENCE THAT DELIVERS RESULTS",
+      "impact.tag": "EXPERIENCE THAT DELIVERS RESULTS",
       "impact.title": "Improvement shows up\nin the operation.",
       "impact.body":
         "Experience across finance, data engineering and BI leadership. Selected outcomes from my professional career.",
@@ -362,13 +364,13 @@ window.PORTFOLIO = {
       "impact.metric4sub": "Version control and governed deployment.",
       "impact.note":
         "Migration and audit counts span my career. The changes in time and capacity come from individual projects.",
-      "services.tag": "02 / HOW I CAN HELP",
+      "services.tag": "HOW I CAN HELP",
       "services.title": "What does your data platform need today?",
       "services.body":
         "We start with the decision your team needs to make and agree on how to measure the improvement.",
       "services.deliver": "What you receive",
       "services.cta": "Discuss this service",
-      "method.tag": "04 / HOW I WORK",
+      "method.tag": "HOW I WORK",
       "method.title": "AI accelerates execution.\nJudgment guides the outcome.",
       "method.body":
         "I turn technical knowledge, business rules and design standards into an agent-assisted development workflow. I retain ownership of architecture, business logic and delivery review.",
@@ -392,7 +394,7 @@ window.PORTFOLIO = {
       "method.step4": "Validate and deliver",
       "method.step4body":
         "Review of logic, visuals, publication and documentation.",
-      "work.tag": "05 / SELECTED WORK",
+      "work.tag": "SELECTED WORK",
       "work.title": "Rigor in the data.\nPurpose in every visual.",
       "work.body":
         "Public reports built to explore, explain and push Power BI further. The same attention to detail I bring to a business solution.",
@@ -414,7 +416,7 @@ window.PORTFOLIO = {
       "project.value": "What it demonstrates",
       "project.close": "Close project",
       "project.count": "public projects",
-      "about.tag": "06 / THE CONSULTANT BEHIND THE WORK",
+      "about.tag": "THE CONSULTANT BEHIND THE WORK",
       "about.title": "Richard Ampié",
       "about.lead":
         "BI leadership. Engineering mindset. Financial perspective.",
@@ -433,7 +435,7 @@ window.PORTFOLIO = {
       "about.history2body":
         "KPIs, reconciliations, financial close and operational automation.",
       "about.location": "Nicaragua · Remote collaboration · Español / English",
-      "cert.tag": "07 / TRAINING & CREDENTIALS",
+      "cert.tag": "TRAINING & CREDENTIALS",
       "cert.title": "Knowledge I keep\nputting to the test.",
       "cert.summary": "4 certifications earned · 2 in progress",
       "cert.earned": "Earned",
@@ -442,7 +444,7 @@ window.PORTFOLIO = {
       "cert.syllabus": "View exam details ↗",
       "cert.note":
         "DP-800 and DP-300 are part of my development plan; they are not yet earned certifications.",
-      "contact.tag": "08 / NEXT STEP",
+      "contact.tag": "NEXT STEP",
       "contact.title": "Your team has\nbetter things to do\nthan repeat tasks.",
       "contact.body":
         "Tell me which process consumes time, which report has slowed down or what you want to automate. We can start by defining the problem and the scope of a first engagement.",
@@ -462,7 +464,7 @@ window.PORTFOLIO = {
       "nav.engineering": "Engineering",
       "theme.light": "Switch to light mode",
       "theme.dark": "Switch to dark mode",
-      "engineering.tag": "03 / ENGINEERING & AUTOMATION",
+      "engineering.tag": "ENGINEERING & AUTOMATION",
       "engineering.title": "From source systems to business reports",
       "engineering.body":
         "These cases show how I migrated workloads from SSIS to Fabric, automated ingestion and shortened the wait between a transaction and the report that uses it. Open a case to see the approach and outcome.",
@@ -687,7 +689,7 @@ window.PORTFOLIO = {
         "En 2025, el grupo facturó USD 3.830 millones con un margen operativo del 32,2 %. Pebble & Pine alcanzó el 28,2 %, frente al 34,7 % de P&K Select. La comparación histórica empieza en 2022 para separar la recuperación de 2021.",
         "In 2025 the group earned $3.83B in revenue at a 32.2% operating margin. Pebble & Pine reached 28.2%, compared with 34.7% for P&K Select. Growth comparisons start in 2022 to account for the 2021 recovery."
       ],
-      img: "assets/group-performance.png",
+      img: "assets/group-performance.webp",
       url: null
     },
     {
@@ -698,7 +700,7 @@ window.PORTFOLIO = {
         "Pebble & Pine · Estrategia de inversión",
         "Pebble & Pine · Investment strategy",
       ],
-      img: "assets/project-pebble-pine.png",
+      img: "assets/project-pebble-pine.webp",
       url: "https://app.fabric.microsoft.com/view?r=eyJrIjoiOWRkMDY5MWYtYWQwNS00Mjk4LThjYzQtNDRiOWVjOGZmNjJlIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9",
       community:
         "https://community.fabric.microsoft.com/discussions/pbi_contestsgallery/pebble--pine---strengthen-what-we-already-have/5429507",
@@ -754,14 +756,14 @@ window.PORTFOLIO = {
         "La tarifa explica el 24 % del crecimiento del RevPAR. El canal web deja USD 280 netos por noche, frente a USD 204 en agencias en línea. La comparación ayuda a priorizar dónde revisar la distribución.",
         "Rate accounts for 24% of RevPAR growth. The website nets $280 per room night versus $204 through online agencies, giving revenue managers a basis for reviewing their channel mix."
       ],
-      img: "assets/commercial-revenue.png",
+      img: "assets/commercial-revenue.webp",
       url: "https://app.fabric.microsoft.com/view?r=eyJrIjoiYzM4YWM4NWUtNmY2ZC00MjEyLWIxOWMtOTBkOWEyZWVkMDdiIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9"
     },
     {
       id: "movies",
       topics: ["story"],
       title: "What Makes a Movie Successful?",
-      img: "assets/project-movies.png",
+      img: "assets/project-movies.webp",
       url: "https://app.fabric.microsoft.com/view?r=eyJrIjoiZWEzM2E0NDEtZGY5NC00YzdmLWE2MWEtMWFlNGI3OWVhZDNlIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9",
       tag: [
         "WORLD CHAMPS BCN 2026 · RONDA 3",
@@ -817,7 +819,7 @@ window.PORTFOLIO = {
         "El NPS del grupo bajó de 23,3 a 17,8. El estado de las habitaciones concentró más quejas y registró el mayor aumento desde 2021. La regla de seguimiento identifica 48 hoteles para revisión.",
         "Group NPS fell from 23.3 to 17.8. Room condition drew the most complaints and the largest increase since 2021. The watch rule identifies 48 hotels for review."
       ],
-      img: "assets/guest-experience.png",
+      img: "assets/guest-experience.webp",
       url: "https://app.fabric.microsoft.com/view?r=eyJrIjoiZTgwNjcwZTctYTkxOC00NDA2LTg0ZDItY2UzOWZiYTAxM2ZiIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9"
     },
     {
@@ -876,7 +878,7 @@ window.PORTFOLIO = {
         "En el escenario esperado, compartir el presupuesto añade USD 3,4 millones de utilidad anual a plena operación. De 40 proyectos, 22 reciben fondos en los tres escenarios. El cálculo precede la puesta en marcha y las interrupciones por obras.",
         "In the expected scenario, pooling adds $3.4M in annual profit at maturity. Of 40 projects, 22 receive funding in all three scenarios. The estimate precedes ramp-up and disruption during construction."
       ],
-      img: "assets/capital-allocation.png",
+      img: "assets/capital-allocation.webp",
       url: "https://app.fabric.microsoft.com/view?r=eyJrIjoiNTdjYmRlMGMtZWQ5YS00ZGUwLWE5YTgtNzMzN2VmNzYzZTk2IiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9"
     },
     {
@@ -942,7 +944,7 @@ window.PORTFOLIO = {
         "La marca opera con un margen del 28,2 % frente al 32,2 % del grupo. Su NPS cayó de 26,1 a 20,3 y la cartera solicita USD 245,3 millones. La dirección puede contrastar las inversiones con un presupuesto de USD 145 millones.",
         "The brand earns a 28.2% margin against the group’s 32.2%. NPS fell from 26.1 to 20.3, and the investment catalogue asks $245.3M. Brand leaders can weigh the proposals against a $145M budget."
       ],
-      img: "assets/brand-performance.png",
+      img: "assets/brand-performance.webp",
       url: "https://app.fabric.microsoft.com/view?r=eyJrIjoiYzk1OWE4ZmItMTNjMy00NWMxLWJmNmMtMGI4YzgyYTk4NDk4IiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9"
     },
     {
@@ -1008,7 +1010,7 @@ window.PORTFOLIO = {
         "El margen observado en 2025 es del 32,2 %. Bajo los supuestos de continuidad, baja al 29,0 % en 2032. La brecha anual de USD 44 millones frente al margen del grupo sirve para seleccionar hoteles que conviene investigar.",
         "The observed 2025 margin is 32.2%. Under the baseline assumptions it reaches 29.0% in 2032. The $44M annual gap to group margin helps FP&A select hotels for investigation."
       ],
-      img: "assets/finance-cost.png",
+      img: "assets/finance-cost.webp",
       url: "https://app.fabric.microsoft.com/view?r=eyJrIjoiM2E3NGMyOWQtZGUxNS00NGExLThhY2ItY2NiODI1NzgxOTNlIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9"
     },
     {

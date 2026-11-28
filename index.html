@@ -20,12 +20,18 @@
       property="og:description"
       content="Business intelligence, data engineering and automation consulting. Richard Ampié combines five years of experience, financial insight and BI leadership."
     />
-    <meta
-      property="og:image"
-      content="https://richardampie.com/assets/social-card.png"
-    />
+    <meta property="og:image" content="https://richardampie.com/assets/social-card-en.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Richard Ampié, Data &amp; AI Consulting. Less manual work. More room to make decisions." />
     <meta name="twitter:card" content="summary_large_image" />
-    <link rel="icon" href="assets/monogram.svg" type="image/svg+xml" />
+    <meta name="twitter:title" content="Portfolio | Richard Ampié" />
+    <meta name="twitter:description" content="Business intelligence, data engineering and automation consulting. Richard Ampié combines five years of experience, financial insight and BI leadership." />
+    <meta name="twitter:image" content="https://richardampie.com/assets/social-card-en.png" />
+    <meta name="twitter:image:alt" content="Richard Ampié, Data &amp; AI Consulting. Less manual work. More room to make decisions." />
+    <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48" />
+    <link rel="icon" href="assets/monogram.svg" sizes="any" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -34,8 +40,8 @@
     />
     <script src="theme-init.js?v=visual-20261113"></script>
     <link rel="stylesheet" href="style.css?v=model-lineage-20261127" />
-    <script src="content.js?v=model-lineage-20261127" defer></script>
-    <script src="app.js?v=model-lineage-20261127" defer></script>
+    <script src="content.js?v=portfolio-polish-20261127" defer></script>
+    <script src="app.js?v=portfolio-polish-20261127" defer></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -54,6 +60,48 @@
         "sameAs": [
           "https://github.com/R1chardDs",
           "https://www.linkedin.com/in/richard-ampie-218a07247/"
+        ],
+        "hasCredential": [
+          {
+            "@type": "EducationalOccupationalCredential",
+            "name": "Fabric Data Engineer Associate",
+            "credentialCategory": "Professional certification",
+            "recognizedBy": {
+              "@type": "Organization",
+              "name": "Microsoft"
+            },
+            "url": "https://learn.microsoft.com/api/credentials/share/es-mx/richardampie-0240/F7CDBD4B6FDD0055?sharingId=7758DE5B5185C6B1"
+          },
+          {
+            "@type": "EducationalOccupationalCredential",
+            "name": "Fabric Analytics Engineer Associate",
+            "credentialCategory": "Professional certification",
+            "recognizedBy": {
+              "@type": "Organization",
+              "name": "Microsoft"
+            },
+            "url": "https://learn.microsoft.com/api/credentials/share/es-mx/richardampie-0240/ED7938BD47B54F5C?sharingId=7758DE5B5185C6B1"
+          },
+          {
+            "@type": "EducationalOccupationalCredential",
+            "name": "Power BI Data Analyst Associate",
+            "credentialCategory": "Professional certification",
+            "recognizedBy": {
+              "@type": "Organization",
+              "name": "Microsoft"
+            },
+            "url": "https://learn.microsoft.com/api/credentials/share/es-mx/richardampie-0240/23F4EABA13F7FA7E?sharingId=7758DE5B5185C6B1"
+          },
+          {
+            "@type": "EducationalOccupationalCredential",
+            "name": "Azure AI Fundamentals",
+            "credentialCategory": "Professional certification",
+            "recognizedBy": {
+              "@type": "Organization",
+              "name": "Microsoft"
+            },
+            "url": "https://learn.microsoft.com/api/credentials/share/es-mx/richardampie-0240/ED826CFA3634B292?sharingId=7758DE5B5185C6B1"
+          }
         ]
       }
     </script>
@@ -69,11 +117,11 @@
           ></a
         >
         <nav id="main-nav" aria-label="Main">
-          <a data-i18n="nav.services" href="#services">Services</a
-          ><a data-i18n="nav.impact" href="#impact">Impact</a
-          ><a data-i18n="nav.engineering" href="#engineering">Engineering</a
-          ><a data-i18n="nav.work" href="#business-cases">Selected work</a
-          ><a data-i18n="nav.about" href="#about">My approach</a>
+          <a data-i18n="nav.impact" href="#impact">Impact</a>
+          <a data-i18n="nav.work" href="#business-cases">Case studies &amp; projects</a>
+          <a data-i18n="nav.services" href="#services">Services</a>
+          <a data-i18n="nav.engineering" href="#engineering">Engineering</a>
+          <a data-i18n="nav.about" href="#about">Profile</a>
         </nav>
         <div class="header-actions">
           <div
@@ -172,7 +220,9 @@
             </div>
             <div class="hero-image-frame">
               <img
-                src="assets/hero-data-system-v3.png"
+                src="assets/hero-data-system-v3.webp"
+                srcset="assets/hero-data-system-v3-768.webp 768w, assets/hero-data-system-v3.webp 1536w"
+                sizes="(max-width: 800px) 92vw, (max-width: 1500px) 46vw, 650px"
                 width="1536"
                 height="1024"
                 alt="Illustration of data sources forming a structured platform and feeding an analytics panel."
@@ -248,7 +298,7 @@
       <section id="impact" class="section impact">
         <div class="container">
           <p class="eyebrow" data-i18n="impact.tag">
-            01 / EXPERIENCE THAT DELIVERS RESULTS
+            EXPERIENCE THAT DELIVERS RESULTS
           </p>
           <div class="section-heading">
             <h2 data-i18n="impact.title">
@@ -331,20 +381,20 @@
           <div class="project-grid" id="business-grid">
             <!-- business cards start -->
             <article class="project-card" data-topics="strategy finance" data-collections="business">
-              <a class="project-image" href="assets/group-performance.png" target="_blank" rel="noopener noreferrer" aria-label="Group Performance — View screenshot ↗"><img src="assets/group-performance.png" alt="Group Performance" loading="lazy" width="1280" height="720" /><span class="project-arrow" aria-hidden="true">↗</span></a>
+              <a class="project-image" href="assets/group-performance.webp" target="_blank" rel="noopener noreferrer" aria-label="Group Performance — View screenshot ↗"><img src="assets/group-performance.webp" alt="Group Performance" loading="lazy" width="1280" height="720" /><span class="project-arrow" aria-hidden="true">↗</span></a>
               <div class="project-info">
                 <p class="eyebrow" data-project="group-performance" data-field="tag">Board of directors · Pillow &amp; Key</p>
                 <h3 data-project="group-performance" data-field="title">Group Performance</h3>
                 <p data-project="group-performance" data-field="desc">Pebble &amp; Pine earns 28% of revenue and 25% of profit. Which brand needs the board’s attention?</p>
                 <div class="topic-tags"><span data-i18n="gallery.strategy">Strategy</span> <span data-i18n="gallery.finance">Finance</span></div>
                 <div class="project-links">
-                  <a href="assets/group-performance.png" target="_blank" rel="noopener noreferrer" data-i18n="gallery.preview">View screenshot ↗</a>
+                  <a href="assets/group-performance.webp" target="_blank" rel="noopener noreferrer" data-i18n="gallery.preview">View screenshot ↗</a>
                   <button type="button" data-open-project="group-performance" data-i18n="project.details">About the project</button>
                 </div>
               </div>
             </article>
             <article class="project-card" data-topics="finance strategy" data-collections="champs community business">
-              <a class="project-image" href="https://app.fabric.microsoft.com/view?r=eyJrIjoiOWRkMDY5MWYtYWQwNS00Mjk4LThjYzQtNDRiOWVjOGZmNjJlIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" rel="noopener noreferrer" aria-label="Pebble &amp; Pine · Investment strategy — Explore report ↗"><img src="assets/project-pebble-pine.png" alt="Pebble &amp; Pine · Investment strategy" loading="lazy" width="1280" height="720" /><span class="project-arrow" aria-hidden="true">↗</span></a>
+              <a class="project-image" href="https://app.fabric.microsoft.com/view?r=eyJrIjoiOWRkMDY5MWYtYWQwNS00Mjk4LThjYzQtNDRiOWVjOGZmNjJlIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" rel="noopener noreferrer" aria-label="Pebble &amp; Pine · Investment strategy — Explore report ↗"><img src="assets/project-pebble-pine.webp" alt="Pebble &amp; Pine · Investment strategy" loading="lazy" width="1280" height="720" /><span class="project-arrow" aria-hidden="true">↗</span></a>
               <div class="project-info">
                 <p class="eyebrow" data-project="pebble-pine" data-field="tag">WORLD CHAMPS ATL 2027 · ROUND 1</p>
                 <h3 data-project="pebble-pine" data-field="title">Pebble &amp; Pine · Investment strategy</h3>
@@ -358,7 +408,7 @@
               </div>
             </article>
             <article class="project-card" data-topics="commercial" data-collections="business">
-              <a class="project-image" href="https://app.fabric.microsoft.com/view?r=eyJrIjoiYzM4YWM4NWUtNmY2ZC00MjEyLWIxOWMtOTBkOWEyZWVkMDdiIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" rel="noopener noreferrer" aria-label="Commercial &amp; Revenue — Explore report ↗"><img src="assets/commercial-revenue.png" alt="Commercial &amp; Revenue" loading="lazy" width="1280" height="720" /><span class="project-arrow" aria-hidden="true">↗</span></a>
+              <a class="project-image" href="https://app.fabric.microsoft.com/view?r=eyJrIjoiYzM4YWM4NWUtNmY2ZC00MjEyLWIxOWMtOTBkOWEyZWVkMDdiIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" rel="noopener noreferrer" aria-label="Commercial &amp; Revenue — Explore report ↗"><img src="assets/commercial-revenue.webp" alt="Commercial &amp; Revenue" loading="lazy" width="1280" height="720" /><span class="project-arrow" aria-hidden="true">↗</span></a>
               <div class="project-info">
                 <p class="eyebrow" data-project="commercial-revenue" data-field="tag">Revenue management · Pillow &amp; Key</p>
                 <h3 data-project="commercial-revenue" data-field="title">Commercial &amp; Revenue</h3>
@@ -371,7 +421,7 @@
               </div>
             </article>
             <article class="project-card" data-topics="story" data-collections="champs community">
-              <a class="project-image" href="https://app.fabric.microsoft.com/view?r=eyJrIjoiZWEzM2E0NDEtZGY5NC00YzdmLWE2MWEtMWFlNGI3OWVhZDNlIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" rel="noopener noreferrer" aria-label="What Makes a Movie Successful? — Explore report ↗"><img src="assets/project-movies.png" alt="What Makes a Movie Successful?" loading="lazy" width="1280" height="720" /><span class="project-arrow" aria-hidden="true">↗</span></a>
+              <a class="project-image" href="https://app.fabric.microsoft.com/view?r=eyJrIjoiZWEzM2E0NDEtZGY5NC00YzdmLWE2MWEtMWFlNGI3OWVhZDNlIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" rel="noopener noreferrer" aria-label="What Makes a Movie Successful? — Explore report ↗"><img src="assets/project-movies.webp" alt="What Makes a Movie Successful?" loading="lazy" width="1280" height="720" /><span class="project-arrow" aria-hidden="true">↗</span></a>
               <div class="project-info">
                 <p class="eyebrow" data-project="movies" data-field="tag">WORLD CHAMPS BCN 2026 · ROUND 3</p>
                 <h3 data-project="movies" data-field="title">What Makes a Movie Successful?</h3>
@@ -385,7 +435,7 @@
               </div>
             </article>
             <article class="project-card" data-topics="operations" data-collections="business">
-              <a class="project-image" href="https://app.fabric.microsoft.com/view?r=eyJrIjoiZTgwNjcwZTctYTkxOC00NDA2LTg0ZDItY2UzOWZiYTAxM2ZiIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" rel="noopener noreferrer" aria-label="Guest Experience — Explore report ↗"><img src="assets/guest-experience.png" alt="Guest Experience" loading="lazy" width="1280" height="720" /><span class="project-arrow" aria-hidden="true">↗</span></a>
+              <a class="project-image" href="https://app.fabric.microsoft.com/view?r=eyJrIjoiZTgwNjcwZTctYTkxOC00NDA2LTg0ZDItY2UzOWZiYTAxM2ZiIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" rel="noopener noreferrer" aria-label="Guest Experience — Explore report ↗"><img src="assets/guest-experience.webp" alt="Guest Experience" loading="lazy" width="1280" height="720" /><span class="project-arrow" aria-hidden="true">↗</span></a>
               <div class="project-info">
                 <p class="eyebrow" data-project="guest-experience" data-field="tag">Hotel operations · Pillow &amp; Key</p>
                 <h3 data-project="guest-experience" data-field="title">Guest Experience</h3>
@@ -411,7 +461,7 @@
               </div>
             </article>
             <article class="project-card" data-topics="finance strategy" data-collections="business">
-              <a class="project-image" href="https://app.fabric.microsoft.com/view?r=eyJrIjoiNTdjYmRlMGMtZWQ5YS00ZGUwLWE5YTgtNzMzN2VmNzYzZTk2IiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" rel="noopener noreferrer" aria-label="Capital Allocation — Explore report ↗"><img src="assets/capital-allocation.png" alt="Capital Allocation" loading="lazy" width="1280" height="720" /><span class="project-arrow" aria-hidden="true">↗</span></a>
+              <a class="project-image" href="https://app.fabric.microsoft.com/view?r=eyJrIjoiNTdjYmRlMGMtZWQ5YS00ZGUwLWE5YTgtNzMzN2VmNzYzZTk2IiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" rel="noopener noreferrer" aria-label="Capital Allocation — Explore report ↗"><img src="assets/capital-allocation.webp" alt="Capital Allocation" loading="lazy" width="1280" height="720" /><span class="project-arrow" aria-hidden="true">↗</span></a>
               <div class="project-info">
                 <p class="eyebrow" data-project="capital-allocation" data-field="tag">Investment committee · Pillow &amp; Key</p>
                 <h3 data-project="capital-allocation" data-field="title">Capital Allocation</h3>
@@ -438,7 +488,7 @@
               </div>
             </article>
             <article class="project-card" data-topics="strategy operations" data-collections="business">
-              <a class="project-image" href="https://app.fabric.microsoft.com/view?r=eyJrIjoiYzk1OWE4ZmItMTNjMy00NWMxLWJmNmMtMGI4YzgyYTk4NDk4IiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" rel="noopener noreferrer" aria-label="Pebble &amp; Pine Brand Performance — Explore report ↗"><img src="assets/brand-performance.png" alt="Pebble &amp; Pine Brand Performance" loading="lazy" width="1280" height="720" /><span class="project-arrow" aria-hidden="true">↗</span></a>
+              <a class="project-image" href="https://app.fabric.microsoft.com/view?r=eyJrIjoiYzk1OWE4ZmItMTNjMy00NWMxLWJmNmMtMGI4YzgyYTk4NDk4IiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" rel="noopener noreferrer" aria-label="Pebble &amp; Pine Brand Performance — Explore report ↗"><img src="assets/brand-performance.webp" alt="Pebble &amp; Pine Brand Performance" loading="lazy" width="1280" height="720" /><span class="project-arrow" aria-hidden="true">↗</span></a>
               <div class="project-info">
                 <p class="eyebrow" data-project="brand-performance" data-field="tag">Brand management · Pebble &amp; Pine</p>
                 <h3 data-project="brand-performance" data-field="title">Pebble &amp; Pine Brand Performance</h3>
@@ -465,7 +515,7 @@
               </div>
             </article>
             <article class="project-card" data-topics="finance" data-collections="business">
-              <a class="project-image" href="https://app.fabric.microsoft.com/view?r=eyJrIjoiM2E3NGMyOWQtZGUxNS00NGExLThhY2ItY2NiODI1NzgxOTNlIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" rel="noopener noreferrer" aria-label="Finance &amp; Cost — Explore report ↗"><img src="assets/finance-cost.png" alt="Finance &amp; Cost" loading="lazy" width="1280" height="720" /><span class="project-arrow" aria-hidden="true">↗</span></a>
+              <a class="project-image" href="https://app.fabric.microsoft.com/view?r=eyJrIjoiM2E3NGMyOWQtZGUxNS00NGExLThhY2ItY2NiODI1NzgxOTNlIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" rel="noopener noreferrer" aria-label="Finance &amp; Cost — Explore report ↗"><img src="assets/finance-cost.webp" alt="Finance &amp; Cost" loading="lazy" width="1280" height="720" /><span class="project-arrow" aria-hidden="true">↗</span></a>
               <div class="project-info">
                 <p class="eyebrow" data-project="finance-cost" data-field="tag">FP&amp;A · Pillow &amp; Key</p>
                 <h3 data-project="finance-cost" data-field="title">Finance &amp; Cost</h3>
@@ -586,7 +636,7 @@
                 </div>
                 <ul class="lineage-branches">
                   <!-- lineage start -->
-                  <li><a href="assets/group-performance.png" data-open-project="group-performance">
+                  <li><a href="assets/group-performance.webp" data-open-project="group-performance">
                     <img src="assets/technology/report.svg" width="20" height="20" alt=""><span data-project="group-performance" data-field="title">Group Performance</span>
                   </a></li>
                   <li><a href="https://app.fabric.microsoft.com/view?r=eyJrIjoiOWRkMDY5MWYtYWQwNS00Mjk4LThjYzQtNDRiOWVjOGZmNjJlIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" data-open-project="pebble-pine">
@@ -648,7 +698,7 @@
       </section>
       <section id="services" class="section services">
         <div class="container">
-          <p class="eyebrow" data-i18n="services.tag">02 / HOW I CAN HELP</p>
+          <p class="eyebrow" data-i18n="services.tag">HOW I CAN HELP</p>
           <div class="section-heading">
             <h2 data-i18n="services.title">What does your data platform need today?</h2>
             <p data-i18n="services.body">We start with the decision your team needs to make and agree on how to measure the improvement.</p>
@@ -770,7 +820,7 @@
       <section id="engineering" class="section engineering">
         <div class="container">
           <p class="eyebrow" data-i18n="engineering.tag">
-            03 / ENGINEERING &amp; AUTOMATION
+            ENGINEERING &amp; AUTOMATION
           </p>
           <div class="section-heading">
             <h2 data-i18n="engineering.title">
@@ -782,9 +832,11 @@
             <figure class="engineering-visual">
               <div class="engineering-image-frame">
                 <img
-                  src="assets/engineering-data-platform-v3.png"
-                  width="1024"
-                  height="1280"
+                  src="assets/engineering-data-platform-v3.webp"
+                  srcset="assets/engineering-data-platform-v3-576.webp 576w, assets/engineering-data-platform-v3.webp 1122w"
+                  sizes="(max-width: 640px) 90vw, (max-width: 1050px) 40vw, 300px"
+                  width="1122"
+                  height="1402"
                   loading="lazy"
                   decoding="async"
                   alt="Architectural illustration of three connected layers in a data platform."
@@ -1763,7 +1815,7 @@
       <section id="method" class="section method">
         <div class="container">
           <div class="method-heading">
-            <p class="eyebrow" data-i18n="method.tag">04 / HOW I WORK</p>
+            <p class="eyebrow" data-i18n="method.tag">HOW I WORK</p>
             <h2 data-i18n="method.title">
               AI accelerates execution. Judgment guides the outcome.
             </h2>
@@ -1852,7 +1904,7 @@
               <p class="eyebrow" data-i18n="design.board">For executives</p>
               <h3 data-i18n="design.boardQuestion">Which brand needs attention?</h3>
               <p data-i18n="design.boardBody">I lead with the group margin and one sentence explaining the change. A chart compares each brand’s share of revenue and profit so the board can see where to focus the discussion.</p>
-              <a class="text-link" data-open-project="group-performance" href="assets/group-performance.png" data-i18n="design.boardLink">Explore the board report</a>
+              <a class="text-link" data-open-project="group-performance" href="assets/group-performance.webp" data-i18n="design.boardLink">Explore the board report</a>
             </article>
             <article>
               <p class="eyebrow" data-i18n="design.ops">For analysts and operations</p>
@@ -1873,7 +1925,7 @@
         <div class="container about-grid">
           <div class="about-copy">
             <p class="eyebrow" data-i18n="about.tag">
-              06 / THE CONSULTANT BEHIND THE WORK
+              THE CONSULTANT BEHIND THE WORK
             </p>
             <h2 data-i18n="about.title">Richard Ampié</h2>
             <p class="about-lead" data-i18n="about.lead">
@@ -1960,7 +2012,7 @@
       <section id="certifications" class="section certifications">
         <div class="container">
           <p class="eyebrow" data-i18n="cert.tag">
-            07 / TRAINING &amp; CREDENTIALS
+            TRAINING &amp; CREDENTIALS
           </p>
           <div class="section-heading">
             <h2 data-i18n="cert.title">
@@ -2101,7 +2153,7 @@
       <section id="contact" class="section contact">
         <div class="container contact-grid">
           <div>
-            <p class="eyebrow" data-i18n="contact.tag">08 / NEXT STEP</p>
+            <p class="eyebrow" data-i18n="contact.tag">NEXT STEP</p>
             <h2 data-i18n="contact.title">
               Your team has better things to do than repeat tasks.
             </h2>
