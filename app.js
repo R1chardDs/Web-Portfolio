@@ -161,12 +161,21 @@ function buildInquiryMailto(subject, body) {
     document.title = tr("meta.title");
     document.querySelector('meta[name="description"]').content =
       tr("meta.description");
-    document.querySelector('meta[property="og:title"]').content =
-      tr("meta.title");
-    document.querySelector('meta[property="og:description"]').content =
-      tr("meta.description");
+    const cardImage = new URL(
+      language === "es" ? "assets/social-card.png" : "assets/social-card-en.png",
+      document.querySelector('link[rel="canonical"]').href,
+    ).href;
+    for (const [field, value] of Object.entries({
+      title: document.title,
+      description: tr("meta.description"),
+      image: cardImage,
+      "image:alt": tr("meta.imageAlt"),
+    })) {
+      document.querySelector(`meta[property="og:${field}"]`).content = value;
+      document.querySelector(`meta[name="twitter:${field}"]`).content = value;
+    }
     document.querySelector('meta[property="og:locale"]').content =
-      language === "es" ? "es_LA" : "en_US";
+      language === "es" ? "es_NI" : "en_US";
     document.querySelectorAll("[data-i18n]").forEach((el) => {
       const value = tr(el.dataset.i18n);
       if (value !== undefined) el.textContent = value;

@@ -2,6 +2,7 @@
 window.PORTFOLIO = {
   ui: {
     es: {
+      "meta.imageAlt": "Richard Ampié, Data & AI Consulting. Menos trabajo manual. Más capacidad para decidir.",
       "tech.fabric": "Integro la ingesta, el almacenamiento y el análisis en Microsoft Fabric. Un pipeline carga las ventas al almacén y deja los datos listos para Finanzas y Operaciones.",
       "tech.power-bi": "Migro reportes de Excel y Tableau a Power BI. Diseño modelos con medidas compartidas para que dirección y analistas exploren las mismas cifras a distinto nivel de detalle.",
       "tech.azure": "En Azure aprovisiono bases de datos y almacenamiento en la nube. Configuro el acceso y monitoreo el uso para ajustar los recursos a la carga de trabajo.",
@@ -252,6 +253,7 @@ window.PORTFOLIO = {
         "Se abrirá tu aplicación de correo con este borrador para que lo revisés y enviés.",
     },
     en: {
+      "meta.imageAlt": "Richard Ampié, Data & AI Consulting. Less manual work. More room to make decisions.",
       "tech.fabric": "I use Microsoft Fabric to bring ingestion, storage and analytics together. A pipeline loads sales into the warehouse and prepares them for Finance and Operations.",
       "tech.power-bi": "I migrate Excel and Tableau reports to Power BI and build models with shared measures so executives and analysts can explore the same figures at different levels of detail.",
       "tech.azure": "I use Azure to provision cloud databases and storage, manage access and monitor usage so resources match the workload.",
