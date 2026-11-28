@@ -9,3 +9,5 @@ hero-data-system-v3.png y engineering-data-platform-v3.png son ilustraciones con
 El PDF de CV preexistente se conserva como archivo histórico y no está enlazado desde la web nueva. El resumen de referencia actualizado está en resume.md.
 
 project-pebble-pine.png es una copia sin cambios del preview compartido por Richard (Screenshot 2026-11-18 235820.png), correspondiente al reporte Pebble & Pine de la ronda 1 del campeonato 2027.
+
+Los iconos de Fabric, Power BI, modelo semántico y reporte de `technology/` proceden del [paquete oficial de arquitectura de Microsoft Fabric](https://learn.microsoft.com/fabric/fundamentals/icons). Azure, SQL Server y Python proceden de [Devicon v2.17.0](https://github.com/devicons/devicon/tree/v2.17.0). Su licencia se incluye junto a los archivos. El icono de agentes de IA es un pictograma propio.

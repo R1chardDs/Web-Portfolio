@@ -3988,3 +3988,138 @@ nav a,
     font-size: 26px;
   }
 }
+
+/* Operational technology guide */
+.tech-list {
+  display: grid;
+  grid-template-columns: repeat(6, max-content);
+  align-items: center;
+  justify-content: space-between;
+  gap: .4rem .85rem;
+  flex: 1;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.tech-item { position: relative; }
+.tech-item[open] { z-index: 5; }
+.tech-item summary {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  min-height: 44px;
+  color: var(--ink);
+  font-weight: 650;
+  font-size: 1rem;
+  cursor: pointer;
+  list-style: none;
+}
+.tech-item summary::-webkit-details-marker { display: none; }
+.tech-item summary::after {
+  content: "";
+  width: .33rem;
+  height: .33rem;
+  border: solid var(--accent);
+  border-width: 0 1.5px 1.5px 0;
+  transform: rotate(45deg);
+}
+.tech-item[open] summary::after { transform: rotate(225deg); }
+.tech-item summary img { width: 28px; height: 28px; object-fit: contain; }
+:root[data-theme="dark"] .tech-item summary img { background: #f5f7fa; border-radius: 5px; padding: 2px; }
+.tech-tip {
+  position: absolute;
+  inset-block-start: 100%;
+  inset-inline-start: 0;
+  width: min(17.5rem, 82vw);
+  padding: .8rem 1rem;
+  border: 1px solid var(--accent);
+  border-radius: .4rem;
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.55;
+  box-shadow: 0 .4rem 1.2rem #0b244427;
+}
+.tech-list li:nth-last-child(-n+2) .tech-tip { inset-inline: auto 0; }
+@media (max-width: 1150px) {
+  .tech-list { grid-template-columns: repeat(3,minmax(0,1fr)); }
+  .tech-list li:nth-last-child(-n+2) .tech-tip { inset-inline: 0 auto; }
+  .tech-list li:nth-child(3n) .tech-tip { inset-inline: auto 0; }
+}
+@media (max-width: 640px) {
+  .tech-list { width: 100%; grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .tech-list li:nth-child(n) .tech-tip { inset-inline: 0 auto; }
+  .tech-list li:nth-child(even) .tech-tip { inset-inline: auto 0; }
+}
+
+/* The connectors follow each report row as its label wraps. */
+.practice-note { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); align-items: center; gap: clamp(1.25rem, 3.5vw, 3.5rem); }
+.practice-copy > p:not(.eyebrow) { margin-block: .75rem; }
+.practice-note figure { min-width: 0; margin: 0; }
+.lineage { container-type: inline-size; }
+.lineage figcaption strong { color: var(--ink); font-size: 1.1rem; }
+.lineage figcaption p { margin: .2rem 0 .8rem; font-size: .96rem; }
+.lineage-tree {
+  --branch-gap: 1.1rem;
+  display: grid;
+  grid-template-columns: minmax(6.75rem, .65fr) minmax(0, 1.4fr);
+  gap: calc(2 * var(--branch-gap));
+  align-items: center;
+}
+.lineage-root {
+  position: relative;
+  display: grid;
+  justify-items: start;
+  gap: .35rem;
+  border: 1px solid var(--accent);
+  border-radius: .4rem;
+  background: var(--surface);
+  padding: .7rem;
+}
+.lineage-root strong { line-height: 1.25; }
+.lineage-root small { color: var(--muted); font-size: .88rem; line-height: 1.4; }
+.lineage-root::after { content: ""; position: absolute; left: 100%; top: 50%; width: calc(var(--branch-gap) + 1px); border-top: 2px solid var(--accent); }
+.lineage-branches { list-style: none; padding: 0; margin: 0; }
+.lineage-branches li { position: relative; padding-block: .16rem; }
+.lineage-branches li::before, .lineage-branches li::after { position: absolute; content: ""; inset-inline-start: calc(-1 * var(--branch-gap)); }
+.lineage-branches li::before { top: 0; bottom: 0; border-inline-start: 2px solid var(--accent); }
+.lineage-branches li:first-child::before { top: 50%; }
+.lineage-branches li:last-child::before { bottom: 50%; }
+.lineage-branches li::after { top: 50%; width: var(--branch-gap); border-block-start: 2px solid var(--accent); }
+.lineage-branches a {
+  display: flex;
+  align-items: center;
+  gap: .45rem;
+  padding: .32rem .6rem;
+  min-height: 2.15rem;
+  border: 1px solid var(--line);
+  border-radius: .35rem;
+  background: var(--surface);
+  font-size: .98rem;
+  line-height: 1.35;
+}
+.lineage-branches a:hover, .lineage-branches a:focus-visible { color: var(--accent); border-color: var(--accent); }
+.lineage-branches img { flex: none; }
+@media (max-width: 950px) { .practice-note { grid-template-columns: minmax(0,1fr); } }
+@container (max-width: 25rem) {
+  .lineage-tree { grid-template-columns: minmax(0,1fr); gap: 0; }
+  .lineage-root { grid-template-columns: auto 1fr; align-items: center; }
+  .lineage-root small { grid-column: 2; }
+  .lineage-root::after { display: none; }
+  .lineage-branches { margin-inline-start: calc(2 * var(--branch-gap)); }
+  .lineage-branches li:first-child { padding-top: .5rem; }
+  .lineage-branches li:first-child::before { top: 0; }
+}
+.offer-card p.service-record, .offer-scope-body p.service-record { padding-inline-start: .7rem; border-inline-start: 2px solid var(--accent); font-size: .96rem; color: var(--ink); }
+.offer-scope-body .service-record { margin-top: 1rem; }
+.design-decisions .section-heading { align-items: start; margin-top: 0; }
+.audience-cases { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: clamp(1rem,3.5vw,3rem); }
+.audience-cases article { padding-block: 1rem; border-top: 2px solid var(--accent); }
+.audience-cases h3 { margin-block: .45rem; font-size: clamp(1.25rem,2vw,1.65rem); }
+.audience-cases .text-link, .design-access .text-link { margin-top: .6rem; }
+.design-access { display: grid; grid-template-columns: minmax(10rem,.5fr) 1fr; gap: 1rem; margin-top: 1rem; padding: clamp(1rem,2.1vw,1.6rem); background: var(--soft); border-radius: .4rem; }
+.design-access h3 { font-size: 1.25rem; }
+@media (max-width: 640px) {
+  .audience-cases, .design-access { grid-template-columns: 1fr; gap: .6rem; }
+}

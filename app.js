@@ -85,6 +85,49 @@ function buildInquiryMailto(subject, body) {
     menu.setAttribute("aria-expanded", "false");
   }
 
+  // Native disclosures also work on touch and when JavaScript is unavailable.
+  const toolsList = document.querySelector(".tech-list");
+  let visibleTool = null;
+  let pinnedTool = null;
+  function closeTool() {
+    if (visibleTool) visibleTool.open = false;
+    visibleTool = null;
+    pinnedTool = null;
+  }
+  function showTool(item) {
+    if (visibleTool === item) return;
+    closeTool();
+    item.open = true;
+    visibleTool = item;
+  }
+  toolsList.querySelectorAll("details").forEach((item) => {
+    const trigger = item.querySelector("summary");
+    item.addEventListener("pointerenter", (event) => {
+      if (event.pointerType === "mouse") showTool(item);
+    });
+    item.addEventListener("pointerleave", (event) => {
+      if (event.pointerType === "mouse" && visibleTool === item && pinnedTool !== item && !item.matches(":focus-within")) closeTool();
+    });
+    trigger.addEventListener("focus", () => showTool(item));
+    trigger.addEventListener("blur", () => {
+      if (visibleTool === item) closeTool();
+    });
+    trigger.addEventListener("click", (event) => {
+      event.preventDefault();
+      if (pinnedTool === item) closeTool();
+      else {
+        showTool(item);
+        pinnedTool = item;
+      }
+    });
+  });
+  document.addEventListener("pointerdown", (event) => {
+    if (visibleTool && !visibleTool.contains(event.target)) closeTool();
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeTool();
+  });
+
   function showProject(id) {
     const p = projects.find((project) => project.id === id);
     if (!p) return;
@@ -230,12 +273,17 @@ function buildInquiryMailto(subject, body) {
     if (event.matches) closeMenu();
   });
 
-  document.querySelectorAll("[data-open-project]").forEach((button) =>
-    button.addEventListener("click", () => {
-      dialogTrigger = button;
-      showProject(button.dataset.openProject);
-    }),
-  );
+  document.querySelectorAll("[data-open-project]").forEach((trigger) => {
+    if (typeof dialog.showModal !== "function") return;
+    trigger.setAttribute("aria-haspopup", "dialog");
+    trigger.addEventListener("click", (event) => {
+      if (trigger.matches("a") && (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey)) return;
+      event.preventDefault();
+      dialogTrigger = trigger;
+      showProject(trigger.dataset.openProject);
+      dialog.scrollTop = 0;
+    });
+  });
   document.querySelectorAll("[data-open-service]").forEach((link) => {
     if (typeof dialog.showModal !== "function") return;
     link.setAttribute("aria-haspopup", "dialog");

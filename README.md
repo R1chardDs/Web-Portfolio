@@ -34,7 +34,7 @@ Dominio principal: https://richardampie.com/. GitHub Pages conserva la publicaci
 
 ## Criterio editorial
 
-- Las cifras profesionales provienen del CV: 80+ migraciones directas y ~150 adicionales lideradas.
+- Las cifras actualizadas por Richard en noviembre de 2026 son más de 100 reportes migrados directamente a Power BI y más de 50 auditados en distintas empresas. Las ~150 migraciones adicionales corresponden a proyectos que lideró.
 - El plazo aproximado de medio día es experiencia propia con requisitos definidos, no un compromiso universal.
 - El reconocimiento enlaza al anuncio público de Judges’ Favorites. No se afirma haber ganado el campeonato ni se presenta un ranking específico sin una fuente que lo acredite.
 - Hay cuatro certificaciones obtenidas y dos en preparación.

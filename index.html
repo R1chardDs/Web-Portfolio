@@ -33,9 +33,9 @@
       rel="stylesheet"
     />
     <script src="theme-init.js?v=visual-20261113"></script>
-    <link rel="stylesheet" href="style.css?v=service-cards-20261127" />
-    <script src="content.js?v=service-cards-20261127" defer></script>
-    <script src="app.js?v=service-cards-20261127" defer></script>
+    <link rel="stylesheet" href="style.css?v=model-lineage-20261127" />
+    <script src="content.js?v=model-lineage-20261127" defer></script>
+    <script src="app.js?v=model-lineage-20261127" defer></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -201,14 +201,48 @@
             </figcaption>
           </figure>
         </div>
-        <div class="container tech-strip">
+        <div class="container tech-strip" id="technology">
           <span class="eyebrow" data-i18n="trust.label"
             >TECHNOLOGY IN SERVICE OF OPERATIONS</span
           >
-          <div>
-            <span>Microsoft Fabric</span><span>Power BI</span><span>Azure</span
-            ><span>SQL Server</span><span>Python</span><span>AI Agents</span>
-          </div>
+          <ul class="tech-list">
+            <li>
+              <details class="tech-item">
+                <summary aria-describedby="tool-fabric"><img src="assets/technology/fabric.svg" alt="" width="28" height="28"><span>Microsoft Fabric</span></summary>
+                <p id="tool-fabric" class="tech-tip" data-i18n="tech.fabric">I use Microsoft Fabric to bring ingestion, storage and analytics together. A pipeline loads sales into the warehouse and prepares them for Finance and Operations.</p>
+              </details>
+            </li>
+            <li>
+              <details class="tech-item">
+                <summary aria-describedby="tool-power-bi"><img src="assets/technology/power-bi.svg" alt="" width="28" height="28"><span>Power BI</span></summary>
+                <p id="tool-power-bi" class="tech-tip" data-i18n="tech.power-bi">I migrate Excel and Tableau reports to Power BI and build models with shared measures so executives and analysts can explore the same figures at different levels of detail.</p>
+              </details>
+            </li>
+            <li>
+              <details class="tech-item">
+                <summary aria-describedby="tool-azure"><img src="assets/technology/azure.svg" alt="" width="28" height="28"><span>Azure</span></summary>
+                <p id="tool-azure" class="tech-tip" data-i18n="tech.azure">I use Azure to provision cloud databases and storage, manage access and monitor usage so resources match the workload.</p>
+              </details>
+            </li>
+            <li>
+              <details class="tech-item">
+                <summary aria-describedby="tool-sql-server"><img src="assets/technology/sql-server.svg" alt="" width="28" height="28"><span>SQL Server</span></summary>
+                <p id="tool-sql-server" class="tech-tip" data-i18n="tech.sql-server">I use SQL Server to design tables and indexes, tune queries and reconcile transactions against the totals in a report.</p>
+              </details>
+            </li>
+            <li>
+              <details class="tech-item">
+                <summary aria-describedby="tool-python"><img src="assets/technology/python.svg" alt="" width="28" height="28"><span>Python</span></summary>
+                <p id="tool-python" class="tech-tip" data-i18n="tech.python">I use Python to connect APIs, transform files and automate quality checks that catch incomplete records before they reach a report.</p>
+              </details>
+            </li>
+            <li>
+              <details class="tech-item">
+                <summary aria-describedby="tool-agents"><img src="assets/technology/agents.svg" alt="" width="28" height="28"><span data-i18n="tech.agentLabel">AI agents</span></summary>
+                <p id="tool-agents" class="tech-tip" data-i18n="tech.agents">AI agents use my development guides and agreed business rules to draft code, measures and visuals. I review the calculations and test the report before publication.</p>
+              </details>
+            </li>
+          </ul>
         </div>
       </section>
       <section id="impact" class="section impact">
@@ -227,8 +261,8 @@
           </div>
           <div class="metrics-grid">
             <article>
-              <strong>80<span>+</span></strong>
-              <h3 data-i18n="impact.metric1">reports migrated hands-on</h3>
+              <strong>100<span>+</span></strong>
+              <h3 data-i18n="impact.metric1">reports migrated hands-on to Power BI</h3>
               <p data-i18n="impact.metric1sub">
                 Plus ~150 additional migrations led.
               </p>
@@ -255,10 +289,7 @@
               </p>
             </article>
           </div>
-          <p class="footnote" data-i18n="impact.note">
-            Career outcomes documented in my CV. These refer to specific
-            projects; each engagement starts with its own assessment.
-          </p>
+          <p class="footnote" data-i18n="impact.note">Migration and audit counts span my career. The changes in time and capacity come from individual projects.</p>
         </div>
       </section>
       <section id="business-cases" class="section projects business-cases" aria-labelledby="business-title">
@@ -312,12 +343,12 @@
                 </div>
               </div>
             </article>
-            <article class="project-card" data-topics="finance strategy" data-collections="champs community">
+            <article class="project-card" data-topics="finance strategy" data-collections="champs community business">
               <a class="project-image" href="https://app.fabric.microsoft.com/view?r=eyJrIjoiOWRkMDY5MWYtYWQwNS00Mjk4LThjYzQtNDRiOWVjOGZmNjJlIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" rel="noopener noreferrer" aria-label="Pebble &amp; Pine · Investment strategy — Explore report ↗"><img src="assets/project-pebble-pine.png" alt="Pebble &amp; Pine · Investment strategy" loading="lazy" width="1280" height="720" /><span class="project-arrow" aria-hidden="true">↗</span></a>
               <div class="project-info">
                 <p class="eyebrow" data-project="pebble-pine" data-field="tag">WORLD CHAMPS ATL 2027 · ROUND 1</p>
                 <h3 data-project="pebble-pine" data-field="title">Pebble &amp; Pine · Investment strategy</h3>
-                <p data-project="pebble-pine" data-field="desc">Financial diagnosis and investment scenarios to prioritize capital across a 45-resort network.</p>
+                <p data-project="pebble-pine" data-field="desc">A profit and loss statement and three investment scenarios help the board allocate capital across 45 resorts.</p>
                 <div class="topic-tags"><span data-i18n="gallery.finance">Finance</span> <span data-i18n="gallery.strategy">Strategy</span></div>
                 <div class="project-links">
                   <a href="https://app.fabric.microsoft.com/view?r=eyJrIjoiOWRkMDY5MWYtYWQwNS00Mjk4LThjYzQtNDRiOWVjOGZmNjJlIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" target="_blank" rel="noopener noreferrer" data-i18n="project.open">Explore report ↗</a>
@@ -531,15 +562,56 @@
             <!-- business cards end -->
           </div>
           <button hidden type="button" class="button business-expand" aria-controls="business-grid" aria-expanded="false" data-i18n="gallery.more">Show all projects</button>
-          <aside class="practice-note" aria-labelledby="practice-title">
-            <p class="eyebrow" data-i18n="practice.label">Field notes · Semantic models</p>
-            <h3 id="practice-title" data-i18n="practice.title">One model for five departments and one brand</h3>
-            <p data-i18n="practice.body">For Pillow &amp; Key, a fictional hotel group, I built six analyses on the semantic model from my ATL 2027 challenge report. Finance and the board can start with the same group margin and investigate different questions without loading sales again for each report.</p>
+          <section id="semantic-lineage" class="practice-note" aria-labelledby="practice-title">
+            <div class="practice-copy">
+              <p class="eyebrow" data-i18n="practice.label">Field notes · Semantic models</p>
+              <h3 id="practice-title" data-i18n="practice.title">One definition of margin across the business</h3>
+              <p data-i18n="practice.body">At several companies I saw analysts load the same sales into separate models. When a rule changed, each team updated its own copy. Two reports could give management different margins for the same month.</p>
+              <p data-i18n="practice.value">I agree with Finance on how to calculate margin and who owns the definition. One refresh updates the sales table, and the reports reuse the same measures. Lineage shows which reports to test before a rule changes.</p>
             <details><summary data-i18n="practice.detail">How I keep the numbers comparable</summary>
               <p data-i18n="practice.example">Group Performance and Finance &amp; Cost both show a 32.2% group margin for 2025. Filter to Pebble &amp; Pine and the same definition returns 28.2%. I divide total operating profit by total revenue for the selected hotels and aggregate distribution costs by hotel and month before adding them.</p><p data-i18n="practice.takeaway">In an audit, I start by locating copies of the sales table, comparing their rules and agreeing with Finance on who owns the shared definition. That gives each correction a clear home and lets the team validate it across the reports that use it.</p>
               <a class="text-link" data-i18n="practice.origin" href="https://community.fabric.microsoft.com/discussions/pbi_contestsgallery/pebble--pine---strengthen-what-we-already-have/5429507" target="_blank" rel="noopener noreferrer">See the original ATL 2027 case ↗</a>
             </details>
-          </aside>
+            </div>
+            <figure class="lineage" aria-labelledby="lineage-title">
+              <figcaption>
+                <strong id="lineage-title" data-i18n="lineage.title">Model lineage · Pillow &amp; Key</strong>
+                <p data-i18n="lineage.caption">Seven reports use the fictional hotel group’s model. Select one to see the decision it supports.</p>
+              </figcaption>
+              <div class="lineage-tree">
+                <div class="lineage-root">
+                  <img src="assets/technology/semantic-model.svg" width="28" height="28" alt="">
+                  <strong data-i18n="lineage.model">Shared semantic model</strong>
+                  <small data-i18n="lineage.measures">Sales, costs and margin</small>
+                </div>
+                <ul class="lineage-branches">
+                  <!-- lineage start -->
+                  <li><a href="assets/group-performance.png" data-open-project="group-performance">
+                    <img src="assets/technology/report.svg" width="20" height="20" alt=""><span data-project="group-performance" data-field="title">Group Performance</span>
+                  </a></li>
+                  <li><a href="https://app.fabric.microsoft.com/view?r=eyJrIjoiOWRkMDY5MWYtYWQwNS00Mjk4LThjYzQtNDRiOWVjOGZmNjJlIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" data-open-project="pebble-pine">
+                    <img src="assets/technology/report.svg" width="20" height="20" alt=""><span data-project="pebble-pine" data-field="title">Pebble &amp; Pine · Investment strategy</span>
+                  </a></li>
+                  <li><a href="https://app.fabric.microsoft.com/view?r=eyJrIjoiYzM4YWM4NWUtNmY2ZC00MjEyLWIxOWMtOTBkOWEyZWVkMDdiIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" data-open-project="commercial-revenue">
+                    <img src="assets/technology/report.svg" width="20" height="20" alt=""><span data-project="commercial-revenue" data-field="title">Commercial &amp; Revenue</span>
+                  </a></li>
+                  <li><a href="https://app.fabric.microsoft.com/view?r=eyJrIjoiZTgwNjcwZTctYTkxOC00NDA2LTg0ZDItY2UzOWZiYTAxM2ZiIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" data-open-project="guest-experience">
+                    <img src="assets/technology/report.svg" width="20" height="20" alt=""><span data-project="guest-experience" data-field="title">Guest Experience</span>
+                  </a></li>
+                  <li><a href="https://app.fabric.microsoft.com/view?r=eyJrIjoiNTdjYmRlMGMtZWQ5YS00ZGUwLWE5YTgtNzMzN2VmNzYzZTk2IiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" data-open-project="capital-allocation">
+                    <img src="assets/technology/report.svg" width="20" height="20" alt=""><span data-project="capital-allocation" data-field="title">Capital Allocation</span>
+                  </a></li>
+                  <li><a href="https://app.fabric.microsoft.com/view?r=eyJrIjoiYzk1OWE4ZmItMTNjMy00NWMxLWJmNmMtMGI4YzgyYTk4NDk4IiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" data-open-project="brand-performance">
+                    <img src="assets/technology/report.svg" width="20" height="20" alt=""><span data-project="brand-performance" data-field="title">Pebble &amp; Pine Brand Performance</span>
+                  </a></li>
+                  <li><a href="https://app.fabric.microsoft.com/view?r=eyJrIjoiM2E3NGMyOWQtZGUxNS00NGExLThhY2ItY2NiODI1NzgxOTNlIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" data-open-project="finance-cost">
+                    <img src="assets/technology/report.svg" width="20" height="20" alt=""><span data-project="finance-cost" data-field="title">Finance &amp; Cost</span>
+                  </a></li>
+                  <!-- lineage end -->
+                </ul>
+              </div>
+            </figure>
+          </section>
           <aside class="recognition">
             <div class="recognition-icon" aria-hidden="true">✳</div>
             <div>
@@ -595,6 +667,7 @@
               </div>
               <h3 data-service="0" data-field="headline">BI performance audit</h3>
               <p data-service="0" data-field="summary">I trace conflicting figures and late refreshes back to their source. You get the root causes, a prioritized fix list and a way to test each improvement.</p>
+              <p class="service-record" data-i18n="services.auditRecord">I’ve audited more than 50 reports across companies and helped their teams identify and fix performance issues.</p>
               <div class="offer-actions">
                 <a class="offer-inquiry" href="#contact-draft" data-inquiry="bi-diagnostic" data-i18n="services.cta">Discuss this service</a>
                 <a class="offer-details-link" href="#scope-bi-diagnostic" data-open-service data-i18n="services.details">View details</a>
@@ -627,6 +700,7 @@
               </div>
               <h3 data-service="2" data-field="headline">Monthly BI support</h3>
               <p data-service="2" data-field="summary">I work with your team each month to resolve issues and improve the platform. We agree on priorities, and you receive tested changes with operating notes.</p>
+              <p class="service-record" data-i18n="services.supportRecord">I’ve migrated more than 100 reports to Power BI. That experience guides what I test with users before each release.</p>
               <div class="offer-actions">
                 <a class="offer-inquiry" href="#contact-draft" data-inquiry="monthly-data-support" data-i18n="services.cta">Discuss this service</a>
                 <a class="offer-details-link" href="#scope-monthly-data-support" data-open-service data-i18n="services.details">View details</a>
@@ -644,6 +718,7 @@
                 <li data-service="0" data-field="items" data-item="2">Prioritized fixes with an agreed test for each improvement.</li>
               </ul>
               <p class="offer-tools">Microsoft Fabric · SQL · DAX · Power BI</p>
+              <p class="service-record" data-i18n="services.auditRecord">I’ve audited more than 50 reports across companies and helped their teams identify and fix performance issues.</p>
               <h3 data-i18n="services.examples">Related cases</h3>
               <div class="service-evidence">
                 <a class="text-link" href="#case-fabric-capacity" data-service="0" data-field="proof" data-item="0">Professional case · Tuning Fabric capacity</a>
@@ -682,6 +757,7 @@
                 <li data-service="2" data-field="items" data-item="2">Tested releases, documented automations and a handover your team can operate.</li>
               </ul>
               <p class="offer-tools">Microsoft Fabric · Azure DevOps · Python · Power Automate</p>
+              <p class="service-record" data-i18n="services.supportRecord">I’ve migrated more than 100 reports to Power BI. That experience guides what I test with users before each release.</p>
               <h3 data-i18n="services.examples">Related cases</h3>
               <div class="service-evidence">
                 <a class="text-link" href="#case-bi-governance" data-service="2" data-field="proof" data-item="0">Professional case · How changes moved from development to production</a>
@@ -963,7 +1039,7 @@
                           data-field="result"
                         >
                           Data ingestion reduced from 3 hours to 1 hour. Across
-                          my career: 80+ reports migrated hands-on and ~150
+                          my career: more than 100 reports migrated hands-on to Power BI and ~150
                           additional migrations led.
                         </p>
                       </section>
@@ -1762,6 +1838,34 @@
                 </div>
               </li>
             </ol>
+          </div>
+        </div>
+      </section>
+      <section id="design-decisions" class="section design-decisions" aria-labelledby="design-title">
+        <div class="container">
+          <div class="section-heading">
+            <h2 id="design-title" data-i18n="design.title">The decisions behind my reports</h2>
+            <p data-i18n="design.intro">Before I choose a chart, I ask who will use the report, what decision they need to make and how much time they have.</p>
+          </div>
+          <div class="audience-cases">
+            <article>
+              <p class="eyebrow" data-i18n="design.board">For executives</p>
+              <h3 data-i18n="design.boardQuestion">Which brand needs attention?</h3>
+              <p data-i18n="design.boardBody">I lead with the group margin and one sentence explaining the change. A chart compares each brand’s share of revenue and profit so the board can see where to focus the discussion.</p>
+              <a class="text-link" data-open-project="group-performance" href="assets/group-performance.png" data-i18n="design.boardLink">Explore the board report</a>
+            </article>
+            <article>
+              <p class="eyebrow" data-i18n="design.ops">For analysts and operations</p>
+              <h3 data-i18n="design.opsQuestion">Which hotels should we review first?</h3>
+              <p data-i18n="design.opsBody">I let the team filter by brand and hotel, compare periods and explore complaints per 1,000 occupied room nights. They can prioritize an intervention even when two hotels differ in size.</p>
+              <a class="text-link" data-open-project="guest-experience" href="https://app.fabric.microsoft.com/view?r=eyJrIjoiZTgwNjcwZTctYTkxOC00NDA2LTg0ZDItY2UzOWZiYTAxM2ZiIiwidCI6IjE5Y2VmZmU2LWEzNWUtNGY2Mi1hZDU5LTZkMGQwYTFiNGE3ZCIsImMiOjZ9" data-i18n="design.opsLink">Explore the operations report</a>
+            </article>
+          </div>
+          <div class="design-access">
+            <h3 data-i18n="design.access">How I make reports easier to read</h3>
+            <div><p data-i18n="design.accessBody">I use titles that name the measure and period. I pair color with labels or symbols and check for at least 4.5:1 contrast on normal text. I set the tab order to follow the reading sequence and add alt text to informative visuals.</p>
+              <a class="text-link" href="https://learn.microsoft.com/power-bi/create-reports/desktop-accessibility-creating-reports" target="_blank" rel="noopener noreferrer" data-i18n="design.source">Microsoft’s guide to accessible Power BI reports ↗</a>
+            </div>
           </div>
         </div>
       </section>
